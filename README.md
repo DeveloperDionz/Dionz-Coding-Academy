@@ -16,9 +16,9 @@ The core of this project is built on three pillars:
 * **Responsive Design:** Optimized for all devices using Tailwind CSS.
 **Interactive UI:** High-quality components built with shadcn-ui.
 ## Tech stack
-**Frontend:** React with Vite (for lightning-fast builds).
-**Language:** TypeScript (for type safety).
-**Styling:** Tailwind CSS & shadcn-ui.
+* **Frontend:** React with Vite (for lightning-fast builds).
+* **Language:** TypeScript (for type safety).
+* **Styling:** Tailwind CSS & shadcn-ui.
 **Backend/Database:** Supabase (Auth, Database, and Storage).
 ## Getting started
 ### Prerequisites:
