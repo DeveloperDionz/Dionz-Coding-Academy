@@ -24,7 +24,7 @@ The core of this project is built on three pillars:
 ### Prerequisites:
 Node.js (v18 or higher)
 A Supabase account
-###installation
+### installation
 ### 1. Clone the repo:
 `git clone https://github.com/your-username/dionz-coding-academy.git`
 ### 2. Install dependencies:
