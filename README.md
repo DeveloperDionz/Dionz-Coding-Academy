@@ -1,4 +1,4 @@
-# Dionz Coding Academy#
+# Dionz Coding Academy
 A modern learning platform designed to streamline the journey for aspiring developers. This application provides a seamless interface for students to access coding resources, track their progress, and engage with the curriculum.
 
 ## My Philosophy
@@ -11,9 +11,9 @@ The core of this project is built on three pillars:
 * **Accessible Excellence:** I believe high-quality coding education should be seamless. Using **shadcn-ui**, I’ve removed the friction between the learner and the logic.
 
 ## Features
-**User Authentication:** Secure login and registration via Supabase.
-**Course Catalog:** Browsable list of coding tracks.
-**Responsive Design:** Optimized for all devices using Tailwind CSS.
+* **User Authentication:** Secure login and registration via Supabase.
+* **Course Catalog:** Browsable list of coding tracks.
+* **Responsive Design:** Optimized for all devices using Tailwind CSS.
 **Interactive UI:** High-quality components built with shadcn-ui.
 ## Tech stack
 **Frontend:** React with Vite (for lightning-fast builds).
