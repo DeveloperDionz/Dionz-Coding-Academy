@@ -12,6 +12,7 @@ import LessonContent from '@/components/LessonContent';
 
 interface Course {
   id: string;
+  course_id?: string;
   title: string;
   description: string;
   icon: string;
@@ -105,15 +106,15 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
 
     try {
       // Fetch course details
-      
+      setLoading(true);
       const formattedTitle = slug.replace(/-/g, ' '); // Convert slug back to title format
-      const { data: courseData, error: courseError } = await supabase
+      const { data: rawData, error: courseError } = await supabase
         .from('courses')
         .select('*')
         .ilike('title', formattedTitle) // Use ILIKE for case-insensitive search
         .single();
 
-      if (courseError) {
+      if (courseError || !rawData) {
         console.error('Error fetching course:', courseError);
         toast({
           title: "Error",
@@ -124,15 +125,16 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         return;
       }
 
-      setCourse(courseData);
+      const currentCourse = rawData as any as Course;
+      setCourse(currentCourse);
 
       // Fetch user progress
       const { data: progressData, error: progressError } = await supabase
         .from('course_progress')
         .select('*')
         .eq('user_id', user.id)
-        .eq('course_id', courseData.id)
-        .single();
+        .eq('course_id', currentCourse.course_id)
+        .maybeSingle();
 
       if (progressError && progressError.code !== 'PGRST116') {
         console.error('Error fetching progress:', progressError);
@@ -141,7 +143,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
       }
 
       // Generate lessons based on course
-      generateLessons(courseData);
+      generateLessons(currentCourse);
       
     } catch (err) {
       console.error('Error:', err);
