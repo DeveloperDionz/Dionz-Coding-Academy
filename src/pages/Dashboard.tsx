@@ -43,6 +43,7 @@ interface CourseProgress {
 }
 
 interface CourseWithProgress extends Course {
+  course_id: string;
   progress?: CourseProgress;
 }
 
@@ -255,15 +256,15 @@ const Dashboard = () => {
       }
 
       // Combine courses with progress data
-      const coursesWithProgress = coursesData.map(course => {
-        const progress = progressData?.find(p => p.course_id === course.id);
+      const coursesWithProgress = (coursesData as any []).map(course => {
+        const progress = progressData?.find(p => p.course_id === course.course_id);
         return {
           ...course,
           progress
         };
       });
 
-      setCourses(coursesWithProgress);
+      setCourses(coursesWithProgress as any as CourseWithProgress[]);
     } catch (err) {
       console.error('Error:', err);
     } finally {
@@ -289,9 +290,11 @@ const Dashboard = () => {
           .from('course_progress')
           .insert({
             user_id: user.id,
-            course_id: course.id,
+            course_id: course.course_id,
             completed_lessons: 0,
-            last_accessed: new Date().toISOString()
+            last_accessed: new Date().toISOString(),
+            status: 'in_progress',
+            progress_percentage: 0
           });
 
         if (error) {
