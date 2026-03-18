@@ -26,7 +26,7 @@ The core of this project is built on three pillars:
 * A Supabase account
 ### installation
 ### 1. Clone the repo:
-`git clone https://github.com/your-username/dionz-coding-academy.git`
+`git clone https://github.com/DeveloperDionz/Dionz-Coding-Academy.git`
 ### 2. Install dependencies:
 `npm install`
 ### 3. Set up Environment Variables:
