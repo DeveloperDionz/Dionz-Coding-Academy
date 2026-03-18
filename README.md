@@ -22,8 +22,8 @@ The core of this project is built on three pillars:
 **Backend/Database:** Supabase (Auth, Database, and Storage).
 ## Getting started
 ### Prerequisites:
-Node.js (v18 or higher)
-A Supabase account
+* Node.js (v18 or higher)
+* A Supabase account
 ### installation
 ### 1. Clone the repo:
 `git clone https://github.com/your-username/dionz-coding-academy.git`
