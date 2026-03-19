@@ -2953,9 +2953,9 @@ Hobby:<br>
                                 <h3 >Defining an HTML class</h3><br>
                                 <p>To create an HTML class, firstly define style for HTML class using &lt;style&gt; tag within &lt;head&gt; section as in the following example:</p><br>
                                 <div class="code-block">
-  <pre id="dataExample"><code>&lt;head&gt;<br>  &lt;style&gt;<br>    .headings {<br>        color: lightgreen;<br>        font-family: cursive;<br>        background-color: black;<br>    }<br>  &lt;/style&gt;<br>&lt;/head&gt;</code></pre>
-  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
-</div><br>
+                                <pre id="dataExample"><code>&lt;head&gt;<br>  &lt;style&gt;<br>    .headings {<br>        color: lightgreen;<br>        font-family: cursive;<br>        background-color: black;<br>    }<br>  &lt;/style&gt;<br>&lt;/head&gt;</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
                                 <p>We have defined style for a class name "headings", and we can use this class name with any of HTML element in which we want to provide such styling. We just need to follow the following syntax to use it.</p><br>
                                 <i style="color: grey;">
                                 <p>&lt;tag class="ghf"&gt; content &lt;/tag&gt;</p><br>
@@ -3025,27 +3025,12 @@ codeExplanation:`
   <h3><strong>Multiple Classes</strong></h3><br>
   <p>You can use multiple class names (more than one) with HTML elements. These class names must be separated by a space.</p><br>
   <p><strong>Example</strong></p>
-  <p>let's style elements with class name "fruit" and also with a class name "center".</p>
-  <i style="color: grey;"<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;style&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;.fruit {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: orange;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;.center {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&lt;/style&gt;<br>
-&lt;body&gt;<br><br>
-&lt;h2&gt;Multiple Classes&lt;/h2&gt;<br>
-&lt;p&gt;All three elements have the class name "fruit". In addition, Mango also has the class name "center", which center-aligns the text.&lt;/p&gt;<br><br>
-&lt;h2 class="fruit center"&gt;Mango&lt;/h2&gt;<br>
-&lt;h2 class="fruit"&gt;Orange&lt;/h2&gt;<br>
-&lt;h2 class="fruit"&gt;Apple&lt;/h2&gt;<br><br>
-&lt;/body&gt;<br>
-&lt;/html&gt;</p></i><br>
+  <p>let's style elements with class name "fruit" and also with a class name "center".</p><br>
+  <div class="code-block">
+  <pre id="multiClassExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;style&gt;<br>    .fruit {<br>        background-color: orange;<br>        color: white;<br>        padding: 10px;<br>    }<br><br>    .center {<br>        text-align: center;<br>    }<br>&lt;/style&gt;<br>&lt;body&gt;<br><br>&lt;h2&gt;Multiple Classes&lt;/h2&gt;<br>&lt;p&gt;All three elements have the class name "fruit". In addition, Mango also has the class name "center", which center-aligns the text.&lt;/p&gt;<br><br>&lt;h2 class="fruit center"&gt;Mango&lt;/h2&gt;<br>&lt;h2 class="fruit"&gt;Orange&lt;/h2&gt;<br>&lt;h2 class="fruit"&gt;Apple&lt;/h2&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('multiClassExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p><br>
 <p><html>
 <style>
@@ -3079,24 +3064,12 @@ codeExplanation:`
 <hr>
 <h3  style= "font-size: 1.5em; font-weight: bold; margin: 1em 0;">Same class with Different Tag</h3><br>
 <p>You can use the same class name with different tags like &lt;h2&gt; and &lt;p&gt; etc. to share the same style.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>
-&lt;!DOCTYPE html&gt;<br>   
-&lt;html&gt;<br>    
-&nbsp;&nbsp;&lt;style&gt;<br>    
-&nbsp;&nbsp;.fruit {<br>    
-  &nbsp;&nbsp;&nbsp;background-color: orange;<br>   
-  &nbsp;&nbsp;&nbsp;color: white;<br>    
-  &nbsp;&nbsp;&nbsp;padding: 10px;<br>  
-}<br>     
-&lt;/style&gt;<br>
-&lt;body&gt;<br>    
-&nbsp;&nbsp;&nbsp;&lt;h2&gt;Same Class with Different Tag&lt;/h2&gt;<br>   
-&nbsp;&nbsp;&nbsp;&lt;h2 class="fruit"&gt;Mango&lt;/h2&gt;<br>    
-&nbsp;&nbsp;&nbsp;&lt;p class="fruit"&gt;Mango is the king of all fruits.&lt;/p&gt;<br>    
-&lt;/body&gt;<br>    
-&lt;/html&gt;<br>
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="sameClassExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;style&gt;<br>  .fruit {<br>   background-color: orange;<br>   color: white;<br>   padding: 10px;<br>}<br>&lt;/style&gt;<br>&lt;body&gt;<br>   &lt;h2&gt;Same Class with Different Tag&lt;/h2&gt;<br>   &lt;h2 class="fruit"&gt;Mango&lt;/h2&gt;<br>   &lt;p class="fruit"&gt;Mango is the king of all fruits.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('sameClassExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p>
 <p><!DOCTYPE html>
 <html>
@@ -3201,15 +3174,12 @@ Date of Joining:
                                     <p>Here, "src" attribute specifies the web address (URL) of the inline frame page.</p><br>
                                     <h2 style= "font-size: 1.5em; font-weight: bold; margin: 1em 0;">Set Width and Height of iframe</h2>
                                     <p>You can set the width and height of iframe by using "width" and "height"attributes. By default, the attributes values are specified in pixels but you can also set them in percent. i.e. 50%, 60% etc.</p>
-                                    <p><strong>Example: (Pixels)</strong></p>
-                                    <i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br><br>
-&lt;h2&gt;HTML Iframes example&lt;/h2&gt;<br>
-&lt;p&gt;Use the height and width attributes to specify the size of the iframe:&lt;/p&gt;<br>
-&lt;iframe src="https://en.wikipedia.org/wiki/Cat/" height="300" width="400"&gt;&lt;/iframe&gt;<br><br>
-&lt;/body&gt;<br>
-&lt;/html&gt;</p></i>
+                                    <p><strong>Example: (Pixels)</strong></p><br>
+                                    <div class="code-block">
+  <pre id="iframeExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h2&gt;HTML Iframes example&lt;/h2&gt;<br>&lt;p&gt;Use the height and width attributes to specify the size of the iframe:&lt;/p&gt;<br>&lt;iframe src="https://en.wikipedia.org/wiki/Cat/" height="300" width="400"&gt;&lt;/iframe&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p>
 <!DOCTYPE html>
 <html>
@@ -3219,17 +3189,13 @@ Date of Joining:
 <iframe src="https://en.wikipedia.org/wiki/Cat" height="300" width="400"></iframe>
 </body>
 </html><br>
-<hr>
-<p><strong>Example: (Percentage)</strong></p>
-<i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>    
-&lt;html&gt;<br>  
-&lt;body&gt;<br>    
-  &lt;h2&gt;HTML Iframes&lt;/h2&gt;<br>    
-  &lt;p&gt;You can use the height and width attributes to specify the size of the iframe:&lt;/p&gt;<br>    
-  &lt;iframe src="https://en.wikipedia.org/wiki/Cat" height="50%" width="70%"&gt;&lt;/iframe&gt;<br>    
-&lt;/body&gt;<br>   
-&lt;/html&gt;<br>
-</p></i>
+<hr><br>
+<p><strong>Example: (Percentage)</strong></p><br>
+<div class="code-block">
+  <pre id="iframePercentExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;HTML Iframes&lt;/h2&gt;<br>&lt;p&gt;You can use the height and width attributes to specify the size of the iframe:&lt;/p&gt;<br>&lt;iframe src="https://en.wikipedia.org/wiki/Cat" height="50%" width="70%"&gt;&lt;/iframe&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframePercentExample', this)">Copy</button>
+</div><br>
+
 <p>output:</p>
 <!DOCTYPE html>
 <html>
@@ -3239,17 +3205,12 @@ Date of Joining:
 <iframe src="https://en.wikipedia.org/wiki/Cat" height="50%" width="70%"></iframe>
 </body>
 </html><br><br>
-<hr>
-<p>You can also use CSS to set the height and width of the iframe.</p>
-<i style = "color: grey"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;h2&gt;HTML iframes&lt;/h2&gt;<br>
-&lt;p&gt;Use the CSS height and widthproperties to specify the size of the iframe:&lt;/p&gt;<br>
-&lt;iframe src="https://en.wikipedia.org/wiki/Cat" style="height="300px;width=400px;&gt;&lt;/iframe&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i>
+<hr><br>
+<p>You can also use CSS to set the height and width of the iframe.</p><br>
+<div class="code-block">
+  <pre id="iframeCssExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;HTML iframes&lt;/h2&gt;<br>&lt;p&gt;Use the CSS height and width properties to specify the size of the iframe:&lt;/p&gt;<br>&lt;iframe src="https://en.wikipedia.org/wiki/Cat" style="height:300px; width:400px;"&gt;&lt;/iframe&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeCssExample', this)">Copy</button>
+</div><br>
 <!DOCTYPE html>
 <html>
 <body>
@@ -3260,19 +3221,13 @@ Date of Joining:
 </html><br>
 <hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">Remove the border of iframe</h3>
-<p>By default, an iframe contains a border around it. You can remove the border by using &ltstyle&gt; attribute and CSS border property.</p>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Remove the Iframe Border&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This iframe example doesn't have any border&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="https://en.wikipedia.org/wiki/Cat/" style="border:none;"&gt;&lt;/iframe&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p>
-</i>
+<p>By default, an iframe contains a border around it. You can remove the border by using &ltstyle&gt; attribute and CSS border property.</p><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="iframeNoBorderExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>    &lt;h2&gt;Remove the Iframe Border&lt;/h2&gt;<br>    &lt;p&gt;This iframe example doesn't have any border&lt;/p&gt;<br>    &lt;iframe src="https://en.wikipedia.org/wiki/Cat/" style="border:none;"&gt;&lt;/iframe&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeNoBorderExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p><br>
 <!DOCTYPE html>
 <html>
@@ -3283,17 +3238,12 @@ Date of Joining:
 </body>
 </html><br>
 <p>You can also change the size, color, style of the iframe's border.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Custom iframe Border&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="https://en.wikipedia.org/wiki/Cat" style="border:2px solid tomato;"&gt;&lt;/iframe&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p>
-</i>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="iframeCustomBorderExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>    &lt;h2&gt;Custom iframe Border&lt;/h2&gt;<br>    &lt;iframe src="https://en.wikipedia.org/wiki/Cat" style="border:2px solid tomato;"&gt;&lt;/iframe&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeCustomBorderExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p><br>
 <!DOCTYPE html>
 <html>
@@ -3304,20 +3254,13 @@ Date of Joining:
 </html><br>
 <hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">iframe Target for a link</h3>
-<p>You can set a target frame for a link by using iframe. Your specified target attribute of the link must refer to the name attribute of the iframe.</p>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;This page is displayed in an iframe&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe height="300px" width="100%" src="new.html" name="iframe_a""&gt;&lt;/iframe&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cat" target="iframe_a"&gt;Wikipedia.com&lt;/a&gt;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;The name of iframe and link target must have same value else link will not open as a frame.&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p>
-</i>
+<p>You can set a target frame for a link by using iframe. Your specified target attribute of the link must refer to the name attribute of the iframe.</p><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="iframeLinkTargetExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>    &lt;h2&gt;This page is displayed in an iframe&lt;/h2&gt;<br>    &lt;iframe height="300px" width="100%" src="new.html" name="iframe_a"&gt;&lt;/iframe&gt;<br>    &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cat" target="iframe_a"&gt;Wikipedia.com&lt;/a&gt;&lt;/p&gt;<br>    &lt;p&gt;The name of iframe and link target must have same value else link will not open as a frame.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeLinkTargetExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p><br>
 <!DOCTYPE html>
 <html>
@@ -3340,8 +3283,11 @@ Date of Joining:
 <li>Paste the code in your HTML file.</li>
 <li>Change height,width and other properties(as per requirement).</li>
 </ul><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aRGdDy18qfY?si=5JSYkGwKuzn7kqzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;<br><br></p></i>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="iframeYoutubeExample"><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aRGdDy18qfY?si=5JSYkGwKuzn7kqzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;<br><br></code></pre>
+  <button class="copy-btn" onclick="copyCode('iframeYoutubeExample', this)">Copy</button>
+</div>
 <p>Output</p><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aRGdDy18qfY?si=5JSYkGwKuzn7kqzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
 <hr>
@@ -3437,34 +3383,22 @@ Date of Joining:
                                       theory:`
                                       <h3>HTML JavaScript</h3>
                                       <p>A script is a small program which is used with HTML to make web pages more attractive, dynamic and interactive, such asd an alert popup window on mouse click. Currently, the most popular scripting language is JavaScript used for websites. </p><br>
-                                      <p><strong>Example</strong></p>
-                                      <i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>  
-&lt;html&gt;<br>  
-&lt;body&gt;<br> 
-  &lt;h2&gt;Use JavaScript to Change Text&lt;/h2&gt;<br>  
-  &lt;p id="demo"&gt;&lt;/p&gt;<br>  
-  &lt;script&gt;<br>  
-    document.getElementById("demo").innerHTML = "Hello JavaTpoint";<br> 
-  &lt;/script&gt;<br>  
-&lt;/body&gt;<br> 
-&lt;/html&gt;<br></p></i><br>
+                                      <p><strong>Example</strong></p><br>
+                                      <div class="code-block">
+  <pre id="jsChangeTextExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Use JavaScript to Change Text&lt;/h2&gt;<br>&lt;p id="demo"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>document.getElementById("demo").innerHTML = "Hello JavaTpoint";<br>&lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsChangeTextExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">HTML &lt;Script&gt; Tag</h3>
-<p>The HTML &lt;script&gt; tag is used to specify a client-side script. It may be an internal or external JavaScript which contains scripting statements, hence we can place &lt;script&gt; tag within &lt;body&gt; or &lt;head&gt; section.</p><br><br>
+<p>The HTML &lt;script&gt; tag is used to specify a client-side script. It may be an internal or external JavaScript which contains scripting statements, hence we can place &lt;script&gt; tag within &lt;body&gt; or &lt;head&gt; section.</p><br>
 <p>It is mainly used to manipulate images, form validation and change content dynamically. JavaScript uses <em>document.getElementById()</em> method to select an HTML element.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>  
-&lt;html&gt;<br> 
-&lt;body&gt;<br> 
-  &lt;h2&gt;Use JavaScript to Change Text&lt;/h2&gt;<br>  
-  &lt;p id="demo"&gt;&lt;/p&gt;<br> 
-  &lt;script&gt;<br>  
-    document.getElementById("demo").innerHTML = "Hello World";<br>  
-  &lt;/script&gt;<br>  
-&lt;/body&gt;<br> 
-&lt;/html&gt;<br>
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="jsHelloWorldExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Use JavaScript to Change Text&lt;/h2&gt;<br>&lt;p id="demo"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>document.getElementById("demo").innerHTML = "Hello World";<br>&lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsHelloWorldExample', this)">Copy</button>
+</div><br>
+
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">HTML events with JavaScript</h3>
 <p>An event is something which user does, or browser does such as mouse click or page loading are examples of events and JavaScript comes in the role if we want something to happen on these events.</p>
 <p>HTML provides event handler attributes which work with JavaScript code and can perform some action on an event.</p>
@@ -3488,7 +3422,7 @@ Date of Joining:
 <li>Focus event: focus, blur, etc.</li>
 <li>Mouse events: select, mouseup, mousemove, mousedown, click, dblclick, etc.</li>
 </ul><br>
-<p>Following are the list for window event attributes:</p>
+<p>Following are the list for window event attributes:</p><br>
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -3531,63 +3465,26 @@ Date of Joining:
 <p><strong>NOTE:</strong> You will learn more about JavaScript Events in our JavaScript tutorial.</p><br>
 <p>Let's see what JavaScript can do:</p><br>
 <p><strong>1) JavaScript can change HTML content.</strong></p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;p&gt;JavaScript can change the content of an HTML element:&lt;/p&gt;<br>
-&lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br>
-&lt;p id="demo"&gt;&lt;/p&gt;<br>
-&lt;script&gt;<br>
-function myFunction() { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Hello World!"; <br>
-} <br>
-&lt;/script&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="jsButtonExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;p&gt;JavaScript can change the content of an HTML element:&lt;/p&gt;<br>&lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br>&lt;p id="demo"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>function myFunction() {<br>    document.getElementById("demo").innerHTML = "Hello World!";<br>}<br>&lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsButtonExample', this)">Copy</button>
+</div><br>
+
 <p><strong>2) JavaScript can change HTML style</strong></p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;p id="demo"&gt;JavaScript can change the style of an HTML element.&lt;/p&gt;<br>
-&lt;script&gt;<br>
-function myFunction() { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").style.fontSize = "25px"; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").style.color = "brown"; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").style.backgroundColor = "lightgreen"; <br>
-} <br>
-&lt;/script&gt;<br>
-&lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</i><br><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="jsStyleChangeExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;p id="demo"&gt;JavaScript can change the style of an HTML element.&lt;/p&gt;<br>&lt;script&gt;<br>function myFunction() {<br>    document.getElementById("demo").style.fontSize = "25px";<br>    document.getElementById("demo").style.color = "brown";<br>    document.getElementById("demo").style.backgroundColor = "lightgreen";<br>}<br>&lt;/script&gt;<br>&lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsStyleChangeExample', this)">Copy</button>
+</div><br>
+
 <p><strong>3. JavaScript can change HTML attributes.</strong></p><br>
 <p><strong>Example</strong></p>
-<i style="color: grey;"&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;script&gt;<br>
-function light(sw) { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;var pic; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (sw == 0) { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pic = "pic_lightoff.png"; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;} else { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pic = "pic_lighton.png"; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;} <br>
-&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('myImage').src = pic; <br>
-} <br>
-&lt;/script&gt;<br>
-&lt;img id="myImage" src="pic_lightoff.png" width="100" height="180"&gt;<br>
-&lt;p&gt;<br>
-&lt;button type="button" onclick="light(1)"&gt;Light On&lt;/button&gt;<br>
-&lt;button type="button" onclick="light(0)"&gt;Light Off&lt;/button&gt;<br>
-&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</i><br><br>
+<div class="code-block">
+  <pre id="jsLightToggleExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;script&gt;<br>function light(sw) {<br>    var pic;<br>    if (sw == 0) {<br>        pic = "pic_lightoff.png";<br>    } else {<br>        pic = "pic_lighton.png";<br>    }<br>    document.getElementById('myImage').src = pic;<br>}<br>&lt;/script&gt;<br>&lt;img id="myImage" src="pic_lightoff.png" width="100" height="180"&gt;<br>&lt;p&gt;<br>&lt;button type="button" onclick="light(1)"&gt;Light On&lt;/button&gt;<br>&lt;button type="button" onclick="light(0)"&gt;Light Off&lt;/button&gt;<br>&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsLightToggleExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">Use External Script</h3>
 <p>Suppose, you have various HTML files which should have same script, then we can put our JavaScript code in separate file and can call in HTML file. Save JavaScript external files using.js extension.</p><br>
@@ -3595,28 +3492,18 @@ function light(sw) { <br>
 <p><strong>Syntax</strong></p>
 <i style="color: grey;">
 <p>&lt;script type="text/javascript" src="URL"&gt;&lt;/script&gt;</p></i><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="external.js"&gt;&lt;/script&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;External JavaScript Example&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form onsubmit="fun()"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Enter your name:&lt;/label&gt;&lt;br&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="uname" id="frm1"&gt;&lt;br&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Enter your Email-address:&lt;/label&gt;&lt;br&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" name="email"&gt;&lt;br&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;</i><br><br>
-<p><strong>Javascript code</strong></p>
-<i style="color: grey;"><p>function fun() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;var x = document.getElementById("frm1").value;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;alert("Hi" + " " + x + " you have successfully submitted the details");<br>
-}</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="externalJsExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;script type="text/javascript" src="external.js"&gt;&lt;/script&gt;<br>    &lt;/head&gt;<br>    &lt;body&gt;<br>        &lt;h2&gt;External JavaScript Example&lt;/h2&gt;<br>        &lt;form onsubmit="fun(); return false;"&gt;<br>            &lt;label&gt;Enter your name:&lt;/label&gt;&lt;br&gt;<br>            &lt;input type="text" name="uname" id="frm1"&gt;&lt;br&gt;<br>            &lt;label&gt;Enter your Email-address:&lt;/label&gt;&lt;br&gt;<br>            &lt;input type="email" name="email"&gt;&lt;br&gt;<br>            &lt;input type="submit"&gt;<br>        &lt;/form&gt;<br>    &lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('externalJsExample', this)">Copy</button>
+</div><br>
+
+<p><strong>Javascript code</strong></p><br>
+<div class="code-block">
+  <pre id="externalFunExample"><code>function fun() {<br>    var x = document.getElementById("frm1").value;<br>    alert("Hi" + " " + x + " you have successfully submitted the details");<br>}</code></pre>
+  <button class="copy-btn" onclick="copyCode('externalFunExample', this)">Copy</button>
+</div><br>
+
 <p>Output</p><br>
                                       `,
                                       codeExample:{
@@ -3650,16 +3537,11 @@ function fun() {
                                       <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">HTML &ltnoscript&gt; Tag</h3>
                                       <p>HTML &lt;noscript&gt; tag is used to write disabled script in the browser. The text written within &lt;noscript&gt;&lt;/noscript&gt; tag is not displayed on the browser.</p><br>
                                       <p><strong>Example</strong></p><br>
-                                      <i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;p id="demo"&gt;&lt;/p&gt;<br>
-&lt;script&gt;<br>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
-&lt;/script&gt;<br>
-&lt;noscript&gt;This text is not visible in the browser.&lt;/noscript&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;</i>
+                                      <div class="code-block">
+  <pre id="jsNoscriptExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;p id="demo"&gt;&lt;/p&gt;<br>&lt;script&gt;<br>document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>&lt;/script&gt;<br>&lt;noscript&gt;This text is not visible in the browser.&lt;/noscript&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('jsNoscriptExample', this)">Copy</button>
+</div><br>
+
 
                                       `,
                                     };
@@ -3763,44 +3645,32 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">Absolute File Paths</h3>
 <p>Absolute file path specifies full URL address.</p><br>
 <p><strong>Example</strong></p><br>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;h2&gt;Using a Full URL File Path&lt;/h2&gt;<br>
-&lt;img src="https://www.javatpoint.com/images/nature-1.jpg" alt="image" style="width:300px"&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br><hr>
+<div class="code-block">
+  <pre id="imgFullUrlExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Using a Full URL File Path&lt;/h2&gt;<br>&lt;img src="https://www.javatpoint.com/images/nature-1.jpg" alt="image" style="width:300px"&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('imgFullUrlExample', this)">Copy</button>
+</div><br>
+<hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">Relative File paths</h3>
 <p>The relative file path specifies to a file which is related to the location of current page.</p><br>
 <p><strong>Example</strong></p><br>
 <p>Let's take an example to see how the file path points to a file in the images folder located at the root of the current web.</p><br>
-<i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>
-&lt;img src="/images/nature-2.jpg" alt="Mountain" style="width:300px"&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;</p></i><br>
+<div class="code-block">
+  <pre id="imgRelativePathExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>&lt;img src="/images/nature-2.jpg" alt="Mountain" style="width:300px"&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('imgRelativePathExample', this)">Copy</button>
+</div><br>
+
 <p>This is how a file path points to a file in the images folder located in the current folder.</p><br>
-<i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>
-&lt;img src="images/nature-3.jpg" alt="Mountain" style="width:300px"&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<div class="code-block">
+  <pre id="imgRelativePathExample2"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>&lt;img src="images/nature-3.jpg" alt="Mountain" style="width:300px"&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('imgRelativePathExample2', this)">Copy</button>
+</div><br>
+
 <p>When the images folder is located in the folder one level above the current folder.</p><br>
-<i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
-&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>
-&lt;img src="../images/nature4.jpg" alt="Mountain" style="width:300px"&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<div class="code-block">
+  <pre id="imgParentRelativePathExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>&lt;h2&gt;Using a Relative File Path&lt;/h2&gt;<br>&lt;img src="../images/nature4.jpg" alt="Mountain" style="width:300px"&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('imgParentRelativePathExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style= "font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">Important points for File Path</h3>
 <ul style="list-style-type: disc; padding-left: 30px;">
@@ -3836,57 +3706,30 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
                                           <li>It displays a title for the page in search engine results.</li>
                                           </ol><br>
                                           <p><strong>Note:</strong> The title element must be specific about the document and its recommended length is 65 to 70 characters including spaces.</p><br>
-                                          <p><strong>Example</strong></p>
-                                          <i style="color: grey;">
-                                          <p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;This Page Title&lt;/title&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;The body's content is displayed in the browser window.&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;The content of the title element is displayed in the browser tab, in favorites and in search engine results.&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+                                          <p><strong>Example</strong></p><br>
+                                          <div class="code-block">
+  <pre id="htmlTitleExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;This Page Title&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;p&gt;The body's content is displayed in the browser window.&lt;/p&gt;<br>    &lt;p&gt;The content of the title element is displayed in the browser tab, in favorites and in search engine results.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlTitleExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0">HTML &lt;style&gt; Element</h3>
 <p>The HTML &lt;style&gt; element is used to style the HTML page. The &lt;style&gt; element can have CSS properties for that HTML page only. If we want to apply CSS for multiple pages then we should use separate CSS file.</p><br>
 <p><strong>Example</strong></p><br>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;This is Page Title&lt;/title&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body {background-color: pink;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 {color: red;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p {color: blue;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<div class="code-block">
+  <pre id="htmlCssExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;This is Page Title&lt;/title&gt;<br>    &lt;style&gt;<br>        body {background-color: pink;}<br>        h1 {color: red;}<br>        p {color: blue;}<br>    &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h1&gt;This is a Heading&lt;/h1&gt;<br>    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlCssExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0" >HTML &lt;link&gt; Element</h3>
 <p>The HTML &lt;link&gt; element is used to link an external style sheet to your webpage. The &lt;link&gt; element contains main two attributes which are "rel" and "href". The rel attribute indicates that it is a stylesheet, and href gives the path to that external file. </p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;This is title&lt;/title&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Web-page with external CSS&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is looking a cool page&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlExternalCssExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;This is title&lt;/title&gt;<br>    &lt;link rel="stylesheet" href="style.css"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h2&gt;Web-page with external CSS&lt;/h2&gt;<br>    &lt;p&gt;This is looking a cool page&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlExternalCssExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0">HTML &lt;meta&gt; Element</h3>
 <p>The HTML &lt;meta&gt; element is used to specify the character set, page description, keywords, authors and other metadata on the webpage.</p><br>
@@ -3896,18 +3739,12 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
 <i style="color: grey;">
 <p>&lt;meta charset="UTF-8"&gt;</p></i><br>
 <p>The charset attribute specifies the character encoding. In this example we have set it to "UTF-8" which means it can handle to display any language.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is written in English language&lt;span style="color: blue"&gt; My friend's name is.......&lt;/span&gt;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is Chinese language &lt;span style="color: red"&gt;Wǒ de péngyǒu jiào&lt;/span&gt;&lt;/p&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlMetaUtfExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;meta charset="UTF-8"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;p&gt;This is written in English language&lt;span style="color: blue"&gt; My friend's name is.......&lt;/span&gt;&lt;/p&gt;<br>    &lt;p&gt;This is Chinese language &lt;span style="color: red"&gt;Wǒ de péngyǒu jiào&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlMetaUtfExample', this)">Copy</button>
+</div><br>
+
 <p><strong>2. To define a description of your webpage</strong></p>
 <i style="color: grey;"<p>&lt;meta name="description" content="Free web tutorials"</p></i><br>
 <p>If you give a meta description then it will be useful for the relevant search to perform by search engines.</p><br>
@@ -3926,33 +3763,18 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
 <p>&lt;meta http-equiv="refresh" content="10; url=https://www.javatpoint.com/head"&gt;</p></i><br>
 <p>If you add an URL with content value, then it will redirect to that page after the time limit is over.</p><br>
 <p><strong>Example</strong></p><br>
-<i style="color: grey"><p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="refresh" content="5; url=https://www.javatpoint.com/html-head"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Meta element Example&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="color: green;"&gt;Kindly wait for 5 seconds and after 5 seconds it will automatically redirect to URL specified in meta tag&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<div class="code-block">
+  <pre id="htmlMetaRefreshExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;meta http-equiv="refresh" content="5; url=https://www.javatpoint.com/html-head"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>        &lt;h2&gt;Meta element Example&lt;/h2&gt;<br>        &lt;p style="color: green;"&gt;Kindly wait for 5 seconds and after 5 seconds it will automatically redirect to URL specified in meta tag&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlMetaRefreshExample', this)">Copy</button>
+</div><br>
+
 <p>Following is an example to show how to use all Meta elements within HTML head</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="description" content="Free Web tutorials"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="keywords" content="HTML,CSS,XML,JavaScript"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="author" content="Akon"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;All the meta information are set.&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br><hr>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlMetaInfoExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;meta charset="UTF-8"&gt;<br>    &lt;meta name="description" content="Free Web tutorials"&gt;<br>    &lt;meta name="keywords" content="HTML,CSS,XML,JavaScript"&gt;<br>    &lt;meta name="author" content="Akon"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;p&gt;All the meta information are set.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlMetaInfoExample', this)">Copy</button>
+</div><br>
+<hr>
 <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0">use &lt;meta&gt; tag to set the Viewport</h3>
 <p>This method was introduced in HTML5 to take control over the viewport by using &lt;meta&gt; tag.</p><br>
 <p>Viewport is the user's visible area of a webpage. it changes from device to device and appears smaller on mobile phones than computer screens.</p><br>
@@ -3962,57 +3784,18 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
 <p>Here, the <strong>&lt;meta&gt; viewport</strong> element specifies how to control the page's dimensions and scaling.</p><br>
 <p>The <strong>width=device-width</strong> is used to set the width of the page to follow the screen-width of the page to follow the screen-width of the device (which will vary depending on the device).</p><br>
 <p>The <strong>initial-scale=1.0</strong> is used to set the initial zoom level when the page is first loaded by the browser.</p><br>
-<p><strong>Example of a web page without the viewport &lt;meta&gt; tag</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;b&gt;To understand this example, you should open this page on a phone or a tablet.&lt;/b&gt;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="image.jpg" alt="image" width="460" height="345"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;facer possim assum.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
-<p><strong>Example of a webpage with the viewport &lt;meta&gt;</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max-width: 100%;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: auto;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;b&gt;To understand this example, you should open this page on a phone or a tablet.&lt;/b&gt;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="cat.jpg" alt="image" width="460" height="345"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;facer possim assum.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example of a web page without the viewport &lt;meta&gt; tag</strong></p><br>
+<div class="code-block">
+  <pre id="htmlLongParagraphExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br>    &lt;p&gt;&lt;b&gt;To understand this example, you should open this page on a phone or a tablet.&lt;/b&gt;&lt;/p&gt;<br>    &lt;img src="image.jpg" alt="image" width="460" height="345"&gt;<br>    &lt;p&gt;<br>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut<br>    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation<br>    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel<br>    eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu<br>    feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum<br>    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis<br>    eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<br>    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat<br>    facer possim assum.<br>    &lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlLongParagraphExample', this)">Copy</button>
+</div><br>
+
+<p><strong>Example of a webpage with the viewport &lt;meta&gt;</strong></p><br>
+<div class="code-block">
+  <pre id="htmlResponsiveImageExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;<br>    &lt;style&gt;<br>        img {<br>            max-width: 100%;<br>            height: auto;<br>        }<br>    &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;p&gt;&lt;b&gt;To understand this example, you should open this page on a phone or a tablet.&lt;/b&gt;&lt;/p&gt;<br>    &lt;img src="cat.jpg" alt="image" width="460" height="345"&gt;<br>    &lt;p&gt;<br>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut<br>    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation<br>    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel<br>    eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu<br>    feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum<br>    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis<br>    eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<br>    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat<br>    facer possim assum.<br>    &lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlResponsiveImageExample', this)">Copy</button>
+</div><br>
+
 <p>Output:</p>
 <!DOCTYPE html>
 <html>
@@ -4045,43 +3828,21 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
 <hr>
 <h3 style="font-size: 1.5em; font-weight: bold; border: 0.5em 0">HTML &lt;base&gt; element</h3>
 <p>The HTML &lt;base&gt; element is used to specify the base URL and base target  for all relative URLs in a page.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;base href="https://static.javatpoint.com/htmlpages/images/" target="_blank"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="html5.png"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;We have specified a base URL, the browser will look for the image "html5.png" at "https://static.javatpoint.com/htmlpages/images/html5.png"&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href=" https://www.javatpoint.com"&gt;JavatPoint&lt;/a&gt;&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;The link above will open in a new window because base target is set to "_blank".&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlBaseExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;Page Title&lt;/title&gt;<br>    &lt;base href="https://static.javatpoint.com/htmlpages/images/" target="_blank"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;img src="html5.png"&gt;<br>    &lt;p&gt;We have specified a base URL, the browser will look for the image "html5.png" at "https://static.javatpoint.com/htmlpages/images/html5.png"&lt;/p&gt;<br>    &lt;p&gt;&lt;a href=" https://www.javatpoint.com"&gt;JavatPoint&lt;/a&gt;&lt;/p&gt;<br>    &lt;p&gt;The link above will open in a new window because base target is set to "_blank".&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlBaseExample', this)">Copy</button>
+</div><br>
+
 <hr>
 <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0">HTML &lt;script&gt; Element</h3>
 <p>HTML &lt;script&gt; element is used to apply client side JavaScript for the same page or to add an external JavaScript file to current page.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;">
-<p>&lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function fun() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("p").style.color = "green";<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Script within Head element&lt;/h2&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p id="p"&gt;This will change the color&lt;/p&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" onclick="fun()"&gt;Click me&lt;/button&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-&lt;/html&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlScriptHeadExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;script&gt;<br>        function fun() {<br>            document.getElementById("p").style.color = "green";<br>        }<br>    &lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h2&gt;Script within Head element&lt;/h2&gt;<br>    &lt;p id="p"&gt;This will change the color&lt;/p&gt;<br>    &lt;button type="button" onclick="fun()"&gt;Click me&lt;/button&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlScriptHeadExample', this)">Copy</button>
+</div><br>
+
 
 
                                           `,
@@ -4111,13 +3872,12 @@ expectedOutput: undefined,
                                           <p>&lt;script src=".js file_path"&gt;</p></i><br>
                                           <h3 style="font-size: 1.5 em; font-weight: bold; margin: 0.5em 0;">Excluding &lt;html&gt;, &lthead&gt; and &lt;body&gt;</h3>
                                           <p>HTML5 facilitates us to omit the &lt;html&gt;, the &lt;body&gt; and the &lt;head&gt; tag.</p><br>
-                                          <p><strong>Example</strong></p>
-                                          <i style="color: grey;">
-                                          <p>&lt;!DOCTYPE html&gt;<br>
-&lt;title&gt;Page Title&lt;/title&gt;<br>
-&lt;h1&gt;This is a heading&lt;/h1&gt;<br>
-&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
-</p></i><br>
+                                          <p><strong>Example</strong></p><br>
+                                          <div class="code-block">
+  <pre id="htmlMinimalTitleExample"><code>&lt;!DOCTYPE html&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>&lt;h1&gt;This is a heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlMinimalTitleExample', this)">Copy</button>
+</div><br>
+
 <p><strong>Note:</strong> It is recommended to omit the &lt;html&gt; and &lt;body&gt; tags. omitting these tags can crash DOM or XML software and produce errors in older browsers (IE9).</p><br>
 <p>However, you can omit the &lt;head&gt; tag.</p>                                         `,
                                         };
@@ -4144,79 +3904,68 @@ expectedOutput: undefined,
                                             <h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0">Description of Various layout Elements</h3>
                                             <p><strong>1. HTML &lt;header&gt;</strong></p><br>
                                             <p>The &lt;header&gt; element is used to create header section of web pages. The header contains the introductory content, heading element, logo or icon for the webpage and authorship information.</p><br>
-                                            <p><strong>Example</strong></p>
-                                            <i style="color: grey;">
-                                            <p>&lt;header style="background-color: #303030; height: 80px; width: 100%"&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 style="font-size: 30px; color: white; text-align: center; padding-top: 15px;"&gt;Welcome to MyFirstWebpage&lt;/h1&gt;<br>
-&lt;/header&gt;<br>
-</p></i><br>
-<hr>
+                                            <p><strong>Example</strong></p><br>
+                                            <div class="code-block">
+  <pre id="htmlHeaderExample"><code>&lt;header style="background-color: #303030; height: 80px; width: 100%"&gt;<br>    &lt;h1 style="font-size: 30px; color: white; text-align: center; padding-top: 15px;"&gt;Welcome to MyFirstWebpage&lt;/h1&gt;<br>&lt;/header&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlHeaderExample', this)">Copy</button>
+</div><br>
+
 <p><strong>2. HTML &lt;nav&gt;</strong></p><br>
 <p>The &lt;nav&gt; elements is a container for the main block of naviation links. It can contain links for the same page or for other pages.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;>"<p>&lt;nav style="background-color:#bcdeef;"&gt;<br>  
-    &lt;h1 style="text-align: center;"&gt;Navgation Links&lt;/h1&gt;<br>  
-    &lt;ul&gt;<br>  
-        &lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;<br>  
-        &lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;<br>  
-        &lt;li&gt;&lt;a href="#"&gt;link3&lt;/a&gt;&lt;/li&gt;<br>  
-        &lt;li&gt;&lt;a href="#"&gt;link4&lt;/a&gt;&lt;/li&gt;<br>  
-    &lt;/ul&gt;<br>  
-&lt;/nav&gt;
-</p></i><br>
-<hr>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlNavExample"><code>&lt;nav style="background-color:#bcdeef;"&gt;<br>&lt;h1 style="text-align: center;"&gt;Navgation Links&lt;/h1&gt;<br>&lt;ul&gt;<br>&lt;li&gt;&lt;a href="#"&gt;link1&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a href="#"&gt;link2&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a href="#"&gt;link3&lt;/a&gt;&lt;/li&gt;<br>&lt;li&gt;&lt;a href="#"&gt;link4&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/nav&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlNavExample', this)">Copy</button>
+</div><br>
+
 <p><strong>3. HTML &lt;section&gt;</strong></p><br>
 <p>HTML &lt;section&gt; elements represent a separate section of a web page which contains related element grouped together. It can contain: text, images, tables, videos, etc.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;section style="background-color:#ff7f50; width: 100%; border: 1px solid black;"&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Introduction to HTML&lt;/h2&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;HTML is a markup language which is used for creating attractive web pages with the help of styling, and which looks in a nice format on a web browser..&lt;/p&gt;<br>  
-&lt;/section&gt;
-</p></i><br>
-<hr>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlSectionExample"><code>&lt;section style="background-color:#ff7f50; width: 100%; border: 1px solid black;"&gt;<br>    &lt;h2&gt;Introduction to HTML&lt;/h2&gt;<br>    &lt;p&gt;HTML is a markup language which is used for creating attractive web pages with the help of styling, and which looks in a nice format on a web browser..&lt;/p&gt;<br>&lt;/section&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlSectionExample', this)">Copy</button>
+</div><br>
+
 <p><strong>4. HTML &lt;article&gt;</strong></p><br>
 <p>The HTML &lt;article&gt; tag is used to contain a self-contained article such as big story, huge article, etc. </p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;article style="width: 100%; border:2px solid black; background-color: #fff0f5;"&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;History of Computer&lt;/h2&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Write your content here for the history of computer&lt;/p&gt;<br>  
-&lt;/article&gt;
-</p></i><br>
-<hr>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlArticleExample"><code>&lt;article style="width: 100%; border:2px solid black; background-color: #fff0f5;"&gt;<br>    &lt;h2&gt;History of Computer&lt;/h2&gt;<br>    &lt;p&gt;Write your content here for the history of computer&lt;/p&gt;<br>&lt;/article&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlArticleExample', this)">Copy</button>
+</div><br>
+
 <p><strong>5. HTML &lt;aside&gt;</strong></p><br>
 <p>HTML &lt;aside&gt; define aside content related to primary content. The &lt;aside&gt; content must be related to the primary content. It can function as sidebar for the main content of webpage. </p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey"><p>&lt;aside style="background-color:#e6e6fa"&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Sidebar information&lt;/h2&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This conatins information which will represent like a side bar for a webpage&lt;/p&gt;<br>  
-&lt;/aside&gt;
-</p></i><br>
-<hr>
-<p><strong>5. HTML &lt;footer&gt;</strong></p><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlAsideExample"><code>&lt;aside style="background-color:#e6e6fa"&gt;<br>    &lt;h2&gt;Sidebar information&lt;/h2&gt;<br>    &lt;p&gt;This conatins information which will represent like a side bar for a webpage&lt;/p&gt;<br>&lt;/aside&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlAsideExample', this)">Copy</button>
+</div><br>
+
+<p><strong>6. HTML &lt;footer&gt;</strong></p><br>
 <p>HTML &lt;footer&gt; element defines the footer for that document or webpage. It mostly contains information about author, copyright, other links etc.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;footer style="background-color: #f0f8ff; width: 100%; text-align: center;"&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Footer Example&lt;/h3&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;© Copyright 2019-2025.&lt;/p&gt;<br>  
-&lt;/footer&gt;</p></i><br>
-<hr>
-<p><strong>5. HTML &lt;details&gt;</strong></p><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlFooterExample"><code>&lt;footer style="background-color: #f0f8ff; width: 100%; text-align: center;"&gt;<br>    &lt;h3&gt;Footer Example&lt;/h3&gt;<br>    &lt;p&gt;© Copyright 2019-2025.&lt;/p&gt;<br>&lt;/footer&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlFooterExample', this)">Copy</button>
+</div><br>
+
+<p><strong>7. HTML &lt;details&gt;</strong></p><br>
 <p>HTML &lt;details&gt; element is used to add extra details about te web page and user can hide or show the details as per requirement.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey;"><p>&lt;details style="background-color: #f5deb3"&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;summary&gt;This is visible section: click to show other details&lt;/summary&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This section only shows if user want to see it.&lt;/p&gt;<br>  
-&lt;/details&gt;</p></i><br>
-<hr>
-<p><strong>6. HTML &lt;summary&gt;</strong></p><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlDetailsExample"><code>&lt;details style="background-color: #f5deb3"&gt;<br>    &lt;summary&gt;This is visible section: click to show other details&lt;/summary&gt;<br>    &lt;p&gt;This section only shows if user want to see it.&lt;/p&gt;<br>&lt;/details&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlDetailsExample', this)">Copy</button>
+</div><br>
+
+<p><strong>8. HTML &lt;summary&gt;</strong></p><br>
 <p>HTML &lt;summary&gt; element is used with the details element in a web page. It is used as summary, captions about the content of &lt;details&t; element.</p><br>
-<p><strong>Example</strong></p>
-<i style="color: grey">
-<p>&lt;details&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;summary&gt;HTML is acronym for?&lt;/summary&gt;<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;p style="color: blue; font-size: 20px;"&gt;Hypertext Markup Language&lt;/p&gt;<br>  
-&lt;/details&gt;
-</p></i><br>
+<p><strong>Example</strong></p><br>
+<div class="code-block">
+  <pre id="htmlDetailsQAExample"><code>&lt;details&gt;<br>    &lt;summary&gt;HTML is acronym for?&lt;/summary&gt;<br>    &lt;p style="color: blue; font-size: 20px;"&gt;Hypertext Markup Language&lt;/p&gt;<br>&lt;/details&gt;</code></pre>
+  <button class="copy-btn" onclick="copyCode('htmlDetailsQAExample', this)">Copy</button>
+</div><br>
+
                                          `,
       };
                                           case 'HTML Layout Techniques':
