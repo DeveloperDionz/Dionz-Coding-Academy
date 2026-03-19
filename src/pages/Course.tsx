@@ -338,6 +338,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
       'React Programming':[],
       'Git Version Control':[],
       'PHP Programming':[],
+      'Java Programming':[]
     };
 
     const courseLessons = lessonTemplates[courseData.title] || [];
