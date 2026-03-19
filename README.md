@@ -1,4 +1,5 @@
 # Dionz Coding Academy
+## [View Live Project](https://dionzcodingacademy.netlify.app)
 
 <p align="center">
  <img src="public/screenshots/landing1.png" alt="Dionz Academy Hero" width="100%">
