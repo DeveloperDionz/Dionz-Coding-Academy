@@ -121,21 +121,24 @@ const Index = () => {
 
   const carouselImages = [
   "./images/DCAlogo1.png",
-  "./images/noPrior.png",
-  "./images/global.png",
-  "./images/cert.png",
-  "./images/self.png"
+  "./images/htmllogo.png",
+  "./images/csslogo.png",
+  "./images/javascriptlogo.png",
+  "./images/pythonlogo.png",
+  "./images/reactlogo.png"
 ];
 
 const sliderSettings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 3000,
   arrows: false,
+  fade: true,
+  cssEase: 'linear'
 };
 
 

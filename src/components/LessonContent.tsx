@@ -1,22 +1,42 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, Target, Code2, CheckSquare, LandPlot, Languages, Code } from "lucide-react";
 import CodeEditor from './CodeEditor';
-import exp from 'constants';
+
+interface Lesson {
+  id: number;
+  title: string;
+  content: string | null;
+  completed: boolean;
+  isHeading?: boolean;
+}
 
 interface LessonContentProps {
-  lesson: {
-    id: number;
-    title: string;
-    content?: string;
-    completed: boolean;
-  };
+  lesson: Lesson;
+  onUnlock: () => void;
   courseTitle: string;
 }
 
-const LessonContent: React.FC<LessonContentProps> = ({ lesson, courseTitle }) => {
+const LessonContent: React.FC<LessonContentProps> = ({ lesson, courseTitle, onUnlock }) => {
+
+  useEffect(() => {
+    if (lesson.isHeading) return;
+
+    if (lesson.completed){
+      onUnlock?.();
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      onUnlock?.();
+    }, 60000);
+
+    return () => clearTimeout(timer);
+  }, [lesson.id, onUnlock]);
+    
+
   const getLessonData = () => {
     const lessonKey = `${courseTitle}-${lesson.title}`;
     

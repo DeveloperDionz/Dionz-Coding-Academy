@@ -9,6 +9,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import LessonContent from '@/components/LessonContent';
+import Certificate from '@/components/Certificate';
 
 interface Course {
   id: string;
@@ -29,8 +30,10 @@ interface Lesson {
 
 interface CourseProgress {
   id: string;
+  user_id: string;
   course_id: string;
   completed_lessons: number;
+  completed_ids?: number[];
   progress_percentage: number;
   status: string;
   last_accessed: string;
@@ -75,6 +78,8 @@ const Course = () => {
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [currentLesson, setCurrentLesson] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [isLessonLocked, setIsLessonLocked] = useState(true);
+  const [showCertificate, setShowCertificate] = useState(false);
 
   const goToNextLesson = () => {
   let next = currentLesson + 1;
@@ -100,6 +105,10 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
       fetchCourseData();
     }
   }, [slug, user]);
+
+  useEffect(() => {
+    setIsLessonLocked(true);
+  }, [currentLesson]);
 
   const fetchCourseData = async () => {
     if (!slug || !user) return;
@@ -143,7 +152,11 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
       }
 
       // Generate lessons based on course
-      generateLessons(currentCourse);
+      if (progressData) {
+        setCourse(currentCourse);
+        setProgress(progressData);
+        generateLessons(currentCourse, progressData || undefined);
+      }
       
     } catch (err) {
       console.error('Error:', err);
@@ -152,7 +165,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
     }
   };
 
-  const generateLessons = (courseData: Course) => {
+  const generateLessons = (courseData: Course, progressData?: CourseProgress) => {
     const lessonTemplates: { [key: string]: string[] } = {
       'HTML Fundamentals': [
         'Introduction to HTML',
@@ -342,19 +355,46 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
     };
 
     const courseLessons = lessonTemplates[courseData.title] || [];
-    const generatedLessons = courseLessons.map((title, index) => ({
-      id: index + 1,
+    const currentProgress = progressData || progress;
+    const previouslyCompletedCount = currentProgress?.completed_lessons || 0;
+
+    let realLessonCounter = 0;
+
+    const generatedLessons = courseLessons.map((title, index) => {
+      const isHeading = title.startsWith("###");
+      const lessonId = index + 1;
+
+      let isCompleted = false;
+
+      if(!isHeading){
+        if(currentProgress?.completed_ids){
+          isCompleted = currentProgress.completed_ids.includes(lessonId);
+        } else {
+          const previouslyCompletedCount = currentProgress?.completed_lessons || 0;
+          realLessonCounter++;
+          isCompleted = realLessonCounter <= previouslyCompletedCount;
+        }
+      }
+
+      return{
+      id: lessonId,
       title,
-      content: title.startsWith("###") ? null : `Content for ${title}...`,
-      completed: false, // logic for progress here
-      isHeading: title.startsWith("###")
-    }));
+      content: isHeading ? null : `Content for ${title}...`,
+      completed: isCompleted,
+      isHeading: isHeading
+    };
+  });
 
     setLessons(generatedLessons);
 
-    //Find the first index that is NOT a heading
+    //If the user has already finished the whole course, show the certificate immediately
+    const totalRealLessons = generatedLessons.filter(l => !l.isHeading).length;
+    if(previouslyCompletedCount >= totalRealLessons && totalRealLessons > 0){
+      setShowCertificate(true);
+    }
+
     const firstRealLessonIndex = generatedLessons.findIndex(l => !l.isHeading);
-    if (firstRealLessonIndex !== -1) {
+    if(firstRealLessonIndex !== -1){
       setCurrentLesson(firstRealLessonIndex);
     }
   };
@@ -362,67 +402,62 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
   const markLessonComplete = async (lessonIndex: number) => {
     if (!user || !slug || !progress) return;
 
-    const realLessons = lessons.filter(l => !l.isHeading);
-    const realIndex = realLessons.findIndex(l => l.id === lessons[lessonIndex].id);
-    const newCompletedLessons = Math.max(progress.completed_lessons, realIndex + 1);
+    const currentLessonId = lessons[lessonIndex].id;
+    const currentIds = progress.completed_ids || [];
+    const updatedIds = currentIds.includes(currentLessonId) ? currentIds : [...currentIds, currentLessonId];
+    const totalRealLessons = lessons.filter(l => !l.isHeading).length;
+    const completedCount = updatedIds.length;
 
     try {
       const { error } = await supabase
         .from('course_progress')
         .update({
-          completed_lessons: newCompletedLessons,
-          progress_percentage: Math.round((newCompletedLessons / realLessons.length) * 100),
-          status: newCompletedLessons === realLessons.length ? 'completed' : 'in_progress',
+          completed_ids: updatedIds,
+          completed_lessons: completedCount,
+          progress_percentage: Math.round((completedCount / totalRealLessons) * 100),
+          status: completedCount === totalRealLessons ? 'completed' : 'in_progress',
           last_accessed: new Date().toISOString()
         })
         .eq('id', progress.id);
 
-      if (error) {
-        console.error('Error updating progress:', error);
-        toast({
-          title: "Error",
-          description: "Failed to update progress",
-          variant: "destructive"
-        });
-        return;
-      }
+      if (error) throw error;
 
-      // Update local state
+
+// update local state
       setProgress(prev => prev ? {
         ...prev,
-        completed_lessons: newCompletedLessons,
-        progress_percentage: Math.round((newCompletedLessons / realLessons.length) * 100),
-        status: newCompletedLessons === realLessons.length ? 'completed' : 'in_progress'
-      } : null);
+        completed_ids: updatedIds,
+        completed_lessons: completedCount,
+        progress_percentage: Math.round((completedCount / totalRealLessons) * 100)}:null);
 
-      setLessons(prev => prev.map((lesson) => {
-        if (lesson.isHeading) return lesson;
-        const realIndex = realLessons.findIndex(l => l.id === lesson.id);
-        return {
-        ...lesson,
-        completed: realIndex < newCompletedLessons
-      };
-    })
-    );
-
+        setLessons(prev => prev.map(l=>l.id === currentLessonId ? {...l, completed:true}:l));
+      
       toast({
-        title: "Lesson Completed!",
-        description: `Great job completing: ${lessons[lessonIndex]?.title}`,
+        title: "Progress Saved!"
       });
 
-      // Move to next lesson
+      if(completedCount === totalRealLessons){
+        setShowCertificate(true)
+      }
+
       let next = lessonIndex + 1;
-      while (next < lessons.length && lessons[next].isHeading) {
+      while (next < lessons.length && lessons[next].isHeading){
         next++;
       }
       if(next < lessons.length){
         setCurrentLesson(next);
       }
-      
-    } catch (err) {
-      console.error('Error:', err);
+
+    } catch (err){
+      console.error('error updating progress:', err);
+      toast({
+        title: "Error",
+        description: "Failed to update progress",
+        variant: "destructive"
+      });
     }
   };
+
 
   if (loading) {
     return (
@@ -568,10 +603,15 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
     {!lessons[currentLesson]?.isHeading && !lessons[currentLesson]?.completed && (
       <Button 
         onClick={() => markLessonComplete(currentLesson)}
-        className="bg-yellow-600 hover:bg-yellow-700"
+        disabled={isLessonLocked}
+        className={`${isLessonLocked ? 'bg-slate-400' : 'bg-yellow-600 hover:bg-yellow-700'}`}
       >
-        <CheckCircle className="w-4 h-4 mr-2" />
-        Mark Complete
+        {isLessonLocked ? (
+          <Clock className="w-4 h-4 mr-2 animate-pulse" />
+        ) : (
+          <CheckCircle className="w-4 h-4 mr-2" />
+        )}
+        {isLessonLocked ? "Read to unlock" : "Mark Complete"}
       </Button>
     )}
   </div>
@@ -581,6 +621,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
                 <LessonContent 
                   lesson={lessons[currentLesson]} 
                   courseTitle={course.title}
+                  onUnlock={() => setIsLessonLocked(false)}
                 />
                 
 
@@ -606,6 +647,14 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
           </div>
         </div>
       </div>
+
+    {showCertificate && (
+      <Certificate
+        courseTitle={course?.title || "Course"}
+        onClose={() => setShowCertificate(false)}
+        />
+    )}
+
     </div>
   );
 };
