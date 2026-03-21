@@ -610,7 +610,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         {isLessonLocked ? (
           <>
           <Clock className="w-4 h-4 mr-2 animate-pulse" />
-          <span>Read to mark complete</span>
+          <span>Mark complete</span>
           </>
         ) : (
           <>
