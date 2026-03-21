@@ -272,15 +272,28 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, mode, onSwitchMo
                 <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                 <Input
                   id="password"
+                  name="new-password-unique"
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
                   value={formData.password}
+
+                readOnly
+                onFocus={(e) => {
+                  e.target.removeAttribute('readonly');
+                  setIsPwdFocused(true);
+                }}
+
                   onChange={(e) => {
                     setFormData({ ...formData, password: e.target.value });
                     setIsTyping(true);
                   }}
-                  onFocus={() => setIsPwdFocused(true)}
-                  onBlur={() => setIsPwdFocused(false)}
+                  
+                  onBlur={(e) => {
+                    e.target.setAttribute('readonly', 'true');
+                    setIsPwdFocused(false);
+                  }}
+
+                  autoComplete="one-time-code"
                   className="pl-10 pr-10"
                   required
                 />
