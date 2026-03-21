@@ -601,20 +601,32 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
     </div>
 
     {!lessons[currentLesson]?.isHeading && !lessons[currentLesson]?.completed && (
+      <div className="flex flex-col items-center gap-2">
       <Button 
         onClick={() => markLessonComplete(currentLesson)}
         disabled={isLessonLocked}
-        className={`${isLessonLocked ? 'bg-slate-400' : 'bg-yellow-600 hover:bg-yellow-700'}`}
+        className={`${isLessonLocked ? 'bg-slate-400 cursor-not-allowed' : 'bg-yellow-600 hover:bg-yellow-700'}`}
       >
         {isLessonLocked ? (
+          <>
           <Clock className="w-4 h-4 mr-2 animate-pulse" />
+          <span>Read to mark complete</span>
+          </>
         ) : (
+          <>
           <CheckCircle className="w-4 h-4 mr-2" />
+          <span>Mark Complete</span>
+          </>
         )}
-        {isLessonLocked ? "Read to unlock" : "Mark Complete"}
       </Button>
+      {isLessonLocked && (
+        <p className="text-xs text-slate-500 italic">
+        Please finish the content to enable completion
+        </p>
+      )}
+    </div>
     )}
-  </div>
+    </div>
 </CardHeader>
 
               <CardContent>
