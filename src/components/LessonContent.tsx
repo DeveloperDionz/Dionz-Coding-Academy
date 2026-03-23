@@ -19472,6 +19472,3154 @@ expectedOutput: undefined,
 
       }
     }
+     //Git Version Control
+      if (courseTitle === 'Git Version Control') {
+        switch (lesson.title) {
+        case 'Introduction':
+          return {
+            theory:`
+            <p>In this section, you will learn all about version control system, source code management, and version control software. You will get an overall introduction about what is Git, how to install Git on different operating systems and have a full understanding of Git repository. This section will also provide information about the SHH key (Secure Shell network protocol) for secure login.</p><br>
+            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Version Control System</h3>
+            <p>Version Control Software (VCS) is a beneficial tool contributing to a collaborative software team workflow. It is a must in case of a team with multiple developers. Each company adopts the VCS that suits best to its strategy. The best VCSs are Git, CVS, SVN, Mercurial, Monotone. Find their pros and cons in next chapters.</p><br>
+            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">What is Git</h3>
+            <p>Git is a version control system that is widely used in the programming world. It is used for tracking changes in the source code during software development. Git is a speedy and efficient distributed tool that handles projects from small to very large ones. Git provides cheap local branching, convenient staging areas, and multiple workflows.</p><br>
+            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Install Git</h3>
+            <p>Working with Git starts with installing or updating, if you already have it on your computer. There are three ways to install Git on Mac OS X: Git for Mac installer, Homebrew and MacPorts. Learn the steps of installation on our next pages.</p><br>
+            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">SSH Hey</h3>
+            <p>SSH keys are an access credential used in SSH protocol (Secure Shell). A secure shell is a network protocol, which helps to login from one computer to another securely, as well as to manage networks, operating systems, and configurations.</p><br>
+            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Git Repository</h3>
+            <p>A Git repository is a storage of project files, which makes it possible to save code versions and have access to them.</p><br>          
+            `,
+          };
+          case 'Version Control System':
+            return{
+              theory:`
+              <p>Version control is a system that allows the software team to manage changes to the source code over time. This software tool makes it easier for developers to collaborate on different projects separating their tasks through branches. It also gives the possibility to turn back to earlier versions for comparing and fixing the mistakes if needed.</p><br>
+              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Importance</h3>
+              <p>The points mentioned above are especially important for developer-oriented work, as it enables multiple developers or teams to work separately without having an impact on the work of others. It helps to build, test and integrate features in a tractable manner.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Version Control Systems</h3>
+              <h3 style=" font-size: 1.0em; font-weight: bold; margin: 0.5em 0">Definition</h3>
+              <p>Version Control Systems (VCS) also known as SCM <b>(Source Code Management)</b> or RCS (Revision Control System) are software tools for keeping track of changes to the source code over time.</p><br>
+              <h3 style=" font-size: 1.0em; font-weight: bold; margin: 0.5em 0">Types of Version Control Systems</h3>
+              <p>Generally, there are three types of version control systems software teams choose. They are:</p><br>
+              <ol style="list-style-type: decimal; padding-left: 30px;">
+              <li style="font-weight:bold;">Local Version Control Systems</li>
+              <p>Local VCSs were created to prevent issues such as confusing the directories and accidentally writing or copying to the wrong file. It is a simple database that keeps all the changes to files under revision control. One of the most popular VCS tools was a system called Revision Control System (RCS), which is still distributed today, although being an earlier version control system. It allows users to make their revisions of a document, commit changes, and merge them. RCS was originally developed for programs but is also useful for text documents or configuration files that are frequently revised.</p><br>
+              <img src="/images/LVCS.png" alt="nodes" width="auto" height="auto"><br>
+              <li style="font-weight:bold;">Centralized Version Control Systems</li>
+              <p>In centralized systems, all the versioned files, as well as a number of clients that check out files from that central place, are included in a single server. For many years, this has been the standard for version control. Centralized Version Control Systems are CVS, Subversion, and Perforce.</p><br>
+              <img src="/images/CVCS.png" alt="nodes" width="auto" height="auto"><br>
+              <li style="font-weight:bold;">Distributed Version Control Systems</li>
+              <p>In Distributed Version Control Systems (DVCS), clients fully mirror the repository, including its full history. If the server that these systems were collaborating with dies, the client repositories can be copied back up to the server to restore it. Distributed Version Control Systems are Git, Mercurial, Bazaar or Darcs</p>
+              </ol><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Version Control Systems</h3>
+              <p>The primary benefits of Version Control Systems are the following:</p><br>
+              <ol style="list-style-type: decimal; padding-left: 30px;">
+              <li style="font-weight:bold;">Long-term change history</li>
+              <p>The changes made by developers, including the creating, modification, and deletion of files over the years, can be seen in history. It will allow going back to the previous version for analyzing bugs and fixing problems.</p><br>
+              <li style="font-weight:bold;">Branching and merging</li>
+              <p>Branching helps work in an independent manner and not interfere with each other’s work. Merging brings the works together and allows seeing if there are conflicts between those works.</p><br>    
+              <li style="font-weight:bold;">Traceability</li>
+              <p>Ability to trace each change and connect it to project management and bug tracking software, as well as to annotate each change with a message describing the purpose of the change.</p>
+              </ol><br>
+              `,
+            };
+            case 'Source Code Management':
+              return{
+                theory:`
+                <p>Source code management (SCM) is synonymous with Version control. It is a software tool that programmers use to manage source code. It tracks modifications to a source code repository and helps deal with merge conflicts.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advantages of Source Code Management</h3>
+                <p>SCM has a lot of useful features that can make your work even more effective and more manageable.</p><br>
+                <p>SCM is used for tracking the changes over time, thus creating a historical record, which can be used to find out where the bugs come from, compare the older versions and even undo some changes to the code base. Besides, it also archives these changes giving a cleaner look to the history log.</p><br>
+                <p>With the help of SCM, each developer works independently on a separate branch and once the work is done, all the branches are merged together.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Importance of Source Code Management</h3>
+                <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                <li><b>Track Changes</b> - Changes can be tracked as someone making a change leaves a commit message about it.</li><br>
+                <li><b>Synchronization</b> - The up-to-date codes can be fetched from the repository.</li><br>
+                <li><b>Backup and Restore</b> - Files are saved at any time and restored from the last saved one.</li><br>
+                <li><b>Undoing</b> - You can undo both the last known version and the last one created a long time ago.</li><br>
+                <li><b>Branching and Merging</b> - Changes are made on a branch and after being approved, they can be merged with the master branch.</li><br>
+                <li><b>Identifying Conflicts and Preventing Overwrites</b> - Overwrites are prevented and in case of conflicts, they are identified. SCM notifies the developers so that they can review these conflicts and resolve them.</li><br>
+                </ul>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices</h3>
+                <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                <li><b>Frequent commits</b> - Commits are snapshots that capture the current state of a project. Frequent commits give many opportunities to go back and undo the work. The commits can be combined into just a single commit to make clear the log.</li><br>
+                <li><b>Work from latest version</b> - SCM enables having a local copy of the codebase. To avoid merging conflicts pull or fetch the latest code before updating.</li><br>
+                <li><b>Detailed Notes</b> - It is a nice practice to leave a descriptive commit log message which will convey the commit’s content. Log messages become a “must” in the course of the project's development.</li><br>
+                <li><b>Review</b> - SCM provides a staging area which is used to collect edits before committing and review changes before creating a snapshot.</li><br>
+                <li><b>Branches</b> - This super powerful mechanism allows team members to work on a separate line of development. When branch development is complete it can be merged into the master line.</li><br>
+                <li><b>Workflow</b> - SCMs offer form methods of contribution. It is very important that the team establishes shared patterns of collaboration. SCM workflows set up processes for merging branches.</li><br>
+                `,
+              };
+              case 'Version Control Software':
+                return{
+                  theory:`
+                  <p>Version Control Software (VCS) is a beneficial tool contributing to a collaborative software team workflow. It is a must in case of a team with multiple developers. Each company adopts the VCS that suits best to its strategy.</p><br>
+                  <p>Below, the list of the best VCSs are presented.</p><br>
+                  <ol style="list-style-type: decimal; padding-left: 30px;">
+                  <li style="font-size: 1.3em; font-weight: bold;">Git</li>
+                  <p>Git is one of the most popular version control software available in today's market. Git is a speedy and efficient distributed version control system that is easy to learn. It can handle projects of any size, from small to huge ones. The distinctive features of Git are the following: cheap local branching, convenient staging areas, and multiple workflows. It is free open-source software.</p><br>
+                  <img src="/images/git.png" width="auto" height="auto"><br>
+                  <p style="font-weight: bold; font-size: 1.1em;">Cons of Git</p>
+                  <p>Despite its advantages, Git also has some cons. First of all, in the case of large binary files, the support is weak. Interactions can lose their speed because of large repositories that have a huge history. Besides, commands are unpredictable.</p><br>
+                  <li style="font-size: 1.3em; font-weight: bold;">CVS</li>
+                  <p>The second most popular version control system after Git is CVS (Concurrent Versions System), which has been preferable for developers for a long time. CVS, with its user-friendly architecture, helps developers record the history of files and documents. By default, it handles projects from small to middle size, and in order to support larger ones, it must be configured and extended. You can use CVS on almost every hardware platform and Operating system. It is free open-source software.</p><br>
+                  <img src="/images/cvs.png"  width="auto" height="auto"><br>
+                  <p style="font-weight: bold; font-size: 1.1em;">Cons of CVS</p>
+                  <p>CVS has some cons too. Particularly, it doesn't check the integrity of the source code repository. There is no support for atomic commits and check-outs, as well as for merge tracking and signed revisions.</p><br>
+                  <li style="font-size: 1.3em; font-weight: bold;">SVN</li>
+                  <p>SVN (Apache Subversion) is the next VCS that has been widely used over the past decade. SVN is a centralized version control system, which has the following features: versioned directories, atomic commits support, merge tracking, the existence of copying, deleting, moving and renaming versions, client-server repository model, metadata of free-from version, full MIME support, file locking, etc.. It is free open-source software.</p><br>
+                  <img src="/images/svn.png" width="auto" height="auto"><br>
+                  <p style="font-weight: bold; font-size: 1.1em;">Cons of SVN</p>
+                  <p>The time of file modifications aren't stored, some problems with filename normalization and the lack of support for signed revisions.</p><br>
+                  <li style="font-size: 1.3em; font-weight: bold;">Mercurial</li>
+                  <p>Mercurial is a distributed version control software written in python. This fast working software supports projects of any size and type. Its interface is quite predictable, which makes it easy to learn. It supports the following operating systems: Unix-like, Windows, and macOS. It strongly supports binary files and has excellent merging and branching capabilities. It is free open-source software.</p><br>
+                  <img src="/images/mercurial.png" width="auto" height="auto"><br>
+                  <p style="font-weight: bold; font-size: 1.1em;">Cons of Mercurial</p>
+                  <p>Python is required for all the add-ons. It doesn't allow partial check-outs and doesn't deal well with extra extensions.</p><br>
+                  <li style="font-size: 1.3em; font-weight: bold;">Monotone</li>
+                  <p>Monotone is a distributed version control system that is written in C++. It's a single-file transactional VSC that provides completely disconnected operation. Merging is history-sensitive, branches are quite light.</p><br>
+                  <p>Monotone supports a productive peer-to-peer synchronization. It understands history-sensitive merging, requires low maintenance, values the integrity of code review, and supports 3-way merges. It runs on several platforms: Linux, Solaris, Mac OS X, Windows, and other Unixes. It is free open-source software.</p><br>
+                  <img src="/images/monotone.png" width="auto" height="auto"><br>
+                  <p style="font-weight: bold; font-size: 1.1em;">Cons of Monotone</p>
+                  <p>Users cannot check out or commit from behind a proxy because of the absence of the HTTP protocol. Performance issues are observed for particular operations. The most obvious of them is the initial pull.</p><br>
+                  </ol><br>
+                  `,
+                };
+                case 'What is Git':
+                  return{
+                    theory:`
+                    <p>Git is a version control system that is widely used in the programming world. It is used for tracking changes in the source code during software development. It was developed in 2005 by Linus Torvalds, the creator of the Linux operating system kernel.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Importance of Git</h3>
+                    <p>Git is a speedy and efficient distributed VCS tool that can handle projects of any size, from small to very large ones. Git provides cheap local branching, convenient staging areas, and multiple workflows. It is free, open-source software that lowers the cost because developers can use Git without paying money. It provides support for non-linear development. Git enables multiple developers or teams to work separately without having an impact on the work of others.</p><br>
+                    <img src="/images/vcs1.png" width="auto" height="auto"><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Performance of Git</h3>
+                    <p>Git stands out with its performance advantages. Performance optimized operations are branching and merging, committing new changes, and the comparison of the past versions. One of the Git performance strengths is its advanced algorithms.</p><br>
+                    <p>Git focuses only on the file content while determining its storage and version history of the tree. The source code files are renamed, split, and rearranged regularly. The object format of Git repository files uses a mixture of delta encoding and compression. It stores directory contents and version metadata objects.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Security of Git</h3>
+                    <p>The main priority of Git is the integrity of managed source code. In Git repository, versions, directories, the content of the file, tags, and commits are secure because a cryptographically secure <b>SHA1</b> hashing algorithm is used, which ensures secure code history. Git provides an authentic content history of the source code.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Flexibility of Git</h3>
+                    <p>One of the advantages provided by Git is its flexibility in several aspects:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                    <li><b>Track Changes</b> - Changes can be tracked as someone making a change leaves a commit message about it.</li><br>
+                    <li><b>Backup and Restore</b> - It helps to maintain the source code backup.</li><br>
+                    <li><b>Collaboration</b> - It enables software team to collaborate with each other.</li><br>
+                    <li><b>Branching and Merging</b> - Changes are made on a branch and after being approved, they can be merged with the master branch. You can see who changed the file and what parts of the content are changed.</li><br>
+                    <li><b>Deployment</b> - It deploys the source code on the server with only one command.</li><br>
+                    </ul><br>
+                    <img src="/images/vcs2.png" width="auto" height="auto"><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Version Control With Git</h3>
+                    <p>Nowadays, Git is the most preferred version control system because it has almost everything that developers need to get more effective results. The main reasons for this are listed below:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                    <li>Git is so popular, that majority of developers can work on it, even before graduating colleges or universities. Besides, Git is considered to be the basis of version control systems, because the developers, who have already learned to work on it, can easily possess other ones.</li><br>
+                    <li>Due to its prevalence, many major software tools and services are incorporated in Git.</li><br>
+                    <li>There are lots of books, tutorials, and even specialized websites, that can help the developers to learn Git.</li><br>
+                    <li>As Git is open-source software, the developers have the opportunity to use it without paying any charge.</li><br>
+                    </ul><br>
+                    <p>The main reason Git is being criticized is the difficulty of learning it. Particularly, some terms used in Git can have other definitions than in other VCS. However, it worths learning it, as the ability to use Git is an excellent advantage for teams and individual developers and is one of the keys of their future success.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The most popular Git solutions</h3>
+                    <p>Git suggests some repository management services that you can find useful. In general, repository management services are the key to fast and effective software development. The most popular ones based on Git are GitHub, Bitbucket and GitLab.</p><br>
+                    <p><b>GitHub</b> is a git-based repository host originally launched in 2008 by Tom Preston-Werner, Chris Wanstrath, and PJ Hyatt. It is the largest repository hosting platform with more than 38 million projects. It permits to host and review code, manage projects and build software.</p><br>
+                    <p><b>Bitbucket</b> was launched in 2008 by an Australian startup and originally supported only Mercurial projects. In 2010 Bitbucket was bought by Atlassian, and from 2011, it started to support Git hosting, which is now its main focus. It provides free unlimited private repos, Jira and Trello integration and built-in continuous delivery.</p><br>
+                    <p><b>GitLab</b> started as a project by Dmitriy Zaporozhets and Valery Sizov in 2011, which aim was providing an alternative to the available repository management solutions. The company was, however, only incorporated in 2014. It provides continuous integration and delivery, agile development, Auto DevOps, etc..</p><br>
+                    `,
+                  };
+                  case 'Install Git':
+                    return{
+                      theory:`
+                      <p>Working with Git starts with installing or updating, if you already have it on your computer. On this page, you will find how to install Git on Windows, Linux and Mac.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Install Git on Mac</h3>
+                      <p>There are three ways to install Git on Mac OS X: Git for <b>Mac installer, Homebrew</b> and <b>MacPorts.</b></p><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Mac Installer</h3>
+                      <p>This is the simplest way of installing Git on Mac. Here are the steps to follow:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Download the latest Git for Mac installer.</li><br>
+                      <li>Follow the given instructions to finish installing.</li><br>
+                      <li>Open the terminal and type git --version to verify that the installation was successful.</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git --version<br>git version 2.9.2</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>Input your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Homebrew</h3>
+                      <p>Install Homebrew on Mac and then follow the steps below to install Git with it:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Open your terminal and install Git with Homebrew.</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>brew install git</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>Type git --version to verify that the installation was successful.</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git --version<br>git version 2.9.2</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>You need to input your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">MacPorts</h3>
+                      <p>Follow these instructions to install Git with MacPorts:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Update MacPorts:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>sudo port selfupdate</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>Now you need to search the most recent Git ports and variants:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>port search git<br>port variants git</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>The installation of Git should be with bash completion, the OS X keychain helper, and the docs:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>sudo port install git +bash_completion+credential_osxkeychain+doc</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>You need to configure your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Install Git on Windows</h3>
+                      <p>Find the instructions below to install Git on Windows:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Download the most recent Git for Windows installer.</li><br>
+                      <li>Then, the Git Setup wizard screen will show up and you need to follow the prompts to complete the installation.</li><br>
+                      <li>Open a Command Prompt or Git Bash if you've selected not to use Git from Windows Command Prompt.</li><br>
+                      <li>Configure your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Install Git on Linux</h3>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Debian / Ubuntu ( apt-get )</h3>
+                      <p>You can find Git packages via APT. Here are the steps to follow:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Install Git from your shell with apt-get:</li><br>
+                      <li>Type git --version to verify that the installation has succeeded:</li><br>
+                      <li>Input your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Fedora (dnf/yum)</h3>
+                      <p>Git packages are available via yum and dnf.</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                      <li>Install Git using dnf or use yum if you're using older versions of Fedora.</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>sudo dnf install git</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>sudo yum install git</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <li>Type git --version to verify that the installation was successful.</li><br>
+                      <li>Configure your Git username and email as given in the example below:</li><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git config --global user.name "BobSmith001"<br>git config --global user.email "bobsmith@blog.com"</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Install Git From Source on Linux</h3>
+                      <p>Installing Git from source is more preferable, as you can always get the latest and updated version. You need the following libraries to install Git from source: <b>curl, zlib, openssl, expat</b> and <b>libiconv.</b> For those, who use a system that has <b>dnf</b> or <b>apt-get</b>, the two commands below can be useful for installing all of the dependencies:</p><br>
+                      <p>Note that you will need the following additional dependencies to be able to add documentation in different formats (doc, HTML, info):</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>yum install curl-devel expat-devel gettext-devel \<br>openssl-devel zlib-devel perl-devel asciidoc xmlto</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \<br>libz-dev libssl-dev</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>sudo dnf install asciidoc xmlto docbook2X<br>sudo apt-get install asciidoc xmlto docbook2x</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <p>Compile and install:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>tar -zxf git-1.7.2.2.tar.gz<br>cd git-1.7.2.2<br>make prefix=/usr/local all<br>sudo make prefix=/usr/local install</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <p>Git can also be installed via Git itself for updates:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>git clone git://git.kernel.org/pub/scm/git/git.git</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      `,
+                    };
+                    case 'SSH Key':
+                      return{
+                        theory:`
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are SSH Keys?</h3>
+                        <img src="/images/ssh.png" width="auto" height="auto"><br>
+                        <p>SSH keys are an access credential used in SSH protocol (Secure Shell). A secure shell is a network protocol, which helps to login from one computer to another securely, as well as to manage networks, operating systems, and configurations. Functionally, SSH keys are nearly the same as passwords, but it’s more secure to log into a server with SSH keys than use only passwords because decrypt SSH is very difficult, almost impossible.</p><br>
+                        <p>SSH keys always come in pairs, and each of these pairs is composed of a public key and a private key. These two are types of keys.</p><br>
+                        <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                        <li>Public keys, also known as authorized keys, determine who can access each system.</li><br>
+                        <li>Private or identity keys identify users and give them access.</li><br>
+                        </ol><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How To Set Up SSH Keys?</h3>
+                        <p>You need public-key cryptographic algorithms to generate SSH keys, mostly used of which are RSA key and DSA key. SSH keys are set up with the help of a key generation tool.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Create an SSH key on Mac and Linux</h3>
+                        <p>As these two operating systems have modern terminal applications, that combine with SSH package, the steps of creating an SSH key are the same for both of them.</p><br>
+                        <ol style="list-style-type: decimal; padding-left: 30px; margin: 0.5em 0">
+                        <li>Open a command terminal and run the following:</li><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <li>Then you have to choose the file location.</li><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <li>Then you should add a secure passphrase, which will be required any time the SSH key is used.</li><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>> Enter passphrase (empty for no passphrase): [Type a passphrase]<br>> Enter same passphrase again: [Type passphrase again]</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <li>Add the new SSH key to the <b>ssh-agent</b></li><br>
+                        </ol><br>
+                        <p>The <b>ssh-agent</b> is a tool responsible for holding private keys, but it also arranges requests to sign SSH requests with the private keys for security purposes.</p><br>
+                        <p>Execute the following code to make sure that the ssh-agent code is running:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>$ eval "$(ssh-agent -s)"<br>> Agent pid 59566</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>If the ssh-agent code is running, add the new SSH key to the local SSH agent by executing the following command:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>ssh-add -K /Users/you/.ssh/id_rsa</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Create an SSH Key on Windows</h3>
+                        <p>You need Git Bash to create an SSH key on the Windows operating system. If you have it, you can generate the key following the same steps as given above.</p><br>
+                        `,
+                      };
+                      case 'Git Repository':
+                        return{
+                          theory:`
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is a Git Repository?</h3>
+                          <p>A Git Repository is a storage of your project files, which makes it possible to save code versions and have access to them.</p><br>
+                          <img src="/images/gitrepo.png" width="auto" height="auto"><br>
+                          <p><b>Git Init</b> for Initializing a new Repository</p><br>
+                          <p>First of all, you need <b>git init</b> command to create a new repository. This command is only used once, while initialising a new repository.</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git init</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>Consequently, a new subdirectory and a new master branch will be created:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git init <directory></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>This creates an empty Git Repository in the specified directory. Running this command will create a new folder which contains the .git subdirectory.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git clone for Cloning an Existing Repository</h3>
+                          <p>The <b>git clone</b> command is used for creating a local clone of an already existing repository. It is a one-time operation, too.</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git clone <repo url></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git add and Git Commit for Saving Changes to the Repository</h3>
+                          <p>Using <b>git add</b> and <b>git commit</b> commands, you can save the file version changes to your repository. Here is an example of the usage of these two commands:</p><br>
+                          <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                          <li>change directories to <b>/path/of/project</b></li><br>
+                          <li>create a new file <b>GitCommit.txt</b> with contents <b>"commit example for git repo"</b></li><br>
+                          <li><b>git add GitCommit.txt</b> to the repository staging area</li><br>
+                          <li>create a new commit message describing the work done</li><br>
+                          </ul><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>cd /path/of/project<br>echo "commit example for git repo" >> GitCommit.txt<br>git add GitCommit.txt<br>git commit -m "added GitCommit.txt to the repo"</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git Push for Repo-to-Repo Interaction</h3>
+                          <p>If you executed <b>git clone</b> command, it means that you already have a remote repository, so you can run git push command to push your changes to that repository. But if you used <b>git init</b>, you have no remote repository. In this case, you can use a hosted Git service, like <b>Github</b> or <b>Bitbucket</b>, and create your repo there, which will give a URL that you can add to your local repository and <b>git push</b> to the hosted repository.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git Config for Configuration and Set up</h3>
+                          <p>A remote repository is added to the local <b>git config</b> with the help of git remote command:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git remote add <remote_name> <remote_repo_url></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>After adding the remote repo, you can push local branches to it:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git push -u <remote_name> <local_branch_name></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>When you use the <b>-u</b> option, Git not only pushes your changes to the remote repository but also sets the remote branch as the default for future <b>git pull</b> and <b>git push</b> commands without specifying the remote branch explicitly.</p><br>
+                          <p>You may also need to set global Git configuration options such as username, or email. With the help of the <b>git config</b> command, you can configure your Git installation from the command line. This command defines everything (user info, preferences, the behavior of a repository). Below you will find some configuration options.</p><br>
+                          <p>Use the <b>--global</b> flag to set configuration options for the current user. Define the name of the author of all the commits in the current repository.</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git config --global user.name <name></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>Adding the <b>--local</b> option or not using a configuration option at all, will define the <b>user.name</b> for the current local repository. Define the e-mail of the author of all the commits by the current user.</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git config --local user.email <email></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>Use the <b>--system</b> option to set the configuration for the whole system, that is to say all users and repos on a machine.</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>git config --system core.editor <editor></code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          `,
+                        };
+                        case 'git init':
+                          return{
+                            theory:`
+                            <p>The <b>git init</b> command is used to generate a new, empty Git repository or to reinitialize an existing one. With the help of this command, a .git subdirectory is created, which includes the metadata, like subdirectories for objects and template files, needed for generating a new Git repository.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git init usage</h3>
+                            <p>Using <b>git init</b> is the simplest way of setting up version-controlled system projects, as there is no need to generate a repository, input files etc.</p><br>
+                            <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                            <li>In order to get a working Git repository, you only need to cd into your project subdirectory and run <b>git init</b> command into your terminal.</li><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>git init</code></pre>
+                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                            </div><br>
+                            <li>Transform the directory into your Git repository, to record the project changes.</li><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>git init <directory></code></pre>
+                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                            </div><br>
+                            <p>Create a new Git repository in a particular directory to generate a new .git subdirectory.</p><br>
+                            </ul><br>
+                            <p>After running <b>git init</b> on your project directory, which contains a .git subdirectory, you can run it on the same project directory once again, and it will not override the existing .git configuration.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git init bare repositories</h3>
+                            <p>The shared repositories must be created with the <b>--bare</b> flag. The <b>--bare</b> flag is used to create a repository that has not working directory and does not allows editting files and commit changes in the directory. <b>--bare</b> is a way to mark a repository as a storage facility. Bare repository must be initialized to <b>git push</b> and <b>git pull</b> from, but never directly commit to it. Central repositories must be created as bare repositories because pushing branches to a non-bare repository can overwrite changes. The central repository is always bare, while the local repositories are non-bare. The most common use for git init <b>--bare</b> is creating a remote central repository.</p><br>
+                            <img src="/images/gitinit.png" width="auto" height="auto"><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Template Directory</h3>
+                            <p>Templates initialize a new repository with .git subdirectory. The template directory will be one of the mentioned below:</p><br>
+                            <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
+                            <li>the argument which is given with the <b>--template</b> option,</li><br>
+                            <li>the contents of the <b>$GIT_TEMPLATE_DIR</b> environment variable,</li><br>
+                            <li>the <b>init.templateDir</b> configuration variable,</li><br>
+                            <li>the default template, which usually resides in a <b>/usr/share/git-core/templates</b> directory.</li><br>
+                            </ul><br>
+                            <p>The default templates are an example of utilizing template features. Templates can be created for default directories and files that will be copied to the already defined.git subdirectory.</p><br>
+                            <p>Templates initialize a new repository with .git subdirectory. Templates can be created for default directories and files that will be copied to the already defined .git subdirectory. The default templates are an example of utilizing template features.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Configuration of git init</h3>
+                            <p>The <b>git init < directory></b> configurations have a <b><directory></b> argument. The command is run inside the provided <b><directory></b>. In case of the absence of this directory, a new one will be created. Here is the full list of options:</p><br>
+                            <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-Q or --QUIET</td>
+      <td style="border: 1px solid #000; padding: 8px;">Prints only errors and warnings. All other output is concealed.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--BARE</td>
+      <td style="border: 1px solid #000; padding: 8px;">Creates a bare repository.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--TEMPLATE=&lt;TEMPLATEDIRECTORY&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies from which templates the directory must be used.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--SEPARATE-GIT-DIR=&lt;GIT DIR&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Creates a text file containing the path to <b>&lt;git dir&gt;</b>. The file acts as a link to the .git directory. When calling <b><code>git init --separate-git-dir</code></b> on an existing repository, the .git dir will be moved to the specified <b>&lt;git dir&gt;</b> path.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--SHARED[=(FALSE|TRUE|UMASK|GROUP|ALL|WORLD|EVERYBODY|0XXX)]</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies that the Git repository is to be shared among several users, allowing them to push/pull to that repository.</td>
+    </tr>
+  </tbody>
+</table>
+
+                            `,
+                          };
+                          case 'git clone':
+                            return{
+                              theory:`
+                              <p>The <b>git clone</b> is a git command, which creates a clone/copy of an existing repository into a new directory. It is also used to create remote-tracking branches for each branch in the cloned repository. It is the most common command which allows users to obtain a development copy of an existing central repository.</p><br>
+                              <img src="/images/gitclone.png" width="auto" height="auto"><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git clone usage</h3>
+                              <p>First of all, the <b>git clone</b> command is used to target an existing repository and clone or copy it in a new directory. A local copy stored on a server, that is accessible at <b>example.com</b> can be obtained using the <b>SSH username x_person</b> , like this:</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone ssh://x_person@example.com/path/to/team-project.git<br>cd team-project<br># You must work on this project</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <p>The <b>git clone</b> initializes a new Git repository in the team-project folder on your local machine and fills it with the contents of the central repository. After that, you can cd into the project starting modification of files, commitment of snapshots, and interaction with other repositories.</p><br>
+                              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Cloning to a certain folder</h3>
+                              <p>You should make a clone of the repository at <b><repo></b> into the folder called <b><directory></b> on the local machine.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone <repo> <directory></code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Cloning a certain tag</h3>
+                              <p>Clone the repository at <b><repo></b> and clone only the ref for <b><tag></b>.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone --branch <tag> <repo></code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Difference Between git init and git clone</h3>
+                              <p>The <b>git init</b> and <b>git clone</b> are usually confused with each other. Here it's important to note that <b>git clone</b> is dependant on the <b>git init</b> and creates a copy of a repository that already exists. In other words, for generating a <b>git clone</b>, we need a repository created with <b>git init</b>. Only after that, we run a <b>git clone</b> to copy the data that is included in our repository mentioned above.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Configuration Options of Git Clone</h3>
+                              <p>Configuration options are the tools you need for making Git work the way that suits best to you or your team. The most common ones are presented below:</p><br>
+                              <ul style="list-style-type: disc; padding-left: 30px; margin 0.5em 0">
+                              <li style="font-size: 1.2em; font-weight: bold;">git clone -branch</li><br>
+                              <p>The <b>-branch</b> argument specifies a branch which should be cloned instead of the one the remote <b>HEAD</b> is indicating to, usually the master branch. Besides, you can pass a tag instead of a branch for the same effect. Using the example below, you will have a clone of the <b>new_feature</b> branch from the remote repo:</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone -branch new_feature git://remoterepository.git</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <li style="font-size: 1.2em; font-weight: bold;">git clone --bare</li><br>
+                              <p>With the <b>--bare</b> argument passed to <b>git clone</b>, you will have a copy of the remote repo created with an excluded working directory. So, the repository will be created with the project history which can be pushed or pulled from but cannot be edited.</p><br>
+                              <li style="font-size: 1.2em; font-weight: bold;">git clone --mirror</li><br>
+                              <p>The behavior of the <b>--bare</b> argument is inherited by the <b>--mirror</b>, which means that passing the <b>--mirror</b> argument will also pass the <b>--bare</b>. The <b>--mirror</b> argument will clone all the extended refs of the remote repo. It will also allow you to maintain a remote branch tracking configuration.</p><br>
+                              </ul><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git URLs</h3>
+                              <p>Git has its own URL syntax. It is used for transferring remote repository locations to Git commands. Git URLs are important because <b>git clone</b> is mostly used on remote repositories.</p><br>
+                              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Git URL protocols</h3>
+                              <p>Git can use the following protocols for data transfer: <b>Git , Secure Shell (SSH) , HTTPS</b> and <b>Local</b>. It should be noted that all these protocols require Git to be installed and working on the server except for HTTPS protocols.</p><br>
+                              <ul style="list-style-type: disc; padding-left: 30px; margin 0.5em 0">
+                              <li style="font-size: 1.2em; font-weight: bold;">Git</li><br>
+                              <p>The Git protocol is unique to Git. It is a special daemon that runs on port (9418) providing a service similar to SSH but without any authentication.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git://host.xz[:port]/path/to/repo.git/</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <p>The advantage of the Git protocol is a fast transfer. The Git protocol has also some disadvantages: the absence of authentication and difficulty of the protocol configuration.</p><br>
+                              <li style="font-size: 1.2em; font-weight: bold;">SSH</li><br>
+                              <p>Secure Shell (SSH) is a network protocol, which helps to login from one computer to another securely. In most cases, SSH access to servers is configured by default. It's necessary to establish credentials with the hosting server before connecting.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone ssh://user@server/project.git</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <p>SSH is the only network protocol, which can be easily read from and write to. SSH has many other advantages such as easy configuration, secure access (all data transfer is encrypted and authenticated), and data compactness before its transfer. The disadvantage of SSH is that it doesn’t support anonymous access to the Git repository. You can find more information about SSH keys on our <b>SSH key</b> section.</p><br>
+                              <li style="font-size: 1.2em; font-weight: bold;">HTTPS</li><br>
+                              <p>HTTPS stands for HyperText Transfer Protocol. This protocol is mostly used to transmit HTML data above the Internet. Git is configured to share information with HTTPS.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone http://example.com/gitproject.git</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <p>One of the advantages of HTTPS is set up simplicity. It doesn’t require a lot of resources on the server as well. It encrypts the content transfer. Corporate firewalls are set up to allow traffic through the port thus making HTTPS one of the commonly used protocols.</p><br>
+                              <p>The main disadvantage is inefficiency for the client because it takes a lot of time to clone or fetch from the repository.</p><br>
+                              <li style="font-size: 1.2em; font-weight: bold;">Local</li><br>
+                              <p>Local is a basic protocol in which the remote repository is in another directory on disk. It is used when all the team members have access to a shared file system. Shared file system allows you to clone, push to, and pull from a local repository. The path to the repository can be used as the URL for cloning a repository like this to an existing project.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>git clone /opt/git/project.git</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              </ul><br>
+                              `,
+                            };
+                            case 'git config':
+                              return{
+                                theory:`
+                                <p>The <code>git config</code> command is a function that sets configuration variables. It controls git look and operation.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git config levels and files</h3>
+                                <p>The git config accepts arguments to specify on which configuration level to operate. When looking for a configuration value, Git prioritizes the following order of configuration levels:</p><br>
+                                <ol style="list-style-type: disc; padding-left: 30px; margin 0.5em 0">
+                                <li style="font-weight: bold;">--local</li><br>
+                                <p>When no configuration option is passed git config writes to a local level, by default.The repository of the .git directory has a file that stores local configuration values.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>.git/config</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <li style="font-weight: bold;">--global</li><br>
+                                <p>The application of the global level configuration includes the operating system user. Global configuration values can be found in a file placed in a user's home directory.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>~ /.gitconfig - on unix systems<br>C:\Users\<username>\.gitconfig - on windows</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <li style="font-weight: bold;">--system</li><br>
+                                <p>The System-level configuration includes all users on an operating system and all repositories. System-level configuration file is located in a git config file of the system root path.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>(prefix)/etc/gitconfig - on unix systems<br>C:\Documents and Settings\All Users\Application Data\Git\config - Windows XP<br>C:\ProgramData\Git\config - on Windows Vista and newer versions.</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                </ol><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to write a value</h3>
+                                <p>Here, the example writes the value "dca_email@example.com" to the configuration name user.email. The global level is used so as to set the value for the current operating system user.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>git config --global user.email "dca_email@example.com"</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git config usage</h3>
+                                <p>The basic use of git config is creating it with a configuration name that displays the set value at that name. Configuration names consist of a ''section'' and a ''key'' separated by a dot.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>git config user.email</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>Here, email is a child property of the user configuration block.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git config editor - core.editor</h3>
+                                <p>When your identity is set up, Git uses your system’s default editor, which is Vi or Vim. The git config sets up which editor Git will use. Here is the list of most common editors with git config commands:</p><br>
+                                <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Editor</th>
+      <th style="border: 1px solid #000; padding: 8px;">Config Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Atom</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "atom --wait"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">emacs</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "emacs"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">nano</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "nano -w"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">vim</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "vim"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Sublime Text (Mac)</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "subl -n -w"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Sublime Text (Win, 32-bit install)</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "'c:/program files (x86)/sublime text 3/sublimetext.exe' -w"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Sublime Text (Win, 64-bit install)</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "'c:/program files/sublime text 3/sublimetext.exe' -w"</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Textmate</td>
+      <td style="border: 1px solid #000; padding: 8px;">git config --global core.editor "mate -w"</td>
+    </tr>
+  </tbody>
+</table>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Merge tools of git config</h3>
+                                <p>Git uses one of the merge tools in the case of a merge conflict. Git uses an internal implementation of the Unix diff program, by default. Besides, there are a lot of external third party merge conflict resolutions used instead.</p><br>
+                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Colored outputs</h3>
+                                <p>Git supports colors thus simplifying the process of reading Git output. You can use your colors for customizing the output. For setting color values git config command is used.</p><br>
+                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Color.ui</h3>
+                                <p>Git automatically colors most of its output, but there is also a master variable if you want to set another color. For disabling all Git's colored terminal output you can do the following:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>git config --global color.ui false</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>The default setting of color.ui is auto which applies colors directly to the terminal output. It omits color code output when the output is redirected to a pipe or a file.</p><br>
+                                <p>You can also set the color.ui value to always. It applies color code output when the output is redirected to files or pipes. This can cause problems as the receiving pipe may not be expecting color-coded input.</p><br>
+                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Git color values</h3>
+                                <p>Besides color.ui, there are also other color settings that can be set to false, auto, or always. They can have a specific color value: normal, black, red, green, yellow, blue, magenta, cyan, white. Colors can be specified as hexadecimal color codes like #1c87c9 or ANSI 256 color values if the terminal supports it.</p><br>
+                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Git color configuration settings</h3><br>
+                                <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Property</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.branch</td>
+      <td style="border: 1px solid #000; padding: 8px;">Sets up the output color of the Git branch command.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.branch.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Relevant to Git branch output. &lt;slot&gt; can be: current branch, local branch, remote branch, upstream branch, plain (any other ref).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.diff</td>
+      <td style="border: 1px solid #000; padding: 8px;">Gives colors to git diff, git log, and git show output.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.diff.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies which part of the patch (context, plain, meta, frag, old, new, commit, whitespace) a specific color should be used.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.decorate.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Adjusts the color for <code>git log --decorate</code> output. Supported &lt;slot&gt; values: branch, remote branch, tag, stash, HEAD.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.grep</td>
+      <td style="border: 1px solid #000; padding: 8px;">Gives color to the output of git grep.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.grep.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies which part of the grep output (context, filename, function, line number, match, match context, match selected, selected, separator) color should be applied.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.interactive</td>
+      <td style="border: 1px solid #000; padding: 8px;">Gives color for interactive prompts and displays (e.g. <code>git add --interactive</code>, <code>git clean --interactive</code>).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.interactive.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Targets interactive output. Available &lt;slot&gt; values: prompt, header, help, error.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.pager</td>
+      <td style="border: 1px solid #000; padding: 8px;">Enables or disables colored output when the pager is in use.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.showBranch</td>
+      <td style="border: 1px solid #000; padding: 8px;">Enables or disables color output for the <code>git show-branch</code> command.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.status</td>
+      <td style="border: 1px solid #000; padding: 8px;">Enables or disables color output for Git status.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">color.status.&lt;slot&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies custom color for defined git status elements. Supported &lt;slot&gt; values: header, added/updated, changed, untracked, branch, nobranch, unmerged.</td>
+    </tr>
+  </tbody>
+</table>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The git config aliases</h3><br>
+                                <p>Aliases are custom shortcuts specifying which command will expand to longer or combined commands. There is no need for typing commonly used commands with aliases. Git has its own alias system which is mostly used to shorten git commit command. The git config command is used to configure aliases.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>git config --global alias.ci commit</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>Aliases can create super-powerful combinations with other aliases.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>git config --global alias.amend ci --amend</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>In the above-mentioned example, an alias amend composes the ci alias into a new alias that uses <b>--amend</b></p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Formatting & whitespace</h3><br>
+                                <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Category</th>
+      <th style="border: 1px solid #000; padding: 8px;">Property</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;" rowspan="3">Enabled Features by Default</td>
+      <td style="border: 1px solid #000; padding: 8px;">indent-with-non-tab</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights a line starting with spaces instead of tabs.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">tab-in-indent</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights an initial tab indent as an error.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">blank-at-eof</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights blank lines inserted at the end of a file.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;" rowspan="5">Disabled Features by Default</td>
+      <td style="border: 1px solid #000; padding: 8px;">indent-with-non-tab</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights a line starting with spaces instead of tabs.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">tab-in-indent</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights an initial tab indent as an error.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">trailing-space</td>
+      <td style="border: 1px solid #000; padding: 8px;">Shorthand for blank-at-eol and blank-at-eof.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">cr-at-eol</td>
+      <td style="border: 1px solid #000; padding: 8px;">Highlights a carriage-return at the end of the line.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">tabwidth=&lt;n&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies how many character positions a tab occupies. Default is 8. Allowed values: 1–63.</td>
+    </tr>
+  </tbody>
+</table>
+
+                                `,
+                              };
+                              case 'git alias':
+                                return {
+                                  theory:`
+                                  <p>A git alias, also known as a shortcut, creates short commands mapping the longer ones. It demands fewer keystrokes to run a command, which simplifies the developers' work. <b>Direct git alias command doesn't exist</b>. This type of command is created through the <b>git config</b> command and the git configuration files. Aliases can be generated in a local or a global scope with other configuration values.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating Aliases with Git</h3><br>
+                                  <p>There are two ways of creating Git aliases: using the git config and directly editing the .gitconfig file.</p><br>
+                                  <ul style="list-style-type: disc; padding-left: 30px; margin 0.5em 0">
+                                  <li style="font-size: 1.2em; font-weight: bold;">Creating Git aliases with git config command</li><br>
+                                  <p>In order to create Git aliases with the git config command, follow the steps below:</p><br>
+                                  <ol style="list-style-type: decimal; padding-left: 30px; margin 0.5em 0">
+                                  <li>To create a git alias you have to edit your .gitconfig file in the user directory, in order to make these aliases accessible for all the projects.</li><br>
+                                  <li>Run the git-config command and define the alias.</li><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>git config --global alias.c commit</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  <li>After this the line below will be added to the /.gitconfig file. Make sure it was saved.</li><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>git config --list</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  <li>Then the alias will be visible.</li><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>c = commit</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  <li>Now the alias is accessible. It will work just as you typed the whole command.</li><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>git c -m "example"</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  <li>In the end, open the config file and you will see something like this.</li><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>[alias]<br>c = commit</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  </ol><br>
+                                  <li style="font-size: 1.2em; font-weight: bold;">Creating git aliases by directly editing .gitconfig file</li><br>
+                                  <p>The second way of creating git aliases is directly editing git config files, like this:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>[alias]<br>co = checkout</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  </ul><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Aliases for Git Commands</h3><br>
+                                  <p>Here are some useful git aliases that just replace the original git command and are designed to make you type less:</p><br>
+                                  <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Alias</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">cob = checkout -b</td>
+      <td style="border: 1px solid #000; padding: 8px;">Checkouts a new not yet existing branch.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">f = fetch -p</td>
+      <td style="border: 1px solid #000; padding: 8px;">Fetches from a repository and prunes any remote-tracking references that no longer exist on the remote.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">p = push</td>
+      <td style="border: 1px solid #000; padding: 8px;">Pushes the changes to a remote.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">bd = branch -d</td>
+      <td style="border: 1px solid #000; padding: 8px;">Deletes a branch only if it has been merged.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">ba = branch -a</td>
+      <td style="border: 1px solid #000; padding: 8px;">Lists both remote-tracking and local branches.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">bD = branch -D</td>
+      <td style="border: 1px solid #000; padding: 8px;">Forces deletion of a branch.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">dc = diff --cached</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays the staged changes.</td>
+    </tr>
+  </tbody>
+</table>
+                                  `,
+                                };
+                                case 'git add':
+                                  return{
+                                    theory:`
+                                    <p>The <code>git add</code> is a command, which adds changes in the working directory to the staging area. With the help of this command, you tell Git that you want to add updates to a certain file in the next commit. But in order to record changes, you need to run <code>git commit</code> too. In combination with the commands mentioned above, <code>git status</code> command is also needed to see which state the working directory and the staging area are in.</p><br>
+                                    <img src="/images/gitadd.png" width="auto" height="auto"><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Working principles</h3><br>
+                                    <p>The <code>git add</code>, along with <code>git commit</code> are used to record project versions into the history of the repository. They are must-know for every Git user, as they compose the basis of Git workflow.</p><br>
+                                    <p>While developing a project, you first edit the files in the working directory, then when a copy of the current state is ready to save, you need to stage changes, which is done with the <code>git add</code> command. The <code>git add</code> command should be called every time altering a file.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Staging area</h3><br>
+                                    <p>The basic role of the <code>git add</code> command is promoting changes in the working directory to the git staging area. The staging area of Git is one of its most special characteristics, which lets gather all the connected changes into highly focused snapshots. Only after that, you can commit these changes to your project history.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                    <ul style="list-style-type: disc;">
+                                    <li>Staging changes in <file> for the next commit:</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>git add <file></code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <li>Staging all changes in <directory> for the next commit.</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>git add -p</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <li>Staging all changes in already tracked files</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>git add -u</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    </ul><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of git add</h3><br>
+                                    <p>The git add and git commit commands are used to create an initial commit of the current directory, as well as recording changes to existing files.</p><br>
+                                    <p>After starting the project you can add new files by passing the path to git add.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>git add hello.py</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>git commit</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Interactive mode</h3><br>
+                                    <p>An interactive staging session lets you choose portions of a file to be added to the next commit. You will be suggested a chunk of changes and prompted for a command. The available options are the following ones:</p><br>
+                                    <p><b>y</b> - staging the hunk</p><br>
+                                    <p><b>n</b> - not staging the hunk</p><br>
+                                    <p><b>q</b> - quit; not staging the hunk or any remaining one</p><br>
+                                    <p><b>a</b> - staging the hunk with all later hunks in the file</p><br>
+                                    <p><b>d</b> - not staging the hunk or any later hunk in the file</p><br>
+                                    <p><b>g</b> - selecting a hunk to go to</p><br>
+                                    <p><b>/</b> - searching for a hunk which matches the given regex</p><br>
+                                    <p><b>j</b> - leaving the hunk undecided, checking the next undecided hunk</p><br>
+                                    <p><b>J</b> - leaving the hunk undecided, checking the next hunk</p><br>
+                                    <p><b>k</b> - leaving the hunk undecided, checking the previous undecided hunk</p><br>
+                                    <p><b>K</b> - leaving the hunk undecided, checking the previous hunk</p><br>
+                                    <p><b>s</b> - splitting the current hunk into smaller ones</p><br>
+                                    <p><b>e</b> - manually editing the current hunk</p><br>
+                                    <p><b>?</b> - the print help</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Editing patches</h3><br>
+                                    <p>Calling <code>git add -e</code> or selecting <code>e</code> from the interactive chunk selector opens a patch in the editor; after exiting the editor, the output is applied to the index. Arbitrary changes are made to the patch, but some changes may have complicated outputs or even an output in a patch that is inapplicable. If you want to decline the operation entirely, simply delete all lines of the patch. Here are some common things you may see in a patch, and which editing operations make sense on them.</p><br>
+                                    <p>Lines starting with "+" represent <b>added content</b>. You can delete them in order to prevent staging any addition lines.</p><br>
+                                    <p>Lines beginning with "-" represent <b>removed content</b>. In order to prevent staging their deletion, you can convert the "-" to a " " (space).</p><br>
+                                    <p><b>Modified content</b> is shown with "-" lines (deleting the old content) followed by "+" lines (adding the replacement content). For preventing the staging of the modification, you can convert "-" lines to " ", and remove "+" lines. Note that modifying only half of the pair may cause confusing changes to the index.</p><br>
+                                    `,
+                                  };
+                                  case 'git commit':
+                                    return{
+                                      theory:`
+                                      <p>The git commit command saves all currently staged changes of the project. Commits are created to capture the current state of a project. Committed snapshots are considered safe versions of a project because Git asks before changing them. Before running git commit command, git add command is used to promote changes to the project that will be then stored in a commit.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                      <p>Git snapshots are committed to the local repository. Git creates an opportunity to gather the commits in the local repository, rather than making a change and commit it immediately to the central repository. This has many advantages splitting up a feature into commits, grouping the related commits, and cleaning up local history before committing it to the central repository. This also gives the developers an opportunity to work in an isolated manner.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                      <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git commit -a</td>
+      <td style="border: 1px solid #000; padding: 8px;">Commits a snapshot of all changes in the working directory. Only modifications to tracked files are included.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git commit -m "commit message"</td>
+      <td style="border: 1px solid #000; padding: 8px;">Creates a commit with a passed commit message. By default, git commit opens the locally configured text editor causing a commit message to be entered.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git commit -am "commit message"</td>
+      <td style="border: 1px solid #000; padding: 8px;">Combines the -a and -m options for creating a commit for all the staged changes and taking an inline commit message.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git commit --amend</td>
+      <td style="border: 1px solid #000; padding: 8px;">Modifies the last commit. Staged changes are added to the previous commit. This command opens the system's configured text editor and changes the previously specified commit message.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Saving changes with a commit</h3><br>
+                                      <p>In the following example, we have the dca.txt file with changed content on the current branch. To commit the staged snapshot of the file, first, you should stage the file with git add command.</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>git add dca.txt</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>Running git add will move dca.txt file to the Git staging area. Use the git status command to see the output.</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>git status<br>On branch master<br>Changes to be committed:<br>(use "git reset HEAD <file>..." to unstage)<br>new file: dca.txt</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>The green output indicates that dca.txt will be saved with the next commit. The commit is created by executing:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>git commit</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>Running git commit opens a text editor (we can set it via git config) asking for a commit log message and a list of what is being committed:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code># Enter the commit message of your changes. Lines that start<br># with '#' will be ignored, an empty message breaks off the commit.<br># On branch master<br># Changes needed to be committed:<br># (use "git reset HEAD ..." to unstage)<br>#<br>#modified: dca.txt</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>The canonical format of Git is used for summarizing the whole commit on the first line in less than 50 characters, then it leaves a blank line, after which gives a detailed explanation of the changes. For example:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>Change the message displayed by dca.txt<br><br>- Update the sayHello() function to get the username<br>- Change the sayGoodbye() function to a more welcoming message</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>The first line in the commit message is the subject line, the rest is its body.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to update (amend) a commit</h3><br>
+                                      <p>The following example opens the configured text editor pre-filled with the already entered commit message. It means you are editing the last commit instead of creating a new one.</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>git add dca.txt<br>git commit --amend</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git commit vs svn commit</h3><br>
+                                      <p>SVN is a centralized application model while Git is a distributed application model. SVN commit pushes changes from the local client to a centralized repository. In Git the snapshots are committed to the local repository. Git commits can be pushed to arbitrary remote repositories.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Snapshots, not differences</h3><br>
+                                      <p>Git is based on the snapshots whereas SVN tracks differences of a file. svn commit consists of a diff which is compared to the original file added to the repository. Git records the whole content of all the files in every commit. When committing or saving the state of the project, Git takes a snapshot of the current file look and stores a reference to that snapshot. If there is no change in the file, Git doesn't store it again.</p><br>
+                                      <img src="/images/snapshot.png" width="auto" height="auto"><br>
+                                      `,
+                                    };
+                                    case 'git stash':
+                                      return{
+                                        theory:`
+                                        <p>The git stash command shelves changes you have made to your working copy so you can do another work, and then come back and re-apply them.<p><br>
+                                        <img src="/images/gitstash.png" width="auto" height="auto">
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Stashing your work</h3><br>
+                                        <p>The git stash takes uncommitted both staged and unstaged changes, saves them away for further use, and then returns them from your working copy. Firstly, you can run the git status so you can see the dirty state. Then run git stash to stash the changes:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git status</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>On branch master<br>Changes to be committed:<br>new file: style.css<br>Changes not staged for commit:<br>modified: index.html</code></pre>
+                                        </div><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>$ git stash</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>Saved working directory and index state WIP on master: 5002d47 our new homepage<br>HEAD is now at 5002d47 our new homepage</code></pre>
+                                        </div><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>$ git status</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>On branch master<br>nothing to commit, working tree clean</code></pre>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Re-applying your stashed changes</h3><br>
+                                        <p>The git stash pop removes the changes from your stash and re-applies them to your working copy.</p><br>
+                                        <p>The alternate way is running git stash apply if you want to re-apply the changes and keep them in your stash:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git status</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>On branch master<br>nothing to commit, working tree clean</code></pre>
+                                        </div><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash pop</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>On branch master<br>Changes to be committed:<br>new file: style.css<br>Changes not staged for commit:<br>modified: index.html<br>Dropped refs/stash@{0} (32b3aa1d185dfe6d57b3c3cc3b32cbf3e380cc6a)</code></pre>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Stashing untracked or ignored files</h3><br>
+                                        <p>The git stash will stash the changes that have been added to your index (staged changes) and changes made to files currently tracked by Git (unstaged changes). It will not stash the new files in the working copy that have not yet been staged and ignored files. In these cases, the git stash -u option (or --include-untracked) helps to stash the untracked files.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash -u</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>You can add changes to ignored files as well by using the <b>-a</b> option (or <a>--all</b>) when running git stash.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash -a</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Multiple Stashes</h3><br>
+                                        <p>You can run git stash several times so as to create multiple stashes, and then run git stash list to view them. By default, stashes are identified as a "WIP" - work in progress. It comes on top of the branch and commits that you created the stash from.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash list</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>stash@{0}: WIP on master: 5002d47 our new homepage<br>stash@{1}: WIP on master: 5002d47 our new homepage<br>stash@{2}: WIP on master: 5002d47 our new homepage</code></pre>
+                                        </div><br>
+                                        <p>It is good to add some context with <code>git stash save "message"</code></p><br>
+                                        <p>By default, <code>git stash pop</code> will re-apply the last created stash: stash@{0}</p><br>
+                                        <p>You can choose which stash to re-apply like this:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash pop stash@{3}</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Viewing stash diffs</h3><br>
+                                        <p>Use git stash show to view a summary of a stash:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash pop show</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>index.html | 1 +<br>style.css | 3 +++<br>2 files changed, 4 insertions(+)</code></pre>
+                                        </div><br>
+                                        <p>You can also use the -p or --patch options to see the full diff of a stash:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash show -p</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>diff --git a/style.css b/style.css<br>new file mode 100644<br>index 0000000..d92368b<br>--- /dev/null<br>+++ b/style.css<br>@@ -0,0 +1,3 @@<br>+* {<br>+ text-decoration: blink;<br>+}<br>diff --git a/index.html b/index.html<br>index 9daeafb..ebdcbd2 100644<br>--- a/index.html<br>+++ b/index.html<br>@@ -1 +1,2 @@<br>+<link rel="stylesheet" href="style.css"/></code></pre>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Partial stashes</h3><br>
+                                        <p>Git allows choosing whether you want to stash just a single file, a bunch of files or individual changes within files. The git stash-p iterates through each hunk (a piece of change in Git) in the working copy and ask if you want to stash it or not:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash -p</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>diff --git a/style.css b/style.css<br>new file mode 100644<br>index 0000000..d92368b<br>--- /dev/null<br>+++ b/style.css<br>@@ -0,0 +1,3 @@<br>+* {<br>+ text-decoration: blink;<br>+}<br>Stash this hunk [y,n,q,a,d,/,e,?]? y<br>diff --git a/index.html b/index.html<br>index 9daeafb..ebdcbd2 100644<br>--- a/index.html<br>+++ b/index.html<br>@@ -1 +1,2 @@<br>+<link rel="stylesheet" href="style.css"/><br>Stash this hunk [y,n,q,a,d,/,e,?]? n</code></pre>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Hunk Commands</h3><br>
+                                        <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">/</td>
+      <td style="border: 1px solid #000; padding: 8px;">Search for a hunk by regex.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">?</td>
+      <td style="border: 1px solid #000; padding: 8px;">Print help.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">n</td>
+      <td style="border: 1px solid #000; padding: 8px;">Do not stash the hunk.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">a</td>
+      <td style="border: 1px solid #000; padding: 8px;">Stash this hunk and all later hunks in the file.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">d</td>
+      <td style="border: 1px solid #000; padding: 8px;">Do not stash this hunk or any of the later hunks in the file.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">e</td>
+      <td style="border: 1px solid #000; padding: 8px;">Manually edit the current hunk.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">q</td>
+      <td style="border: 1px solid #000; padding: 8px;">Quit (selected hunks will be stashed).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">s</td>
+      <td style="border: 1px solid #000; padding: 8px;">Split the hunk into smaller hunks.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">y</td>
+      <td style="border: 1px solid #000; padding: 8px;">Stash the hunk.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating a branch from stash</h3><br>
+                                        <p>You can create a new branch to apply your stashed changes to it with git stash branch:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash branch add-stylesheet stash@{1}</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>Switched to a new branch 'add-stylesheet'<br>On branch add-stylesheet<br>Changes to be committed:<br>new file: style.css<br>Changes not staged for commit:<br>modified: index.html<br>Dropped refs/stash@{1} (32b3aa1d185dfe6d57b3c3cc3b32cbf3e380cc6a)</code></pre>
+                                        </div><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Cleaning up the stash</h3><br>
+                                        <p>You can delete the stash with git stash drop:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash drop stash@{1}</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <div class="code-block1">
+                                        <pre><code>Dropped stash@{1} (17e2697fd8251df6163117cb3d58c1f62a5e7cdb)</code></pre>
+                                        </div><br>
+                                        <p>If you use git stash clear it will delete all the stashes:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>git stash clear</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        `,
+                                      };
+                                      case 'git diff':
+                                        return{
+                                          theory:`
+                                          <p>The git diff is a multi-function Git command, which is used to compare changes committed in Git. Particularly, with the help of this command, you can take two input data sets and output the modifications between them. While executing, this command runs a diff function on Git data source. Commonly, it is used in combination with git status and git log commands for analyzing the state of a git repository.</p><br>
+                                          <img src="/images/gitdiff.png" width="auto" height="auto"><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Diff outputs</h3><br>
+                                          <p>Diffing can have multiple outputs that will be discussed below.</p><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Raw output format</h3><br>
+                                          <p>Take a look at the commands below to create a simple repository:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>mkdir test_repo<br>cd test_repo<br>touch test.txt<br>echo "this is a git diff test example" > test.txt<br>git init .<br>#Initialized empty Git repository in /Users/kev/code/test/.git/<br>git add test.txt<br>git commit -am "add diff test file"<br>#[master (root-commit) 9e2dcac] add diff test file<br>#1 file changed, 1 insertion(+)<br>#create mode 100644 test.txt</code></pre>
+                                          </div><br>
+                                          <p>If you want the git diff to have an output, you have to change the content of the test.txt file after adding it to the created repository. You can do it by executing the following command:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>echo "this is a diff example" > test.txt</code></pre>
+                                          </div><br>
+                                          <p>Only now we can view a diff and discuss output. Executing git diff will produce the following:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>diff --git a/test.txt b/test.txt<br>index 6b0c6cf..b37e70a 100644<br>--- a/test.txt<br>+++ b/test.txt<br>@@ -1 +1 @@<br>-this is a git diff test example<br>+this is a diff example</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Diff input sources</h3><br>
+                                          <p>Below you can find the comparison input of diff. As a result, a/test.txt and b/test.txt will be passed to the diff.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>diff --git a/test.txt b/test.txt</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Meta data</h3><br>
+                                          <p>This line shows some internal Git meta data .The numbers in this output match to Git object version hash identifiers.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>index 6b0c6cf..b37e70a 100644</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Symbols for changes</h3><br>
+                                          <p>These lines show the symbols assigned to each diff input source. Changes from a/test.txt are marked with a --- and the changes from b/test.txt are marked with the +++ symbol.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>--- a/test.txt<br>+++ b/test.txt</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Diff chunks</h3><br>
+                                          <p>A diff doesn't show the whole file. It shows only modified lines. That modified portion is called a "chunk". The advantage of the chunks is that they show lines before and after the changes, so you can have a better understanding of the modifications.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>@@ -1 +1 @@<br>-this is a git diff test example<br>+this is a diff example</code></pre>
+                                          </div><br>
+                                          <p>The first line is the chunk header. Each chunk is placed by a header within @@ symbols. The changes made to the file are summarized in the header.</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Highlighting changes</h3><br>
+                                          <p>You can use the following 2 tools for highlighting changes so that they will be more visible.</p><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">git diff --color-words</h3><br>
+                                          <p>The first way of highlighting changes is the special mode that git diffproposes: --color-words. It tokenizes added and removed lines by whitespace and then diffs those.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff --color-words<br>diff --git a/test.txt b/test.txt<br>index 6b0c6cf..b37e70a 100644<br>--- a/test.txt<br>+++ b/test.txt<br>@@ -1 +1 @@<br>this is agit difftest example</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">git diff-highlight</h3><br>
+                                          <p>In the case of cloning the git source, a sub-directory call contrib will be found. This sub-directory contains tools that are related to Git. One of these tools is called diff-highlight. It highlights changed sub-word pieces.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff | /your/local/path/to/git-core/contrib/diff-highlight/diff-highlight<br>diff --git a/test.txt b/test.txt<br>index 6b0c6cf..b37e70a 100644<br>--- a/test.txt<br>+++ b/test.txt<br>@@ -1 +1 @@<br>-this is a git diff test example<br>+this is a diff example</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Diffing binary files</h3><br>
+                                          <p>Git diff can be run not only on text files, but also on binary ones. The default option can sometimes be not very useful.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff<br>Binary files a/script.pdf and b/script.pdf differ</code></pre>
+                                          </div><br>
+                                          <p>Git has a feature allowing you to specify a shell command to convert the binary files content into text prior to performing the diff. However, a little set up may be required. First of all, you should define a textconv filter with the description of the conversion way of a certain type of binary to a text. For example, you can use a simple utility called pdftohtml (available through homebrew) to convert PDF into HTML. There are two ways of setting it up: by editing the .git/config file, or globally, by editing .gitconfig.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>[diff "pdfconv"]<br>textconv=pdftohtml -stdout</code></pre>
+                                          </div><br>
+                                          <p>Then you need to connect one or more file patterns with the pdfconv filter, which can be done by creating a .gitattributes file in the root of the repository.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>*.pdf diff=pdfconv</code></pre>
+                                          </div><br>
+                                          <p>After the configuration, git diff will firstly run the binary file via the configured converter script and diff the output of the converter. Using the same technique, you can also have helpful diffs from all types of a binary file (zips, jars, and other archives).</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison of files: git diff file</h3><br>
+                                          <p>The git diff command has also an explicit file path option. The Git diff operation will go through the specific file once the file path passed to git diff. In the example below, the ./path/to/file argument will compare the modifications in the working directory against the index and display the changes that haven't been staged yet. It will perform the comparison against HEAD.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff HEAD ./path/to/file</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison of all changes</h3><br>
+                                          <p>In order to compare changes throughout the whole repo, you should run git diff without a file path. So, you can invoke the examples above without the ./path/to/file argument and have the same results across all files in the local repository.</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Changes since the recent commit</h3><br>
+                                          <p>Initially, git diff shows all of the uncommitted changes since the most recent commit:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison of files between two commits</h3><br>
+                                          <p>Thegit diff command can be passed to Git refs, such as names of head, tags, and branches. Every commit in Git has its commit ID which can get when executing git log. The commit ID can also be passed to git diff.</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison of branches</h3><br>
+                                          <p>The comparison of branches is executed similarly to other ref inputs to git diff. Let's see dot operator examples:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff branch1..branch2</code></pre>
+                                          </div><br>
+                                          <p>The two dots in the example above show that the diff input is the tips of both branches. You will have the same result if the dots are left out and space is used between the branches. Besides, there is a three-dot operator:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff branch1...branch2</code></pre>
+                                          </div><br>
+                                          <p>The three-dot operator changes the first input parameter <b>branch1</b> initiating the diff. It transforms branch1 into a ref of the shared common ancestor commit between the two diff inputs. The last input parameter stays the same as the tip of <b>branch2.</b></p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison of the files from two branches</h3><br>
+                                          <p>In order to compare a specific file in branches, you should pass in the path of the file as the third argument to git diff:</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>git diff master new_branch ./test.txt</code></pre>
+                                          </div><br>
+                                          `,
+                                        };
+                                        case '.gitignore':
+                                          return{
+                                            theory:`
+                                            <p>In the working copy, the files are visible to Git as one of the following: tracked, untracked and ignored.</p><br>
+                                            <p>Ignored files are the ones that Git has been told to ignore. They are considered to be build artifacts. If you want these files to be committed, first they have to be derived from the repository source. Some examples of Git ignored files are presented below:</p><br>
+                                            <ul style="list-style-type: disc; padding-left:30px;">
+                                            <li>Files which are generated at runtime (for example .log, .lock),</li><br>
+                                            <li>Hidden system files (.DS_Store,Thumbs.db),</li><br>
+                                            <li>Compiled code (.o, .class) and so on.</li><br>
+                                            </ul><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git ignore patterns</h3><br>
+                                            <p>Git ignore files are located in a file called .gitignore. They are edited and committed by hand, as a git ignore command doesn’t exist. Git ignore files contain patterns matched against file names, with the help of which you decide to ignore or not each file. These patterns are created with the help of several symbols:</p><br>
+                                            <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Pattern</th>
+      <th style="border: 1px solid #000; padding: 8px;">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border: 1px solid #000; padding: 8px;">**/logs</td><td style="border: 1px solid #000; padding: 8px;">Double asterisks are used to match directories anywhere in the repository.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">**/logs/debug.log</td><td style="border: 1px solid #000; padding: 8px;">Double asterisks are used to match files based on their name and the name of their parent directory.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">*.log</td><td style="border: 1px solid #000; padding: 8px;">An asterisk matches zero or more characters.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">*.log !important.log</td><td style="border: 1px solid #000; padding: 8px;">Exclamation mark negates pattern. The file will not be ignored if it matches a negating pattern defined later.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">*.log !important/*.log trace.*</td><td style="border: 1px solid #000; padding: 8px;">Any previously negated file will be re-ignored by the patterns defined after a negating pattern.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">/debug.log</td><td style="border: 1px solid #000; padding: 8px;">The slash matches files only in the repository root.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug.log</td><td style="border: 1px solid #000; padding: 8px;">By default, patterns match files in any directory.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug?.log</td><td style="border: 1px solid #000; padding: 8px;">The question mark matches just one character.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug[0-9].log</td><td style="border: 1px solid #000; padding: 8px;">Square brackets are used to match a single character from a particular range.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug[01].log</td><td style="border: 1px solid #000; padding: 8px;">Square brackets match a single character from the particular set.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug[!01].log</td><td style="border: 1px solid #000; padding: 8px;">The exclamation mark is used to match any character except one from the particular set.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">debug[a-z].log</td><td style="border: 1px solid #000; padding: 8px;">Ranges can be numeric or alphabetic.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">logs</td><td style="border: 1px solid #000; padding: 8px;">Matches both files and the contents of directories with that name if not used with a slash.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">logs/</td><td style="border: 1px solid #000; padding: 8px;">Using a slash points out that the pattern is a directory. The whole content of any directory with its files and subdirectories will be ignored.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">logs/**/debug.log</td><td style="border: 1px solid #000; padding: 8px;">A double asterisk matches zero or more directories.</td></tr>
+    <tr><td style="border: 1px solid #000; padding: 8px;">logs/*day/debug.log</td><td style="border: 1px solid #000; padding: 8px;">Asterisks can be used in directory names too.</td></tr>
+  </tbody>
+</table><br>
+                                            <p>Here is an example with one of these patterns:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>debug0.log<br>debug1.log<br>#but not<br>debug10.log</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Shared .gitignore files in the repository</h3><br>
+                                            <p>You can define several .gitignore files in different directories in the repository. Each of the patterns is tested relative to the directory that contains that file. However, the simplest way is to define a single .gitignore file at the root of the repository.</p><br>
+                                            <p>As your .gitignore file is checked in, in your repository it is versioned like other files and is shared with your team when you push. You should only include patterns in .gitignore to benefit other users of the repository.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Personal rules for Git ignore</h3><br>
+                                            <p>Personal ignore patterns can also be defined for a particular repository in a special file at .git/info/exclude. It is an appropriate place to include patterns beneficial only for you, as these are neither versioned, and nor distributed with your repository.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Global Git ignore rules</h3><br>
+                                            <p>You can define the Git core.excludesFile property to additionally specify global Git ignore patterns for all repositories on your local system. This file is going to be created by yourself. You can put your global .gitignore file at your home directory to find it easily. Once you've created the file, configure its location with the git config command, like this:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>touch ~/.gitignore<br>git config --global core.excludesFile ~/.gitignore</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Ignoring a previously committed file</h3><br>
+                                            <p>For ignoring a file that has been committed previously, it should be deleted from the repository. Then you should add a .gitignore rule for it. With the help of --cached option with git rm, the file will be deleted from the repo but will remain in the working directory as an ignored file. However, if you want it to be deleted from the working directory too, just leave out the --cached option.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>echo debug.log >> .gitignore<br>git rm --cached debug.log<br>#rm 'debug.log'<br>git commit -m "Start ignoring debug.log"</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Committing an ignored file</h3><br>
+                                            <p>The ignored file can be committed to the repository with the combination of the <b>-f</b> (or <b>--force</b>) option with <b>git add</b>. However, choose this way in case you have a general pattern, such as <b>*.log</b>, but you want to commit a specific file:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>cat .gitignore<br># *.log<br>git add -f debug.log<br>git commit -m "Force adding debug.log"</code></pre>
+                                            </div><br>
+                                            <p>If not, the simplest way is setting an exception to the general rule:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>echo !debug.log >> .gitignore<br><br>cat .gitignore<br>#*.log<br>#!debug.log<br><br>git add debug.log<br>git commit -m "Adding debug.log"</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Stashing an ignored file</h3><br>
+                                            <p>The <b>git stash</b> command takes uncommitted both staged and unstaged changes, saves them away for further use, and then returns them from your working copy. By default, it ignores ignored files and stashes only the changes tracked by Git. But the <b>--all</b> option will make this command stash changes to the files that are ignored and untracked.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Debugging .gitignore files</h3><br>
+                                            <p>In case of complicated .gitignore patterns, or the ones throughout multiple .gitignore files, it can be difficult to find out the reason why a particular file is being ignored. The git check-ignore command with the -v (or --verbose) option determines which pattern is causing a particular file to be ignored:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>git check-ignore -v debug.log<br>#.gitignore:3:*.log debug.log</code></pre>
+                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                            </div><br>
+                                            <p>Here is the output:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>&lt;file containing the pattern&gt; : &lt;line number of the pattern&gt; : &lt;pattern&gt; &lt;file name&gt;</code></pre>
+                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                            </div><br>
+                                            `,
+                                          };
+                                          case 'git status':
+                                            return{
+                                              theory:`
+                                              <p>The <b>git status</b> command shows the state of the working directory and the staging area. It allows you to see staged changes and the files that aren't being tracked by Git. The Status output does not display any information about the committed project history. For this purpose, use the <b>git log</b> command. The <b>git status</b> simply displays what has been going on with <b>git add</b> and <b>git commit</b> commands.</p><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Usage</h3><br>
+                                              <p>The git status lists which files are staged, unstaged, and untracked.</p><br>
+                                              <div class="code-block">
+                                              <pre id="dataExample"><code>git status</code></pre>
+                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                              </div><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                              <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-s or --short</td>
+      <td style="border: 1px solid #000; padding: 8px;">Outputs in the short-format.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-b or --branch</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays the branch and tracking information in the short-format.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--porcelain</td>
+      <td style="border: 1px solid #000; padding: 8px;">Outputs in an easy-to-parse format for scripts. It remains stable across Git versions and ignores user configuration.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--long</td>
+      <td style="border: 1px solid #000; padding: 8px;">Outputs in the long-format (default).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-u[&lt;mode&gt;] or --untracked-files[=&lt;mode&gt;]</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays the untracked files. The optional &lt;mode&gt; parameter manages untracked files:<br>
+        <strong>no</strong> – displays no untracked files.<br>
+        <strong>normal</strong> – displays untracked files and directories.<br>
+        <strong>all</strong> – also displays individual files in untracked directories.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--ignore-submodules[=&lt;when&gt;]</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ignores changes to submodules when looking for changes. &lt;when&gt; can be "none", "untracked", "dirty", or "all".</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--ignored</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays ignored files.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-z</td>
+      <td style="border: 1px solid #000; padding: 8px;">Terminates entries with NUL. If no format is given, the --porcelain output format is used.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--column[=&lt;options&gt;] or --no-column</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays untracked files in columns. If no option is used, --column and --no-column without options are equivalent to always and never.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Ignoring Files</h3><br>
+                                              <p>Untracked files can be of two types: ones that have not been added and committed to the project and the ones that are binaries like .pyc, .obj, .exe, etc. If binaries are included in git status output, you cannot see the actual state of your repository. Thus, Git puts paths in the .gitignore file to ignore these files. The ones that you do not want to ignore, will be included on a separate line. The * symbol is used as a wildcard:</p><br>
+                                              <div class="code-block">
+                                              <pre id="dataExample"><code>*.obj</code></pre>
+                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                              </div><br>
+                                              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Explanation</h3><br>
+                                              <p>It is very important to check the state of the repository before committing any change. The following example shows the repository status before and after staging and committing:</p><br>
+                                              <div class="code-block">
+                                              <pre id="dataExample"><code># Edit dca.txt<br>git status<br># dca.txt is listed under "Changes not staged for commit"<br>git add dca.txt<br>git status<br># dca.txt is listed under "Changes to be committed"<br>git commit<br>git status<br># nothing to commit (working directory clean)</code></pre>
+                                              </div><br>
+                                              <p>The first status shows the unstaged file. In the second status, <b>git add</b> action will be followed. The third stats output shows that there is nothing to commit.</p><br>
+                                              `,
+                                            };
+                                            case 'git log':
+                                              return{
+                                                theory:`
+                                                <p>The git log command shows committed snapshots. It is used for listing and filtering the project history, and searching for particular changes. The git log only works on the committed history in comparison with git status controlling the working directory and the staging area.</p><br>
+                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Usage</h3><br>
+                                                <p>The git log command is a tool used for examining a repository's history and finding a particular version of a project. Log output can be personalized differently, from filtering commits to displaying them in an entirely user-defined format. Here is the list of most commonly used configurations of git log:</p><br>
+                                                <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log</td>
+      <td style="border: 1px solid #000; padding: 8px;">By default formatting, shows the whole commit history. Uses space for scrolling, and q for exiting if the log output takes up multiple screens.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log -n &lt;limit&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Limits the number of commits. For example, <code>git log -n 2</code> displays only 2 commits.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --oneline</td>
+      <td style="border: 1px solid #000; padding: 8px;">Fits each commit on a single line which is useful for an overview of the project history.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --stat</td>
+      <td style="border: 1px solid #000; padding: 8px;">Includes changed files and the number of added or deleted lines from them besides the git log information.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log -p</td>
+      <td style="border: 1px solid #000; padding: 8px;">Shows the patch for each commit as well as their full diff.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --author="&lt;pattern&gt;"</td>
+      <td style="border: 1px solid #000; padding: 8px;">Searches for commits by a specified author. The &lt;pattern&gt; argument can be a string or a regex.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --grep="&lt;pattern&gt;"</td>
+      <td style="border: 1px solid #000; padding: 8px;">Searches for commits with a commit message. The &lt;pattern&gt; argument can be a string or a regex.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log &lt;since&gt;..&lt;until&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays only commits that occur between &lt;since&gt; and &lt;until&gt; arguments. Both can be either a commit ID, a branch name, HEAD, or any other kind of revision reference.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log &lt;file&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays those commits that include the specified file, making it easier to see the file’s history.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --graph --decorate --oneline</td>
+      <td style="border: 1px solid #000; padding: 8px;">The <code>--graph</code> flag draws a text-based graph of the commits on the left-hand side of the commit messages. The <code>--decorate</code> flag adds the names of branches or tags of the displayed commits. The <code>--oneline</code> flag displays the commit information on a single line, making it easier to browse through commits.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Explanation</h3><br>
+                                                <p>All the above mentioned options can be combined into the following command:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>git log --author="Bob Smith" -p dca.txt</code></pre>
+                                                </div><br>
+                                                <p>The given example will show a full diff of all the changes that the author has made to the file dca.txt.</p><br>
+                                                <p>The .. syntax is used for comparing branches:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>git log --oneline master..some-feature</code></pre>
+                                                </div><br>
+                                            <p>This example shows a brief overview of all the commits that are in some-feature instead of master.</p><br>
+                                                `,
+                                              };
+                                              case 'git tag':
+                                                return{
+                                                  theory:`
+                                                  <p>Tags are references showing particular points in a Git history. The main function of tagging is to capture a point in a Git history that marks version release. Tags don't change. After a tag is created, it has no history of commits.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating a Git tag</h3><br>
+                                                  <p>In order to create a git tag you need to run the command below:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag <name-of-tag></code></pre>
+                                                  </div><br>
+                                                  <p>While the tag is being created put a semantic identifier to the state of the repository instead of <name-of-tag>. There are two kinds of tags that are supported by Git: annotated and lightweight tags. A difference between these two tags is the amount of metadata they store. Another difference is that annotated tags are public and lightweight tags are private.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Annotated tags</h3><br>
+                                                  <p>Git database store these tags as full objects. Some additional metadata are stored in annotated tags. These can be the tagger name, email, and date. Annotated tags include a tagging message, as it is in case of commits. They can be additionally signed and verified with GPG (GNU Privacy Guard) for security purposes.</p><br>
+                                                  <p>Running the command below, you can create a new annotated tag with <b>v1.3 id</b>. The configured default text editor will then show up prompting for further meta data input.</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag -a v1.3</code></pre>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Lightweight tags</h3><br>
+                                                  <p>The command below creates a lightweight tag identified as v1.3-lw. They are created without the <b>-a</b>, <b>-s</b>, or <b>-m</b> options. Lightweight tags generate a new tag checksum stored it in the <b>.git/ directory</b>.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Tags list</h3><br>
+                                                  <p>Run the code below to list the stored tags:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <p>As a result, you will have this output:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>v0.10.0<br>v0.10.0-rc1<br>v0.11.0<br>v0.11.0-rc1<br>v0.11.1<br>v0.11.2<br>v0.12.0<br>v0.12.0-rc1<br>v0.12.1<br>v0.12.2<br>v0.13.0<br>v0.13.0-rc1<br>v0.13.0-rc2</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <p>You can use the <b>-l</b> option with a wildcard expression to clear up the list of tags:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag -l *-rc*<br>v0.10.0-rc1<br>v0.11.0-rc1<br>v0.12.0-rc1<br>v0.13.0-rc1<br>v0.13.0-rc2<br>v0.14.0-rc1<br>v0.9.0-rc1<br>v15.0.0-rc.1<br>v15.0.0-rc.2<br>v15.4.0-rc.3</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Tagging old commits</h3><br>
+                                                  <p>By default, git tag creates a tag on the commit mentioned by HEAD. It can be passed as a ref to a particular commit. As a result, the passed commit will be tagged instead of defaulting to HEAD. Run the git log command to output a list of older commits: In the example below, the Merge branch 'feature'commit is used for a new tag. For passing to Git, the SHA hash have to be referenced to your commit:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git log --pretty=oneline<br>29389857951b64cf874c3557a0f3547bd83b899s Merging branch 'crossword'<br>b4g5697498bd301d84096da251c98a07c7723e65 init method for crossword<br>89f3gaab4479697da7686c15f77a3d64d9165190 little changes in logic<br>3hy4a271eda8725415634dd79daabbc4d9b6008e Merging branch 'how-it-works'</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <p>Run the git tag command for generating a new annotated commit with <b>v1.2 ID</b> for the commit that has been selected in the previous example:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag -a v1.2 29389857951b64cf874c3557a0f3547bd83b899s</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Replacing old tags</h3><br>
+                                                  <p>In the case of trying to tag an older commit with an existing tag identifier, an error will occur. You should use -f FORCE option for updating an existing tag. It will cancel any existing content for the tag identifier.</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag -a -f v1.3 29389857951b64cf874c3557a0f3547bd83b899s</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pushing tags to remote</h3><br>
+                                                  <p>In order to push several tags together, you should pass the <b>--tags</b> option to <b>git push</b> command, and if another user clones a repository, they will get the new tags.</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git push origin v1.3<br>Counting objects: 9, done.<br>Delta compression using up to 5 threads.<br>Compressing objects: 100% (8/8), done.<br>Writing objects: 100% (12/12), 2.05 KiB | 0 bytes/s, done.<br>Total 12 (delta 3), reused 0 (delta 0)<br>To git@github.com:gr8/gittagdocs.git<br>* [new tag] v1.3 -> v1.3</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Checking over tags</h3><br>
+                                                  <p>With the help of the git checkout command, you can check the state of a repo. This command will put the repo in a separate HEAD state. As a result, instead of updating the tag, the changes will create a new separate commit, which will not be a part of any branch. This commit will only be accessible by the SHA hash.</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git checkout v1.3</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Deleting tags</h3><br>
+                                                  <p>You can delete a tag bypassing the <b>-d</b> option and a tag identifier to the git tag. You can find an example of this operation below:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>git tag<br>v1<br>v2<br>v3<br>git tag -d v1<br>git tag<br>v2<br>v3</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  `,
+                                                };
+                                                case 'git blame':
+                                                  return{
+                                                    theory:`
+                                                    <p>The <code>git blame</code> command is a flexible tool with several options of use. The most important function of the <code>git blame</code> command is the display of author metadata attached to a particular committed line in a file. It is used for exploring the file history and finding out the last author who changed the line.</p><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                    <p>So as to clearly show how git blame works, let's consider the example where we have README.md file with a few commits from different authors.</p><br>
+                                                    <p>In the following example, we use git blame. The state of the example repository can be explored with a git log. The commit history has the following look:</p><br>
+                                                    <div class="code-block">
+                                                    <pre id="dataExample"><code>git log<br>commit 745nurcid82e4e5f3734c219d5a742b1c259926b2<br>Author: Bob Smith <bobsmith@3dca.com><br>Date: Fri Apr 1 19:55:15 2019 +0000<br>Another commit to help git blame track the who, the what, and the when<br>commit eb06faedb1fdd159d62e4438fc8dbe9c9fe0728b<br>Author: Bob Smith <bobsmith@dca.com><br>Date: Fri Apr 1 19:53:23 2019 +0000<br>Creating the third commit, along with Nick and Robert, so that Nick can get git blame docs.<br>commit 990c2b6a84464fee153253dbf02e845a4db372bb<br>Merge: 82496ea 89feb84<br>Author: Tom Brown <tombrown@dca.com>Date: Fri Apr 1 05:33:01 2019 +0000<br>Merged in tom-brown/git-blame-example/albert-so/readmemd-edited-online-with-bitbucket-1519865641474 (pull request #2)<br>README.md edited online with Bitbucket<br>commit 73nov64c885fe33d1182f2112885c2a64a4206ec<br>Author: Tom Brown <tombrown@dca.com><br>Date: Fri Apr 1 00:54:03 2019 +0000<br>README.md edited online with Bitbucket</code></pre>
+                                                    </div><br>
+                                                    <p>The git blame works on individual files. The default execution of git blame outputs the commands help menu.</p><br>
+                                                    <p>The following output is a subset of the full blame output of the README file:</p><br>
+                                                    <div class="code-block">
+                                                    <pre id="dataExample"><code>git blame README.md<br>83253ua2 (marioswift 2019-02-28 13:37:02 -0800 1) # Git Blame example<br>83253ua2 (marioswift 2019-02-28 13:37:02 -0800 2)<br>73nov64c (Tom Brown 2019-04-01 00:54:03 +0000 3) Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.<br>83253ua2 (marioswift 2019-02-28 13:37:02 -0800 4)<br>83253ua2 (marioswift 2019-02-28 13:37:02 -0800 5) There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br>83253ua2(marioswift 2019-02-28 13:37:02 -0800 6)<br>73nov64c (Tom Brown 2019-04-01 00:54:03 +0000 7) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod TEMPOR incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</code></pre>
+                                                    </div><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common Options</h3><br>
+                                                    <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git blame -L 1,3 README.md</td>
+      <td style="border: 1px solid #000; padding: 8px;">Limits the output to the requested line range. Here it is limited to lines 1 through 3.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git blame -e README.md</td>
+      <td style="border: 1px solid #000; padding: 8px;">Displays the author's email address instead of username.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git blame -w README.md</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ignores whitespace changes. Useful when spacing changes (tabs to spaces, added new lines) would otherwise obscure blame output.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git blame -M README.md</td>
+      <td style="border: 1px solid #000; padding: 8px;">Detects moved or copied lines within the same file. Reports the original author instead of the last person who moved/copied the lines.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git blame -C README.md</td>
+      <td style="border: 1px solid #000; padding: 8px;">Detects lines that were moved or copied from other files. Reports the original author instead of the last person who moved/copied the lines.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git Blame vs Git Log</h3><br>
+                                                    <p>The git blame shows the last author who changed a line but sometimes you may need to see when a line was initially added. This can be difficult to do with git blame. For this purpose a combination of -w, -C, and -M options can be used. But it will be easier to use git log.</p><br>
+                                                    <p>Use git log with the -S option to display all initial commits with a particular added or changed code.</p><br>
+                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Let's take the following example:</h3><br>
+                                                    <div class="code-block">
+                                                    <pre id="dataExample"><code>git log -S"CSS3D and WebGL renderers." --pretty=format:'%h %an %ad %s'<br>e339d3c85 John Carter Fri Jun 13 16:51:06 2015 +0200 reverted README.md to original content<br>509c2cc35 Max Fri Jul 8 13:56:14 2015 +0200 Updated README<br>cb20237cc Leo Sat Aug 31 00:22:36 2012 +0100 Removed DOMRenderer. Now with the CSS3DRenderer it has become irrelevant.</code></pre>
+                                                    </div><br>
+                                                    <p>The output shows that the README.md file was added and modified 3 times by three authors. The --pretty-format option converts the initial git log output format into one that corresponds the format of git log.</p><br>
+                                                    `,
+                                                  };
+                                                  case 'git clean':
+                                                    return{
+                                                      theory:`
+                                                      <p>The git clean is an undo command, which completes other commands like git reset and git checkout. However, unlike the other commands that operate on files already added to the Git tracking index, the git clean command runs on untracked files. Untracked files are those created within the working directory, but are not yet added to the tracking index. The example below shows the difference between tracked and untracked files:</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>mkdir test_directory<br>cd test_directory/<br>git init .<br>#Initialized empty Git repository in /Users/kev/code/test_directory/.git/<br>echo "tracked file" > ./test_tracked_file<br>git add ./test_tracked_file<br>echo "untracked" > ./test_untracked_file<br>mkdir ./test_untracked_dir && touch ./test_untracked_dir/file<br>git status<br>#On branch master<br>#No commits yet<br>#Changes to be committed:<br>    # (use "git rm --cached <file>..." to unstage)<br>         #new file: test_tracked_file<br>#Untracked files:<br>    # (use "git add <file>..." to include in what will be committed)<br>         #test_untracked_dir/<br>         #test_untracked_file</code></pre>
+                                                      </div><br>
+                                                      <p>As a result of the example above, you will have a new Git repository in the test_directory directory, which then creates a test_tracked_file added to the Git index. Besides, an test_untracked_file is created, and an test_untracked_dir. The example then calls git status which displays output pointing on the internal state of tracked and untracked changes. The git clean command is executed to show its predetermined aim.</p><br>
+                                                      <p>At this point, you should not execute the git clean command. The example below demonstrates what errors it may produce. Initially, Git is globally configured to require a "force" option to initiate for the git clean. Once executed, you cannot undo git clean. When it is fully executed, it will create a hard file system deletion. You should make sure that you really want to delete the untracked files before running it.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean<br>#fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean</code></pre>
+                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                      </div><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options and usage</h3><br>
+                                                      <p>The git clean command has various usages with different options.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>-n</code></pre>
+                                                      </div><br>
+                                                      <p>The -n option performs a tryout of git clean. It shows the files that are going to be removed, but doesn't remove them.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -n<br>#Would remove test_untracked_file</code></pre>
+                                                      </div><br>
+                                                      <p>As you can see, it says that the test_untracked_file will be removed when the git clean command is executed.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>-f or --force</code></pre>
+                                                      </div><br>
+                                                      <p>The --force option is required unless the clean.requireForce configuration option is set to false. It deletes untracked files from the current directory, except the untracked folders or files specified with .gitignore.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -f<br>#Removing test_untracked_file</code></pre>
+                                                      </div><br>
+                                                      <p>The output shows that the test_untracked_file has been deleted. At this point, git status will show that the test_untracked_file has been deleted and cannot be found. By default, git clean -f will operate on all the untracked files within the current directory. Additionally, a &lt;path&gt; value can be passed with the -f option that will remove a specific file.</p><br>
+                                                      <p>If you want to remove any untracked directory, you can use the -d option that tells git clean to do so, as by default it will ignore directories.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -f &lt;path&gt;<br>-d include directories</code></pre>
+                                                      </div><br>
+                                                      <p>You can also use the -dn combination.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -dn<br>#Would remove test_untracked_dir/<br>git clean -df<br>#Removing test_untracked_dir/</code></pre>
+                                                      </div><br>
+                                                      <p>It firstly outputs that test_untracked_file that is up for removal. Then we execute a forced clean and receive output that test_untracked_dir is removed.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -x</code></pre>
+                                                      </div><br>
+                                                      <p>The -x option indicates git clean to also include ignored files. You have better execute a 'dry run' first, before the final deletion. The -x option will act on all ignored files. This could be unintended things like ./.idea IDE configuration files.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -xf</code></pre>
+                                                      </div><br>
+                                                      <p>The -x option can be passed and composed with other options. The example above is a combination with -f that will delete untracked files from the current directory as well as any files that Git usually ignores.</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Interactive mode</h3><br>
+                                                      <p>The git clean has an interactive mode that is activated while passing the -ioption. In the example below we also use the -d option, in order to act over the test_untracked_dir. After activating the interactive mode, it will display a What now> prompt. This prompt will demand to select a command to apply to the untracked files. These commands are 6.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>git clean -di<br>Would remove the following items:<br>test_untracked_dir/ test_untracked_file<br>*** Commands ***<br>1: clean 2: filter by pattern 3: select by numbers 4: ask each 5: quit 6: help<br>What now></code></pre>
+                                                      </div><br>
+                                                      <p>We are going to look through each command below.</p><br>
+                                                      <ol style="list-style-type: decimal; padding-left:30px;">
+                                                      <li>Command 6 will explain the other commands.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>What now> 6<br>clean - start cleaning<br>filter by pattern - exclude items from deletion<br>select by numbers - select items to be deleted by numbers<br>ask each - confirm each deletion (like "rm -i")<br>quit - stop cleaning<br>help - this screen<br>? - help for prompt selection</code></pre>
+                                                      </div><br>
+                                                      <li>Command 1 will delete the mentioned items.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>1:clean</code></pre>
+                                                      </div><br>
+                                                      <li>Selecting command 2 will show a further prompt for filtering the list of untracked files.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>2: filter by pattern</code></pre>
+                                                      </div><br>
+                                                      <p>After choosing command 2, we will need the *_ file wildcard pattern, which will restrict the untracked file list to <b>test_untracked_dir</b>.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>Would remove the following items:<br>test_untracked_dir/ test_untracked_file*** Commands ***<br>1: clean 2: filter by pattern 3: select by numbers 4: ask each 5: quit 6: help<br>What now> 2<br>test_untracked_dir/ test_untracked_file<br>Input ignore patterns>> *_file<br>test_untracked_dir/</code></pre>
+                                                      </div><br>
+                                                      <li>Like command 2, command 3 is for refining the list of untracked file names. Selecting this command will prompt for numbers matching an untracked file name.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>3: select by numbers</code></pre>
+                                                      </div><br>
+                                                      <li>Command 4 will run on each untracked file and show a Y/N prompt for confirming the deletion.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>4: ask each<br>*** Commands ***<br>1: clean 2: filter by pattern 3: select by numbers 4: ask each 5: quit 6: help<br>What now> 4<br>Remove test_untracked_dir/ [y/N]? N<br>Remove test_untracked_file [y/N]? N</code></pre>
+                                                      </div><br>
+                                                      <li>Selecting command 5 will quit the interactive session.</li><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>5: quit</code></pre>
+                                                      </div><br>
+                                                      </ol><br>
+                                                      `,
+                                                    };
+                                                    case 'git revert':
+                                                      return{
+                                                        theory:`
+                                                        <p>The git revert command is an “undo” operation however it is not the appropriate one. The git revert command reverts the changes introduced by the commit and appends a new commit with resulting reversed content. This does not allow Git to lose history which is essential for revision history integrity and proper collaboration. Reverting is used for applying the inverse commit from the project history. You can use git revert for automatically going back and making fixes.</p><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Options</h3><br>
+                                                        <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-e / --edit</td>
+      <td style="border: 1px solid #000; padding: 8px;">Opens up the configured system editor and prompts you to edit the commit message before committing the revert. Default option.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--no-edit</td>
+      <td style="border: 1px solid #000; padding: 8px;">Causes the revert not to open the editor (the opposite of the -e option).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-n / --no-commit</td>
+      <td style="border: 1px solid #000; padding: 8px;">Adds the inverse modifications to the Staging Index and Working Directory instead of creating a new commit.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                        <p>Like git checkout and git reset, git revert also takes a specified commit but it does not move reference pointers to this commit. The revert operation takes the specified commit, inverses the modifications from that commit and creates a new revert commit.</p><br>
+                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Here is an example of creating a repository:</h3><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>mkdir git_revert_example<br>cd git_revert_example/<br>git init .<br>#Initialized empty Git repository in /git_revert_example/.git/<br>touch dca_file<br>git add dca_file<br>git commit -am "original commit"<br>#[master (root-commit) 299b15f] original commit<br>#1 file changed, 0 insertions(+), 0 deletions(-)<br>#create mode 100644 dca_file<br>echo "original content" >> dca_file<br>git commit -am "add new content to dca_file"<br>#[master 3602d88] add new content to dca_file<br>#1 file changed, 1 insertion(+)<br>echo "prepended line content" >> dca_file<br>git commit -am"prepend content to dca file"<br>#[master 86bb32e] prepend content to dca file<br>#1 file changed, 1 insertion(+)<br>git log --oneline<br>#86bb32e prepend content to dca file<br>#3602d88 add new content to dca file<br>#299b15f original commit</code></pre>
+                                                        </div><br>
+                                                        <p>In the above-mentioned example, a repository is initialized in a newly created directory named git_revert_example. There are 3 commits to the repository in which a file named dca_file is added. Its content has been changed twice. We use git log at the end of the repository set up to show all 3 commits in the commit history. Now we can invoke git revert:</p><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>git revert HEAD<br>#[master b9cd081] Revert "prepend content to dca file"<br>#1 file changed, 1 deletion(-)</code></pre>
+                                                        </div><br>
+                                                        <p>Git revert will not work without passing commit reference. In the given example, it has been passed in the HEAD reference to revert the last commit. A revert creates a new commit which opens up the configured system editor creating a new commit message. We can use git log and see the new commit added to the previous log:</p><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>git log --oneline<br>#2365e21 Revert "prepend content to dca_file"<br>#23ab21e prepend content to dca_file<br>#3602d88 add new content to dca_file<br>#345b23f original commit</code></pre>
+                                                        </div><br>
+                                                        <p>After the revert the 3rd commit is still in the project history. The git revert added a new commit to undo its changes instead of deleting.</p><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Resetting vs. reverting</h3><br>
+                                                        <p>The git revert undoes only one commit while git reset reverts back to the previous project state by deleting succeeding commits.</p><br>
+                                                        <img src="/images/gitrevert.png" width="auto" height="auto"><br>
+                                                        <p>Reverting is considered as safe operation for the commits that have been published to the shared repository. Another advantage of reverting is targeting a specific commit at a random point in the history. Find detailed information about git reset on our next page.</p><br>
+                                                        `,
+                                                      };
+                                                      case 'git reset':
+                                                        return{
+                                                          theory:`
+                                                          <img src="/images/gitreset1.png" width="auto" height="auto"><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git reset and the three trees</h3><br>
+                                                          <p>The git reset command is a tool used to undo changes. It has three forms of invocation matching Git's three internal state management systems called three trees of Git. These systems include HEAD (the commit history), the staging index and the working directory. We are going to look through each of these systems.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The working directory</h3><br>
+                                                          <p>The first tree is the working directory. It represents the files on the file system of your computer, that are available to the code editor for applying changes. The working directory is considered to be a specific commit of the checked out project. When the project is checked out, this means that its files have decompressed versions extracted from the Git repository.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>echo 'hello git reset' > edited_file<br>git status<br>#On branch master<br>#Changes not staged for commit:<br>#(use "git add ..." to update what will be committed)<br>#(use "git checkout -- ..." to discard changes in working directory)<br>#modified: edited_file</code></pre>
+                                                          </div><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Staging index</h3><br>
+                                                          <p>The following tree is the staging index, which tracks the changes committed in the working directory. In general, the performance details of the staging area are hidden from users by Git. Sometimes, while talking about staging area, different expressions are used, like cache, directory cache, staged files, staging area etc..</p><br>
+                                                          <p>Here we need git ls-files. command, which is considered to be a debug tool, that checks the state of the staging index.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git ls-files -s<br>#543644 a32de29bb3c1d643328b29ae775ad8c2e48c3256 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Commit history</h3><br>
+                                                          <p>The last tree is the commit history. The git commit command commits changes to a permanent snapshot placed of the staging index.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git commit -am "edit content of test_file"<br>#[master ab23324] edit the content of edited_file<br>#1 file changed, 1 insertion(+)<br>git status<br>#On branch master<br>#nothing to commit, working tree clean</code></pre>
+                                                          </div><br>
+                                                          <p>In the example above, you can see the new commit with a message "edit content of test_file".The changes are attached to the commit history.. At this stage, running git status shows no forthcoming changes to any of the trees. Invoking git log, you will see the commit history. Once the changes are made through the three trees, the git reset can be used.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                          <p>At first sight, the git reset command has some similarities with the git checkout, as they both operate on HEAD. The git checkout command operates exclusively on the HEAD reference pointer, while the git reset command passes the HEAD reference pointer and the current branch reference pointer. You will make a better understanding of its behavior with the illustration below:</p><br>
+                                                          <img src="/images/gitreset2.png" width="auto" height="auto"><br>
+                                                          <p>This illustration presents the sequence of commits on the master branch. As you can see, the HEAD ref and the master branch ref presently point to commit d. We will see how the image changes in case of git checkout b and git reset b.</p><br>
+                                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">git checkout b</h3><br>
+                                                          <p>When executing the git checkout command, the master ref is still pointing to the commit d. What comes to the HEAD ref, it has been moved and changed the pointer to the commit b. As a result, the repository is now in a 'detached HEAD' state.</p><br>
+                                                          <img src="/images/gitreset3.png" width="auto" height="auto"><br>
+                                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">git reset b</h3><br>
+                                                          <p>The git reset command switches both the HEAD and branch refs to the defined commit. Besides, it changes the state of the three trees. There are three command line arguments --soft, --mixed, and --hard direct that define the modification of the staging index, and working directory trees.</p><br>
+                                                          <img src="/images/gitreset4.png" width="auto" height="auto"><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Main Options</h3><br>
+                                                          <p>By default, the git reset command has constant arguments of --mixed and HEAD. So, invoking git reset is the same as invoking git reset --mixed HEAD. Here the HEAD is the stated commit. You can use any Git SHA-1 commit hash instead of it.</p><br>
+                                                          <img src="/images/gitreset5.png" width="auto" height="auto"><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">--hard</h3><br>
+                                                          <p>The most commonly used option is the --hard. Using it has however some risks. With --hard, the commit history ref pointers start pointing to the stated commit. After, the staging index and the working directory are reset to correspond to the stated commit. Changes that have been previously pending to the staging index and the working directory, are reset to match the commit tree state. Any pending commit in the staging index and working directory will be lost. The example below will demonstrate the above mentioned. First of all, execute the following commands:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>echo 'test content' > test_file<br>git add test_file<br>echo 'modified content' >> edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>A new file named test_file has been created and added to the repository. Furthermore, the content of edited_file will be modified. Let us now check the state of the repository with these changes using the git status command.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git status<br>#On branch master<br>#Changes to be committed:<br>#(use "git reset HEAD ..." to unstage)<br>#new file: test_file<br>#Changes not staged for commit:<br>#(use "git add ..." to update what will be committed)<br>#(use "git checkout -- ..." to discard changes in working directory)<br>#modified: edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>As you can see, there are now some pending changes. The pending change for the staging index tree is the addition of <b>test_file</b> and the one for the working directory are modifications to <b>edited_file</b>. Now let us see the state of the staging index:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git ls-files -s<br>#123126 7a32454a5477b1bf4765946147c49509a431f963 0 test_file<br>#123126 6c423c1b04b5edd5acfc85de0b592449e5303773 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>The <b>test_file</b> has been added to the index. The <b>edited_file</b> has been updated, but the staging index SHA (d7d77c1b04b5edd5acfc85de0b592449e5303770) stays the same. These changes are in the working directory. They are not promoted to the staging index as we have not used the git add command. At this point, we can execute git reset --hardand see the new state of the repo:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --hard<br>#HEAD is now at ab23324 update content of edited_file<br>git status<br>#On branch master<br>#nothing to commit, working tree clean<br>git ls-files -s<br>#123126 6c423c1b04b5edd5acfc85de0b592449e5303773 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>The <b>--hard</b> option executed a "hard reset". Git indicates that HEAD is pointing to the recent commit ab23324. Then, the state of the repo is checked with <b>git status</b>. Git indicates there are no pending changes. What comes to the state of the staging index, it has been reset to a point before adding the <b>test_file</b>. edited_file changes and the addition of <b>test_file</b> have been wiped out. This loss cannot be undone.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">--mixed</h3><br>
+                                                          <p>The operating mode is by default --mixed. It updates the ref pointers. The staging index is reset to the stated commit. Undone changes from the staging index are placed in the working directory.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>echo 'new file content' > test_file<br>git add test_file<br>echo 'append content' >> edited_file<br>git add edited_file<br>git status<br>#On branch master<br>#Changes to be committed:<br>#(use "git reset HEAD ..." to unstage)<br>#new file: test_file<br>#modified: edited_file<br>git ls-files -s<br>#123126 6a32154a5477b1bf4765946147c49509a4323d32 0 test_file<br>#123126 3c3262db063f9e9426901092c00a3394b4bd3445 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>In the example above, a test_file has been added and the contents of edited_file have been modified. Next, these changes are applied to the staging index with the help of the git status. With this state of the repository, now it's time to invoke git reset.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --mixed<br>git status<br>#On branch master<br>#Changes not staged for commit:<br>#(use "git add ..." to update what will be committed)<br>#(use "git checkout -- ..." to discard changes in working directory)<br>#modified: edited_file<br>#Untracked files:<br>#(use "git add ..." to include in what will be committed)<br>#<test_file><br>#no changes added to commit (use "git add" and/or "git commit -a")<br>git ls-files -s<br>#123126 6c423c1b04b5edd5acfc85de0b592449e5303773 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>The <b>--mixed</b> is the default mode. It has the same effect as git reset. The <b>git status</b> shows that there are changes to edited_file and that the test_file is an untracked file. This is the exact--mixed behavior. The staging index has been reset and the pending changes are moved to the working directory.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">--soft</h3><br>
+                                                          <p>The --soft argument updates ref pointers and stops the reset. However, it doesn't affect the staging index and the working directory.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --soft<br>git status<br>#On branch master<br>#Changes to be committed:<br>#(use "git reset HEAD ..." to unstage)<br>#modified: edited_file<br>git ls-files -s<br>#123126 32a252710639e5da6b515416fd779d0741e4561a 0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>A soft reset resets only the commit history. By default, it is invoked with HEAD as the target commit. Let's now create a new commit to try a --soft with a target commit that is not HEAD:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git commit -m "add changes to edited_file"</code></pre>
+                                                          </div><br>
+                                                          <p>Now our repository has three commits. In order to find the first one, we need to check its ID, which can be done by viewing the output from git log.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git log<br>#commit 62e793f6941c7e0d4ad9a1345a175fe8f45cb9df<br>#Author: dca<br>#Date: Fri Nov 1 14:02:07 2019 -0800<br>#add changes to edited_file<br>#commit ab23324a6da9f0dec51ed16d3d8823f28e1a72a<br>#Author: dca<br>#Date: Fri Nov 1 11:31:58 2019 -0800<br>#change content of edited_file<br>#commit 780411da3b47117270c0e3a8d5dcfd11d28d04a4<br>#Author: dca<br>#Date: Thu Sep 31 18:40:29 2019 -0800<br>#initial commit</code></pre>
+                                                          </div><br>
+                                                          <p>This is the ID of the initial commit. Now it will be used as the target for the soft reset. Before, we need to check the current state of the repository:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git status && git ls-files -s<br>#On branch master<br>#nothing to commit, working tree clean<br>#123126 32a252710639e5da6b515416fd779d0741e4561a  0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>Now we can soft reset the first commit:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --soft 780411da3b47117270c0e3a8d5dcfd11d28d04a4<br>git status && git ls-files -s<br>#On branch master<br>#Changes to be committed:<br>#(use "git reset HEAD ..." to unstage)<br>#modified: edited_file<br>#123126 32a252710639e5da6b515416fd779d0741e4561a  0 edited_file</code></pre>
+                                                          </div><br>
+                                                          <p>In the example above, we had a soft reset and the git status and git ls-files combo command invoked, that outputs the state of the repository. The git status command shows that there are some changes to edited_file highlighting them as changes staged for the next commit. The git ls-files input shows that the staging index has remained unchanged and retains the SHA 32a252710639e5da6b515416fd779d0741e4561a . Let's additionally examine the state of the repository after soft reset by the help of git log:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git log<br>#commit 780411da3b47117270c0e3a8d5dcfd11d28d04a4<br>#Author: dca<br>#Date: Thu Sep 31 18:40:29 2019 -0800<br>#initial commit</code></pre>
+                                                          </div><br>
+                                                          <p>As we can see, the output above indicates that a single commit in the commit history. As with all git reset invocations, firstly --soft reset the commit tree.</p><br>
+                                                          <p>Unlike --hard and --mixed that have both been against the HEAD, a soft reset took the commit tree back in time.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The difference between reset and revert commands</h3><br>
+                                                          <p>Git revert is considered to be a safer way of undoing changes than git reset. There is a great probability, that the work can be lost with it reset. Git reset doesn't delete a commit, but it can make the commit “orphaned”. This means, that there isn't any direct way to access them. As a result, Git will delete all the orphaned commits, when it runs the internal trash collector. By default, Git runs the internal trash collector every 30 days. The orphaned commits are usually found with the help of git reflog command.</p><br>
+                                                          <p>Another difference between these two commands is that git revert is configured to undo public commits, and git reset is configured to undo local changes to the working directory and staging index.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The inadmissibility of the reset of public history</h3><br>
+                                                          <p>Don't use git reset <commit>, when there are snapshots after <commit>, which are moved to a public repository. When you publish a commit, take into account the fact that other developers rely on it too. Deleting commits that are being developed by other team members too, will cause lots of problems. Use git reset <commit> only on local changes. To fix public changes use git revert command.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples</h3><br>
+                                                          <p>Use the following for removing the specified file from the staging area, but not changing the working directory. It will unstage a file without overwriting changes:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset &lt;file&gt;</code></pre>
+                                                          </div><br>
+                                                          <p>Use the following for resetting the staging area to correspond to the last commit, but leave the working directory unchanged. It will unstage all files without overwriting changes, giving you the possibility to rebuild the staged snapshot from scratch:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset</code></pre>
+                                                          </div><br>
+                                                          <p>Use the following for resetting the staging area and the working directory to correspond to the last commit. It will unstage changes overwriting all changes in the working directory, too:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --hard</code></pre>
+                                                          </div><br>
+                                                          <p>Use the following for moving the branch tip back in time to commit, resetting the staging area to match, but not touching the working directory:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset &lt;commit&gt;</code></pre>
+                                                          </div><br>
+                                                          <p>Use the following for moving the current branch tip backward to <commit> and resetting the staging area and the working directory to match:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>git reset --hard &lt;commit&gt;</code></pre>
+                                                          </div><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Removing local commits</h3><br>
+                                                          <p>As mentioned above, you can use git reset command for deleting commits on the local repository. The example below is a demonstration of such a usage of git reset. The git reset HEAD~2 command pushes the current branch backward by two other commits and removes the two recently created snapshots from the project history.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code># Create a new file called &#96;yourname.txt&#96; and add some code to it<br># Commit it to the project history<br>git add yourname.txt<br>git commit -m "Start to develop a project"<br># Edit &#96;yourname.txt&#96; again and change some other tracked files, too<br># Commit another snapshot<br>git commit -a -m "Continue developing"<br># Scrap the project and remove the related commits<br>git reset --hard HEAD~2</code></pre>
+                                                          </div><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Unstaging files</h3><br>
+                                                          <p>The git resetcommand is usually used for making staged snapshots. In the example below we have 2 files called task.txt and index.txt. which have been added to the repository. Git reset lets us to unstage the changes that are not connected with the next commit.</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code># Edit task.txt and index.txt<br># Stage everything in the current directory<br>git add .<br># Realize that the changes in task.txt and index.txt<br># should be committed in different snapshots<br># Unstage index.txt<br>git reset common.txt<br># Commit only task.txt<br>git commit -m "Edit task.txt"<br># Commit index.txt in a separate snapshot<br>git add index.txt<br>git commit -m "Edit index.txt"</code></pre>
+                                                          </div><br>
+                                                          `,
+                                                        };
+                                                        case 'git rm':
+                                                          return{
+                                                            theory:`
+                                                            <p>The git rm command removes specific files or a group of files from a Git repository. The main function of git rm is removing tracked files from the index. The git rm can also be used for removing files from both the staging index and the working directory. But a file can not be removed only from the working directory. It should be mentioned that the git rm command does not remove branches.</p><br>
+                                                            <img src="/images/gitrm.png" width="auto" height="auto"><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Usage of git rm command</h3><br>
+                                                            <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">&lt;file&gt;…​</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies which files to remove.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-f / --force</td>
+      <td style="border: 1px solid #000; padding: 8px;">Overrides the security check ensuring files in HEAD correspond to the staging index and working directory.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-n / --dry-run</td>
+      <td style="border: 1px solid #000; padding: 8px;">Executes the command but does not remove files. Only outputs which files would have been removed.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-r</td>
+      <td style="border: 1px solid #000; padding: 8px;">Shorthand for 'recursive'. Removes a target directory and its entire content.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--</td>
+      <td style="border: 1px solid #000; padding: 8px;">Separates file names from arguments passed to <code>git rm</code>.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--cached</td>
+      <td style="border: 1px solid #000; padding: 8px;">Deletes only from the staging index. Leaves working directory files untouched.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--ignore-unmatch</td>
+      <td style="border: 1px solid #000; padding: 8px;">Exits with a 0 status even if no files matched. This is a Unix-level status code.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-q / --quiet</td>
+      <td style="border: 1px solid #000; padding: 8px;">Suppresses output. Normally, <code>git rm</code> prints one line for each removed file.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Undoing git rm</h3><br>
+                                                            <p>The git rm command updates the staging index and the working directory. These modifications will not be persisted until a new commit is created. The modifications are added to the commit history which means that they can be undone with git commands. The following command is used to undo a git rm. It reverts the current staging index and working directory back to the HEAD commit.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>git reset HEAD</code></pre>
+                                                            </div><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>git checkout .</code></pre>
+                                                            </div><br>
+                                                            <p>Use git reflog for finding a reference before the execution of the git rm, in the case that git rm is run and a new commit is created which persists the removal.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git rm vs rm</h3><br>
+                                                            <p>When an ordinary shell rm command is being executed on a file it is tracking, Git repository recognizes it and updates only the working directory for reflecting the removal. For adding the modifications to the staging index the git add command must be executed too.The git rm command updates both the staging index and the working directory with the removal.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples</h3><br>
+                                                            <p>Let's consider the following example:</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>git rm folder/\*.txt</code></pre>
+                                                            </div><br>
+                                                            <p>We use a wildcard file glob to remove all *.txt files. These files are children of the folder directory and its subdirectories. We put slashes before asterisk to prevent the shell from expanding the wildcard. Then the wildcard expands the pathnames of files and subdirectories.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>git rm -f git-*.sh</code></pre>
+                                                            </div><br>
+                                                            <p>The force option is used in the example to remove the target files from the working directory and staging index.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Removing files no longer existing in the filesystem</h3><br>
+                                                            <p>If you want to record all the removed files as a component of the following commit, execute git commit -a command, and all the removal events will be added to the staging index in preparation of the following commit.</p><br>
+                                                            <p>But if you want to continuously remove all the files that have been removed with the shell rm, use the command below, which will create a list of all the removed files from the working directory and pipe it to git rm --cached for updating the staging index:</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>git diff --name-only --diff-filter=D -z | xargs -0 git rm --cached</code></pre>
+                                                            </div><br>
+                                                            `,
+                                                          };
+                                                          case 'git commit --amend':
+                                                            return{
+                                                              theory:`
+                                                              <p>While working with Git, you can often forget to format the commit or to stage a file. The git commit -- amend command is the easiest way of correcting such mistakes. It is used to edit the latest commits. Instead of creating a completely new commit, you can run this command for combining staged changes with the previous commit. Besides, this command can modify the previous commit message without changing its snapshot. Take into account, that git commit -- amend replaces the current commit entirely. We are going to see some ways of usage of git commit -- amend.</p><br>
+                                                              <img src="/images/amend.png" width="auto" height="auto"><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Changing the most recent Git commit message</h3><br>
+                                                              <p>If you have committed and made a mistake in the commit log message, you can execute git commit -- amend for modifying the log message of the previous commit without changing its snapshot. You can pass in a new message from the command line without receiving a prompt for opening an editor by using -m option.</p><br>
+                                                              <div class="code-block">
+                                                              <pre id="dataExample"><code>git commit --amend -m "an updated commit message"</code></pre>
+                                                              </div><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Changing committed files</h3><br>
+                                                              <p>Let's imagine that you have modified some files that you want to commit in a singular snapshot, but you have forgotten to add one of the files the first time around. You can solve this problem, if you stage the other file and commit by using the --amend flag. Add --no-edit flag to modify your commit without changing the commit message. As a result, the wrong commit will be replaced by the right one, and it will look like the following example:</p><br>
+                                                              <div class="code-block">
+                                                              <pre id="dataExample"><code># Modify project.py and text.py git add project.py git commit<br># You forgot to add the changes from text.py git add text.py<br> git commit --amend --no-edit</code></pre>
+                                                              </div><br>
+                                                              <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">The inadmissibility of amending public commits</h3><br>
+                                                              <p>In fact, amended commits are new ones and after amending a commit, the previous commit will not be removed from the current branch. That's why you should never amend a commit which is being developed by other team members because it will cause a lot of problems for collaboration. So you notice that the consequences are the same as in the case of resetting a public snapshot.</p><br>
+                                                              `,
+                                                            };
+                                                            case 'git rebase':
+                                                              return {
+                                                                theory:`
+                                                                <p>Rebasing means to move or combine a series of commits to a new base commit. In other words, it changes the basis of the current branch from one commit to another making it look like the branch has been created from another commit. This is done by executing the git rebase command. Take into account that even if the branch looks the same, it is built up of wholly new commits.</p><br>
+                                                                <img src="/images/gitrebase.png" width="auto" height="auto"><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Usage of the git rebase command</h3><br>
+                                                                <p>Firstly, we need this command for maintaining a linear project history. For example, the master branch progresses after you start to work on a feature branch. You need the recent updates of the master branch in your feature branch, but the history of the master branch must maintain clean. We need a clear history while executing Git operations to explore the introduction of a regression. Find more information about the usage of git rebase below:</p><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">The inadmissibility of rebasing public history</h3><br>
+                                                                <p>Never rebase commits after publishing them in public history. As in the case of amending and resetting, it will cause problems for team collaboration. If you do it, the old commit will be replaced by a new one and it will appear as part of your project has disappeared.</p><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">The difference between Git rebase standard and Git rebase interactive.</h3><br>
+                                                                <p>There are two modes of git rebase command: standard and interactive. In standard mode git rebase will automatically apply the commits in the current working branch to the passed branch's head. The current branch will be rebased onto <base> . This can be different kinds of commit references, as a tag, an ID, a branch name and so on.</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>git rebase &lt;base&gt;</code></pre>
+                                                                </div><br>
+                                                                <p>In interactive mode git rebase is executed with the -i flag, which stands for “interactive”. The advantage of rebasing in interactive mode is changing the individual commits in the process, without having to move all the commits to the new base. Due to this mode, you can clean the history by removing and changing the existing sequence of commits.</p><br>
+                                                                <p>Running the following command will open an editor:</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>git rebase --interactive &lt;base&gt;</code></pre>
+                                                                </div><br>
+                                                                <p>In this editor enter the commands given below for each commit that must be rebased. Git will start to playback commits and apply the rebase commands, after determining the commands for each commit.</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>pick 11a1456 some old commit<br>pick a23db19 Adds new feature<br># Rebase 31d332c..a23db19 onto 31d332c (9 commands)<br>#<br>#<br># Commands:<br># p, pick = use commit<br># r, reword = use commit, but edit the commit message<br># e, edit = use commit, but stop for amending<br># s, squash = use commit, but meld into previous commit<br># f, fixup = like "squash", but discard this commit's log message<br># x, exec = run command (the rest of the line) using shell<br># d, drop = remove commit</code></pre>
+                                                                </div><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Additional rebase commits</h3><br>
+                                                                <p>The git rebase has some command options such as:</p><br>
+                                                                <ul style="list-style-type: disc; padding-left:30px;">
+                                                                <li><b>git rebase -- d</b>. Using this option will discard the commit from the final combined commit block during playback.</li><br>
+                                                                <li><b>git rebase -- p</b>, which doesn't edit the message or the content of the commit remaining an individual commit in the branch history.</li><br>
+                                                                <li><b>git rebase -- x</b>, which allows to run a command line shell script on each marked commit during playback.</li><br>
+                                                                </ul><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Git recap</h3><br>
+                                                                <p>One of the interactive rebasing advantages is that it allows developers not to worry about the messiness of the project history, as they can later go back and clean it up. So, many developers use this tool to make the feature branch history cleaner before merging it into the master branch. Cleaning up a branch means removing meaningless or dead and gone commits. As a result, developers have a well-planned history and can easily understand what commits have been done.</p><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Configuration options</h3><br>
+                                                                <p>There exist some rebase options that are set with the help of the git config commit. These options give another look and sense to the git rebase.</p><br>
+                                                                <ul style="list-style-type: disc; padding-left:30px;">
+                                                                <li>rebase.stat: by default a false boolean, which toggles display of visual diffstat content showing changes since the last debase.</li><br>
+                                                                <li>rebase.autoSquash: A boolean value toggling the --autosquash behavior.</li><br>
+                                                                <li>rebase.missingCommitsCheck: It can be set to multiple values changing the rebase behavior around missing commits.</li><br>
+                                                                <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">warn</td>
+      <td style="border: 1px solid #000; padding: 8px;">Warning output is printed in interactive mode and warns about removed commits.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">error</td>
+      <td style="border: 1px solid #000; padding: 8px;">The rebase is stopped and removed commit warning messages are printed.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">ignore</td>
+      <td style="border: 1px solid #000; padding: 8px;">The default option, which ignores any missing commit warnings.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                <li>rebase.instructionFormat: A string in git log format used for formatting interactive rebase display.</li>
+                                                                </ul><br>
+                                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Advanced rebase application</h3><br>
+                                                                <p>The git rebase can be passed to the --onto command line argument, in which case the command expands to the following:</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>git rebase --onto &lt;newbase&gt; &lt;oldbase&gt;</code></pre>
+                                                                </div><br>
+                                                                <p>The --onto command provides advanced rebase application as it allows passing specific refs as the rebase tips.</p><br>
+                                                                <p>Let's see its behavior on an example:</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>o---o---o---o---o master<br> &#92;<br> o---o---o---o---o featureX<br> &#92;<br> o---o---o featureY</code></pre>
+                                                                </div><br>
+                                                                <p>Although featureY is based on featureX, it is independent from any changes in featureX and could be branched off master.</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>git rebase --onto master featureX featureY</code></pre>
+                                                                </div><br>
+                                                                <p>FeatureX is the <oldbase>. master is the <newbase> and featureY is reference for what <newbase> HEAD will point to. Here is the output:</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>o---o---o featureY<br> /<br> o---o---o---o---o master<br> &#92;<br> o---o---o---o---o featureX</code></pre>
+                                                                </div><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The dangers of rebasing</h3><br>
+                                                                <p>The first danger of using the git rebase command is that it can cause more merge conflicts during a rebasing process, especially in cases when you have a durable branch strayed from master. Sooner or later you may decide to rebase against the master, which may contain some new commits which the changes of your branch may conflict with. The solution to the situation described above is rebasing the branch against the master more often and make more periodic commits. In order to advance or reset the rebase while copying with conflicts, you can use the --continue and --abort arguments with the git rebase. Another more serious alarm is that some commits may be lost from interactive history rewriting. Running rebase in interactive mode with some subcommands like squash or drop remove commits from the immediate log of the branch.It may seem as though the commits are removed permanently. The solution is the git reflog by the help of which these commits can be restored and you can undo the entire rebase.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Recovering from upstream rebase</h3><br>
+                                                                <p>In case another user has rebased and force pushed to the branch that you're committing to, a git pull will then overwrites any commit you have based off that previous branch with the force pushed tip.Git rebase allows you to get the reflog of the remote branch. There you can find a ref before it was rebased. Then you can rebase your branch against that remote ref with the--onto option.</p><br>
+                                                                `,
+                                                              };
+                                                              case 'git reflog':
+                                                                return{
+                                                                  theory:`
+                                                                  <p>The git reflog command is used for Git to record updates made to the tip of branches. It allows to return to commits even to the ones that are not referenced by any branch or any tag. After rewriting history, the reflog includes information about the previous state of branches and makes it possible to go back to that state if needed.</p><br>
+                                                                  <img src="/images/gitreflog.png" width="auto" height="auto"><br>
+                                                                  <p>There are some git commands, to which a reference specifying parameter or a “ref” can be applied. This parameter serves to point to a commit. With the help of this reflog mechanism, you can keep track of the update time of git refs in the local repository.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The basic usage of git reflog command</h3><br>
+                                                                  <p>Generally git reflog is used like the following:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog</code></pre>
+                                                                  </div><br>
+                                                                  <p>It is the shortcut of this:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog show HEAD</code></pre>
+                                                                  </div><br>
+                                                                  <p>The command above outputs the HEAD reflog. The output looks like the following:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>a32556a HEAD@{0}: commit: migrating content<br>ab371fd HEAD@{1}: commit: adding git reflog outline<br>23a491a HEAD@{2}: checkout: moving from stage to feature/solver<br>7b119cb HEAD@{3}: checkout: moving from feature/solver to stage<br>56a183a HEAD@{4}: commit: changing color scheme<br>7a2aa71 HEAD@{5}: commit: adding more color palettes<br>a56322b HEAD@{6}: commit: adding color tool package</code></pre>
+                                                                  </div><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Reflog references</h3><br>
+                                                                  <p>Be default, git reflog outputs the reflog of the HEAD reference, which is considered to be an iconic reference to the branch, which is currently active. You can access a git ref by using the <b>name@{qualifier}</b> syntax.</p><br>
+                                                                  <p>Execute the following command for getting the entire reflog of all the references:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog show --all</code></pre>
+                                                                  </div><br>
+                                                                  <p>Pass the current branch name to git reflog show, if you want to see the reflog for it. In the example below displays a reflog for the test_branch branch.</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog show test_branch<br>#32a591f test_branch@{0}: commit: add snippets<br>#23bae4a test_branch{1}: commit (initial): initial commit</code></pre>
+                                                                  </div><br>
+                                                                  <p>Using the command below will output a reflog for a <b>git stash:</b></p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog stash<br>#0d44de3 stash@{0}: WIP on git_reflog: a567574 adding Vue.js</code></pre>
+                                                                  </div><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Timed reflogs</h3><br>
+                                                                  <p>There is an attached timestamp to each reflog entry.They can be leveraged as a qualifier which is token of Git ref pointer syntax. This allows to filter Git reflogs by time. Here are some examples of time qualifiers:</p><br>
+                                                                  <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                  <li>1.minute.ago</li>
+                                                                  <li>1.hour.ago</li>
+                                                                  <li>1.day.ago</li>
+                                                                  <li>yesterday</li>
+                                                                  <li>1.week.ago</li>
+                                                                  <li>1.month.ago</li>
+                                                                  <li>1.year.ago</li>
+                                                                  <li>2011-05-17.09:00:00</li>
+                                                                  </ul><br>
+                                                                  <p>You can also have a combination of time qualifiers (e.g. 1.week.3.hours.ago), and plural forms (e.g. 5.hours.ago). The refs of time qualifiers can be given to other git commands, like this:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git diff master@{0} master@{1.week.ago}</code></pre>
+                                                                  </div><br>
+                                                                  <p>Here we will have a diff of the current master branch against master 1 week ago.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Subcommands of git reflog</h3><br>
+                                                                  <p>There exist some arguments, considered to be subcommands, that are accepted by git reflog. These subcommands are presented below.</p><br>
+                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Show - git reflog show subcommand</h3><br>
+                                                                  <p>The git reflog show subcommand is an alias for git log -g --abbrev-commit --pretty=oneline. It is passed by default. In the following example, the two commands are equivalent to each other:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog master@{0} = git reflog show master@{0}</code></pre>
+                                                                  </div><br>
+                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Expire - git reflog expire subcommand</h3><br>
+                                                                  <p>The git reflog expire subcommand is used for cleaning old or unapproachable reflog entries. The danger of this subcommand is the possibility of data loss. In fact, the expire subcommand is not used by users. It is used only by the Git. By default, the reflog date of expiry is set to 90 days. Pass --expire=time argument to git reflog expire for specifying an expire time.</p><br>
+                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Delete - git reflog delete subcommand</h3><br>
+                                                                  <p>The git reflog delete subcommand is designed for deleting passed reflog entries. However, the end users avoid executing this subcommand, because, as in the case of git reflog expire , there is a risk of data loss.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Recovering lost commits</h3><br>
+                                                                  <p>Actually, commits are never being lost in Git, even during history rewriting operations. Let's see an example of a git log --pretty=oneline that looks like this:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>2b43ceab309da94256db8fb1f35b1678fb74abd4 changes in content<br>c32557493a95185997c87e0bc3a9481715279351 adding Vue.js<br>abc234f986d270d7f97c77618314a06f024c4563 migrating content<br>a5673cd762d8ef2e146d7f0226e81a92f91956b1 adding git reflog outline<br>2bce4a4404c42128bee8468a9517418ed0ea412 initial commit</code></pre>
+                                                                  </div><br>
+                                                                  <p>Now suppose we commit some new changes to this repository and run the following:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>#make changes to HEAD<br>git commit -am "API changes"</code></pre>
+                                                                  </div><br>
+                                                                  <p>As a result, the log now looks like this:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>37656e19d4e4f1a9b419f57850c8f1974f871b07 API changes<br>2b43ceab309da94256db8fb1f35b1678fb74abd4 changes in content<br>c32557493a95185997c87e0bc3a9481715279351 adding Vue.js<br>abc234f986d270d7f97c77618314a06f024c4563 migrating content<br>a5673cd762d8ef2e146d7f0226e81a92f91956b1 adding git reflog outline<br>2bce4a4404c42128bee8468a9517418ed0ea412 initial commit</code></pre>
+                                                                  </div><br>
+                                                                  <p>At this stage, in order to make an interactive rebase against the master branch, we need to execute the following:<p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git rebase -i origin/master</code></pre>
+                                                                  </div><br>
+                                                                  <p>While rebasing, the s rebase subcommand marks commits for squashing into the most recent <b>"API changes"</b> commit. As a result of squashing the commits, the git log output now has a look, like this:</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>40dhsoi37656e19d4e4f1a9b419f57850ch87dah987698hs  API changes<br>35aee4a4404c42128bee8468a9517418ed0eb3dc initial commit</code></pre>
+                                                                  </div><br>
+                                                                  <p>It now seems that commits marked for squashing are no longer there. If you need to operate on a squashed commit, you can leverage the reflog.</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reflog<br>37656e1 HEAD@{0}: rebase -i (finish): returning to refs/heads/git_reflog<br>37656e1 HEAD@{1}: rebase -i (start): checkout origin/master<br>37656e1 HEAD@{2}: commit: API changes</code></pre>
+                                                                  </div><br>
+                                                                  <p>There are reflog entries for the start and finish of the rebase and preceding those is the <b>"API changes"</b> commit. The reflog ref can be passed to git reset in order to reset a commit before the rebase.</p><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>git reset HEAD@{2}</code></pre>
+                                                                  </div><br>
+                                                                  <p>This command will move <b>HEAD</b> to that commit with <b>"API changes"</b>, and restore the other squashed commits</p><br>
+                                                                  `,
+                                                                };
+                                                                case 'git remote':
+                                                                  return{
+                                                                    theory:`
+                                                                    <p>The <code>git remote</code> command is designed for creating, viewing and removing connections to other repositories. Remote connections are considered to be bookmarks in other repositories, which are convenient names used for referencing URL that are not convenient enough.</p><br>
+                                                                    <p>The diagram below displays two remote connections from your repository into the central repository and into the repository of another developer. You can pass the origin to another developer and they will shortcut to other Git commands. As a result, you won't have to reference the connections by their full URLs.</p><br>
+                                                                    <img src="/images/gitremote.png" width="auto" height="auto"><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating and editing git remote configurations</h3><br>
+                                                                    <p>The git remote command is also used for editing a <b>./.git/config</b> file of the repository. You can do it by executing the commands below:</p><br>
+                                                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                    <li>Use the command below for adding a new remote connection to a remote repository. Then you can use &lt;name&gt; as an appropriate shortcut for &lt;url&gt; in other Git commands.</li><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote add</code></pre>
+                                                                    </div><br>
+                                                                    <li>Be executing the following command, remove the connection to the remote repository, which is called &lt;name&gt;.</li><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote rm</code></pre>
+                                                                    </div><br>
+                                                                    <li>Run the command below for renaming a remote connection:</li><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote rename</code></pre>
+                                                                    </div><br>
+                                                                    </ul><br>
+                                                                    <p>You can get the same result, as in case of executing the commands above, by modifying <b>./.git/config</b> file with a text director, too.</p><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The origin remote</h3><br>
+                                                                    <p>Cloning a repository by executing git clone command, will automatically create a remote connection, that is called origin, and that points back to the cloned repository. Creating a local copy of the central directory is an easy method of pulling upstream modifications or publishing local commits. That's why, the central repository of many Git-based projects is called “origin”.</p><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Repository URLs</h3><br>
+                                                                    <p>There are many ways of referencing a remote repository, but the two simplest ones are considered to be via HTTPS and SSH protocols. In the case of accessing a remote repository via HTTPS, you can't push commits to an HTTPS address.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>http://host/path/to/repo.git</code></pre>
+                                                                    </div><br>
+                                                                    <p>Use SSH for a read and write access. You need a valid SSH account. But take into account, that only authenticated access is supported by Git. Modern secure third party hosting solutions, for example, Bitbucket.com, can provide such URLs:</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>ssh://user@host/path/to/repo.git</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git remote subcommands</h3><br>
+                                                                    <p>The <code>git remote</code> command has its own subcommands. We are going to examine them below.</p><br>
+                                                                    <p>The subcommand below will add a record to <code>./.git/config</code> file for remote named <b>&lt;NAME&gt;</b> at the repository url <b>&lt;URL&gt;</b> . It accepts a <b>-f</b> option, that after the creation of the remote record will instantly git fetch <b>&lt;name&gt;</b>. Another option accepted by this subcommand is a <b>--tags</b> option, which will instantly <code>git fetch &lt;name&gt;</code> and import all the tags from the remote repository.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>ADD &lt;NAME&gt; &lt;URL&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <p>The following subcommand will update <code>./.git/config</code> for renaming the record <b>&lt;OLD&gt;</b> to <b>&lt;NEW&gt;</b>. As a result, all the configuration settings and branches of the remote will be updated.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>RENAME &lt;OLD&gt; &lt;NEW&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <p>Next subcommand edits <code>./.git/config</code> removing the remote named <b>&lt;NAME&gt;</b>. In the end, all the configuration settings and branches for the remote will be removed.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>REMOVE or RM</code></pre>
+                                                                    </div><br>
+                                                                    <p>Executing the subcommand below will output the URLs for a remote record. This subcommand accepts <b>--push</b> and <b>--all</b> options.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>GET-URL &lt;NAME&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <p>The next subcommand will output information about the remote <b>&lt;NAME&gt;</b>.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>SHOW &lt;NAME&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <p>And the last command will delete all the local branches for <b>&lt;NAME&gt;</b> that don't exist on the remote repository. This subcommand accepts <b>--dry-run</b> option which lists the branches that have been set to be pruned, but in fact doesn't prune them.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>PRUNE &lt;NAME&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git remote examples</h3><br>
+                                                                    <p>While using Git, it's desirable to be connected to other developers' repositories too, because this gives the opportunity to collaborate outside of the central repository and have effective work. For example, your co-worker has kept a repository dev.example.com/tom.git that is publicly accessible, you can add a connection like the following:</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote add tom http://dev.example.com/tom.git</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Showing your remotes</h3><br>
+                                                                    <p>By default, the <code>git remote</code> command lists all the remote connections that have previously been stored to other repos. As a result, you will have a single line output listing the names of bookmarked remote repositories.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote<br>origin<br>upstream<br>other_repo</code></pre>
+                                                                    </div><br>
+                                                                    <p>You can invoke the <code>git remote</code> command with the -v option that will list bookmarked repository names with the URL of the corresponding repository.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote -v<br>origin  git@bitbucket.com:origin_user/reponame.git (fetch)<br>origin  git@bitbucket.com:origin_user/reponame.git (push)<br>upstream    https://example.com/upstream_user/reponame.git (fetch)<br>upstream    https://example.com/upstream_user/reponame.git (push)<br>other_repo    https://example.com/other_repo/reponame (fetch)<br>other_repo    https://example.com/other_repo/r</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Adding remote repositories</h3><br>
+                                                                    <p>Invoking the git remote add command, a new connection record will be created to a remote repository. Then the <b>&lt;name&gt;</b> name will be available as an acceptable shortcut for &lt;url&gt; in other Git commands. This command creates a new record in the ./.git/config of the repository.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote add fake_test https://example.com/upstream_user/reponame.git; [remote "remote_test"] <br>url = https://example.com/upstream_user/reponame.git<br>fetch = +refs/heads/*:refs/remotes/remote_test/*</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Inspecting a remote</h3><br>
+                                                                    <p>You can also attach the show subcommand to the git remote command to have more detailed output on the configuration of a remote, included a list of those branches that are connected with the remote and the endpoints appended for fetching and pushing.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote show upstream<br>* remote upstream<br>Fetch URL: https://example.com/upstream_user/reponame.git<br>Push URL: https://example.com/upstream_user/reponame.git<br>HEAD branch: master<br>Remote branches:<br>master tracked<br> simd-deprecated tracked<br> tutorial tracked<br> Local ref configured for 'git push':<br> master pushes to master (fast-forwardable)</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Fetching and pulling from Git remotes</h3><br>
+                                                                    <p>Immediately after the configuration of a remote record done with the git remote command, the remote name can serve as an argument for other Git commands to create a communication with the remote repository. You can use git fetch and git pull commands for reading from a remote repository.</p><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pushing to Git remotes</h3><br>
+                                                                    <p>The git push command writes to a remote repository.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git push &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Renaming and removing remotes</h3><br>
+                                                                    <p>The git remote command renames a remote connection from <b>&lt;that-name&gt;</b> to <b>&lt;this-name&gt;</b>. Besides, it modifies the contents of ./.git/config to rename the record for the remote as well.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote rename &lt;that-name&gt; &lt;this-name&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <p>The git remote rm command removes the connection to the remote repository defined by the <b>&lt;name&gt;</b> parameter.</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>git remote rm &lt;name&gt;</code></pre>
+                                                                    </div><br>
+                                                                    `,
+                                                                  };
+                                                                  case 'git fetch':
+                                                                    return{
+                                                                      theory:`
+                                                                      <p>The <code>git fetch</code> command is used to download commits, files and references from a remote repository into the local repository. It is used to see what other members of the team have been working on.</p><br>
+                                                                      <img src="/images/gitfetch.png" width="auto" height="auto">
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works with remote branches</h3><br>
+                                                                      <p>Git stores the local and remote commits and separates through the use of branch references. The references for the local branches are stored in the /.git/refs/heads/. So as to see the list of the local branch references, run the git branch command.</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git branch<br>#master<br>#crossword<br>#solver</code></pre>
+                                                                      </div><br>
+                                                                      <p>Exploring the contents of the /.git/refs/heads/ directory will have the following output:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>ls ./.git/refs/heads/<br>#master<br>#crossword<br>#solver</code></pre>
+                                                                      </div><br>
+                                                                      <p>Remote branch references are stored in the ./.git/refs/remotes/ directory. To see the remote branches, use the -r flag with the git branch. Here is the output after fetching a remote repository:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git branch -r<br># origin/master<br># origin/crossword<br># origin/solver<br># remote-repo/master<br># remote-repo/other-feature</code></pre>
+                                                                      </div><br>
+                                                                      <p>The output displays with prefix origin/ which shows the remote branches. You can examine the remote branches with the git checkout and git log commands. After approving the changes of the remote branch, you can merge it into the local branch with the git merge command. Use the git pull command instead to shorten the process.</p><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common Options</h3><br>
+                                                                      <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--all</td>
+      <td style="border: 1px solid #000; padding: 8px;">Fetches all the remote branches.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--dry-run</td>
+      <td style="border: 1px solid #000; padding: 8px;">Shows a demo run of the command without making changes.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-k / --keep</td>
+      <td style="border: 1px solid #000; padding: 8px;">Keeps the downloaded pack.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-p / --prune</td>
+      <td style="border: 1px solid #000; padding: 8px;">Removes remote-tracking references that no longer exist on the remote before fetching.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">--depth=&lt;depth&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Limits the number of commits to fetch from the tip of each remote branch history.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to git fetch the remote branch</h3><br>
+                                                                      <p>Here, we will show the steps of fetching a remote branch and update the local working state to the remote content. In the following example, we have a central repository origin from which the local repository has been cloned with the git clone command. There is another remote repository named <b>test_repo</b> containing <b>feature_branch</b> that has to be configured and fetched.</p><br>
+                                                                      <p>The first step is configuring the remote repository with git remote:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git remote test_repo git@hostname:test/test_repo.git</code></pre>
+                                                                      </div><br>
+                                                                      <p>Using the URL of the coworker's repository, we have created a reference to it. For downloading the content git fetch the test feature_branch:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git fetch test feature_branch<br>fetching test/feature_branch</code></pre>
+                                                                      </div><br>
+                                                                      <p>This will integrate the content of the <b>test/feature_branch</b> to the local repository. Now, use the git checkout command to checkout the downloaded remote branch:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git checkout test/feature_branch<br>Note: checking out test/feature_branch'.<br><br>You are in 'detached HEAD' state. You can look around, make experimental<br>changes and commit them, and you can drop all the commits you make in this<br>state without influencing branches by executing another checkout.<br><br>If you want to generate a new branch for maintaining commits you create, you may<br>do so (now or later) if you use -b with the checkout command again. Example:<br><br>git checkout -b <new-branch-name></code></pre>
+                                                                      </div><br>
+                                                                      <p>The output shows that we are in the detached HEAD state which means that the HEAD reference points to a reference not being in sequence with the local history.</p><br>
+                                                                      <p>With the git checkout command a new local branch from the <b>test/feature_branch</b> reference may be created:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git checkout -b local_feature_branch</code></pre>
+                                                                      </div><br>
+                                                                      <p>The new local branch is created updating HEAD to point at the latest remote content.</p><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Synchronizing origin with git fetch</h3><br>
+                                                                      <p>The following example displays how to synchronize the local repository with the central repository's master branch:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git fetch origin</code></pre>
+                                                                      </div><br>
+                                                                      <p>The output will show the branches that have been downloaded:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>b341bc3..32a45b1 master -> origin/master<br>b341bc3..7a52a22 develop -> origin/develop<br>* [new branch] some-feature -> origin/some-feature</code></pre>
+                                                                      </div><br>
+                                                                      <p>Invoke git log using origin/master as a filter to show the commits added to the upstream master:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git log --oneline master..origin/master</code></pre>
+                                                                      </div><br>
+                                                                      <p>Check the changes and merge them into the local master branch:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git checkout master<br>git log origin/master</code></pre>
+                                                                      </div><br>
+                                                                      <p>Run git merge origin/master to synchronize with the upstream developments:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>git merge origin/master</code></pre>
+                                                                      </div><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">A Common Scenario Example:</h3><br>
+                                                                      <p>Here's a scenario to help you better understand this concept:</p><br>
+                                                                      <p>Assume there is a small development team consisting of two developers, Alice and Bob. They are working on a project hosted on a remote Git repository called origin. Alice clones the repository to her local machine and starts working on the main branch, while Bob is working on a separate branch called feature-branch.</p><br>
+                                                                      <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                      <li>Alice creates a new file called README.md and makes some changes to it. She then commits and pushes her changes to the main branch on the origin repository:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git add README.md<br>$ git commit -m "Add README file"<br>$ git push origin main</code></pre>
+                                                                      </div><br>
+                                                                      <li>Meanwhile, Bob has made some changes to the feature-branch and pushed them to the origin repository:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git add some_file.txt<br>$ git commit -m "Add new feature"<br>$ git push origin feature-branch</code></pre>
+                                                                      </div><br>
+                                                                      <li>Alice realizes that she needs to incorporate Bob's changes into her own work, so she fetches the changes from the origin repository:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git fetch origin</code></pre>
+                                                                      </div><br>
+                                                                      <li>After fetching, Alice can see that there are new changes in the feature-branch:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git branch -r<br> origin/HEAD -> origin/main<br> origin/main<br> origin/feature-branch</code></pre>
+                                                                      </div><br>
+                                                                      <li>Alice can now merge Bob's changes into her main branch:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git merge origin/feature-branch</code></pre>
+                                                                      </div><br>
+                                                                      <li>Alice resolves any merge conflicts, and then pushes her changes to the origin repository:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git push origin main</code></pre>
+                                                                      </div><br>
+                                                                      <li>Bob can now fetch the changes made by Alice:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git fetch origin</code></pre>
+                                                                      </div><br>
+                                                                      <li>Bob can now see that there are new changes in the main branch:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git branch -r<br> origin/HEAD -> origin/main<br> origin/main<br> origin/feature-branch</code></pre>
+                                                                      </div><br>
+                                                                      <li>Bob can merge the changes made by Alice into his feature-branch:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git merge origin/main</code></pre>
+                                                                      </div><br>
+                                                                      <li>Bob resolves any merge conflicts, and then pushes his changes to the origin repository:</li><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>$ git push origin feature-branch</code></pre>
+                                                                      </div><br>
+                                                                      </ol><br>
+                                                                      <p>And so the cycle continues, with both Alice and Bob using git fetch to track changes made by each other and push their own changes to the origin repository. By using git fetch, they are able to keep their local repository up-to-date with the changes made by their teammates, which helps to avoid conflicts and ensure a smooth collaboration process.</p><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git fetch vs git pull</h3><br>
+                                                                      <p>Both git fetch and git pull are used for downloading the content from the remote repository. The git fetch command does not force to merge the changes into the repository, it just shows the progression of the central history. The fetched content does not have any effect on the local work, and it should be checked out using the git checkout command making it safe to review commits before merging them into the local repository. The git pull command not only downloads the new content but also directly integrates it into the current working copy. This can cause merging conflicts. Also, it is recommended to run git pull only when the working copy is clean.</p><br>
+                                                                      `,
+                                                                    };
+                                                                    case 'git push':
+                                                                      return{
+                                                                        theory:`
+                                                                        <p>The git push command uploads the content of the local repository to the remote repository. Pushing is the opposite of fetching. If git fetch imports the content to the local branches, git push exports it to the remote branches.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git push usage</h3><br>
+                                                                        <p>The git push command is commonly used to publish the upload local changes to the central repository. After the changes are made in the local repository, you can git push to share the modification with other members of the team. The git pushcommand is one of the commands that are involved in the "syncing" process. These commands work on the remote branches that are configured with the git remote command. The commits are uploaded with git push and download with git fetch and git pull. After making changes in both cases, git merge is used to integrate changes.</p><br>
+                                                                        <p>The following diagrams show the progression of the local master past the central repository's master and publishing changes by invoking git push origin master.</p><br>
+                                                                        <img src="/images/gitpush.png" width="auto" height="auto"><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                                                        <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git push &lt;remote&gt; &lt;branch&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Pushes the specified branch to &lt;remote&gt; with necessary commits, creating a local branch in the destination repository.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git push &lt;remote&gt; --force</td>
+      <td style="border: 1px solid #000; padding: 8px;">Forces the push even if it results in a non-fast-forward merge. Use with caution to avoid overwriting others’ work.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git push &lt;remote&gt; --all</td>
+      <td style="border: 1px solid #000; padding: 8px;">Pushes all of the local branches to the remote repository.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git push &lt;remote&gt; --tags</td>
+      <td style="border: 1px solid #000; padding: 8px;">Pushes the tags from the local repository to the remote. Note that <code>--all</code> does not push tags.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to push to bare repositories</h3><br>
+                                                                        <p>It is very safe to push to repositories that are created with --bare flag since it doesn't allow to edit files and commit changes to that repository. It is recommended to create central repositories as bare ones otherwise pushing to a non-bare repository can overwrite changes.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Force pushing</h3><br>
+                                                                        <p>Git can refuse your push request if the history of the central repository does not match the local one. In these cases, you should pull the remote branch and merge it into the local repository then push again. The --force flag matches the remote repository's branch and local one cleaning the upstream changes from the last pull. Use force push when the shared commits are not right and are fixed with git commit --amend or an interactive rebase. Before using the --force option, be sure that nobody has pulled the commits. The interactive rebase is also a good way to clean up the commits before sharing. The git commit --amend option updates the previous commit. When the commit is amended git pushwill fail because Git will accept the amended commit and the remote commit as diverged content. Here, --force must be used to push the amended commit.</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code># make changes to a repo and git addgit commit --amend<br># update the existing commit message<br>git push --force origin master</code></pre>
+                                                                        </div><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to delete a remote branch</h3><br>
+                                                                        <p>Here is an example of deleting the remote branch. The <b>branch_name</b> prefixed with a colon to git push will delete the remote branch:</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git branch -D branch_name<br>git push origin :branch_name</code></pre>
+                                                                        </div><br>
+                                                                        <p>The command git <code>push origin :branch_name</code> deletes the specified branch (branch_name) from the remote repository (origin) by pushing an empty reference to it.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Here's how it works:</h3><br>
+                                                                        <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                        <li><code>git push</code>: push changes from your local Git repository to a remote repository</li><br>
+                                                                        <li><code>origin</code>: the name of the remote repository</li><br>
+                                                                        <li><code>:branch_name</code>: a refspec that represents an empty reference, effectively deleting the specified branch from the remote repository</li><br>
+                                                                        </ol><br>
+                                                                        <p>So when you run <code>git push origin :branch_name</code>, Git will delete the <b>branch_name</b> branch from the <b>origin</b> remote repository.</p><br>
+                                                                        <p>Note that this command can be dangerous if used incorrectly, as it will delete the branch without any confirmation or possibility of recovery. Make sure you double-check the branch name and that you really want to delete it before running this command.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Use -u flag for the first push on a branch</h3><br>
+                                                                        <p>When you have a local branch and you want to push it to the remote repository for the first time, you should specify which branch of the remote repository you mean. In Git, the -u flag is used with the git push command to set the upstream branch for the current branch. When you use the -u flag, Git will create a link between your local branch and the remote branch. This link is useful for simplifying the git pull and git push commands in the future, as it allows Git to remember which remote branch corresponds to your local branch.</p><br>
+                                                                        <p>The -u flag is short for --set-upstream. When you use this flag, you'll typically see it used like this:</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push -u origin your-branch-name</code></pre>
+                                                                        </div><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of some mostly used flags:</h3><br>
+                                                                        <p>Here are some examples of how to use some of the git push flags:</p><br>
+                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">-f flag:</h3><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push -f origin master</code></pre>
+                                                                        </div><br>
+                                                                        <p>This will force push the local master branch to the origin remote repository, overwriting any changes that may have been made to the master branch in the remote repository. Use this flag with caution, as it can cause problems if multiple people are working on the same branch.</p><br>
+                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">--tags flag:</h3><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push --tags origin</code></pre>
+                                                                        </div><br>
+                                                                        <p>This will push all tags to the origin remote repository. Tags are used to label important points in your project's history, such as releases or milestones.</p><br>
+                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">--all flag:</h3><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push --all origin</code></pre>
+                                                                        </div><br>
+                                                                        <p>This will push all local branches to the origin remote repository.</p><br>
+                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">--dry-run flag:</h3><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push --dry-run origin master</code></pre>
+                                                                        </div><br>
+                                                                        <p>This will simulate a push to the master branch of the origin remote repository, without actually pushing anything. This can be useful for testing and checking what changes will be pushed before actually pushing them.</p><br>
+                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">--force-with-lease flag:</h3><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>git push --force-with-lease origin master</code></pre>
+                                                                        </div><br>
+                                                                        <p>This will force push the local master branch to the origin remote repository, while ensuring that you don't overwrite changes that may have been made to the master branch in the remote repository since your last pull. This is a safer alternative to using the -f flag.</p><br>
+                                                                        `,
+                                                                      };
+                                                                      case 'git pull':
+                                                                        return{
+                                                                          theory:`
+                                                                          <p>The git pull command fetches and downloads content from the remote repository and integrates changes into the local repository. The git pull command is called as the combination of git fetch followed by git merge.</p><br>
+                                                                          <img src="/images/gitpull1.png" width="auto" height="auto">
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git pull usage</h3><br>
+                                                                          <p>The git pull command is one of the commands that are involved in the "syncing" process. These commands work on the remote branches that are configured with the git remote command. The commits are uploaded with git push and download with git fetch and git pull. After making changes in both cases, git merge is used to integrate changes. Both git fetch and git pull are used for downloading the content from the remote repository. The git fetch command does not force to merge the changes into the repository while the git pull command not only downloads the remote content but also merges it into the current working copy.</p><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                                          <p>To understand the pull and merging process let's assume the following example. There is a repository with a master branch and a remote origin. The git pull command downloads the changes from the point where the local and the master branches are diverged. The illustration shows that point is E. Here you can see the A, B and C remote commits that will be fetched by git pull. Then a new local merge commit with the content of the new diverged remote commits will be created.</p><br>
+                                                                          <img src="/images/gitpull2.png"wdth="auto" height="auto"><br>
+                                                                          <p>The illustration shows the H new commit which contains all the contents of A, B, and C commits with combined log message.</p><br>
+                                                                          <img src="/images/gitpull3.png"wdth="auto" height="auto"><br>
+                                                                          <p>The git pull with --rebase option is used for merging instead of git merge.</p><br>
+                                                                          <img src="/images/gitpull4.png"wdth="auto" height="auto"><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                                                          <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git pull &lt;remote&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Fetches the remote content and directly merges it into the local copy (equivalent to <code>git fetch &lt;remote&gt;</code> followed by <code>git merge origin/&lt;current-branch&gt;</code>).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git pull --no-commit &lt;remote&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Fetches the remote content but does not create a merge commit.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git pull --rebase &lt;remote&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Integrates the remote branch with the local one using rebase instead of merge.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git pull --verbose</td>
+      <td style="border: 1px solid #000; padding: 8px;">Shows downloaded content and merge details, giving verbose output during a pull.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Examples</h3><br>
+                                                                          <p>Invoking git pull is equivalent to git fetch origin HEAD and git merge HEAD. HEAD is reference that points to the current branch.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>git pull</code></pre>
+                                                                          </div><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pull changes from a specific branch of a remote repository:</h3><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>git pull &lt;remote&gt; &lt;branch&gt;</code></pre>
+                                                                          </div><br>
+                                                                          <p>This command will fetch and merge the changes from the specified branch of the remote repository.</p><br>
+                                                                          <p>For example, if you want to pull changes from the develop branch of the origin remote, you would use the following command:</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>git pull origin develop</code></pre>
+                                                                          </div><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pull changes from a remote repository and rebase your changes on top of them:</h3><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>git pull --rebase</code></pre>
+                                                                          </div><br>
+                                                                          <p>This command will fetch the changes from the remote repository and rebase your local changes on top of them, rather than merging them. This can be useful if you want to keep your commit history linear and avoid merge commits.</p><br>
+                                                                          <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                          <li>Pull changes from a remote repository, but don't merge them automatically:</li><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>git pull --no-commit</code></pre>
+                                                                          </div><br>
+                                                                          </ol><br>
+                                                                          <p>This command will fetch the changes from the remote repository, but won't automatically merge them into your local branch. Instead, it will leave the changes as staged changes, which you can review and commit manually.</p><br>
+                                                                          `,
+                                                                        };
+                                                                        case 'git branch':
+                                                                          return{
+                                                                            theory:`
+                                                                            <p>The git branch command creates, lists and deletes branches. It doesn't allow switching between branches or putting a forked history back together again. Thus, git branch is integrated with the git checkout and git merge commands.</p><br>
+                                                                            <img src="/images/gitbranch1.png" width="auto" height="auto"><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Git branch usage</h3><br>
+                                                                            <p>Branching is an available feature in most version control systems. Git branches are a pointer to a snapshot of the changes you have made. A new branch is created to encapsulate the changes when you want to fix bugs or add new features. This helps you to clean up the future's history before merging it. Git branches are an essential part of everyday workflow. Git does not copy files from one directory to another, it stores the branch as a reference to a commit.</p><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                                            <p>Branches represent an isolated line of development. They are accepted as a way to request a new working directory, staging area and project history. Developing isolated lines of development for two features in branches will enable to operate on them in parallel and make the master branch free from questionable code.</p><br>
+                                                                            <img src="/images/gitbranch2.png" width="auto" height="auto"><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common options</h3><br>
+                                                                            <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch</td>
+      <td style="border: 1px solid #000; padding: 8px;">Lists all of the branches in the repository (same as <code>git branch --list</code>).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch &lt;branch&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Creates a new branch called &lt;branch&gt; but does not check out the new branch.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch -d &lt;branch&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Deletes a branch. If there are unmerged changes, Git does not allow deletion.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch -D &lt;branch&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Forces deletion of the branch, even if there are unmerged changes. Use when you are sure to delete permanently.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch -m &lt;branch&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Moves or renames the current branch to &lt;branch&gt;.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git branch -a</td>
+      <td style="border: 1px solid #000; padding: 8px;">Lists all the remote branches.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating branches</h3><br>
+                                                                            <p>Branches are just pointers to commits. When you create a branch, Git will create a new pointer. It does not change the history of the repository.</p><br>
+                                                                            <img src="/images/gitbranch3.png" width="auto" height="auto">
+                                                                            <p>You can create a branch with the git branch command:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git branch test_branch</code></pre>
+                                                                            </div><br>
+                                                                            <p>The history of the repository will remain unchanged. A new pointer to the current commit will be created:</p><br>
+                                                                            <img src="/images/gitbranch4.png" width="auto" height="auto"><br>
+                                                                            <p>The newly created branch should be selected with git checkout and then git add and git commit so as to add commits to it.</p><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating remote branches</h3><br>
+                                                                            <p>The git branch command not only operates on the local branches but also remote branches. Creating a branch on a remote repository must be configured and added to the local repository config:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git remote add new-remote-repo https://hostname/user/repo.git<br># Add remote repo to local repo config<br>git push <new-remote-repo> test_branch~<br># pushes the test_branch branch to new-remote-repo</code></pre>
+                                                                            </div><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Deleting Branches</h3><br>
+                                                                            <p>After finishing the work on a branch and merging it into the main master, you can delete it:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git branch -d test_branch</code></pre>
+                                                                            </div><br>
+                                                                            <p>If unmerged changes remain, an error will occur:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>error: The branch 'test_branch' is not fully merged.<br>If you are sure you want to delete it, run 'git branch -D test_branch'.</code></pre>
+                                                                            </div><br>
+                                                                            <p>If you are sure that you want to delete the branch permanently you can use the git branch command with the capital -D option:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git branch -D test_branch</code></pre>
+                                                                            </div><br>
+                                                                            <p>The above-mentioned commands only delete the local copy of a branch. The branch may still exist in remote repositories. Run the following to delete the remote branch:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git push origin --delete test_branch</code></pre>
+                                                                            </div><br>
+                                                                            <p>or</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>git push origin :test_branch</code></pre>
+                                                                            </div><br>
+                                                                            `,
+                                                                          };
+                                                                          case 'git checkout':
+                                                                            return{
+                                                                              theory:`
+                                                                              <p>The git checkout command switches branches or restores working tree files. It operates on files, commits, and branches. The git checkout command allows switching between multiple features in just a single repository.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Checking out branches</h3><br>
+                                                                              <p>The git checkout command works with the git branch command. It updates the files in the working directory to match the version stored in that branch telling Git to record all the new commits. The git checkout command can be associated with git clone. The git clone command operates to fetch code from a remote repository whereas git checkout operates to switch code versions on the local system.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Checking out existing branches</h3><br>
+                                                                              <p>Consider there is a repository that contains pre-existing branches. If you want to switch between these branches you can invoke git checkout. Executing git branch will display the list of available branches and the current branch name.</p>br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git branch<br>master<br>test_branch<br>feature_branch<br>git checkout feature_branch</code></pre>
+                                                                              </div><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Checking out new branches</h3><br>
+                                                                              <p>The git branch command is executed to create a new branch. However, git checkout -b argument creates a new branch and directly switch to it:</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git checkout -b &lt;new_branch&gt;</code></pre>
+                                                                              </div><br>
+                                                                              <p>In the given example, the -b flag tells Git to execute git branch <new_branch> before invoking git checkout &lt;new_branch&gt;.</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git checkout -b <new_branch> &lt;existing_branch&gt;</code></pre>
+                                                                              </div><br>
+                                                                              <p>The git checkout -b bases the new_branch off the current HEAD. In the given example, <existing_branch> will base new_branch off instead of the current HEAD.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Switching branches</h3><br>
+                                                                              <p>Invoking the following will point HEAD to the tip of &lt;branchname&gt;:</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git checkout &lt;branchname&gt;</code></pre>
+                                                                              </div><br>
+                                                                              <p>The git reflog command can be executed to view the history. Read more about it on our git reflog.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Checking out remote branches</h3><br>
+                                                                              <p>It is common to use remote repositories when working with a team. Each remote repository can contain its own branches. So as to checkout a remote branch git fetch should be executed to fetch the contents of it:</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git fetch --all</code></pre>
+                                                                              </div><br>
+                                                                              <p>The modern versions of Git allow checking out the remote branch like a local branch:</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git checkout &lt;remote_branch&gt;</code></pre>
+                                                                              </div><br>
+                                                                              <p>While in the older versions of Git, you should create a new branch based on the remote one:</p><br>
+                                                                              <p>git checkout &lt;remote_branch&gt; origin/&lt;remote_branch&gt;</p><br>
+                                                                              <p>Then checkout a new local branch and reset it to the remote branches last commit with the git reset command:</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>git checkout -b &lt;branchname&gt;<br>git reset --hard origin/&lt;branchname&gt;</code></pre>
+                                                                              </div><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Detached HEADS</h3><br>
+                                                                              <p>“Detached HEAD” state allows you to check out commits and examine the repository's older state without creating a local branch. The HEAD command updates the git checkout to point the specified branch or commit. No problem will occur, when HEAD points to a branch, but when it points to a commit, it moves to a “detached HEAD” state.</p><br>
+                                                                              <p>“Detached HEAD” state is a warning which informs that your activity is “detached” from the project's development. Developing a feature in a “detached HEAD” state, no branch will allow you to get back to it. When checking out another branch you cannot reference your feature:</p><br>
+                                                                              <img src="/images/gitcheckout.png" width="auto" height="auto"><br>
+                                                                              <p>The development must take place on a branch not being on “detached HEAD” thus ensuring to have a reference to the new commits. But when you want to look at an old commit being on “detached HEAD” state does not really matters.</p><br>
+                                                                              `,
+                                                                            };
+                                                                            case 'git merge':
+                                                                              return{
+                                                                                theory:`
+                                                                                <p>The git merge command integrates the independent lines of development into a single branch. The git merge command goes hand in hand with the git checkout command to select the current branch and the git branch command with the -d flag to delete the obsolete target branch. Read about these commands in our previous chapters.</p><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How it works</h3><br>
+                                                                                <p>The primary use of git merge is to combine two branches. It is also used to merge multiple commits into one history. In the following illustration, git merge takes two branch tips and finds a common case commit between them. The common base commit creates a new commit that merges the changes of the sequence of each merge commit. Here we have two branches: a <b>master</b> and a <b>stage</b>. We should merge the stage branch to the master branch.</p><br>
+                                                                                <img src="/images/gitmerge.png" width="auto" height="auto"><br>
+                                                                                <p>Merge commits are unique because they have two parent commits. Git automatically merges separate histories when a new merge commit is created. It will not combine the data that is changed in both histories. This is what is called “version control conflict”.</p><br>
+                                                                                <img src="/images/gitmerge1.png" width="auto" height="auto"><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Merging process</h3><br>
+                                                                                <p>Before the merging process we should take some steps.</p><br>
+                                                                                <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                <li>Firstly, invoke git status so that to point HEAD to the correct merge-receiving branch. Run git checkout <receiving branch> to switch to the receiving branch.</li><br>
+                                                                                <li>The next step is to fetch latest remote commits. The receiving branch and the merging branch should be updated with the latest remote changes. Invoke git fetch to pull the latest remote commits. After the fetching process invoke git pull to update the master branch.</li><br>
+                                                                                <li>The final step is executing git merge <branch name> which is the name of the branch to be merged into the receiving branch.</li><br>
+                                                                                </ul><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Fast forward merge</h3><br>
+                                                                                <p>A fast-forward merge occurs the path from the current branch to the target branch is linear. The fast-forward merge combines the histories, as all the commits that are reachable from the target branch are available through the current branch. Here's an example of a fast-forward merge:</p><br>
+                                                                                <img src="/images/gitmerge2.png" width="auto" height="auto"><br>
+                                                                                <p>When the two histories are diverged, Git uses the 3-way merge as an alternative. 3-way merge uses a dedicated commit to combine two histories</p><br>
+                                                                                <img src="/images/gitmerge3.png" width="auto" height="auto"><br>
+                                                                                <p>A fast-forward merges are used to fix bugs and small features, whereas 3-way merges are used to integrate long-running features. The following examples use a fast-forward merge:</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code># Start the stage<br>git checkout -b stage master<br># Edit some files<br>git add &lt;file&gt;<br>git commit -m "Start with the stage"<br># Edit some files<br>git add &lt;file&gt;<br>git commit -m "Finish with the stage"<br># Merge in the stage branch<br>git checkout master<br>git merge stage<br>git branch -d stage</code></pre>
+                                                                                </div><br>
+                                                                                <p>We run the git branch -d to delete the stage branch, as <b>stage</b> is now accessible from the master branch.</p><br>
+                                                                                <p>The git merge command with the --no-ff option is run if you require a merge commit during a fast-forward merge to merge the specified branch into the current branch always generating a merge commit (also, in the case of a fast-forward merge):</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code>git merge --no-ff &lt;branch&gt;</code></pre>
+                                                                                </div><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">3-way merge</h3><br>
+                                                                                <p>Another example which requires a 3-way merge as the master branch progresses while the stage is in progress. This is used when members of the team work on the large feature simultaneously:</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code># Start the stage<br>git checkout -b stage master<br># Edit some files<br>git add &lt;file&gt;git commit -m "Start with the stage"<br># Edit some files<br>git add &lt;file&gt;<br>git commit -m "Finish with the stage"<br># Develop the master branch<br>git checkout master<br># Edit some files<br>git add &lt;file&gt;git commit -m "Make some super-stable changes to master"<br># Merge in the stage branch<br>git merge stage<br>git branch -d stage</code></pre>
+                                                                                </div><br>
+                                                                                <p>In the above example, <b>stage</b> would be a larger feature taking much time to develop, that is why we use a 3-way merge. If your feature is small, you had better use a fast-forward merge to prevent unnecessary commits messing up the project history.</p><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Resolving conflict</h3><br>
+                                                                                <p>When you want to merge two branches and the same part of the same file is changed, merging conflicts occur as Git cannot figure out which version to use. When this happens, it stops before the merge commit so as to resolve that conflict. Git merging process uses edit/stage/commit workflow for resolving merge conflicts.When conflict occurs executing git status will display the files that need to be resolved. The following picture will show up when the same parts of the <b>example.txt</b> file have been changed:</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code>On branch master<br>Unmerged paths:<br>(use "git add/rm ..." as appropriate to mark resolution)<br>both modified: example.txt</code></pre>
+                                                                                </div><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How conflicts are presented</h3><br>
+                                                                                <p>In the case of conflicts, Git edits the content of the affected files with the visual marks both sides of the conflicted content. Merge conflicts only occur in the case of a 3-way merge.</p><br>
+                                                                                <p>These markers are: <<<<<<<, =======, and >>>>>>>. They help you search for a project for these indicators to find the conflicted parts.</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code>here is some content not affected by the conflict<br><<<<<<< master<br>this is conflicted text from master<br>=======<br>this is conflicted text from stage branch</code></pre>
+                                                                                </div><br>
+                                                                                <p>After finding the conflicted parts, you execute git add on the conflicted file to instruct Git they are resolved. Next, run git commit to generating the merge commit.</p><br>
+                                                                                `,
+                                                                              };
+                                                                              case 'merge conflicts':
+                                                                                return{
+                                                                                  theory:`
+                                                                                  <p>Merge conflicts occur when multiple authors edit the same content or when one developer deletes a file while another developer was making changes on it. To solve this problem developers work in isolated branches. The git merge command is responsible for combining isolated branches and resolving conflicting edits.</p><br>
+                                                                                  <p>Git makes the merging process easier unlike most version control systems. Git even can automatically integrate new changes. But in the cases of conflicts, Git cannot automatically figure out what version is correct. It marks the file as being conflicted and stops the merging process.</p><br>
+                                                                                  <img src="/images/gitmergec.png" width="auto" height="auto"><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of merge conflicts</h3><br>
+                                                                                  <p>Conflicts can arise at two points: at the start of the merge process or during it.</p><br>
+                                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Merge failure on start</h3><br>
+                                                                                  <p>Git fails to start a merge because the pending changes in the working directory or staging area of the project should be written over by the commits being merged in. This happens because of pending local changes. To take control over the local state, the git stash, git checkout, git commit and git reset commands are used. The following message will show up when an error occurs on start:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>error: Entry '&lt;fileName&gt;' not uptodate. Cannot merge. (Changes in working directory)</code></pre>
+                                                                                  </div><br>
+                                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Failure during merge</h3><br>
+                                                                                  <p>The failure during merge tells that there is a conflict between the current local branch and the branch that is being merged in. The following message will show up when an error occurs during merge:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>error: Entry '&lt;fileName&gt;' would be overwritten by merge. Cannot merge. (Changes in staging area)</code></pre>
+                                                                                  </div><br>
+                                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Creating a merge conflict</h3><br>
+                                                                                  <p>Here, we will show you a simulation of how merge conflicts appear.</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>mkdir test-dir<br>cd test-dir<br>git init .<br>echo "some content" > example.txt<br>git add example.txt<br>git commit -am "initial commit"<br>[master (root-commit) a45c22d] initial commit<br>1 file changed, 1 insertion(+)<br>create mode 100524 example.txt</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>In the given example, we create a <b>test-dir</b> new directory. Next, we create <b>example.txt</b> text file with some content and add it to the repository and commit it. As a result, we have a new repository with one master branch and <b>example.txt</b> file. The next step is creating another branch to use as a conflicting merge.</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>git checkout -b branch_to_merge<br>echo "completely different content to merge later" > example.txt<br>git commit -am "edit the content of example.txt to make a conflict"<br>[branch_to_merge 4221135] edit the content of example.txt to make a conflict<br>1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>In the above example, we create and check out <b>branch_to_merge</b> branch. After creating, we overwrite the content in <b>example.txt</b> file and commit the new content. After doing all this, the commit overrides the content of <b>example.txt:</b></p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>git checkout master<br>Switched to branch 'master'<br>echo "content to add" >> example.txt<br>git commit -am "added content to example.txt"<br>[master 11ab34b] added content to example.txt<br>1 file changed, 1 insertion(+)</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>This bunch of commands checks out the master branch attaching the content to <b>example.txt</b> and committing it. So, our repository is put to the state where we have one commit in the master branch and one in the <b>branch_to_merge</b> branch. The final step is to execute the git merge command after which conflict will occur:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>git merge branch_to_merge<br>Auto-merging example.txt<br>CONFLICT (content): Merge conflict in example.txt<br>Automatic merge failed; fix conflicts and then commit the result.</code></pre>
+                                                                                  </div><br>
+                                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Identifying merge conflicts</h3><br>
+                                                                                  <p>As we have already seen, Git displays output which indicates that a conflict has appeared. Execute the git status command to see the unmerged paths:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>git status<br>On branch master<br>You have unmerged paths.<br>(fix conflicts and run "git commit")<br>(use "git merge --abort" to abort the merge)<br>Unmerged paths:<br>(use "git add &lt;file&gt;..." to mark resolution)both modified:   example.txt</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>The example.txt file appears in a modified state. Execute <b>cat</b> command to put out the contents of the example.txt file. We can see these visual marks:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code><<<<<<< HEAD<br>=======<br>>>>>>>> branch_to_merge</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>The ======= marks is the center of the conflict. The content between the center and the HEAD line is the content existing in the current branch master that the HEAD reference is pointing to. Read more about visual marks on the git merge page.</p><br>
+                                                                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Resolving merge conflicts</h3><br>
+                                                                                  <p>To resolve a merge conflict you should edit the conflicted file. Open the <b>example.txt</b> file in the editor and remove all the marks. The changed file has the following look:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>some content to mess with<br>content to add<br>completely different content to merge later</code></pre>
+                                                                                  </div><br>
+                                                                                  <p>Execute the git add the command to stage the new merge content. Next, create a new commit to complete the merge:</p><br>
+                                                                                  <div class="code-block">
+                                                                                  <pre id="dataExample"><code>git commit -m "the conflict in example.txt is merged and resolved"</code></pre>
+                                                                                  </div><br>
+                                                                                  <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Category</th>
+      <th style="border: 1px solid #000; padding: 8px;">Command</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- General Tools -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;" rowspan="3">General Tools</td>
+      <td style="border: 1px solid #000; padding: 8px;">git status</td>
+      <td style="border: 1px solid #000; padding: 8px;">Helps find out conflicted files.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git log --merge</td>
+      <td style="border: 1px solid #000; padding: 8px;">Creates a log with a list of commits having conflict between the merging branches.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git diff</td>
+      <td style="border: 1px solid #000; padding: 8px;">Finds differences between repository states or files. Useful to predict and prevent merge conflicts.</td>
+    </tr>
+
+    <!-- Tools to resolve failure on start -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;" rowspan="2">Resolve Failure on Start</td>
+      <td style="border: 1px solid #000; padding: 8px;">git checkout</td>
+      <td style="border: 1px solid #000; padding: 8px;">Undoes changes to files and switches branches.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git reset --mixed</td>
+      <td style="border: 1px solid #000; padding: 8px;">Undoes changes to the working directory and staging area.</td>
+    </tr>
+
+    <!-- Tools to resolve failure during merge -->
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;" rowspan="2">Resolve Failure During Merge</td>
+      <td style="border: 1px solid #000; padding: 8px;">git merge --abort</td>
+      <td style="border: 1px solid #000; padding: 8px;">Exits from the merge process and returns the branch to its state before the merge began.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">git reset</td>
+      <td style="border: 1px solid #000; padding: 8px;">Resets conflicted files to a known good state.</td>
+    </tr>
+  </tbody>
+</table><br>                                                                               
+                                                                                  `,
+                                                                                };
+                                                                                case 'merge strategies':
+                                                                                  return{
+                                                                                    theory:`
+                                                                                    <img src="/images/mergestrategy.png" width="auto" height="auto"><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Resolving merge conflicts</h3><br>
+                                                                                    <p>When the work is complete and ready to be merged into the main line of the development, we should choose our merge strategy.</p><br>
+                                                                                    <p>Git combines two commit pointers into one common base commit between them. Git finds that common base in different ways called “merge strategies". After selecting a merge strategy, Git creates a new merge commit combining the changes of the specified merge commits. If not specified, the git merge command will automatically select a merge strategy based on the provided branches. The -s option can be attached with the name of the specified strategy. Here's the list of merge strategies:</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Recursive</h3><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>git merge -s recursive branch1 branch2</code></pre>
+                                                                                    </div><br>
+                                                                                    <p>Git will select recursive as a default strategy when pulling or merging branches. The recursive strategy can detect and manage merges that involve renames, but it cannot use detected copies.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Resolve</h3><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>git merge -s resolve branch1 branch2</code></pre>
+                                                                                    </div><br>
+                                                                                    <p>The resolve strategy uses a 3-way merge for resolving branches and can resolve only two HEADs using a 3-way merge algorithm. It is safe and fast and detects criss-cross merge ambiguities in detail.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Octopus</h3><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>git merge -s octopus branch1 branch2 branch3 branchN</code></pre>
+                                                                                    </div><br>
+                                                                                    <p>When two or more branches are passed, the octopus strategy is engaged, by default. Octopus refuses if the merge has conflicts that need manual resolution. The basic use of Octopus is to bundle feature branch HEADs that have similarities.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Ours</h3><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>Our strategy resolves multiple branches, but the result is always that of the current branch HEAD. It ignores all changes from all other branches very effectively. It is intended to be used to replace an old history of side branches.</code></pre>
+                                                                                    </div><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Subtree</h3><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>git merge -s subtree branchA branchB</code></pre>
+                                                                                    </div><br>
+                                                                                    <p>The subtree strategy is the modified version of the recursive strategy. For example, we merge A and B trees. When corresponding to a subtree of A, B is first modified to reflect the tree structure of A. The modification can be done to the shared ancestor tree of A and B.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of git merge strategies</h3><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Explicit merge</h3><br>
+                                                                                    <p>Explicit merges are considered as the default merge type. It is called explicit because it creates a new merge commit changing the history and displaying where the merge was invoked. The merge commit content is also considered as explicit as it displays the parent commits of the merge commit.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Implicit merge via rebase or fast-forward merge</h3><br>
+                                                                                    <p>The implicit merges do not create a merge commit. They just take a number of commits from the specified branch HEAD and put them to the top of the target branch. They are triggered by rebase events or fast forward merges.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Squash on merge without explicit merge</h3><br>
+                                                                                    <p>Squash is another type of implicit merge. A squash merge takes the commits from the target branch and squashes them into one commit which then is applied to the HEAD of the merge base branch. Squash can be executed during an interactive rebase. The commit history of the target branches becomes a squashed branch commit when squashed and merged.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Recursive git merge strategy options</h3><br>
+                                                                                    <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option / Strategy</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">ours</td>
+      <td style="border: 1px solid #000; padding: 8px;">Forces conflicted parts to be auto-resolved by favoring "our" version. Non-conflicting changes from the other tree are still included in the merge output.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">theirs</td>
+      <td style="border: 1px solid #000; padding: 8px;">Favors the other merging tree in conflict resolution. Note: there is no standalone "theirs" merge strategy like "ours".</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">patience</td>
+      <td style="border: 1px solid #000; padding: 8px;">Spends more time to avoid mis-merges caused by unimportant matching lines.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">diff-algorithm</td>
+      <td style="border: 1px solid #000; padding: 8px;">Instructs "merge-recursive" to use a different diff algorithm to help avoid mis-merges on unimportant matching lines.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">
+        ignore-* <br>
+        ignore-space-change <br>
+        ignore-all-space <br>
+        ignore-space-at-eol <br>
+        ignore-cr-at-eol
+      </td>
+      <td style="border: 1px solid #000; padding: 8px;">Targets whitespace characters. Whitespace-only changes are ignored, but whitespace mixed with other changes are not.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">renormalize</td>
+      <td style="border: 1px solid #000; padding: 8px;">Runs a check-out and check-in on all file stages when resolving a 3-way merge.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">no-normalize</td>
+      <td style="border: 1px solid #000; padding: 8px;">Disables the renormalize option.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">no-renames</td>
+      <td style="border: 1px solid #000; padding: 8px;">Ignores renamed files during merge.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">find-renames=n</td>
+      <td style="border: 1px solid #000; padding: 8px;">Turns on rename detection with a similarity threshold. The <code>n</code> value is a percentage (100% = exact match).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">subtree</td>
+      <td style="border: 1px solid #000; padding: 8px;">Works on path metadata of the tree to make the trees match, useful for merging subprojects.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                                    `,
+                                                                                  };
+                                                                                  case 'Git Submodule':
+                                                                                    return{
+                                                                                      theory:`
+                                                                                      <p>Very often, the code repository depends on the external code from other repositories. You can directly copy and paste the external code into the main repository, or you can use the method of language's package management system. But these two methods have the downside of not tracking changes to the external repository. Git allows including other Git Repositories called submodules into a single repository. Submodules allow tracking changes in several repositories via one repository. Submodules are repositories included in the parent repository at a specific path in the working directory of the parent repository. They can be located anywhere in the working directory and are configured via the .gitmodules file, which is located at the root of the parent repository. The .gitmodules file contains metadata about the mapping between the submodule project's URL and local directory. Submodule supports adding, synchronizing, updating, and cloning submodules. Submodules track only specific commits, not the git references and branches.</p><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">When to Use Submodules</h3><br>
+                                                                                      <p>Working with submodules is tricky, so we suggest some best use cases for them.</p><br>
+                                                                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                      <li>If the subproject is changing too fast or upcoming changes will break the API, lock the code to a specific commit for safety.</li><br>
+                                                                                      <li>If a component isn't updated very often, and you want to track it as a vendor dependency.</li><br>
+                                                                                      <li>If you represent a part of the project to a third party, and you want to integrate their work at a particular time (works only when updates are not too frequent).</li><br>
+                                                                                      <li>If the technological context allows packaging and formal dependency management, you should use submodules.</li><br>
+                                                                                      <li>If your codebase is massive and you don't want to fetch it every time, use submodules so as not to make the collaborators fetch the entire blocks of the codebase.</li><br>
+                                                                                      </ul><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Commands for Git Submodules</h3><br>
+                                                                                      <p>For creating a new submodule to the existing repository, use git submodule add. This sets of command create a new directory, enter it, and initialize it as a new repository:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>mkdir git-submodule-demo<br>cd git-submodule-demo/<br>git init</code></pre>
+                                                                                      </div><br>
+                                                                                      <div class="code-block1">
+                                                                                      <pre id="dataExample"><code>Initialized empty Git repository in /Users/example/git-submodule-demo/.git/</code></pre>
+                                                                                      </div><br>
+                                                                                      <p>To add a submodule to the new repository run the following:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git submodule add https://somehost/example/textexample</code></pre>
+                                                                                      </div><br>
+                                                                                      <div class="code-block1">
+                                                                                      <pre id="dataExample"><code>Cloning into '/Users/example/git-submodule-demo/textexample'...<br>remote: Counting objects: 8, done.<br>remote: Compressing objects: 100% (6/6), done.<br>remote: Total 8 (delta 1), reused 0 (delta 0)<br>Unpacking objects: 100% (8/8), done.</code></pre>
+                                                                                      </div><br>
+                                                                                      <p>The git submodule add command uses a URL parameter to point to a git repository. Git immediately clones the textexample submodule. Check the state of the repository by running the git status command:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git status</code></pre>
+                                                                                      </div><br>
+                                                                                      <div class="code-block1">
+                                                                                      <pre id="dataExample"><code>On branch master<br><br>No commits yet<br><br>Changes to be committed:<br> (use "git rm --cached &lt;file&gt;..." to unstage)<br><br> new file: .gitmodules<br> new file: textexample</code></pre>
+                                                                                      </div><br>
+                                                                                      <p>Two new files are created in the repository: .gitmodules and the textexample directory. You can commit the files to the original repository with the git commit, and git add commands:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git add .gitmodules textexample/<br>git commit -m "added submodule"</code></pre>
+                                                                                      </div><br>
+                                                                                      <div class="code-block1">
+                                                                                      <pre id="dataExample"><code>[master (root-commit) d5002d0] added submodule<br> 2 files changed, 4 insertions(+)<br> create mode 100644 .gitmodules<br> create mode 160000 textexample</code></pre>
+                                                                                      </div><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Updating Submodules</h3><br>
+                                                                                      <p>The members of the team should update the submodule code if someone has updated it. We cannot use git pull because it just retrieves the information that the submodule pointing to another commit, not updates the code of it. For updating the code of the submodule run the following:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git submodule update</code></pre>
+                                                                                      </div><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Cloning Git Submodules</h3><br>
+                                                                                      <p>For cloning a project with submodules, you should use the git clone command. It will clone the directories with submodules but not the files within them. You should run git submodule init and git submodule update. The first will update the local .git/config with the mapping from the .gitmodules file, and the latter will fetch the entire data from the submodule project and check out the mapped commit in the parent project.</p><br>
+                                                                                      <p>The -recursive option of the git clone command initializes and updates submodules. Or just run the following:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git clone /url/to/repo/with/submodules<br>git submodule init</code></pre>
+                                                                                      </div><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pulling the Submodule's Code</h3><br>
+                                                                                      <p>When you create a new submodule, the other members of the team should initiate it. To get the information about the submodule, first, you have to get the information about the submodule by executing git pull. If there are new submodules, you'll see it in the output of git pull. Then you'll have to initiate them with:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>git submodule init</code></pre>
+                                                                                      </div><br>
+                                                                                      <p>This will pull the code from the submodule and locate it in the directory that it is configured to.</p><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Pushing Updates in Submodule</h3><br>
+                                                                                      <p>As the submodule is a separate repository, you can push it like a regular Git repository by executing commands in the submodule’s directory. To make new commits inside the submodule will still point to the old commit. If you want to have the changes in the main repository, too, you should instruct the main repository to use the recent commit of the submodule. When you run git status in the main repository, the submodule will be in the “Changes not staged for commit” with the text “modified content”. This will check out the submodule code on a different commit than the main repository is pointing at. For making the main repository point to the new commit, run the git add command, commit and push it.</p><br>
+                                                                                      <p>Submodules are a good way of keeping the projects in separate repositories, but still, be able to reference them as folders in the working directory of other repositories. However, take into account that for a lot of projects, submodules are not the best practice, and working with them is tricky.</p><br>
+                                                                                      `,
+                                                                                    };
+                                                                                    case 'Git Subtree':
+                                                                                      return{
+                                                                                        theory:`
+                                                                                        <p>As we mentioned on our previous page, Git Submodule is useful for only some cases. But there is a preferable way of tracking the history of software dependencies. Many developers prefer Git Subtree to Git Submodule.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is Git Subtree</h3><br>
+                                                                                        <p>Git Subtree is an alternative to Git Submodule. It allows nesting one repository inside another one as a subdirectory. It is one of the ways to track the history of software dependencies. But subtrees should not be confused with submodules. Unlike submodules, subtrees do not need .gitmodules files or gitlinks in the repository. A subtree is just a subdirectory that you can commit to, branch, and merge along with your project.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why to Use Git Subtree</h3><br>
+                                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Pros</h3><br>
+                                                                                        <ul style="list-style-type: disc; padding-left: 30px">
+                                                                                        <li>Supported by the older version of Git (even older than v1.5.2).</li><br>
+                                                                                        <li>Simple workflow management.</li><br>
+                                                                                        <li>Available sub-project code after the super project is done.</li><br>
+                                                                                        <li>Not required Git new knowledge for using git subtree.</li><br>
+                                                                                        <li>Not added new metadata files (for example, .gitmodule).</li><br>
+                                                                                        <li>Enabled modification of content without a separate repository copy of the dependency.</li><br>
+                                                                                        </ul><br>
+                                                                                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Cons</h3><br>
+                                                                                        <ul style="list-style-type: disc; padding-left: 30px">
+                                                                                        <li>Learning about a new merge strategy.</li><br>
+                                                                                        <li>Complicated contributing code back upstream for the sub-projects.</li><br>
+                                                                                        <li>Not mixing super and sub-project code.</li><br>
+                                                                                        </ul><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use Git Subtrees</h3><br>
+                                                                                        <p>Let's assume there is an external project, and you want to add it to your repository.</p><br>
+                                                                                        <p>For example, to add a vim extension in a repository that stores your vim setup do the following:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git subtree add --prefix .vim/bundle/example https://github.com/Example/vim-example.git master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>This will squash the entire history of the vim-fireplace project into your folder .vim/bundle/fireplace, recording the SHA-1 of master at the time for future reference. The output is the following two commits:</p><br>
+                                                                                        <div class="code-block1">
+                                                                                        <pre id="dataExample"><code>commit 6d7054b3gcea64e2e31f4d6fb2e3be12e5865e87<br>Merge: 87fa91e ef86deb<br>Author: Ann Smith<ann@smith.com><br>Date:   Tue Jun 10 13:37:03 2016 +0200<br>  Merge commit 'fe67ddf158faccff4082d78a25c45d8cd93e8ba8' as '.vim/bundle/example'<br>commit fe67ddf158faccff4082d78a25c45d8cd93e8ba8<br>Author: Ann Smith<ann@smith.com><br>Date:   Tue May 12 13:37:03 2015 +0200<br>  Squashed '.vim/bundle/example/' content from commit b999b09<br>  git-subtree-dir: .vim/bundle/example<br>  git-subtree-split: b999b09cd9d69f359fa5668e81b09dcfde455cca</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>To update the sub-folder to the latest version of the child repository, run the following:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git subtree pull --prefix .vim/bundle/example https://github.com/Exampel/vim-example.git master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>But, git subtree stores subproject commit ids and not references in the meta-data. Find the symbolic name connected with a commit:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git ls-remote https://github.com/Example/vim-example.git | grep &lt;sha-1&gt;</code></pre>
+                                                                                        </div><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Rebasing After Git Subtree</h3><br>
+                                                                                        <p>Here, you should use the --interactive mode of git rebase and remove the add commits, then execute rebase--continue and re execute the git subtree add command after the rebase process is done.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">OPTIONS</h3><br>
+                                                                                        <table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px;">Option</th>
+      <th style="border: 1px solid #000; padding: 8px;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-q / --quiet</td>
+      <td style="border: 1px solid #000; padding: 8px;">Suppresses unnecessary result messages on <code>stderr</code>.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-d / --debug</td>
+      <td style="border: 1px solid #000; padding: 8px;">Produces additional debug messages on <code>stderr</code>.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-P &lt;prefix&gt; / --prefix=&lt;prefix&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Defines the path in the repository to the subtree you want to manipulate. Mandatory for all commands.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">-m &lt;message&gt; / --message=&lt;message&gt;</td>
+      <td style="border: 1px solid #000; padding: 8px;">Specifies &lt;message&gt; as the commit message for the merge commit. Valid only for <code>add</code>, <code>merge</code>, and <code>pull</code>.</td>
+    </tr>
+  </tbody>
+</table><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using Git Subtree Without Remote Tracking</h3><br>
+                                                                                        <p>Add the git subtree at a specified prefix folder. Use the --squash flag to preserve the whole subproject history in your main repository:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git subtree add --prefix .vim/bundle/vim-double-upon https:/hostname.org/example/vim-plugins.git master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>The result will be the following:</p><br>
+                                                                                        <div class="code-block1">
+                                                                                        <pre id="dataExample"><code>git fetch https:/hostname.org/example/vim-plugins.git  master<br>warning: no common commits<br>remote: Counting objects: 325, done.<br>remote: Compressing objects: 100% (145/145), done.<br>remote: Total 325 (delta 101), reused 313 (delta 89)<br>Receiving objects: 100% (325/325), 61.47 KiB, done.<br>Resolving deltas: 100% (110/110), done.<br>From https:/hostname.org/vim-plugins.git<br>* branch master -} FETCH_HEAD<br>Added dir '.vim/bundle/vim-double-upon '</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>This creates a merge commit by squashing the entire history of the vim-surround repository into a single one:</p><br>
+                                                                                        <div class="code-block1">
+                                                                                        <pre id="dataExample"><code>3bca0ad [4 minutes ago] (HEAD, stree) Merge commit 'fa2f5dc4f1b94356bca8a440c786a94f75dc0a45' as '.vim/bundle/vim-double-upon' [John Brown]<br>fa2f5dc [4 minutes ago] Squashed '.vim/bundle/vim-double-upon/' content from commit 13189ec [John Brown]</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>For updating the code of the plugin from the upstream repository, do a git subtree pull:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git subtree pull --prefix .vim/bundle/vim-double-upon https:/hostname.org/example/vim-plugins.git master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>To make the commands shorter, add the sub-project as a remote.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Adding Sub-project as a Remote</h3><br>
+                                                                                        <p>Adding as a remote shortens the process:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git remote add -f vim-double-upon https:/hostname.org/example/vim-plugins.git</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>Add the subtree:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git subtree add --prefix .vim/bundle/vim-double-upon vim-double-upon master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>Update the sub-project like this:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>git fetch vim-double-upon master<br>git subtree pull --prefix .vim/bundle/vim-double-upon vim-double-upon master --squash</code></pre>
+                                                                                        </div><br>
+                                                                                        <p>Git subtree is the alternative from submodules, but if submodules are aimed at putting another project in a directory of your repository and keeping the remote repository in sync, git subtree allows keeping a subproject separate and allow bidirectional collaboration between your main repo and the subprojects.</p><br>
+                                                                                        `,
+                                                                                      };
+
+
+                                                              
+
+    }
+  }
+
+  //Python Programming
+      if (courseTitle === 'Python Programming') {
+        switch (lesson.title) {
+        case 'Introduction':
+          return {
+            theory:``,
+          };
+
+    }
+  }
+
+  //React Programming
+      if (courseTitle === 'React Programming') {
+        switch (lesson.title) {
+        case 'Introduction':
+          return {
+            theory:``,
+          };
+
+    }
+  }
+
+  //PHP Programming
+      if (courseTitle === 'PHP Programming') {
+        switch (lesson.title) {
+        case 'Introduction':
+          return {
+            theory:``,
+          };
+
+    }
+  }
+
+  //Java Programming
+      if (courseTitle === 'Java Programming') {
+        switch (lesson.title) {
+        case 'Introduction':
+          return {
+            theory:``,
+          };
+
+    }
+  }
     
     // Default fallback
     return {
