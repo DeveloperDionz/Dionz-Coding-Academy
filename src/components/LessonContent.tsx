@@ -22613,10 +22613,485 @@ expectedOutput: undefined,
   //Java Programming
       if (courseTitle === 'Java Programming') {
         switch (lesson.title) {
-        case 'Introduction':
+        case 'Java Intro':
           return {
-            theory:``,
+            theory:`
+            <p>Java is a powerful, high-level programming language that is widely used for developing applications for the web, desktop, and mobile devices. Java is known for its simplicity, scalability, and robustness, making it an ideal choice for beginners and experienced developers alike. In this article, we will provide a comprehensive introduction to the Java programming language and its key features.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">History of Java</h3><br>
+            <p>Java was developed in the mid-1990s by James Gosling and his team at Sun Microsystems. The language was designed to be small, secure, and portable, and it quickly became popular among developers for its ease of use and versatility. In 2009, Sun Microsystems was acquired by Oracle, which has since continued to maintain and develop the Java platform.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Key Features of Java</h3><br>
+            <p>Java is an object-oriented programming language, which means that it is based on the concept of objects that interact with each other to perform tasks. This programming model provides a natural and intuitive way to structure and manipulate data, making it easy to build complex applications.</p><br>
+            <p>Some of the key features of Java include:</p><br>
+            <ul style="list-style-type: disc; padding-left: 30px;">
+            <li>Object-oriented programming</li><br>
+            <li>Platform independence</li><br>
+            <li>Security</li><br>
+            <li>Memory management</li><br>
+            <li>Robustness</li><br>
+            <li>Dynamic and extensible</li><br>
+            </ul><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Platform Independence</h3><br>
+            <p>One of the most important features of Java is its platform independence, which means that Java applications can run on any platform that has a Java Virtual Machine (JVM) installed. This makes it easy to develop applications that can run on multiple operating systems, such as Windows, Mac, and Linux.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Security</h3><br>
+            <p>Java is known for its security features, which are designed to prevent malicious code from accessing sensitive information. Java applications run in a secure environment called the JVM, which protects against viruses and other malicious software. Additionally, Java has strict access controls that limit the actions that applications can perform on the user's device.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Memory Management</h3><br>
+            <p>Java has automatic memory management, which means that the Java runtime system automatically manages the memory used by Java applications. This eliminates the need for developers to manually manage memory, reducing the risk of memory-related errors and improving the performance of Java applications.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Robustness</h3><br>
+            <p>Java is a robust language, which means that it is designed to be reliable and free from errors. Java's strong type system, exception handling, and memory management features all contribute to its robustness. Additionally, Java's platform independence means that applications written in Java are less likely to be affected by platform-specific issues.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Dynamic and Extensible</h3><br>
+            <p>Java is a dynamic language, which means that it can be extended and modified at runtime. This allows Java applications to adapt to changing requirements and to incorporate new features as they become available. Additionally, Java's support for reflection and dynamic loading of classes makes it easy to write modular and reusable code.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Getting Started with Java</h3><br>
+            <p>To get started with Java programming, you will need to download and install a Java Development Kit (JDK). The JDK includes all of the tools you need to develop Java applications, including a Java compiler and the JVM.</p><br>
+            <p>Once you have installed the JDK, you can start writing Java code using a text editor or integrated development environment (IDE). There are many popular IDEs for Java development, including Eclipse and IntelliJ IDEA.</p><br>
+            <p>In conclusion, Java is a powerful, versatile programming language that is ideal for developing applications for the web, desktop, and mobile devices. With its ease of use, security features, and platform independence, Java is an excellent choice for both beginners and experienced developers.</p><br>
+            `,
           };
+          case 'Java Syntax':
+            return{
+              theory:`
+              <p>Java is one of the most widely used programming languages in the world, known for its simplicity, robustness, and scalability. This article provides a comprehensive guide to the syntax of the Java language, making it easier for beginners to get started with coding.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding Java Keywords</h3><br>
+              <p>Java keywords are reserved words that have a specific meaning in the language. They cannot be used as identifiers (variable names, method names, class names, etc.). Some of the most commonly used keywords in Java are: <code>abstract, assert, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, enum, extends, final, finally, float, for, goto, if, implements, import, instanceof, int, interface, long, native, new, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, try, void, volatile,</code> and <code>while.</code></p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Basic Structure of a Java Program</h3><br>
+              <p>A Java program consists of one or more classes, and each class contains one or more methods. A typical Java program has the following structure:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>package com.example;<br><br>public class Main {<br>  public static void main(String[] args) {<br>    // Your code goes here<br>  }<br>}</code></pre>
+              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+              </div><br>
+              <p>In this example, the program is contained within a single class named Main. The main method is the entry point for the program, and is where the code execution begins. The public static void part of the method signature is known as the method return type, and main is the method name. The String[] args part of the method signature is known as the method parameter.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Variables in Java</h3><br>
+              <p>Variables in Java are used to store values. They have a type (such as <code>int, double, char, boolean,</code> etc.) and a name, and can be declared using the following syntax:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>type variableName;</code></pre>
+              </div><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>int age;<br>double salary;<br>char gender;<br>boolean isEmployed;</code></pre>
+              </div><br>
+              <p>Variables can be assigned values using the following syntax:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>variableName = value;</code></pre>
+              </div><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>age = 30;<br>salary = 50000.0;<br>gender = 'M';<br>isEmployed = true;</code></pre>
+              </div><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Operators in Java</h3><br>
+              <p>Java has several operators that can be used to perform operations on variables. Some of the most commonly used operators are:</p><br>
+              <ul style="list-style-type: disc; padding-left: 30px;">
+              <li>Arithmetic operators (+, -, *, /, %)</li><br>
+              <li>Comparison operators (==, !=, >, <, >=, <=)</li><br>
+              <li>Logical operators (&&, ||, !)</li><br>
+              <li>Assignment operators (=, +=, -=, *=, /=, %=)</li><br>
+              </ul><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>int a = 10;<br>int b = 20;<br>int c = a + b;<br>System.out.println("The value of c is: " + c);<br><br>boolean isTrue = (a > b) || (b > a);<br>System.out.println("The value of isTrue is: " + isTrue);<br><br>a *= 2;<br>System.out.println("The value of a is: " + a);</code></pre>
+              </div><br>
+              <p>In this example, the arithmetic operator &#96;+&#96; is used to add &#96;a&#96; and &#96;b&#96; and store the result in &#96;c&#96;. The logical operator &#96;||&#96; is used to evaluate a condition and store the result in &#96;isTrue&#96;. The assignment operator &#96;*=&#96; is used to multiply &#96;a&#96; by &#96;2&#96; and store the result back in &#96;a&#96;.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conditional Statements in Java</h3><br>
+              <p>Conditional statements in Java are used to control the flow of execution of a program based on certain conditions. The two most commonly used conditional statements in Java are &#96;if&#96; and &#96;switch&#96;.</p><br>
+              <p>The &#96;if&#96; statement has the following syntax:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>if (condition) {<br>// Code to be executed if condition is true<br>} else {<br>// Code to be executed if condition is false<br>}</code></pre>
+              </div><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>int score = 75;<br><br>if (score >= 60) {<br>System.out.println("Pass");<br>} else {<br>System.out.println("Fail");<br>}</code></pre>
+              </div><br>
+              <p>In this example, the if statement checks if the value of score is greater than or equal to 60. If the condition is true, the program outputs Pass, otherwise it outputs Fail.</p><br>
+              <p>The switch statement has the following syntax:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>switch (expression) {<br>case value1:<br>// Code to be executed if expression is equal to value1<br>break;<br>case value2:<br>// Code to be executed if expression is equal to value2<br>break;<br>...<br>default:// Code to be executed if expression does not match any of the values<br>break;<br>}</code></pre>
+              </div><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>int day = 3;<br><br>switch (day) {<br>case 1:<br>System.out.println("Monday");<br>break;<br>case 2:<br>System.out.println("Tuesday");<br>break;<br>case 3:<br>System.out.println("Wednesday");<br>break;<br>...<br>default:<br>System.out.println("Invalid day");<br>break;<br>}</code></pre>
+              </div><br>
+              <p>In this example, the switch statement evaluates the value of day and outputs the name of the day corresponding to that value. If the value of day does not match any of the cases, the program outputs Invalid day.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Loops in Java</h3><br>
+              <p>Loops in Java are used to repeat a block of code multiple times. The two most commonly used loops in Java are for and while.</p><br>
+              <p>The for loop has the following syntax:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>for (initialization; condition; update) {<br>// Code to be executed<br>}</code></pre>
+              </div><br>
+              <p>For example:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>for (int i = 1; i <= 10; i++) {<br>System.out.println(i);<br>}</code></pre>
+              </div><br>
+              `,
+            };
+            case 'Java Comments':
+              return{
+                theory:`
+                <p>Java is a widely used programming language and one of its key features is the ability to include comments within the code. Comments serve as an important tool for developers, allowing them to document their code and make it easier to understand and maintain. In this article, we will explore the different types of comments in Java and how to use them effectively.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Java Comments?</h3><br>
+                <p>Java comments are sections of code that are ignored by the Java compiler when the code is compiled and executed. They are used to provide explanations, descriptions, and other annotations to the code, helping other developers understand the code's purpose and how it works.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Java Comments</h3><br>
+                <p>There are two types of comments in Java: single-line comments and multi-line comments.</p><br>
+                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Single-Line Comments</h3><br>
+                <p>Single-line comments start with two forward slashes (//) and continue until the end of the line. They are used to provide brief explanations or annotations for a single line of code.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>// This is a single-line comment in Java</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Multi-Line Comments</h3><br>
+                <p>Multi-line comments start with a forward slash and an asterisk (/) and end with an asterisk and a forward slash (/). They are used to provide longer explanations or annotations that span multiple lines of code.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>/*<br>This is a<br>multi-line comment<br>in Java<br>*/</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use Java Comments Effectively</h3><br>
+                <p>When using comments in Java, it's important to keep them concise, clear, and relevant. Here are some tips for using comments effectively:</p><br>
+                <ul style="list-style-type: disc; padding-left: 30px;">
+                <li>Use clear and concise language</li><br>
+                <li>Explain the purpose of the code, not just how it works</li><br>
+                <li>Avoid including information that is already obvious from the code</li><br>
+                <li>Use meaningful names for variables, methods, and classes so that comments are not necessary for understanding their purpose</li><br>
+                </ul><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                <p>In conclusion, Java comments are an important tool for developers, allowing them to document their code and make it easier to understand and maintain. By using comments effectively, you can ensure that your code is readable and maintainable for both yourself and other developers.</p><br>
+                `,
+              };
+              case 'Java Variables':
+                return{
+                  theory:`
+                  <p>Java is a high-level programming language that has become widely popular due to its object-oriented features and easy-to-learn syntax. Java variables are an essential part of the language, and they are used to store data in a program. This article will explain what Java variables are, how they work, and what types of variables are available in Java.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What Are Java Variables?</h3><br>
+                  <p>In Java, a variable is a named storage location that holds a value. Variables are used to store data in a program, and the value of the variable can change as the program is executed. When you declare a variable, you specify the type of data it will hold and the name of the variable. The type of data that a variable can hold is determined by its data type.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How Do Java Variables Work?</h3><br>
+                  <p>Java variables are declared using the following syntax:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code>dataType variableName;</code></pre>
+                  </div><br>
+                  <p>where dataType is the type of data that the variable will hold and <code>variableName</code> is the name of the variable. The name of the variable can be any combination of letters, numbers, and underscores, but it cannot start with a number.</p><br>
+                  <p>Once a variable is declared, it can be assigned a value using the following syntax:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code>variableName = value;</code></pre>
+                  </div><br>
+                  <p>where value is the value that you want to assign to the variable. For example:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code>int age;<br>age = 30;</code></pre>
+                  </div><br>
+                  <p>In this example, the variable age is declared as an int (integer) and is assigned the value 30.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Java Variables</h3><br>
+                  <p>There are three types of variables in Java:</p><br>
+                  <ul style="list-style-type: disc; padding-left: 30px;">
+                  <li>Local variables</li><br>
+                  <li>Instance variables</li><br>
+                  <li>Static variables</li><br>
+                  </ul><br>
+                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Local Variables</h3><br>
+                  <p>Local variables are variables that are declared within a method. They are only accessible within the method in which they are declared. Local variables are created when the method is called and destroyed when the method returns.</p><br>
+                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Instance Variables</h3><br>
+                  <p>Instance variables are variables that are declared within a class, but outside of a method. They are associated with an instance of the class, and each instance of the class has its own copy of the instance variable.</p><br>
+                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Static Variables</h3><br>
+                  <p>Static variables are variables that are declared using the static keyword. They are associated with the class itself, rather than with an instance of the class. There is only one copy of a static variable, regardless of the number of instances of the class.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                  <p>In conclusion, Java variables are an essential part of the Java programming language. They allow you to store data in a program, and the value of the variable can change as the program is executed. Understanding the types of variables in Java, and how they work, is crucial to becoming a successful Java programmer.</p><br>
+                  `,
+                };
+                case 'Java Data Types':
+                  return{
+                    theory:`
+                    <p>Java is a high-level programming language that is widely used for developing applications and platforms. One of the key aspects of Java is its data types, which are used to define the type of data that a variable can hold. Understanding the different data types in Java and how to use them effectively is crucial to developing robust and efficient applications.</p><br>
+                    <p>In this article, we will take an in-depth look at the various data types in Java, their range of values, and how to use them in your programs. We'll also discuss some of the key differences between the data types and when to use each one.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Primitive Data Types</h3><br>
+                    <p>Java has eight primitive data types, which are the building blocks of all other data types in the language. The primitive data types include:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li>byte</li><br>
+                    <li>short</li><br>
+                    <li>int</li><br>
+                    <li>long</li><br>
+                    <li>float</li><br>
+                    <li>double</li><br>
+                    <li>char</li><br>
+                    <li>boolean</li><br>
+                    </ul><br>
+                    <p>Each of these data types has a specific range of values and uses, and it's important to choose the right one for the job. For example, you would use a byte to store a small number, such as a color code, while you would use a long to store a large number, such as a file size.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Numeric Data Types</h3><br>
+                    <p>Java has four numeric data types, which are used to store numerical values. These include:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li>byte</li><br>
+                    <li>short</li><br>
+                    <li>int</li><br>
+                    <li>long</li><br>
+                    </ul><br>
+                    <p>Each of these data types has a different range of values, and the choice of which one to use depends on the size of the number you need to store. For example, you would use a byte to store a small number, such as a color code, while you would use a long to store a large number, such as a file size.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Floating-Point Data Types</h3><br>
+                    <p>Java has two floating-point data types, which are used to store decimal values. These include:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li>float</li><br>
+                    <li>double</li><br>
+                    </ul><br>
+                    <p>The choice of which one to use depends on the precision you need. For example, you would use a float to store a number with a smaller number of decimal places, while you would use a double to store a number with a larger number of decimal places.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Character Data Type</h3><br>
+                    <p>The char data type is used to store a single character, such as a letter, symbol, or punctuation mark.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Boolean Data Type</h3><br>
+                    <p>The boolean data type is used to store a value of either true or false. This type is commonly used in control structures, such as if-else statements, to control the flow of a program.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                    <p>In conclusion, understanding the different data types in Java and how to use them effectively is crucial to developing robust and efficient applications. Each data type has its own range of values and uses, and it's important to choose the right one for the job. Whether you're working with numeric, floating-point, character, or boolean values, Java provides a data type that can handle the task.</p><br>
+                    `,
+                  };
+                  case 'Java type Casting':
+                    return{
+                      theory:`
+                      <p>Java is a popular object-oriented programming language that is used by developers all over the world. One of the important concepts in Java is type casting, which is the process of converting one data type to another. In this article, we will explore the different types of type casting in Java and how to use them in your code.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Primitive Type Casting</h3><br>
+                      <p>Java has eight primitive data types: byte, short, int, long, float, double, char, and boolean. Primitive type casting involves converting a primitive data type to another primitive data type. There are two types of primitive type casting:</p><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Widening Primitive Type Casting</h3><br>
+                      <p>Widening primitive type casting is the process of converting a smaller primitive data type to a larger primitive data type. For example, converting a byte to an int. This type of casting is done automatically by Java and is referred to as implicit casting.</p><br>
+                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Narrowing Primitive Type Casting</h3><br>
+                      <p>Narrowing primitive type casting is the process of converting a larger primitive data type to a smaller primitive data type. For example, converting a double to a float. This type of casting requires explicit casting and must be done by the programmer.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Object Type Casting</h3><br>
+                      <p>Object type casting involves converting an object of one class to an object of another class. Object type casting requires explicit casting and is done using the keyword (<code>ClassName</code>). The class to which the object is being cast must be a subclass of the class of the object being cast. If the object being cast is not an instance of the subclass, a <code>ClassCastException</code> will be thrown.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of Java Type Casting</h3><br>
+                      <p>Here are some examples of type casting in Java:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>int i = 100;<br>long l = i; //widening primitive type casting<br><br>double d = 100.04;<br>float f = (float) d; //narrowing primitive type casting<br><br>Object obj = new String("Hello");<br>String str = (String) obj; //object type casting</code></pre>
+                      </div><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Java Type Casting</h3><br>
+                      <p>Here are some best practices to keep in mind when using type casting in Java:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px;">
+                      <li>Use explicit casting when doing narrowing primitive type casting</li><br>
+                      <li>Make sure the object being cast is an instance of the subclass before using object type casting</li><br>
+                      <li>Use the <code>instanceof</code> operator to check the class of an object before casting it</li><br>
+                      </ol><br>
+                      <p>Type casting is an important concept in Java and is used to convert one data type to another. Whether you are working with primitive data types or objects, it is important to understand how type casting works and to follow best practices when using it in your code. By doing so, you can ensure that your Java applications run smoothly and efficiently.</p><br>
+                      `,
+                    };
+                    case 'Java Operators':
+                      return{
+                        theory:`
+                        <p>Java is a powerful programming language, and a good understanding of its operators is crucial for writing effective and efficient code. Java provides a wide range of operators that can be used in various ways, from simple arithmetic operations to complex conditional statements.</p><br>
+                        <p>In this comprehensive guide, we will cover all the different types of Java operators, their syntax, and how to use them effectively.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Arithmetic Operators</h3><br>
+                        <p>Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, and division. Java provides several arithmetic operators that are used to perform basic mathematical calculations. The most commonly used arithmetic operators in Java are:</p><br>
+                        <ul style="list-style-type: decimal; padding-left: 30px;">
+                        <li>+: Used to add two numbers.</li><br>
+                        <li>-: Used to subtract two numbers.</li><br>
+                        <li>*: Used to multiply two numbers.</li><br>
+                        <li>/: Used to divide two numbers.</li><br>
+                        <li>%: Used to find the remainder of dividing two numbers.</li><br>
+                        </ul><br>
+                        <p>Here's an example of how to use arithmetic operators in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>int x = 10;<br>int y = 5;<br>int sum = x + y;<br>int difference = x - y;<br>int product = x * y;<br>int quotient = x / y;<br>int remainder = x % y;<br><br>System.out.println("Sum: " + sum);<br>System.out.println("Difference: " + difference);<br>System.out.println("Product: " + product);<br>System.out.println("Quotient: " + quotient);<br>System.out.println("Remainder: " + remainder);</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>Sum: 15<br>Difference: 5<br>Product: 50<br>Quotient: 2<br>Remainder: 0</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Relational Operators</h3><br>
+                        <p>Relational operators are used to compare two values and return a boolean value of true or false. Java provides several relational operators that can be used to compare values. The most commonly used relational operators in Java are:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px;">
+                        <li><b>==</b>: Used to check if two values are equal</li><br>
+                        <li><b>!=</b>: Used to check if two values are not equal.</li><br>
+                        <li><b>></b>: Used to check if one value is greater than another.</li><br>
+                        <li><b><</b>: Used to check if one value is less than another.</li><br>
+                        <li><b>>=</b>: Used to check if one value is greater than or equal to another.</li><br>
+                        <li><b><=:</b> Used to check if one value is less than or equal to another.</li><br>
+                        </ul><br>
+                        <p>Here's an example of how to use relational operators in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>int x = 10;<br>int y = 5;<br>boolean isEqual = x == y;<br>boolean isNotEqual = x != y;<br>boolean isGreater = x > y;<br>boolean isLess = x < y;<br>boolean isGreaterOrEqual = x >= y;<br>boolean isLessOrEqual = x <= y;<br><br>System.out.println("x == y: " + isEqual);<br>System.out.println("x != y: " + isNotEqual);<br>System.out.println("x > y: " + isGreater);<br>System.out.println("x < y: " + isLess);<br>System.out.println("x >= y: " + isGreaterOrEqual);<br>System.out.println("x <= y: " + isLessOrEqual);</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x== y: false<br>x != y: true<br>x > y: true<br>x < y: false<br>x >= y: true<br>x <= y: false</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Logical Operators</h3><br>
+                        <p>Logical operators are used to perform logical operations on boolean values. Java provides three logical operators that can be used to perform logical operations. The most commonly used logical operators in Java are:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px;">
+                        <li><b>&&</b>: Used to perform the logical AND operation. Returns true only if both operands are true.</li><br>
+                        <li><b>||</b>: Used to perform the logical OR operation. Returns true if at least one of the operands is true</li><br>
+                        <li><b>!</b>: Used to perform the logical NOT operation. Returns the opposite boolean value of the operand.</li><br>
+                        </ul><br>
+                        <p>Here's an example of how to use logical operators in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>boolean y = false;<br>boolean andResult = x && y;<br>boolean orResult = x || y;<br>boolean notResult = !x;<br><br>System.out.println("x && y: " + andResult);<br>System.out.println("x || y: " + orResult);<br>System.out.println("!x: " + notResult);</code></pre>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x && y: false<br>x || y: true<br>!x: false</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Assignment Operators</h3><br>
+                        <p>Assignment operators are used to assign a value to a variable. Java provides several assignment operators that can be used to assign values to variables. The most commonly used assignment operators in Java are:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px;">
+                        <li>=: Used to assign a value to a variable.</li><br>
+                        <li>+=: Used to add a value to a variable and then assign the result to the same variable.</li><br>
+                        <li>-=: Used to subtract a value from a variable and then assign the result to the same variable.</li><br>
+                        <li>*=: Used to multiply a value with a variable and then assign the result to the same variable.</li><br>
+                        <li>/=: Used to divide a variable by a value and then assign the result to the same variable.</li><br>
+                        <li>%=: Used to find the remainder of dividing a variable by a value and then assign the result to the same variable.</li><br>
+                        </ul><br>
+                        <p>Here's an example of how to use assignment operators in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>int x = 10;<br>int y = 5;<br><br>x += y;<br>System.out.println("x += y: " + x);<br><br>x -= y;<br>System.out.println("x -= y: " + x);<br><br>x *= y;<br>System.out.println("x *= y: " + x);<br><br>x /= y;<br>System.out.println("x /= y: " + x);<br><br>x %= y;<br>System.out.println("x %= y: " + x);</code></pre>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x += y: 15<br>x -= y: 10<br>x *= y: 50<br>x /= y: 10<br>x %= y: 0</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conditional Operators</h3><br>
+                        <p>Conditional operators are used to perform operations based on conditions. Java provides the ternary operator, which can be used to perform operations based on conditions. The syntax for the ternary operator is as follows:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>condition ? expression1 : expression2</code></pre>
+                        </div><br>
+                        <p>Here's an example of how to use the ternary operator in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>int x = 10;<br>int y = 5;<br><br>int max = (x > y) ? x : y;<br><br>System.out.println("Max value: " + max);</code></pre>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>Max value: 10</code></pre>
+                        </div><br>
+                        <p>In this example, the ternary operator is used to find the maximum value between x and y. If x is greater than y, x is assigned to max. Otherwise, y is assigned to max.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Bitwise Operators</h3><br>
+                        <p>Bitwise operators are used to perform operations on individual bits of a binary number. Java provides several bitwise operators that can be used to perform operations on binary numbers. The most commonly used bitwise operators in Java are:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px;">
+                        <li>&: Used to perform a bitwise AND operation.</li><br>
+                        <li>|: Used to perform a bitwise OR operation.</li><br>
+                        <li>^: Used to perform a bitwise XOR operation.</li><br>
+                        <li>~: Used to perform a bitwise NOT operation.</li><br>
+                        <li><<: Used to shift bits to the left.</li><br>
+                        <li>>>: Used to shift bits to the right.</li><br>
+                        <li>>>>: Used to shift bits to the right with zero-fill.</li><br>
+                        </ul><br>
+                        <p>Here's an example of how to use bitwise operators in Java:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>int x = 10;<br>int y = 5;<br><br>int andResult = x & y;<br>int orResult = x | y;<br>int xorResult = x ^ y;<br>int notResult = ~x;<br>int leftShiftResult = x << 1;<br>int rightShiftResult = x >> 1;<br>int zeroFillRightShiftResult = x >>> 1;<br><br>System.out.println("x & y: " + andResult);<br>System.out.println("x | y: " + orResult);<br>System.out.println("x ^ y: " + xorResult);<br>System.out.println("~x: " + notResult);<br>System.out.println("x << 1: " + leftShiftResult);<br>System.out.println("x >> 1: " + rightShiftResult);<br>System.out.println("x >>> 1: " + zeroFillRightShiftResult);</code></pre>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x & y: 0<br>x | y: 15<br>x ^ y: 15<br>~x: -11<br>x << 1: 20<br>x >> 1: 5<br>x >>> 1: 5</code></pre>
+                        </div><br>
+                        <p>In this example, the bitwise operators are used to perform various operations on the binary representation of x and y. The bitwise AND operation returns the bits that are set in both x and y. The bitwise OR operation returns the bits that are set in either x or y. The bitwise XOR operation returns the bits that are set in either x or y but not both. The bitwise NOT operation returns the opposite of the binary representation of x. The left shift operator shifts the bits of x to the left by 1 position. The right shift operator shifts the bits of x to the right by 1 position. The zero-fill right shift operator shifts the bits of x to the right by 1 position with zero-fill.</p><br>
+                        <p>In conclusion, Java provides several operators that can be used to perform various operations. Understanding these operators and how to use them correctly is crucial for writing efficient and effective Java code.</p><br>
+                        `,
+                      };
+                      case 'Java Strings':
+                        return{
+                          theory:`
+                          <p>Java strings are sequences of characters that are commonly used to store and manipulate text in applications. In this guide, we will explore the different ways in which Java strings can be used, as well as their advantages and disadvantages. By the end of this article, you will have a solid understanding of the various features of Java strings and how to use them effectively in your programs.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Characteristics of Java Strings</h3><br>
+                          <p>One of the key characteristics of Java strings is that they are immutable. This means that once a string is created, its value cannot be changed. This can be a useful feature, as it provides a way to store data that needs to be constant, such as password hashes. On the other hand, this immutability can also be a drawback, as it requires the creation of new strings when manipulating existing ones.</p><br>
+                          <p>Another characteristic of Java strings is that they are objects. This means that they have methods and attributes, which can be used to perform operations such as concatenation, substring extraction, and comparison. These methods and attributes make it easier to manipulate strings, as they provide a way to perform operations that would be difficult to achieve using just the characters themselves.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating Java Strings</h3><br>
+                          <p>Java strings can be created in a number of different ways. The most common way is to use the string literal syntax, which allows you to create a string by enclosing a sequence of characters in quotation marks. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String greeting = "Hello, World!";</code></pre>
+                          </div><br>
+                          <p>Another way to create a Java string is to use the String constructor. This allows you to create a string from an array of characters or a string literal. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>char[] charArray = {'H', 'e', 'l', 'l', 'o'};<br>String hello = new String(charArray);</code></pre>
+                          </div><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String greeting = new String("Hello, World!");</code></pre>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Manipulating Java Strings</h3><br>
+                          <p>One of the most common operations that you will perform on Java strings is concatenation. This involves combining two or more strings into a single string. You can perform this operation using the + operator or the concat method. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String hello = "Hello, ";<br>String world = "World!";<br>String greeting = hello + world;</code></pre>
+                          </div><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String hello = "Hello, ";<br>String world = "World!";<br>String greeting = hello.concat(world);</code></pre>
+                          </div><br>
+                          <p>Another operation that you can perform on Java strings is substring extraction. This involves extracting a portion of a string and creating a new string from that portion. You can perform this operation using the substring method. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String greeting = "Hello, World!";<br>String hello = greeting.substring(0, 5);</code></pre>
+                          </div><br>
+                          <p>Finally, you can also compare Java strings to determine if they are equal or not. This can be useful when searching for specific strings or sorting strings. You can perform this operation using the equals method or the compareTo method. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>String greeting = "Hello, World!";<br>String hello = "Hello";<br>if (hello.equals(greeting.substring(0, 5))) {<br> System.out.println("The strings are equal");<br>}</code></pre>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Performance of Java Strings</h3><br>
+                          <p>When working with Java strings, it is important to consider the performance of various operations. Concatenating strings using the + operator can be slow, especially when performed many times in a loop. This is because each time the + operator is used, a new string must be created. A more efficient way to concatenate strings is to use a <code>StringBuilder</code> object.</p><br>
+                          <p>StringBuilder is a mutable class that allows you to build strings by appending characters to it. When using StringBuilder, you can avoid the overhead of creating new strings each time a concatenation operation is performed. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>StringBuilder greeting = new StringBuilder();<br>greeting.append("Hello, ");<br>greeting.append("World!");<br>String finalGreeting = greeting.toString();</code></pre>
+                          </div><br>
+                          <p>When comparing strings, it is important to use the equals method instead of the == operator. The == operator compares object references, which may not be equal even if the contents of the strings are the same. The equals method, on the other hand, compares the contents of the strings.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                          <p>Java strings provide a powerful and flexible way to store and manipulate text in your programs. By understanding the characteristics, creation, and manipulation of Java strings, you can write efficient and effective programs that use strings to achieve your goals. Whether you are working on a large-scale project or just a small program, Java strings are a fundamental tool that you will use regularly in your programming endeavors.</p><br>
+                          `,
+                        };
+                        case 'Java ArrayList':
+                          return{
+                            theory:`
+                            <p>ArrayList is a powerful data structure in Java that enables dynamic size arrays to be implemented with ease. With its capabilities to grow and shrink in size, it is an essential part of any Java programmer's toolkit. In this comprehensive guide, we will explore the ArrayList class in detail, including its creation, manipulation, and usage in real-world scenarios.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is an ArrayList in Java?</h3><br>
+                            <p>An ArrayList in Java is a resizable array implementation of the List interface. It allows for elements to be added and removed from the list dynamically, as opposed to the traditional arrays which have a fixed size. The ArrayList class is part of the Java Collection framework and offers a wide range of functionality that makes it an ideal choice for many programming tasks.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating an ArrayList</h3><br>
+                            <p>The process of creating an ArrayList in Java is simple and straightforward. The ArrayList class provides several constructors to choose from, including a default constructor, one that takes an initial capacity as an argument, and one that takes a Collection object.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;Integer&gt; numbers = new ArrayList<>();<br>ArrayList<String> names = new ArrayList<>(10);<br>ArrayList<Boolean> flags = new ArrayList<>(Arrays.asList(true, false, true));</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Manipulating an ArrayList</h3><br>
+                            <p>One of the strengths of ArrayList is its ability to manipulate its elements with ease. Adding, removing, and modifying elements in an ArrayList can be accomplished with several methods provided by the ArrayList class.</p><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Adding Elements</h3><br>
+                            <p>Elements can be added to an ArrayList using the add method. This method takes an element as an argument and adds it to the end of the list.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;String&gt; names = new ArrayList<>();<br>names.add("John");<br>names.add("Jane");<br>names.add("Jim");</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Removing Elements</h3><br>
+                            <p>Elements can be removed from an ArrayList using the remove method. This method takes either an index or an object as an argument and removes the corresponding element from the list.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;String&gt; names = new ArrayList<>(Arrays.asList("John", "Jane", "Jim"));<br>names.remove(1); // removes "Jane"<br>names.remove("John"); // removes "John"</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Modifying Elements</h3><br>
+                            <p>Elements can be modified in an ArrayList using the set method. This method takes an index and an object as arguments and sets the element at the specified index to the given object.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;String&gt; names = new ArrayList<>(Arrays.asList("John", "Jane", "Jim"));<br>names.set(1, "Jill"); // replaces "Jane" with "Jill"</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using an ArrayList in Real-World Scenarios</h3><br>
+                            <p>ArrayList can be used in a variety of real-world scenarios, from simple tasks such as storing a list of names to more complex tasks such as representing a graph. In this section, we will explore some of the most common uses of ArrayList.</p><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Storing a List of Objects</h3><br>
+                            <p>ArrayList can be used to store a list of objects, such as strings, integers, or custom objects. This makes it an ideal choice for tasks such as reading data from a file or database and storing it in memory for processing.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;Person&gt;<br>people = new ArrayList<>();<br>people.add(new Person("John Doe", 30));<br>people.add(new Person("Jane Doe", 28));<br>people.add(new Person("Jim Smith", 35));</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Implementing a Stack</h3><br>
+                            <p>ArrayList can be used to implement a stack data structure, where elements are added and removed in a Last In First Out (LIFO) order. This can be accomplished by adding and removing elements from the end of the list.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>ArrayList&lt;Integer&gt; stack = new ArrayList<>();<br>stack.add(1);<br>stack.add(2);<br>stack.add(3);<br>System.out.println(stack.remove(stack.size()-1)); // Outputs 3<br>System.out.println(stack.remove(stack.size()-1)); // Outputs 2<br>System.out.println(stack.remove(stack.size()-1)); // Outputs 1</code></pre>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                            <p>ArrayList is a versatile and essential data structure in Java, offering a dynamic and flexible way to store and manipulate elements. Whether it's used to store a list of objects, implement a stack, or represent a graph, ArrayList is an indispensable tool for any Java programmer. With its ease of use and wide range of functionality, it's no wonder that ArrayList is one of the most popular data structures in Java.</p><br>
+                            `,
+                          };
+                          case 'Java HashMap':
+                            return{
+                              theory:`
+                              <p>Java HashMap is a fundamental data structure that is widely used in Java programming. It is a class that implements the Map interface, which maps unique keys to values. In this article, we will explore in depth the workings of HashMap and how to use it effectively in Java programming.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is a HashMap in Java?</h3><br>
+                              <p>A HashMap in Java is a data structure that consists of a collection of key-value pairs, where each key is unique. The keys are used to access the corresponding values in the HashMap. HashMap is one of the most commonly used data structures in Java, as it provides fast access to values based on the keys.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How does a HashMap work in Java?</h3><br>
+                              <p>A HashMap in Java works by using a hash table, where the keys are hashed to determine their position in the table. The hash function is used to map the keys to the indexes in the table. When you add a new key-value pair to the HashMap, the hash function calculates the index of the key in the table, and the key-value pair is stored in that index. When you want to access a value based on its key, the HashMap uses the hash function to determine the index of the key, and then accesses the value stored in that index.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of using a HashMap in Java</h3><br>
+                              <ol style="list-style-type: decimal; padding-left: 30px;">
+                              <li>Fast access: HashMap provides fast access to values based on the keys, as it uses a hash function to determine the index of the key in the table.</li><br>
+                              <li>Dynamic size: HashMap can grow or shrink dynamically, as you add or remove key-value pairs from it.</li><br>
+                              <li>Uniqueness of keys: HashMap ensures that each key is unique, so you do not have to worry about duplicate keys.</li><br>
+                              <li>Null keys and values: HashMap allows you to use null keys and values, which is not possible in other data structures like ArrayList.</li><br>
+                              </ol><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to create and use a HashMap in Java</h3><br>
+                              <p>Here is a simple example of how to create and use a HashMap in Java:</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>import java.util.HashMap;<br><br>public class Main {<br> public static void main(String[] args) {<br>  // Create a HashMap<br>  HashMap<String, Integer> map = new HashMap<>();<br><br>  // Add key-value pairs to the HashMap<br>  map.put("Key1", 1);<br>  map.put("Key2", 2);<br>  map.put("Key3", 3);<br><br>  // Access values based on the keys<br>  int value1 = map.get("Key1");<br>  int value2 = map.get("Key2");<br>  int value3 = map.get("Key3");<br><br>  // Print the values<br>  System.out.println(value1);<br>  System.out.println(value2);<br>  System.out.println(value3);<br> }<br>}</code></pre>
+                              </div><br>
+                              <p>In this example, we first create a HashMap map that maps String keys to Integer values. Then, we add three key-value pairs to the HashMap using the put method. Finally, we access the values based on their keys using the get method, and print the values.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced features of HashMap in Java</h3><br>
+                              <ol style="list-style-type: decimal; padding-left: 30px;">
+                              <li>Iterating through a HashMap: You can use the entrySet method to get a set of key-value pairs from the HashMap, and then use an enhanced for loop to iterate through the set and access the keys and values.</li><br>
+                              <li>Sorting a HashMap: HashMap does not provide a built-in method to sort its key-value pairs, but you can sort a HashMap by converting it to a TreeMap or by using a custom comparator.</li><br>
+                              <li>Thread safety: HashMap is not thread-safe by default, meaning that multiple threads can access and modify it simultaneously, leading to inconsistent results. To ensure thread safety, you can use the Collections.synchronizedMap method to wrap a HashMap in a synchronized map.</li><br>
+                              </ol><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                              <p>In conclusion, Java HashMap is a powerful data structure that provides fast access to values based on the keys. It is widely used in Java programming for its dynamic size, uniqueness of keys, and support for null keys and values. By understanding the basics of HashMap and its advanced features, you can use it effectively in your Java projects to solve various problems.</p><br>
+
+                              `,
+                            };
 
     }
   }

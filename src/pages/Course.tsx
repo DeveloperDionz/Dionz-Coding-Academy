@@ -400,7 +400,20 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         'Git Subtree',
       ],
       'PHP Programming':[],
-      'Java Programming':[]
+      'Java Programming':[
+        '###Java Tutorial',
+        'Java Intro',
+        'Java Syntax',
+        'Java Comments',
+        'Java Variables',
+        'Java Data Types',
+        'Java type Casting',
+        'Java Operators',
+        'Java Strings',
+        '###Java Classes',
+        'Java ArrayList',
+        'Java HashMap'
+      ]
     };
 
     const courseLessons = lessonTemplates[courseData.title] || [];
