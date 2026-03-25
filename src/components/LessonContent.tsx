@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Target, Code2, CheckSquare, LandPlot, Languages, Code } from "lucide-react";
+import { Lightbulb, Target, Code2, CheckSquare, LandPlot, Languages, Code, HelpCircle, CheckCircle, XCircle } from "lucide-react";
 import CodeEditor from './CodeEditor';
 
 interface Lesson {
@@ -20,6 +20,24 @@ interface LessonContentProps {
 }
 
 const LessonContent: React.FC<LessonContentProps> = ({ lesson, courseTitle, onUnlock }) => {
+ const [selectedAnswers, setSelectedAnswers] = React.useState<number[]>([]);
+const [isSubmitted, setIsSubmitted] = React.useState(false); // New state
+
+// Reset both when the lesson changes
+useEffect(() => {
+  setSelectedAnswers([]);
+  setIsSubmitted(false);
+}, [lesson.id]);
+
+const handleToggleAnswer = (idx: number) => {
+  if (isSubmitted) return; // Prevent changing answers after submitting
+  
+  setSelectedAnswers(prev => 
+    prev.includes(idx) 
+      ? prev.filter(item => item !== idx) 
+      : [...prev, idx]
+  );
+};
 
   useEffect(() => {
     if (lesson.isHeading) return;
@@ -22580,11 +22598,813 @@ expectedOutput: undefined,
   //Python Programming
       if (courseTitle === 'Python Programming') {
         switch (lesson.title) {
-        case 'Introduction':
+        case 'Python Intro':
           return {
-            theory:``,
+            theory:`
+            <p>Python is a high-level, interpreted programming language that is widely used for web development, data science, artificial intelligence, and many other applications. In this article, we will provide a comprehensive introduction to Python, covering the basics of the language, its syntax, and its use cases.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Python Basics</h3><br>
+            <p>Python is an interpreted language, which means that code is executed line-by-line at runtime. This makes it easy to write and test code, as there is no need to compile the code before running it. Additionally, Python is dynamically typed, meaning that variable types are determined at runtime.</p><br>
+            <p>Python's syntax is designed to be easy to read and write, with minimal boilerplate code required. For example, the following code snippet defines a function that calculates the sum of two numbers:</p><br>
+            <div class="code-block">
+            <pre id="dataExample"><code>def add_numbers(a, b):<br>  return a + b</code></pre>
+            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+            </div><br>
+            <p>In this example, we define a function called add_numbers that takes two parameters a and b and returns their sum. Note that there are no type declarations for the parameters or the return value.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Python Use Cases</h3><br>
+            <p>Python is a versatile language that can be used for a wide range of applications. Some of the most popular use cases for Python include:</p><br>
+            <ol style="list-style-type: decimal; padding-left: 30px;">
+            <li>Web Development: Python is widely used for web development, with popular frameworks such as Django and Flask providing powerful tools for building web applications.</li><br>
+            <li>Data Science: Python's rich ecosystem of data science libraries, including NumPy, Pandas, and Matplotlib, make it an excellent choice for data analysis and visualization.</li><br>
+            <li>Artificial Intelligence: Python's simplicity and versatility make it an ideal language for artificial intelligence applications, including machine learning and natural language processing.</li><br>
+            <li>Automation: Python's ease of use and powerful standard library make it an excellent choice for automating tasks, such as web scraping and data processing.</li><br>
+            </ol><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Get Started with Python</h3><br>
+            <p>Getting started with Python is easy. All you need is a text editor and the Python interpreter, which can be downloaded for free from the official Python website. Once you have installed Python, you can start writing and running Python code right away.</p><br>
+            <p>To get started with Python, we recommend following a tutorial or taking an online course. There are many excellent resources available, including the official Python documentation, online tutorials, and books.</p><br>
+            <p>Python is a powerful, versatile language that is widely used for web development, data science, artificial intelligence, and many other applications. In this article, we have provided a comprehensive introduction to Python, covering the basics of the language, its syntax, and its use cases. Whether you are a beginner or an experienced programmer, we hope that this article has provided you with a solid foundation for exploring the many possibilities of Python.</p><br>
+            <p>Diagram:</p><br>
+            <img src="/images/pythonintro.png" width="auto" height="auto"><br>
+            <p>The above diagram shows the various applications of Python, including web development, data science, artificial intelligence, and automation. Python is a versatile language that can be used for a wide range of applications, making it an excellent choice for developers and programmers of all skill levels.</p><br> 
+            `,
+            quiz:{
+              question:"What are the key features of Python as mentioned on the provided link?",
+              options:[
+                "Python is simple and easy to learn",
+                "Python is slow and complex",
+                "Python supports the object-oriented style or technique of programming",
+                "Python doesn't support scripting",
+                "Python integrates systems more effectively",
+                "Python doesn't support GUI applications",
+              ],
+              correctAnswers:[0, 2, 4],
+            }
           };
-
+          case 'Python Get Started':
+            return{
+              theory:`
+              <p>Welcome to our comprehensive guide on getting started with Python. Python is a popular high-level programming language known for its simplicity, versatility, and readability. It has a wide range of applications, including web development, data analysis, machine learning, and artificial intelligence.</p><br>
+              <p>In this guide, we will cover the basics of Python programming and give you the tools you need to get started with coding. We'll cover everything from installing Python to writing your first Python program.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Installing Python</h3><br>
+              <p>Before we dive into programming with Python, we need to install it on our computer. Python is a free and open-source programming language, so you can download it from the official website at python.org.</p><br>
+              <p>The website provides installers for Windows, macOS, and Linux, so choose the appropriate one for your operating system. Once you've downloaded the installer, follow the instructions to install Python on your computer.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Writing Your First Python Program</h3><br>
+              <p>Now that you have Python installed, it's time to write your first Python program. We'll start with a simple "Hello, World!" program. Open up a text editor or an Integrated Development Environment (IDE) and type the following code:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>print("Hello, World!")</code></pre>
+              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+              </div><br>
+              <p>Save the file as "hello.py" and then run it from the command line by typing:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>python hello.py</code></pre>
+              </div><br>
+              <p>If everything worked correctly, you should see the message "Hello, World!" printed to the console.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Variables and Data Types</h3><br>
+              <p>In Python, variables are used to store values that can be used later in the program. You can think of variables as containers that hold data. To create a variable, you simply give it a name and assign a value to it.</p><br>
+              <p>Python supports several data types, including integers, floating-point numbers, strings, and booleans. Let's look at some examples:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code># Integer variable<br>my_age = 30<br><br># Float variable<br>my_weight = 65.5<br><br># String variable<br>my_name = "John Doe"<br><br># Boolean variable<br>is_python_fun = True</code></pre>
+              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+              </div><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Operators</h3><br>
+              <p>Python supports a wide range of operators that you can use to perform arithmetic, comparison, and logical operations. Here are some examples:</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code># Arithmetic operators<br>x = 10<br>y = 5<br>print(x + y)    # Addition<br>print(x - y)    # Subtraction<br>print(x * y)    # Multiplication<br>print(x / y)    # Division<br>print(x % y)    # Modulus<br>print(x ** y)   # Exponentiation<br><br># Comparison operators<br>a = 10<br>b = 20<br>print(a == b)   # Equal to<br>print(a != b)   # Not equal to<br>print(a > b)    # Greater than<br>print(a < b)    # Less than<br>print(a >= b)   # Greater than or equal to<br>print(a <= b)   # Less than or equal to<br><br># Logical operators<br>p = True<br>q = False<br>print(p and q)  # Logical AND<br>print(p or q)   # Logical OR<br>print(not p)    # Logical NOT</code></pre>
+              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+              </div><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Control Structures</h3><br>
+              <p>Control structures are used to control the flow of a program. They allow you to perform certain actions based on certain conditions. Python supports several control structures, including if statements, for loops, and while loops.</p><br>
+              <div class="code-block">
+              <pre id="dataExample"><code># If statement<br>x = 10<br>if x > 0:<br>  print("x is positive")<br>elif x == 0:<br>  print("x is zero")<br>else:<br>  print("x is negative")<br><br># For loop<br>for i in range(1, 11):<br>  print(i)<br><br># While loop<br>i = 1<br>While i <= 10:<br>print(i)<br>i += 1<br><br># Functions<br><br># Define a function<br>def square(x):<br>return x ** 2<br><br># Call the function<br>print(square(5))</code></pre>
+              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+              </div><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+              <p>In this guide, we covered the basics of Python programming, including installing Python, writing your first program, using variables and data types, working with operators, control structures, and functions.</p><br>
+              <p>Python is a powerful and versatile language, and we've only scratched the surface of what it can do. With this knowledge, you're well on your way to becoming a proficient Python programmer.</p><br>
+              <p>We hope this guide has been helpful, and we look forward to seeing what you create with Python!</p><br>
+              `,
+              quiz:{
+              question:"What are some of the characteristics of Python programming language as mentioned in the provided URL?",
+              options:[
+                "Python is difficult to learn",
+                "Python is an interpreted language",
+                "Python does not support object-oriented programming",
+                "Python has clear syntax and easy readability",
+                "One cannot write server-side web application back-ends using Python.",
+              ],
+              correctAnswers:[1, 3]
+            },
+            };
+            case 'Python Syntax':
+              return{
+                theory:`
+                <p>Python is a high-level programming language that is widely used in the software development industry. It is an interpreted language, which means that it does not need to be compiled, making it easier for developers to work with. One of the most important aspects of any programming language is its syntax, and Python is no exception. In this article, we will explore the various aspects of Python syntax and how it can be used to create efficient and effective programs.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Basic Syntax</h3><br>
+                <p>The basic syntax of Python is relatively simple and easy to understand. It consists of a set of rules that dictate how the language should be structured and how various elements of the language should be used. Some of the key elements of Python syntax include:</p><br>
+                <ul style="list-style-type: disc; padding-left: 30px;">
+                <li>Keywords: Python has a set of keywords that are used to perform specific tasks within the language. These keywords include 'if', 'else', 'for', 'while', and many others.</li><br>
+                <li>Variables: Variables are used to store values in Python. A variable can be defined by simply assigning a value to it, like this: x = 10.</li><br>
+                <li>Operators: Python supports a range of operators that can be used to perform various operations on values. Some of the most commonly used operators in Python include +, -, *, /, and %.</li><br>
+                <li>Statements: Statements are used to define a series of instructions that are executed by the interpreter. A statement in Python ends with a newline character.</li><br>
+                </ul><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Indentation</h3><br>
+                <p>One of the unique features of Python syntax is its use of indentation to define the structure of a program. Unlike many other programming languages, Python uses indentation to indicate the scope of a block of code. For example, if we have an if statement, the code that should be executed if the condition is met is indented underneath the if statement.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>x = 10<br>if x == 10:<br>  print("x is equal to 10")</code></pre>
+                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                </div><br>
+                <p>In this example, the print statement is indented, which indicates that it is part of the code block that should be executed if the condition x == 10 is met.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comments</h3><br>
+                <p>Comments are used to provide additional information about a program and to make it easier for others to understand. In Python, a comment is indicated by a # symbol. Everything that appears after the # symbol on a line is ignored by the interpreter.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code># This is a comment in Python</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Strings</h3><br>
+                <p>Strings are used to represent sequences of characters in Python. They are defined by enclosing a sequence of characters within either single or double quotes.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>string1 = "Hello, World!"<br>string2 = 'Hello, World!'</code></pre>
+                </div><br>
+                <p>Both string1 and string2 are valid strings in Python, and they can be used interchangeably</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Lists</h3><br>
+                <p>Lists are a commonly used data structure in Python. They are used to store a collection of values, which can be of any type. A list is defined by enclosing a comma-separated sequence of values within square brackets.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>numbers = [1, 2, 3, 4, 5]</code></pre>
+                </div><br>
+                <p>In this example, the numbers list contains the values 1, 2, 3, 4, and 5.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Loops</h3><br>
+                <p>Loops are used to repeat a block of code a specified number of times. There are two types of loops in Python: for loops and while loops.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The For Loop in Python</h3><br>
+                <p>The for loop is a commonly used type of loop in Python. It allows you to iterate over a sequence of values and execute a block of code for each value in the sequence. The general syntax for a for loop in Python is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>for element in sequence:<br>  # code to be executed for each element in the sequence</code></pre>
+                </div><br>
+                <p>For example, let's say we have a list of numbers and we want to print each number in the list. We can do this using a for loop:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>numbers = [1, 2, 3, 4, 5]<br><br>for number in numbers:<br>  print(number)</code></pre>
+                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                </div><br>
+                <p>In this example, the for loop will iterate over each value in the numbers list and print each number.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The While Loop in Python</h3><br>
+                <p>The while loop is another type of loop in Python. It allows you to execute a block of code repeatedly as long as a certain condition is met. The general syntax for a while loop in Python is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>while condition:<br>  # code to be executed as long as the condition is True</code></pre>
+                </div><br>
+                <p>For example, let's say we want to print the numbers from 1 to 5. We can do this using a while loop:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>count = 1<br><br>while count <= 5:<br>  print(count)<br>  count += 1</code></pre>
+                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                </div><br>
+                <p>In this example, the while loop will continue to execute as long as count is less than or equal to 5. After each iteration, count is incremented by 1, until it reaches 6, at which point the loop will terminate.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Flow Control Statements</h3><br>
+                <p>Flow control statements are used to control the flow of execution in a Python program. Some of the most commonly used flow control statements include if, else, and elif.</p><br>
+                <p>The if statement allows you to test a condition and execute a block of code if the condition is met. The general syntax for an if statement in Python is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>if condition:<br>  # code to be executed if the condition is True</code></pre>
+                </div><br>
+                <p>The else statement can be used in conjunction with an if statement to execute a block of code if the condition is not met. The general syntax for an if statement with an else clause is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>if condition:<br>  # code to be executed if the condition is True<br>else:<br>  # code to be executed if the condition is False</code></pre>
+                </div><br>
+                <p>The elif statement is used to specify additional conditions to test. It can be used in conjunction with an if statement to test multiple conditions. The general syntax for an if statement with elif clauses is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>if condition1:<br>  # code to be executed if condition1 is True<br>elif condition2:<br>  # code to be executed if condition1 is False and condition2 is True<br>else:<br>  # code to be executed if neither condition1 nor condition2 is True</code></pre>
+                </div><br>
+                <p>By using flow control statements, you can create complex programs that can make decisions based on the values of variables and perform different actions depending on the results of those decisions.</p><br>
+                `,
+                quiz:{
+              question:"What are some general rules to follow when indenting code in Python as mentioned on Dionz Coding Academy?",
+              options:[
+                "Each line of the code in the same block of code needs to be indented the same number of tabs or spaces.",
+                "Python uses curly braces to mark blocks of code.",
+                "Python does not support object-oriented programming",
+                "If a function or loop is written without an indented block of code, Python will give an error.",
+                "Indenting is optional in Python and does not affect the execution of the code.",
+              ],
+              correctAnswers:[0, 3]
+            },
+              };
+              case 'Python Comments':
+                return{
+                  theory:`
+                  <p>Python is a high-level programming language known for its simple and easy-to-understand syntax. One of the important elements of writing a well-structured code is the usage of comments. Comments in Python serve as a useful tool for explaining the code, making it more readable and understandable for others.</p><br>
+                  <p>In this article, we will take a closer look at comments in Python and explore how to use them effectively in your code.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are comments in Python?</h3><br>
+                  <p>In programming, a comment is a non-executable piece of code that is ignored by the interpreter. It is used to explain what the code is doing or to add annotations to the code.</p><br>
+                  <p>In Python, comments are denoted by the hash symbol (#). Everything following the hash symbol, until the end of the line, is considered a comment.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why use comments in Python?</h3><br>
+                  <p>The use of comments in Python can serve several purposes, including:</p><br>
+                  <ul style="list-style-type: disc; padding-left: 30px;">
+                  <li>Providing explanations and annotations to the code, making it easier to understand for others and yourself in the future.</li><br>
+                  <li>Debugging code. By adding comments, you can quickly identify the purpose of a specific line of code, making it easier to identify bugs.</li><br>
+                  <li>Preventing code from being executed. If you want to temporarily prevent a line of code from being executed, you can add a comment in front of it.</li><br>
+                  </ul><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to use comments in Python</h3><br>
+                  <p>Using comments in Python is simple and straightforward. To add a comment to your code, simply start the line with the hash symbol (#).</p><br>
+                  <p>For example:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code># This is a comment in Python</code></pre>
+                  </div><br>
+                  <p>You can also add multiple comments on the same line by using the hash symbol multiple times.</p><br>
+                  <p>For example:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code># This is the first comment<br># This is the second comment</code></pre>
+                  </div><br>
+                  <p>It is good practice to write meaningful comments that add value to the code and make it easier to understand. This can include explanations of what the code is doing, why it is necessary, or annotations on how to use it.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                  <p>Comments play an important role in writing well-structured and readable code. By using comments in Python, you can make your code easier to understand and debug, and prevent errors from occurring. So, don't hesitate to include comments in your code to make it more readable and understandable to others.</p><br>
+                  `,
+                  quiz:{
+                  question:"Which of the following are ways to add comments in Python code?",
+                  options:[
+                  "Using /*...*/",
+                  "Using the # symbol before the comment",
+                  "Using // before the comment",
+                  "Using triple quotes before and after the comment ''' '''",
+                  "Writing a comment in a separate line without any symbol before it",
+                  ],
+                  correctAnswers:[1, 3]
+                },
+                };
+                case 'Python Variables':
+                  return{
+                    theory:`
+                    <p>Python is one of the most popular programming languages in the world, and it is loved by developers for its ease of use and readability. One of the core concepts in programming is the idea of a variable. Variables are used to store values that can be used in your code. In this article, we will be taking a deep dive into Python variables, including their types, how to create them, and how to manipulate them.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Variables in Python?</h3><br>
+                    <p>A variable is a named container for storing data values. In Python, you can use a variable to store a wide range of data types, including strings, numbers, and lists. You can then use the variable name to reference the data stored in it.</p><br>
+                    <p>For example, consider the following code:</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>name = "John Doe"<br>print(name)</code></pre>
+                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                    </div><br>
+                    <p>Here, the name variable is used to store the string "John Doe". You can use the print function to display the value of the name variable, which will result in John Doe being displayed.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Create Variables in Python</h3><br>
+                    <p>Creating a variable in Python is simple. To create a variable, you need to provide a name for the variable and assign a value to it using the = operator. The following code demonstrates how to create a variable:</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>name = "John Doe"</code></pre>
+                    </div><br>
+                    <p>Here, name is the name of the variable, and "John Doe" is the value being assigned to it.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Variables in Python</h3><br>
+                    <p>Python supports several data types, including:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li><b>Numbers:</b> Python supports integer, floating point, and complex numbers.</li><br>
+                    <li><b>Strings:</b> Strings are sequences of characters and can be enclosed in single quotes ('), double quotes ("), or triple quotes (''' or """).</li><br>
+                    <li><b>Lists:</b> Lists are ordered sequences of elements, which can be of any type.</li><br>
+                    <li><b>Tuples:</b> Tuples are similar to lists, but they are immutable and cannot be changed.</li><br>
+                    <li><b>Dictionaries:</b> Dictionaries are unordered collections of key-value pairs.</li><br>
+                    <li><b>Sets:</b> Sets are unordered collections of unique elements.</li><br>
+                    </ul><br>
+                    <p>Here is an example of how you can create variables of different types in Python:</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>integer = 10<br>float_num = 10.5<br>complex_num = 10 + 5j<br>string = "Hello, World!"<br>list = [1, 2, 3, 4, 5]<br>tuple = (1, 2, 3, 4, 5)<br>dictionary = {"key1": "value1", "key2": "value2"}<br>set = {1, 2, 3, 4, 5}</code></pre>
+                    </div><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Manipulating Variables in Python</h3><br>
+                    <p>Once you have created a variable, you can manipulate it in several ways. For example, you can perform mathematical operations on variables of type int or float, concatenate strings, and add or remove elements from lists and dictionaries.</p><br>
+                    <p>Here is an example of how you can perform mathematical operations on variables:</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>a = 10<br>b = 20<br><br>sum = a + b<br>diff = b - a<br>product = a * b<br>quotient = b / a</code></pre>
+                    </div><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                    <p>In conclusion, variables are a crucial aspect of programming and play an important role in Python. Understanding how to create and manipulate variables is essential for writing effective and efficient code. In this article, we have explored the basics of variables in Python, including what they are, how to create them, and the different types of variables available. By mastering the use of variables, you can take your Python programming skills to the next level.</p><br>
+                    `,
+                    quiz:{
+                    question:"In Python, which of the following is true about variables?",
+                    options:[
+                    "Variables are memory locations to store values.",
+                    "In Python, the equal sign (=) is used to assign values to variables.",
+                    "You have to declare the variable type before using it.",
+                    "Python allows to assign a single value to several variables simultaneously.",
+                    "Variables in Python are constants and their values cannot be changed once assigned.",
+                    ],
+                    correctAnswers:[0, 1, 3]
+                  },
+                  };
+                  case 'Variable Names':
+                    return{
+                      theory:`
+                      <p>At Dionz Coding Academy, we take Python coding seriously. We believe that writing clear, concise, and readable code is essential for creating robust and maintainable applications. One of the key elements of Python coding is variable naming. In this article, we'll share our best practices for Python variable naming and show you how to make your code more readable and understandable.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why is Variable Naming Important in Python?</h3><br>
+                      <p>Python is a high-level, dynamically-typed programming language that is known for its simplicity and readability. One of the ways that Python achieves this readability is by using meaningful and descriptive variable names. By using descriptive variable names, you can make your code more understandable, maintainable, and easier to debug.</p><br>
+                      <p>When you write Python code, you are writing for two audiences: the computer and other developers. While the computer can read code with meaningless variable names, other developers may have a hard time understanding what the code does. By using descriptive variable names, you can make your code more accessible and easier to understand for other developers.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Python Variable Naming</h3><br>
+                      <p>Here are our best practices for naming variables in Python:</p><br>
+                      <ol style="list-style-type: decimal; padding-left: 30px;">
+                      <li style="font-weight: bold;">Use descriptive and meaningful names</li><br>
+                      <p>Variable names should be descriptive and meaningful. They should describe what the variable represents or contains. For example, if you are writing a program that calculates the area of a circle, you might name your variable "radius" or "area". Avoid using generic or meaningless names such as "x" or "temp".</p><br>
+                      <li style="font-weight: bold;">Follow a consistent naming convention</li><br>
+                      <p>It's important to follow a consistent naming convention to make your code more readable and understandable. There are several naming conventions that you can follow, but the most common ones are:</p><br>
+                      <ul style="list-style-type: disc; padding-left: 30px;">
+                      <li>CamelCase: This convention capitalizes the first letter of each word except for the first word. For example, "firstName" or "lastName".</li><br>
+                      <li>snake_case: This convention uses underscores to separate words. For example, "first_name" or "last_name".</li><br>
+                      </ul><br>
+                      <p>Choose a naming convention and stick to it throughout your code</p><br>
+                      <li style="font-weight: bold;">Avoid reserved keywords</li><br>
+                      <p>Avoid using reserved keywords as variable names. Python has several reserved keywords that have special meanings in the language. Using reserved keywords as variable names can cause syntax errors and make your code hard to read. Some examples of reserved keywords are "if", "while", "for", and "print".</p><br>
+                      <li style="font-weight: bold;">Don't use abbreviations</li><br>
+                      <p>Avoid using abbreviations in your variable names. Abbreviations can be confusing and may not be understandable to other developers. Instead, use full and descriptive names.</p><br>
+                      <li style="font-weight: bold;">Be mindful of variable scope</li><br>
+                      <p>Be mindful of the scope of your variables. Variables should be defined in the smallest possible scope to avoid naming conflicts and improve readability. For example, if you have a function that uses a variable, define that variable inside the function instead of at the global level.</p><br>
+                      </ol><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of Good Variable Names in Python</h3><br>
+                      <p>Here are some examples of good variable names in Python:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code># Example 1: Calculating the area of a circle<br>radius = 5<br>pi = 3.14<br>area = pi * radius ** 2<br><br># Example 2: Storing a person's information<br>first_name = "John"<br>last_name = "Doe"<br>age = 30</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <p>In these examples, the variable names are descriptive, meaningful, and follow a consistent naming convention.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                      <p>In this article, we have shared our best practices for Python variable naming. By using descriptive and meaningful variable names, following a consistent naming convention, avoiding reserved keywords and abbreviations, and being mindful of variable scope, you can make your Python code more readable, understandable, and maintain</p><br>
+                      `,
+                      quiz:{
+                      question:"In Python, which of the following are valid rules to name a variable?",
+                      options:[
+                      "Variable names can start with a letter or an underscore.",
+                      "Variable names can start with a number.",
+                      "Variable names can include letters, numbers, and underscores.",
+                      "Variable names can include special characters like %, #, @.",
+                      "Python is a case-sensitive language, which means VAR and var would be different variables.",
+                      ],
+                      correctAnswers:[0, 2, 4]
+                      },
+                    };
+                    case 'Assign Multiple Values':
+                      return{
+                        theory:`
+                        <p>Python is a popular programming language used for a variety of applications, from web development to data analysis. One of the essential features of Python is the ability to assign multiple variables simultaneously. In this guide, we will explore how to use multiple variables in Python and their benefits.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding Python Multiple Variables</h3><br>
+                        <p>Python allows you to assign multiple variables in a single line of code. The syntax for assigning multiple variables is as follows:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>variable1, variable2, variable3 = value1, value2, value3</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>The above code assigns three variables, variable1, variable2, and variable3, with values value1, value2, and value3, respectively.</p><br>
+                        <p>Using multiple variables in Python can simplify your code and make it more readable. Instead of declaring and assigning variables separately, you can assign them all in a single line of code, saving you time and reducing the chances of errors.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advantages of Using Multiple Variables in Python</h3><br>
+                        <p>Using multiple variables in Python has several advantages, including:</p><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Simplify Code</h3><br>
+                        <p>When you need to assign multiple variables, you can use a single line of code instead of multiple lines. This makes your code more concise and easier to read, reducing the chances of errors.</p><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Improve Readability</h3><br>
+                        <p>Multiple variables make your code more readable, as you can quickly identify the variables and their corresponding values. This is especially useful when working with large datasets.</p><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Reduce Memory Usage</h3><br>
+                        <p>When you assign multiple variables in a single line of code, you save memory, as you do not need to declare separate variables.</p><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Faster Execution</h3><br>
+                        <p>Faster Execution</p><br>
+                        <p>Using multiple variables can make your code run faster, as it reduces the number of lines of code and memory usage.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of Using Multiple Variables in Python</h3><br>
+                        <p>Here are some examples of how to use multiple variables in Python:</p><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Example 1: Assigning Multiple Variables</h3><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x, y, z = "Python", 3.7, True<br>print(x)<br>print(y)<br>print(z)</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>Python<br>3.7<br>True</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Example 2: Swapping Variables</h3><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>x = 5<br>y = 10<br><br># Before swapping<br><br>print("Before swapping")<br>print("x =", x)<br>print("y =", y)<br><br># Swapping variables<br>x, y = y, x<br><br># After swapping<br>print("After swapping")<br>print("x =", x)<br>print("y =", y)</code></pre>
+                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                        </div><br>
+                        <p>Output:</p><br>
+                        <div class="code-block">
+                        <pre id="dataExample"><code>Before swapping<br>x = 5<br>y = 10<br>After swapping<br>x = 10<br>y = 5</code></pre>
+                        </div><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                        <p>In this guide, we have explored the benefits of using multiple variables in Python, as well as provided some examples to help you get started. Using multiple variables can make your code more concise, easier to read, and faster to execute. By incorporating multiple variables in your Python code, you can improve its overall efficiency and effectiveness.</p><br>
+                        <p>To help you visualize the concept of multiple variables, we have provided a diagram below:</p><br>
+                        <img src="/images/varname.png" width="auto" height="auto"><br>
+                        <p>We hope this guide has been useful, and we wish you success in your programming journey!</p><br>
+                        `,
+                        quiz:{
+                        question:"What are the ways in which you can assign multiple values in Python as stated on the specified URL?",
+                        options:[
+                        "Assigning multiple values to multiple variables",
+                        "Assigning the same value to multiple variables",
+                        "Assigning values from list to variables",
+                        "Assigning values from tuple to variables",
+                        "Assigning different values to the same variable",
+                        ],
+                        correctAnswers:[0, 1, 2, 3]
+                      },
+                      };
+                      case 'Output Variables':
+                        return{
+                          theory:`
+                          <p>Python is a popular programming language that is widely used for its simplicity, versatility, and ease of use. One of the fundamental concepts of Python is the use of variables, which allows programmers to store and manipulate data within their code. In this article, we will explore the concept of Python variables and outputs in depth, providing you with a comprehensive understanding of these essential programming concepts.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Python Variables?</h3><br>
+                          <p>A variable in Python is a named reference to a value that is stored in the computer's memory. These values can be any type of data, such as numbers, strings, or even objects. Variables are created using the assignment operator (=), which assigns a value to the variable name. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>x = 5<br>y = "Hello, World!"</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>In this example, we have created two variables: x and y. The variable x has been assigned the value of 5, while the variable y has been assigned the value of the string "Hello, World!".</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding Python Outputs</h3><br>
+                          <p>Python outputs are the results of a program or a code snippet. They are typically displayed on the console or screen and can be used to provide feedback to the user or other parts of the program. Python provides several functions for generating outputs, including the print() function, which displays text on the console. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>print("Hello, World!")</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>This code will output the string "Hello, World!" on the console.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Data Types in Python Variables</h3><br>
+                          <p>Python variables can store data of different types, including numbers, strings, and Boolean values. Python also supports complex numbers, lists, tuples, and dictionaries.</p><br>
+                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Numbers</h3><br>
+                          <p>Numbers in Python can be integers, floating-point numbers, or complex numbers. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>x = 10    # integer<br>y = 3.14  # floating-point<br>z = 2 + 3j # complex</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Strings</h3><br>
+                          <p>Strings in Python are a sequence of characters, enclosed in quotes (single or double). For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>message = "Hello, World!"</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Boolean</h3><br>
+                          <p>Boolean values in Python represent the truth value of an expression. They can only be True or False. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>is_python_fun = True</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Operations on Python Variables</h3><br>
+                          <p>Python variables can be used in mathematical expressions and other operations. For example:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>x = 5<br>y = 2<br><br>print(x + y)  # Addition<br>print(x - y)  # Subtraction<br>print(x * y)  # Multiplication<br>print(x / y)  # Division<br>print(x % y)  # Modulo</code></pre>
+                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                          </div><br>
+                          <p>The above code will output the following:</p><br>
+                          <div class="code-block">
+                          <pre id="dataExample"><code>7<br>3<br>10<br>2.5<br>1</code></pre>
+                          </div><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                          <p>In this article, we have explored the fundamental concepts of Python variables and outputs, including data types, operations, and display functions. We hope that this article has provided you with a comprehensive understanding of these essential programming concepts, and we look forward to helping you achieve your programming goals.</p><br>
+                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Diagram Suggestion:</h3><br>
+                          <img src="/images/outvar.png" width="auto" height="auto"><br>
+                          `,
+                          quiz:{
+                          question:"In Python, how can you output variables?",
+                          options:[
+                          "By using the print() statement",
+                          "By using the display() statement",
+                          "Combining text and variable using the '+' character",
+                          "Using 'alert()' function",
+                          "Using 'show()' function",
+                          "Combining text and variable using ',' character",
+                          ],
+                          correctAnswers:[0, 2, 5]
+                      },
+                        };
+                        case 'Global Variables':
+                          return{
+                            theory:`
+                            <p>We can help you understand global variables in Python better. Global variables can be used in Python to create values that can be accessed from any part of the program. In this article, we will explain how global variables work in Python, their syntax, and the best practices to follow while using them.</p><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">What are Global Variables in Python?</h3><br>
+                            <p>In Python, global variables are created outside of functions and can be accessed from anywhere in the code. They are usually defined at the beginning of the program and are used to store values that are shared across different functions or modules. The use of global variables makes it easy to modify the value of a variable from any part of the program without having to pass it as a parameter to functions.</p><br>
+                            <img src="/images/globalvar.png" width="auto" height="auto"><br>
+                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Syntax for Global Variables</h3><br>
+                            <p>The syntax for creating global variables in Python is quite simple. You only need to declare the variable outside of a function, and it becomes a global variable automatically.</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code># Define a global variable<br>global_var = "This is a global variable"<br><br>def my_function():<br> # Access the global variable inside the function<br> print("The global variable is:", global_var)<br><br>my_function() # Output: The global variable is: This is a global variable</code></pre>
+                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Using Global Variables</h3><br>
+                            <p>While using global variables in Python, it is essential to follow some best practices to avoid potential bugs and make your code more readable and maintainable. Here are some best practices to follow:</p><br>
+                            <ol style="list-style-type: decimal; padding-left: 30px;">
+                            <li style="font-weight: bold;">Limit the Use of Global Variables</li><br>
+                            <p>In general, it is good practice to limit the use of global variables as much as possible. Instead of relying on global variables to share data between functions, you should use function arguments and return values.</p><br>
+                            <li style="font-weight: bold;">Use Descriptive Variable Names</li><br>
+                            <p>When creating global variables, use descriptive names that make it easy to understand what the variable represents. Avoid using short and cryptic names that can be confusing.</p><br>
+                            <li style="font-weight: bold;">Initialize Global Variables at the Beginning of the Program</li><br>
+                            <p>Initialize global variables at the beginning of your program to avoid errors that can occur when variables are used before they are defined.</p><br>
+                            <li style="font-weight: bold;">Avoid Modifying Global Variables from Multiple Threads</li><br>
+                            <p>If you are using multiple threads in your program, avoid modifying global variables from different threads as it can lead to race conditions and other synchronization issues.</p>
+                            </ol><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                            <p>In conclusion, global variables are an essential feature of Python that allows you to share data between different parts of your code easily. While they can be useful, it is important to use them responsibly and follow best practices to avoid potential issues. By following these best practices, you can make your code more readable, maintainable, and less prone to errors.</p><br>
+                            <p>With this detailed and informative article, we believe we have provided you with a better understanding of global variables in Python. We hope this article has helped you learn something new about Python and will be useful in your future projects.</p><br>
+                            `,
+                            quiz:{
+                            question:"In Python, what are the properties of Global Variables?",
+                            options:[
+                            "Global variables are declared outside of the function, or in global space.",
+                            "Global variables can be accessed from any function in the program.",
+                            "Combining text and variable using the '+' character",
+                            "Global variables can only be accessed within the function where they are declared.",
+                            "Global variables cannot be used by any function, only within their declaring block.",
+                            "A variable declared inside the function is a global variable.",
+                            "Every module has its own private symbol table which is used as global symbol table for all functions in the module.",
+                            ],
+                            correctAnswers:[0, 1, 6]
+                            },
+                          };
+                          case 'Python Data Types':
+                            return{
+                              theory:`
+                              <p>Python is a high-level, dynamically-typed programming language that is widely used for a variety of applications, ranging from scientific computing to web development. One of the key features of Python is its ability to work with different types of data, such as numbers, strings, lists, and dictionaries. In this article, we'll take an in-depth look at Python data types, including their properties, methods, and examples of how to use them in your code.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Numbers</h3><br>
+                              <p>Python supports several types of numbers, including integers, floating-point numbers, and complex numbers. Integers are whole numbers that can be positive, negative, or zero. Floating-point numbers have a decimal point and can be either positive or negative. Complex numbers have both a real and imaginary component.</p><br>
+                              <h3 style=" font-size: 1.15em; font-weight: bold; margin: 0.5em 0">Integers</h3><br>
+                              <p>Integers are represented in Python as whole numbers without a decimal point. For example, the integer 42 represents the number 42. You can perform various arithmetic operations with integers, such as addition, subtraction, multiplication, and division.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code># Integer addition<br>print(1 + 2)<br><br># Integer subtraction<br>print(3 - 1)<br><br># Integer multiplication<br>print(2 * 3)<br><br># Integer division<br>print(6 / 2)</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.15em; font-weight: bold; margin: 0.5em 0">Floating-Point Numbers</h3><br>
+                              <p>Floating-point numbers are represented in Python as numbers with a decimal point. For example, the floating-point number 42.0 represents the number 42.0. You can perform the same arithmetic operations with floating-point numbers as you can with integers.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code># Floating-point addition<br>print(1.0 + 2.0)<br><br># Floating-point subtraction<br>print(3.0 - 1.0)<br><br># Floating-point multiplication<br>print(2.0 * 3.0)<br><br># Floating-point division<br>print(6.0 / 2.0)</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.15em; font-weight: bold; margin: 0.5em 0">Complex Numbers</h3><br>
+                              <p>Complex numbers are represented in Python as a combination of a real and imaginary component. The real component is a floating-point number and the imaginary component is represented by the letter 'j'. For example, the complex number 2 + 3j represents the number 2 + 3i, where i is the imaginary unit.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code># Complex number addition<br>print(1 + 2j + 3 + 4j)<br><br># Complex number subtraction<br>print(3 + 4j - 1 - 2j)<br><br># Complex number multiplication<br>print((1 + 2j) * (3 + 4j))<br><br># Complex number division is not supported in Python</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Strings</h3><br>
+                              <p>Strings are sequences of characters that can be used to represent text or other types of data. In Python, strings are enclosed in either single or double quotes. You can concatenate strings, extract substrings, and perform other operations with strings.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code># String concatenation<br>print("Hello" + " " + "World")<br><br># String repetition<br>print("Hello" * 3)<br><br># String indexing<br>print("Hello"[0])<br><br># String slicing<br>print("Hello"[1:4])</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Lists</h3><br>
+                              <p>Lists are ordered collections of values that can be of any type. In Python, lists are created by enclosing values in square brackets and separating them with commas. You can add, remove, and modify elements in lists.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code># List creation<br>fruits = ["apple", "banana", "cherry"]<br><br># List modification<br>fruits[1] = "orange"<br>print(fruits)</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Dictionaries</h3><br>
+                              <p>Dictionaries are unordered collections of key-value pairs. In Python, dictionaries are created using curly braces and separated by colons. You can access, add, and remove values from dictionaries using the keys.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>person = {"name": "John", "age": 32, "city": "New York"}<br>print(person["name"])<br><br># Dictionary add<br>person["country"] = "United States"<br>print(person)<br><br># Dictionary remove<br>del person["city"]<br>print(person)</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                              <p>In this article, we've explored the different data types in Python, including numbers, strings, lists, and dictionaries. Understanding how to work with these data types is crucial for developing effective and efficient Python programs. Whether you're a beginner or an experienced Python developer, we hope this article has been a helpful resource for improving your skills.</p><br>
+                              `,
+                              quiz:{
+                              question:"Which of the following are considered as immutable data types in Python?",
+                              options:[
+                              "Lists",
+                              "Dictionaries",
+                              "Tuples",
+                              "Strings",
+                              "Numbers",
+                              "sets",
+                              ],
+                              correctAnswers:[2, 3, 4]
+                              },
+                            };
+                            case 'Python Numbers':
+                              return{
+                                theory:`
+                                <p>Python is a high-level, interpreted programming language that is widely used for various applications, including web development, machine learning, data analysis, and more. In this article, we'll take a closer look at the various types of numbers in Python and how to use them effectively.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Integer Numbers</h3><br>
+                                <p>Integers are whole numbers that can be positive, negative, or zero. In Python, integers are represented by the int data type. Here are some examples of integers in Python:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>x = 10<br>y = -5<br>z = 0</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>You can perform various arithmetic operations with integers in Python, such as addition, subtraction, multiplication, division, and more. Here's an example of how you can perform these operations in Python:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>a = 5<br>b = 3<br><br># Addition<br>c = a + b<br>print(c) # 8<br><br># Subtraction<br>c = a - b<br>print(c) # 2<br><br># Multiplication<br>c = a * b<br>print(c) # 15<br><br># Division<br>c = a / b<br>print(c) # 1.6666666666666667</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Float Numbers</h3><br>
+                                <p>Float numbers, also known as floating-point numbers, are numbers that have decimal points. In Python, float numbers are represented by the float data type. Here are some examples of float numbers in Python:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>x = 10.5<br>y = -5.2<br>z = 0.0</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>Just like integers, you can perform various arithmetic operations with float numbers in Python. However, it's important to note that float numbers have limited precision, so the result of some operations may not be exactly as expected.</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>a = 5.5<br>b = 3.5<br><br># Addition<br>c = a + b<br>print(c) # 9.0<br><br># Subtraction<br>c = a - b<br>print(c) # 2.0<br><br># Multiplication<br>c = a * b<br>print(c) # 19.25<br><br># Division<br>c = a / b<br>print(c) # 1.5714285714285714</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Complex Numbers</h3><br>
+                                <p>Complex numbers are numbers that have both real and imaginary parts. In Python, complex numbers are represented by the complex data type and are denoted by the letter j or J. Here are some examples of complex numbers in Python:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>x = 10 + 5j<br>y = -5 + 3j<br>z = 0 + 0j</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>Just like integers and float numbers, you can perform various arithmetic operations with complex numbers in Python. Here's an example of how you can perform these operations in Python:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>a = 5 + 2j<br>b = 3 + 4j<br><br># Addition<br>c = a + b<br>print(c) # (8+6j)<br><br># Subtraction<br>c = a - b<br>print(c) # (2-2j)<br><br># Multiplication<br>c = a * b<br>print(c) # (1+20j)<br><br># Division<br>c = a / b<br>print(c) # (0.6-0.4j)</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                <p>In this article, we've covered the various types of numbers in Python and how to use them effectively.</p><br>
+                                `,
+                                quiz:{
+                                  question: "Which of the following types of numbers are supported in Python?",
+                                  options: [
+                                    "Integers",
+                                    "Floating-point numbers",
+                                    "Complex numbers",
+                                    "Rational numbers",
+                                    "Imaginary numbers",
+                                  ],
+                                  correctAnswers: [0, 1, 2]
+                                },
+                              };
+                              case 'Python Casting':
+                                return{
+                                  theory:`
+                                  <p>Python is a high-level programming language that has become popular for its simplicity, readability, and versatility. One of the features of Python is type casting, which is the process of converting one data type into another. This guide aims to provide a comprehensive understanding of type casting in Python.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is Type Casting?</h3><br>
+                                  <p>Type casting, also known as type conversion, is a process in which data of one type is converted into another type. In Python, this can be achieved using functions such as int(), float(), and str(). For example, converting a floating-point number to an integer using int() or converting a string to a float using float().</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why is Type Casting Important in Python?</h3><br>
+                                  <p>Type casting is important in Python because different data types have different properties and functions associated with them. For example, integers can be used for mathematical operations, whereas strings can be used for text manipulation. By converting data from one type to another, we can perform operations that are specific to that data type.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Type Casting in Python</h3><br>
+                                  <p>In Python, there are two types of type casting: implicit type casting and explicit type casting.</p><br>
+                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Implicit Type Casting</h3><br>
+                                  <p>Implicit type casting, also known as automatic type conversion, occurs when Python automatically converts one data type into another. This happens when a value of one type is assigned to a variable of another type.</p><br>
+                                  <p>For example, if we assign a floating-point number to an integer variable, Python will implicitly cast the floating-point number to an integer:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>x = 10.5<br>y = int(x)<br>print(y)</code></pre>
+                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                  </div><br>
+                                  <p>Output:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>10</code></pre>
+                                  </div><br>
+                                  <p>In this example, the floating-point number 10.5 is implicitly cast to an integer 10 when it is assigned to the integer variable y.</p><br>
+                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Explicit Type Casting</h3><br>
+                                  <p>Explicit type casting, also known as manual type conversion, occurs when a programmer explicitly casts a value from one type to another using type casting functions.</p><br>
+                                  <p>For example, if we want to convert an integer to a floating-point number, we can use the float() function:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>x = 10<br>y = float(x)<br>print(y)</code></pre>
+                                  </div><br>
+                                  <p>In this example, the integer 10 is explicitly cast to a floating-point number 10.0 using the float() function.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Type Casting in Python: Examples</h3><br>
+                                  <p>Here are some examples of type casting in Python:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code># Converting an integer to a floating-point number<br>x = 10<br>y = float(x)<br>print(y)<br><br># Converting a floating-point number to an integer<br>x = 10.5<br>y = int(x)<br>print(y)<br><br># Converting a string to an integer<br>x = "10"<br>y = int(x)<br>print(y)<br><br># Converting a string to a floating-point number<br>x = "10.5"<br>y = float(x)<br>print(y)<br><br># Converting an integer to a string<br>x = 10<br>y = str(x)<br>print(y)<br><br># Converting a floating-point number to a string<br>x = 10.5<br>y = str(x)<br>print(y)</code></pre>
+                                  </div><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Type Casting in Python: Common Issues</h3><br>
+                                  <p>There are several common issues that arise when type casting in Python. Here are a few of the most common ones:</p><br>
+                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">TypeError</h3><br>
+                                  <p>A TypeError occurs when a type casting function is called with an argument that is not of the correct type. For example, if we try to convert a string that cannot be converted to an integer to an integer using the int() function, a TypeError will be raised:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>x = "hello"<br>y = int(x)<br>print(y)</code></pre>
+                                  </div><br>
+                                  <p>Output:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>TypeError: invalid literal for int() with base 10: 'hello'</code></pre>
+                                  </div><br>
+                                  <p>In this example, the string "hello" cannot be converted to an integer, so a TypeError is raised.</p><br>
+                                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">ValueError</h3><br>
+                                  <p>A ValueError occurs when a type casting function is called with an argument that is not a valid value for that type. For example, if we try to convert a string that cannot be converted to a floating-point number to a floating-point number using the float() function, a ValueError will be raised:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>x = "hello"<br>y = float(x)<br>print(y)</code></pre>
+                                  </div><br>
+                                  <p>Output:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>ValueError: could not convert string to float: 'hello'</code></pre>
+                                  </div><br>
+                                  <p>In this example, the string "hello" cannot be converted to a floating-point number, so a ValueError is raised.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Loss of Precision</h3><br>
+                                  <p>When converting a floating-point number to an integer, there may be a loss of precision. This is because the decimal part of the floating-point number will be truncated, and only the integer part will be kept. For example:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>x = 10.5<br>y = int(x)<br>print(y)</code></pre>
+                                  </div><br>
+                                  <p>Output:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>10</code></pre>
+                                  </div><br>
+                                  <p>In this example, the decimal part of the floating-point number 10.5 is lost when it is converted to an integer 10.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                  <p>In this guide, we have covered the basics of type casting in Python. We have discussed what type casting is, why it is important, and the different types of type casting. We have also seen several examples of type casting in action and some of the common issues that can arise when type casting. By understanding type casting, you will be able to write more efficient and versatile code in Python.</p><br>
+                                  `,
+                                  quiz:{
+                                    question:"In Python, how does casting take place and what are its functions?",
+                                    options:[
+                                      "Casting in Python can be enabled by using the construct functions such as int(), str(), and float().",
+                                      "Casting in Python is performed by using predefined classes only.",
+                                      "The function of casting in Python is to transform a variable value from one datatype to another.",
+                                      "Casting in Python is used only to transform a number to string.",
+                                      "Casting in Python can also be done by defining sets.",
+                                    ],
+                                    correctAnswers:[0, 2],
+                                  },
+                                };
+                                case 'Python Strings':
+                                  return{
+                                    theory:`
+                                    <p>Python strings are a fundamental data type in the language, used to represent a sequence of characters. In this article, we will dive into the details of Python strings and explore the various methods and operations that can be performed on them.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Strings in Python?</h3><br>
+                                    <p>A string in Python is a sequence of characters surrounded by quotation marks. These quotation marks can be either single quotes (') or double quotes ("). For example, "hello" and 'world' are both valid strings in Python.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating Strings in Python</h3><br>
+                                    <p>Strings can be created in Python in a variety of ways. The most straightforward way is to simply enclose the characters in quotation marks, as we saw in the examples above. Another way to create strings is to use the str function, which takes an object and returns a string representation of that object.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello"<br>string_var2 = str(123)</code></pre>
+                                    </div><br>
+                                    <p>In the example above, string_var is a string created using quotation marks, while string_var2 is created using the str function and contains the string representation of the integer 123.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Accessing Characters in a String</h3><br>
+                                    <p>In Python, individual characters in a string can be accessed using indexing. Indexing in Python starts from 0, so the first character in a string can be accessed using the index 0, the second character using the index 1, and so on.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello"<br>print(string_var[0]) # "h"print(string_var[1]) # "e"</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Modifying Strings in Python</h3><br>
+                                    <p>Strings in Python are immutable, which means that once a string is created, its contents cannot be changed. However, it is possible to create a new string that is a modified version of an existing string.</p><br>
+                                    <p>One common way to modify strings is using string concatenation. String concatenation is the process of combining two or more strings into a single string. In Python, string concatenation can be done using the + operator.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var1 = "hello"<br>string_var2 = "world"<br>string_var3 = string_var1 + " " + string_var2<br>print(string_var3) # "hello world"</code></pre>
+                                    </div><br>
+                                    <p>Another way to modify strings is by using string replication. String replication is the process of repeating a string a specified number of times. In Python, string replication can be done using the * operator.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello"<br>string_var2 = string_var * 3<br>print(string_var2) # "hellohellohello"</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">String Operations in Python</h3><br>
+                                    <p>In addition to the string modification methods we discussed above, there are a variety of other operations that can be performed on strings in Python.</p><br>
+                                    <p>One such operation is string formatting, which allows you to embed variables within a string. String formatting in Python is done using the format method.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello, {}".format("world")<br>print(string_var) # "hello, world"</code></pre>
+                                    </div><br>
+                                    <p>Another important operation is string slicing, which allows you to extract a portion of a string. String slicing in Python is done using the [start:end] syntax.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello"<br>print(string_var[1:4]) # "ell"</code></pre>
+                                    </div><br>
+                                    <p>In the example above, the slice [1:4] returns the portion of the string from the second character (index 1) to the fourth character (index 3), not including the fourth character.</p><br>
+                                    <p>There are also various string methods available in Python that perform operations such as searching for substrings, checking for the presence of characters, converting the case of characters, and more. Some common string methods include:</p><br>
+                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                    <li>find: searches for a substring within a string and returns the index of the first occurrence of the substring</li><br>
+                                    <li>count: counts the number of occurrences of a substring within a string</li><br>
+                                    <li>upper and lower: convert a string to all uppercase or all lowercase characters, respectively</li><br>
+                                    <li>strip: removes whitespace characters from the beginning and end of a string</li><br>
+                                    <li>split: splits a string into a list of substrings based on a specified delimiter</li><br>
+                                    </ul><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>string_var = "hello, world"<br>print(string_var.find("o")) # 4<br>print(string_var.count("l")) # 3<br>print(string_var.upper()) # "HELLO, WORLD"<br>print(string_var.strip()) # "hello, world"<br>print(string_var.split(", ")) # ["hello", "world"]</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                    <p>In this article, we have covered the basics of Python strings and the various methods and operations that can be performed on them. With a solid understanding of strings in Python, you will be well-equipped to handle text data in your Python programs.</p><br>   
+                                    `,
+                                    quiz:{
+                                      question:"In Python, which of the following are valid ways for declaring a string?",
+                                      options:[
+                                        "With single quotes, like: 'abc'",
+                                        "With double quotes, like: \"abc\"",
+                                        "With triple quotes, like: '''abc''' or \"\"\"abc\"\"\"",
+                                        "With no quotes, like: abc",
+                                      ],
+                                      correctAnswers:[0, 1, 2],
+                                    },
+                                  };
+                                  case 'Slicing Strings':
+                                  return{
+                                    theory:`
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding Slicing Strings in Python</h3><br>
+                                    <p>Slicing is a powerful feature in Python that allows us to extract a portion of a string by specifying the starting and ending indices. In this article, we will explore the different ways to slice strings in Python and how to use them effectively.</p><br>
+                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Basic String Slicing</h3><br>
+                                    <p>Let's start with the basics. To slice a string, we need to provide the starting and ending indices separated by a colon. For example, to extract the first three characters of a string, we can use the following code:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[0:3])</code></pre>
+                                    </div><br>
+                                    <p>The output will be "Hel". Note that the starting index is inclusive, but the ending index is exclusive. In other words, the character at the starting index is included in the result, but the character at the ending index is not.</p><br>
+                                    <p>We can also omit the starting or ending index to slice from the beginning or end of the string, respectively. For example:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[:5])  # Output: "Hello"<br>print(my_string[7:])  # Output: "World!"</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Negative Indexing</h3><br>
+                                    <p>In addition to positive indices, we can also use negative indices to slice strings. Negative indices count from the end of the string, with -1 being the last character. For example:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[-6:-1])  # Output: "World"</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Step Value</h3><br>
+                                    <p>We can also specify a step value to extract every nth character from the string. For example, to extract every other character from a string, we can use a step value of 2:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[::2])  # Output: "Hlo ol!"</code></pre>
+                                    </div><br>
+                                    <p>Note that if the step value is negative, the starting index should be greater than the ending index.</p><br>
+                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Advanced Slicing Techniques</h3><br>
+                                    <p>In addition to the basic slicing techniques, Python provides several advanced slicing techniques to extract specific patterns from strings. Some of these techniques are:</p><br>
+                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                    <li><b>Striding with Step Values:</b> This technique allows us to extract a pattern of characters from a string with a certain step value. For example, to extract every third character of a string starting from the second character, we can use the following code:</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "abcdefghijklmnopqrstuvwxyz"<br>print(my_string[1::3])  # Output: "behkqtwz"</code></pre>
+                                    </div><br>
+                                    <li><b>Reverse Slicing:</b> This technique allows us to reverse the order of the characters in a string. For example:</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[::-1])  # Output: "!dlroW ,olleH"</code></pre>
+                                    </div><br>
+                                    <li><b>Slicing with Stride and Stop:</b> This technique allows us to extract a pattern of characters from a string with a certain step value until a certain index is reached. For example, to extract every other character of a string until the fifth character, we can use the following code:</li><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>my_string = "Hello, World!"<br>print(my_string[:5:2])  # Output: "Hlo"</code></pre>
+                                    </div><br>
+                                    </ul><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                    <p>Slicing is an essential feature in Python that allows us to manipulate strings effectively. In this article, we explored the different ways to slice strings in Python and demonstrated how to use them in various scenarios. We hope this article has been informative and useful for</p><br>
+                                    `,
+                                    quiz:{
+                                      question:"What does slicing in Python allow you to do?",
+                                      options:[
+                                        "It allows you to get a slice of items from a string using specific indexes.",
+                                        "It allows to create a new password string.",
+                                        "It allows you to specify a start, end, and step value to get a slice.",
+                                        "It allows to make an application bug-free.",
+                                      ],
+                                      correctAnswers:[0, 2],
+                                    },
+                                  };
     }
   }
 
@@ -23778,7 +24598,95 @@ expectedOutput: undefined,
   </Card>
 )}
 
+{lessonData.quiz && (
+  <Card className="border-2 border-indigo-100 bg-indigo-50/30">
+    <CardHeader>
+      <CardTitle className="flex items-center space-x-2 text-black font-bold">
+        <Target className="w-5 h-5 text-black" />
+        <span>Knowledge Check</span>
+      </CardTitle>
+    </CardHeader>
+    
+    <CardContent className="space-y-4">
+      <p className="font-bold text-slate-800">{lessonData.quiz.question}</p>
+      <p className="text-xs text-yellow-500 mb-2 italic">Select all that apply</p>
+      
+      <div className="flex flex-col gap-2">
+        {lessonData.quiz.options.map((option: string, idx: number) => {
+          const isSelected = selectedAnswers.includes(idx);
+          return (
+            <button
+              key={idx}
+              disabled={isSubmitted} // Lock choice after submission
+              onClick={() => handleToggleAnswer(idx)}
+              className={`p-4 text-left rounded-xl border-2 transition-all flex items-center ${
+                isSelected 
+                  ? 'border-yellow-500 bg-yellow-500 text-black' 
+                  : 'border-white bg-white hover:border-yellow-200 text-black'
+              } ${isSubmitted ? 'cursor-default opacity-90' : 'cursor-pointer'}`}
+            >
+              <div className={`w-5 h-5 border-2 rounded mr-3 flex items-center justify-center ${
+                isSelected ? 'bg-white border-white' : 'border-slate-300'
+              }`}>
+                {isSelected && <div className="w-2 h-2 bg-yellow-600 rounded-sm" />}
+              </div>
+              {option}
+            </button>
+          );
+        })}
+      </div>
 
+      {/* The Submit Button */}
+      {!isSubmitted ? (
+        <button
+          onClick={() => setIsSubmitted(true)}
+          disabled={selectedAnswers.length === 0}
+          className={`mt-4 w-full py-3 rounded-lg font-bold transition-all ${
+            selectedAnswers.length === 0 
+              ? 'bg-slate-200 text-slate-400 cursor-not-allowed' 
+              : 'bg-yellow-600 text-white hover:bg-yellow-700 shadow-md'
+          }`}
+        >
+          Submit Answer
+        </button>
+      ) : (
+        <div className="mt-4 animate-in fade-in slide-in-from-top-2">
+          {(() => {
+            const isCorrect = 
+              selectedAnswers.length === lessonData.quiz.correctAnswers.length &&
+              selectedAnswers.every(val => lessonData.quiz.correctAnswers.includes(val));
+              
+            return (
+              <div className={`p-4 rounded-xl flex flex-col items-center text-center gap-2 border-2 ${
+                isCorrect 
+                  ? 'bg-green-50 border-green-200 text-green-800' 
+                  : 'bg-rose-50 border-rose-200 text-rose-800'
+              }`}>
+                {isCorrect ? (
+                  <>
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                    <p className="font-bold text-lg">Perfect! That's correct.</p>
+                  </>
+                ) : (
+                  <>
+                    <XCircle className="w-8 h-8 text-rose-600" />
+                    <p className="font-bold text-lg">Not quite right.</p>
+                    <button 
+                      onClick={() => {setIsSubmitted(false); setSelectedAnswers([]);}}
+                      className="text-sm underline font-medium hover:text-rose-900"
+                    >
+                      Try Again
+                    </button>
+                  </>
+                )}
+              </div>
+            );
+          })()}
+        </div>
+      )}
+    </CardContent>
+  </Card>
+)}
 
 
       {/* Learning Objectives */}
