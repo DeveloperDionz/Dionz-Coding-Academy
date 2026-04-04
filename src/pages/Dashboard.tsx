@@ -10,7 +10,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import Cropper from 'react-easy-crop';   // npm install react-easy-crop
 import { jsPDF } from 'jspdf';          // npm install jspdf
-import { getCroppedImg } from '@/utils/cropImage'; // utility we'll add (circle crop)
+import { getCroppedImg } from '@/utils/cropImage'; // utility for (circle crop)
 import { slugify } from '@/utils/slugify'; // utility to create URL-friendly slugs
 
 
@@ -85,7 +85,7 @@ const Dashboard = () => {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [courses, setCourses] = useState<CourseWithProgress[]>([]);
   const [loading, setLoading] = useState(true);
-  const comingSoonCourses = ["React Programming", "PHP Programming", "Python Programming"];
+  const comingSoonCourses = ["React Programming", "PHP Programming",];
 
   const handleAvatarUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
   if (!event.target.files || !event.target.files[0] || !user) return;
@@ -274,7 +274,7 @@ const Dashboard = () => {
 
   const handleCourseAction = async (course: CourseWithProgress) => {
     if (!user) return;
-    // 🚧 Coming soon check
+    //  Coming soon check
   if (comingSoonCourses.includes(course.title)) {
     toast({
       title: "Coming Soon!",

@@ -110,6 +110,27 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
     setIsLessonLocked(true);
   }, [currentLesson]);
 
+  useEffect(() => {
+    const totalRealLessons = lessons.filter(l => !l.isHeading).length;
+    
+    if (progress && totalRealLessons > 0 && (progress.completed_lessons > totalRealLessons)) {
+      const syncDatabase = async () => {
+        const { error } = await supabase
+          .from('course_progress')
+          .update({ 
+            completed_lessons: totalRealLessons,
+            progress_percentage: 100 
+          })
+          .eq('id', progress.id);
+
+        if (!error) {
+          setProgress(prev => prev ? { ...prev, completed_lessons: totalRealLessons, progress_percentage: 100 } : null);
+        }
+      };
+      syncDatabase();
+    }
+  }, [lessons, progress]);
+
   const fetchCourseData = async () => {
     if (!slug || !user) return;
 
@@ -373,25 +394,54 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         'Python Booleans',
         'Python Operators',
         'Python Lists',
+        'Access List Items',
+        'Change List Items',
+        'Add List Items',
+        'Remove List Items',
+        'Loop Lists',
+        'List Comprehension',
+        'Sort Lists',
+        'Copy Lists',
+        'Join Lists',
+        'List Methods',
         'Python Tuples',
+        'Access Tuples',
+        'Update Tuples',
+        'Unpack Tuples',
+        'Loop Tuples',
+        'Join Tuples',
+        'Tuple Methods',
         'Python Dictionaries',
+        'Access Items',
+        'Change Items',
+        'Add Items',
+        'Remove Items',
+        'Loop Dictionaries',
+        'Copy Dictionaries',
+        'Nested Dictionaries',
+        'Dictionary Methods',
+        'Python Arrays',
+        '###Control Flow',
         'Python If...Else',
         'Python While Loops',
         'Python For Loops',
+        'Python Try...Except',
+        '###Functions & Expressions',
         'Python Functions',
         'Python Lambda',
-        'Python Arrays',
+        '###Object-Oriented Programming',
         'Python Classess/Objects',
         'Python Inheritance',
-        'Python Iterators',
         'Python Scope',
+        '###Modules & Packages',
         'Python Modules',
+        'Python PIP',
+        '###Utilities & Built-Ins',
+        'Python Iterators',
         'Python Dates',
         'Python Math',
         'Python JSON',
         'Python RegEx',
-        'Python PIP',
-        'Python Try...Except',
         'Python User Input',
         'Python String Formatting',
         '###File Handling',
@@ -399,73 +449,6 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         'Python Read Files',
         'Python Write/Create Files',
         'Python Delete Files',
-        '###Python Modules',
-        'NumPy tutorial',
-        'Pandas tutorial',
-        'Scipy tutorial',
-        '###Django tutorial',
-        'Python Matplotlib',
-        'Matplotlib Intro',
-        'Matplotlib Get Started',
-        'Matplotlib Plotting',
-        'Matplotlib Markers',
-        'Matplotlib Line',
-        'Matplotlib Labels',
-        'Matplotlib Grid',
-        'Matplotlib Subplot',
-        'Matplotlib Scatter',
-        'Matplotlib Bars',
-        'Matplotlib Histograms',
-        'Matplotlib Pie Charts',
-        '###Machine Learning',
-        'Getting Started',
-        'Mean Median Mode',
-        'Standard Deviation',
-        'Percentile',
-        'Data Distribution',
-        'Normal Data Distribution',
-        'Scatter Plot',
-        'Linear Regression',
-        'Polynomial Regression',
-        'Multiple Regression',
-        'Scale',
-        'Train/Test',
-        'Decision Tree',
-        'Confusion Matrix',
-        'Hierarchical Clustering',
-        'Logistic Regression',
-        'Grid Search',
-        'Categorical Data',
-        'K-means',
-        'Bootstrap Aggregation',
-        'Cross Validation',
-        'AUC - ROC Curve',
-        'K-nearest neighbors',
-        '###Python MySQL',
-        'MySQL Get Started',
-        'MySQL Create Database',
-        'MySQL Create Table',
-        'MySQL Insert',
-        'MySQL Select',
-        'MySQL Where',
-        'MySQL Order By',
-        'MySQL Delete',
-        'MySQL Drop Table',
-        'MySQL Update',
-        'MySQL Limit',
-        'MySQL join',
-        '###Python MongoDB',
-        'MongoDB Get Started',
-        'MongoDB Create Database',
-        'MongoDB Create Collection',
-        'MongoDB Insert',
-        'MongoDB Find',
-        'MongoDB Query',
-        'MongoDB Sort',
-        'MongoDB Delete',
-        'MongoDB Drop Collection',
-        'MongoDB Update',
-        'MongoDB Limit',
         '###Python How To',
         'Remove List Duplicates',
         'Reverse a String',
@@ -698,16 +681,16 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
           </div>
           <div className="flex items-center space-x-4">
             <Badge variant="outline" className="px-3 py-1 text-white/100">
-              {progress?.completed_lessons || 0}/{course.total_lessons} lessons
+              {progress?.completed_lessons || 0}/{lessons.filter(l => !l.isHeading).length} lessons
             </Badge>
             <div className="w-32 text-white">
-              <Progress value={progress?.progress_percentage || 0} />
+              <Progress value={lessons.filter(l => !l.isHeading).length > 0 ? ((progress?.completed_lessons || 0) / lessons.filter(l => !l.isHeading).length) * 100 : 0} />
             </div>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-autos px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
           {/* Lessons Sidebar */}
