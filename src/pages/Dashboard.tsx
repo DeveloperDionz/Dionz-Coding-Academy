@@ -85,7 +85,7 @@ const Dashboard = () => {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [courses, setCourses] = useState<CourseWithProgress[]>([]);
   const [loading, setLoading] = useState(true);
-  const comingSoonCourses = ["React Programming", "PHP Programming",];
+  const comingSoonCourses = ["React Programming",];
 
   const handleAvatarUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
   if (!event.target.files || !event.target.files[0] || !user) return;

@@ -380,7 +380,7 @@ const handleToggleAnswer = (idx: number) => {
                   <td style="border: 1px solid black;">&lt;hr&gt;</td>
                   <td style="border: 1px solid black;"></td>
                   <td style="border: 1px solid black;"></td>
-                  <td style="border: 1px solid black;">This element is used toprovide a horizontal line. (void element).</td>
+                  <td style="border: 1px solid black;">This element is used to provide a horizontal line. (void element).</td>
                 </table>`,
           };
           case 'HTML Formatting':
@@ -26827,10 +26827,2711 @@ expectedOutput: undefined,
   //PHP Programming
       if (courseTitle === 'PHP Programming') {
         switch (lesson.title) {
-        case 'Introduction':
+        case 'PHP Intro':
           return {
-            theory:``,
+            theory:`
+            <p>PHP is a server-side scripting language that is widely used for web development. It stands for Hypertext Preprocessor and is an open-source programming language that is easy to learn and use. PHP is compatible with most web servers and operating systems, making it a versatile language for web development.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advantages of PHP</h3><br>
+            <p>There are many advantages to using PHP for web development, including:</p><br>
+            <ol style="list-style-type: decimal; padding-left: 30px">
+            <li>Easy to learn: PHP has a simple syntax and is easy to learn, even for those with no programming experience.</li><br>
+            <li>Open-source: As an open-source language, PHP is free to use and has a large community of developers constantly improving and updating it.</li><br>
+            <li>Cross-platform compatibility: PHP can run on various operating systems, including Windows, Mac OS X, and Linux.</li><br>
+            <li>Integration with databases: PHP can be easily integrated with databases such as MySQL, making it a popular choice for database-driven websites.</li><br>
+            <li>Large community: With a large community of developers and users, there is a wealth of information and support available for PHP.</li><br>
+            </ol><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Get Started with PHP</h3><br>
+            <p>Getting started with PHP is easy. All you need is a web server and a text editor. You can then start writing and testing PHP scripts. To get started, you can refer to online tutorials and resources such as W3Schools or the PHP manual.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating a PHP File</h3><br>
+            <p>To create a PHP file, simply open a text editor and save the file with a .php extension. You can then write PHP code within the file, which will be executed on the server when the file is requested.</p><br>
+            <p>Here is a simple example of a PHP script:</p><br>
+            <div class="code-block">
+            <pre id="dataExample"><code>&lt;?php<br>echo "Hello World!";<br>?&gt;</code></pre>
+            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+            </div><br>
+            <p>This script will display "Hello World!" in the browser when the file is requested from the server.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Variables in PHP</h3><br>
+            <p>Variables in PHP are declared using the "$" symbol, followed by the name of the variable. The value of a variable can be assigned using the "=" operator.</p><br>
+            <p>Here is an example of a variable in PHP:</p><br>
+            <div class="code-block">
+            <pre id="dataExample"><code>&lt;?php<br> $text = "Hello World!";<br> echo $text;<br>?&gt;</code></pre>
+            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+            </div><br>
+            <p>This script will display "Hello World!" in the browser, just like the previous example.</p><br>
+            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+            <p>PHP is a powerful and flexible language for web development, and its ease of use, compatibility with various operating systems, and integration with databases make it a popular choice for web developers. Whether you are just starting out or are an experienced programmer, PHP is a language worth learning.</p><br>
+            `,
+            quiz:{
+              question: "What are some of the defining characteristics of PHP?",
+              options: [
+                "PHP is a client-side scripting language.",
+                "PHP is an open-source server-side scripting language.",
+                "PHP is widely-used for generating dynamic web pages.",
+                "PHP cannot interact with many different database languages.",
+                "PHP can be embedded within HTML code.",
+                "PHP has no capability to send HTTP headers to the browser.",
+              ],
+              correctAnswers: [1, 2, 4]
+            }
           };
+          case 'PHP Installation':
+            return {
+              theory:`
+              <p>PHP (Hypertext Preprocessor) is a server-side scripting language widely used for developing dynamic web applications. In this guide, we will provide you with a step-by-step instruction on how to install PHP on your computer and start coding PHP applications.</p><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Prerequisites</h3><br>
+              <p>Before you begin, you need to make sure you have the following prerequisites:</p><br>
+              <ul style="list-style-type: disc; padding-left: 30px;">
+              <li>A computer with Windows, Mac, or Linux operating system.</li><br>
+              <li>A web server such as Apache or Nginx installed on your computer.</li><br>
+              <li>A text editor such as Notepad++, Sublime Text, or Visual Studio Code.</li><br>
+              </ul><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Downloading and Installing PHP</h3><br>
+              <ol style="list-style-type: decimal; padding-left: 30px;">
+              <li>Visit the official PHP website https://windows.php.net/download/ and download the latest version of PHP for your operating system.</li><br>
+              <li>Once the download is complete, double-click the setup file to start the installation process.</li><br>
+              <li>Follow the instructions provided by the setup wizard to install PHP on your computer.</li><br>
+              <li>Once the installation is complete, restart your computer to apply the changes.</li><br>
+              </ol><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Configuring PHP with Apache</h3><br>
+              <ol style="list-style-type: decimal; padding-left: 30px;">
+              <li>Open the Apache configuration file located in the Apache installation folder (usually C:\Program Files (x86)\Apache Group\Apache2\conf\httpd.conf).</li><br>
+              <li>Find the following line in the file:</li><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>#LoadModule php7_module modules/libphp7.so</code></pre>
+              </div><br>
+              <li>Remove the # symbol to uncomment the line, then save and close the file.</li><br>
+              <li>Restart Apache to apply the changes.</li><br>
+              </ol><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Testing the PHP Installation</h3><br>
+              <ol style="list-style-type: decimal; padding-left: 30px;">
+              <li>Create a new file with a .php extension (e.g. index.php) in your web root folder (usually C:\Program Files (x86)\Apache Group\Apache2\htdocs).</li><br>
+              <li>Enter the following code into the file:</li><br>
+              <div class="code-block">
+              <pre id="dataExample"><code>&lt;?php<br>  phpinfo();<br>?&gt;</code></pre>
+              </div><br>
+              <li>Save and close the file.</li><br>
+              <li>Open a web browser and navigate to http://localhost/index.php.</li><br>
+              <li>If everything is set up correctly, you will see a page displaying information about your PHP installation.</li><br>
+              </ol><br>
+              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+              <p>In this guide, we have provided you with a step-by-step instruction on how to install PHP on your computer and start coding PHP applications. By following these instructions, you will be able to set up a development environment and start learning PHP in no time.</p><br>
+              `,
+              quiz: {
+                question: "What are the different ways PHP can be installed on a system?",
+                options: [
+                  "From a Windows binary distribution provided by the official PHP site.",
+                  "From a Linux binary distribution using package managers like apt, yum, or dnf.",
+                  "By compiling PHP from source code for custom builds.",
+                  "By downloading it from the official PHP repository or trusted package managers.",
+                  "By installing it through random third-party repositories without verification.",
+                ],
+                correctAnswers: [0, 1, 2, 3]
+              },
+            };
+            case 'PHP Syntax':
+              return{
+                theory:`
+                <p>PHP, which stands for Hypertext Preprocessor, is a server-side scripting language used for creating dynamic web pages. PHP syntax is crucial to understanding the language and creating effective and efficient code. In this article, we will delve into the key aspects of PHP syntax to help you become an expert in the language.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Basic Structure of a PHP Script</h3><br>
+                <p>A PHP script is essentially a set of instructions written in PHP syntax, which the server executes to produce dynamic content. The basic structure of a PHP script is as follows:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>&lt;?php<br>// PHP code goes here<br>?&gt;</code></pre>
+                </div><br>
+                <p>As you can see, a PHP script begins with an opening PHP tag &lt;?php and ends with a closing PHP tag ?>. Everything in between these tags is considered to be PHP code.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Variables in PHP</h3><br>
+                <p>Variables are an essential aspect of any programming language and PHP is no exception. Variables in PHP are declared using the $ symbol followed by the variable name. For example:</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>$firstName = "John";<br>$lastName = "Doe";</code></pre>
+                </div><br>
+                <p>It's important to note that PHP variables are case-sensitive. This means that $firstName and $FirstName are considered to be two different variables.</p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Data Types in PHP</h3><br>
+                <p>PHP supports several data types, including integers, floating-point numbers, strings, arrays, and objects. It's crucial to understand the different data types in PHP, as they determine how the data is stored and manipulated in your code.</p><br>
+                <p>For example, strings are used to store character data, such as names, addresses, and other textual information. Strings can be declared using either single or double quotes.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>$name = "John Doe";<br>$address = '123 Main Street';</code></pre>
+                </div><br>
+                <p>Arrays, on the other hand, are used to store multiple values in a single variable. Arrays can be declared using the array() function or by enclosing a list of values in square brackets.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>$fruits = array("apple", "banana", "cherry");<br>$vegetables = ["carrot", "potato", "onion"];</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Operators in PHP</h3><br>
+                <p>Operators in PHP are used to perform operations on values and variables. The language supports several types of operators, including arithmetic, comparison, and logical operators.</p><br>
+                <p></p><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0"></h3><br>
+                <p>For example, the addition operator + is used to add two values, while the comparison operator == is used to check if two values are equal.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>$x = 10;$y = 20;<br>$z = $x + $y; // $z is equal to 30<br><br>$a = "hello";<br>$b = "hello";<br>if ($a == $b) {<br> // this block of code will be executed<br>}</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Functions in PHP</h3><br>
+                <p>Functions in PHP are used to encapsulate a block of code that can be reused throughout your script. Functions are declared using the function keyword followed by the function name and a set of parentheses.</p><br>
+                <div class="code-block">
+                <pre id="dataExample"><code>&lt;?php<br><br>function greet($name) {<br> echo "Hello, " . $name . "!";<br>}<br><br>greet("John"); // outputs "Hello, John!"<br><br>?&gt;</code></pre>
+                </div><br>
+                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                <p>This article provided a comprehensive overview of the key aspects of PHP syntax. By understanding variables, data types, operators, and functions</p><br>
+                `,
+                quiz: {
+                  question: "In PHP programming, which of the following are correct ways to begin and end a PHP command block?",
+                  options: [
+                    "The command block begins with <?php and ends with ?>",
+                    "The command block begins with @php and ends with @endphp",
+                    "The command block begins with <php and ends with /php>",
+                    "The command block begins with <? and ends with ?>",
+                    "The command block begins with {{php and ends with }}",
+                  ],
+                  correctAnswers: [0, 2]
+                },
+              };
+              case 'PHP Comments':
+                return {
+                  theory:`
+                  <p>PHP is a popular scripting language used for web development. One of the key features of PHP is the ability to add comments to code, which makes it easier for developers to understand and maintain their code. In this article, we will provide an in-depth guide to PHP comments and how they are used in PHP programming.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Comments?</h3><br>
+                  <p>PHP comments are lines of code that are not executed by the server, but rather serve as notes for the developer. They are used to explain the purpose of a particular line of code, or to provide additional information about the code.</p><br>
+                  <p>There are two types of comments in PHP: single-line comments and multi-line comments.</p><br>
+                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Single-Line Comments</h3><br>
+                  <p>Single-line comments start with two forward slashes (//) and can be used to comment out a single line of code. For example:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code>// This is a single-line comment</code></pre>
+                  </div><br>
+                  <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Multi-Line Comments</h3><br>
+                  <p>Multi-line comments start with a forward slash and an asterisk (/) and end with an asterisk and a forward slash (/). Multi-line comments can span multiple lines and can be used to comment out blocks of code. For example:</p><br>
+                  <div class="code-block">
+                  <pre id="dataExample"><code>/* This is a multi-line<br>  comment that can span<br>  multiple lines */</code></pre>
+                  </div><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why Use PHP Comments?</h3><br>
+                  <p>PHP comments are an important tool for developers, as they help to make code easier to understand and maintain. By adding comments to your code, you can explain the purpose of specific lines of code, or provide additional information about the code. This makes it easier for other developers to understand and maintain your code, and also helps you to remember what your code does if you come back to it later.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use PHP Comments</h3><br>
+                  <p>To add a comment to your PHP code, simply start the line with either two forward slashes (for single-line comments) or a forward slash and an asterisk (for multi-line comments). It's important to choose the appropriate type of comment based on the size and complexity of the code you are commenting on.</p><br>
+                  <p>It's also important to make sure that your comments are clear and concise, and that they provide meaningful information about the code. Avoid using comments to simply repeat the code, or to state the obvious. Instead, focus on providing information that is not immediately apparent from the code.</p><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for PHP Comments</h3><br>
+                  <p>Here are some best practices to follow when using PHP comments:</p><br>
+                  <ul style="list-style-type: disc; padding-left: 30px;">
+                  <li>Use clear and concise language in your comments</li><br>
+                  <li>Avoid repeating the code in your comments</li><br>
+                  <li>Focus on providing information that is not immediately apparent from the code</li><br>
+                  <li>Use appropriate levels of detail in your comments</li><br>
+                  <li>Keep your comments up to date as your code evolves</li><br>
+                  </ul><br>
+                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                  <p>PHP comments are an essential tool for developers, allowing them to make their code easier to understand and maintain. By following the best practices outlined in this article, you can make the most of PHP comments and ensure that your code is well-documented and easy to understand for other developers.</p><br>
+                  `,
+                  quiz: {
+                    question: "Which of these are ways in which comments can be used in PHP?",
+                    options: [
+                      "A line comment starting with //",
+                      "A multi-line comment enclosed in /* and */",
+                      "A comment starting with @@",
+                      "A comment enclosed in <> and >",
+                      "A shell-style comment starting with #",
+                    ],
+                    correctAnswers: [0, 1, 4]
+                  },
+                };
+                case 'PHP Variables':
+                  return {
+                    theory:`
+                    <p>In PHP, a variable is a memory location used to store values. Variables in PHP are denoted by a dollar sign ($), followed by the name of the variable. The value of a variable can be changed, stored and retrieved during the execution of a PHP script.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Declaration of PHP Variables</h3><br>
+                    <p>A variable in PHP can be declared using the following syntax:</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>$variable_name = value;</code></pre>
+                    </div><br>
+                    <p>where $variable_name is the name of the variable and value is the value assigned to the variable.</p><br>
+                    <p>It is important to note that the name of a PHP variable must start with a letter or an underscore, and can only contain letters, numbers, and underscores. Additionally, the name of a PHP variable is case-sensitive.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of PHP Variables</h3><br>
+                    <p>PHP supports several data types including:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li>String: A sequence of characters, e.g. $name = "John Doe";</li><br>
+                    <li>Integer: A whole number, e.g. $age = 25;</li><br>
+                    <li>Float: A floating-point number, e.g. $average = 7.5;</li><br>
+                    <li>Boolean: A value that can either be TRUE or FALSE, e.g. $is_true = TRUE;</li><br>
+                    <li>Array: A collection of values, e.g. $fruits = array("apple", "banana", "orange");</li><br>
+                    <li>Object: An instance of a user-defined class, e.g. $person = new Person();</li><br>
+                    <li>NULL: Represents a variable with no value, e.g. $email = NULL;</li><br>
+                    </ul><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Operations with PHP Variables</h3><br>
+                    <p>PHP variables can be manipulated in several ways, including:</p><br>
+                    <ul style="list-style-type: disc; padding-left: 30px;">
+                    <li>Assignment: Assigning a value to a variable, e.g. $name = "John Doe";</li><br>
+                    <li>Arithmetic: Performing arithmetic operations with variables, e.g. $sum = $a + $b;</li><br>
+                    <li>Comparison: Comparing the values of variables, e.g. $is_equal = ($a == $b);</li><br>
+                    <li>Concatenation: Combining the values of two or more variables, e.g. $full_name = $first_name . " " . $last_name;</li><br>
+                    </ul><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Variables Scope</h3><br>
+                    <p>In PHP, variables have a certain scope that determines where they can be accessed and used within the code. This scope is determined by the location where the variable is declared and can either be global or local. In this article, we will discuss the different types of scopes and how they are used in PHP.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Global Variables</h3><br>
+                    <p>Global variables are those that can be accessed from anywhere in the code, including functions, classes, and included files. To declare a variable as global, you need to use the global keyword. This allows you to access the variable within a function or class without having to pass it as an argument.</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>&lt;?php<br><br>$x = 10;<br><br>function myFunction() {<br> global $x;<br> echo $x;}<br><br>myFunction(); // Outputs 10<br><br>?&gt;</code></pre>
+                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                    </div><br>
+                    <p>It is important to note that global variables are accessible to all parts of the code and can affect the outcome of your program. Therefore, it is recommended to use global variables sparingly and only when necessary.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Local Variables</h3><br>
+                    <p>Local variables, on the other hand, are only accessible within the function or class where they are declared. These variables are declared within the function or class and are not accessible outside of it.</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>function myFunction() {<br> $x = 10;<br> echo $x;<br>}<br><br>myFunction(); // Outputs 10<br><br>echo $x; // This will result in an error</code></pre>
+                    </div><br>
+                    <p>Local variables are typically used to store temporary values within a function or class, such as counters or temporary data. They are also useful for passing data between different parts of the code, as they can be passed as arguments to other functions or classes.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Static Variables</h3><br>
+                    <p>Static variables are used to maintain their value between function calls. In other words, they retain their value even after the function has completed. This allows you to keep track of data across multiple function calls, such as counting the number of times a function has been called.</p><br>
+                    <div class="code-block">
+                    <pre id="dataExample"><code>&lt;?php<br><br>function myFunction() {<br> static $x = 0;<br> echo $x;<br> $x++;<br>}<br><br>myFunction(); // Outputs 0<br>myFunction(); // Outputs 1<br>myFunction(); // Outputs 2<br><br>?&gt;</code></pre>
+                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                    </div><br>
+                    <p>Static variables are declared using the static keyword and are only accessible within the function where they are declared.</p><br>
+                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                    <p>In conclusion, PHP variables are essential components of PHP scripts, providing a means of storing and manipulating data. Understanding the various types of PHP variables and how to work with them is a crucial step in becoming proficient in PHP programming.</p><br>
+                    <p>Variables in PHP have a scope that determines where they can be accessed and used. Understanding the different types of scopes, such as global, local, and static, can help you write more efficient and effective code. By using the appropriate scope for your variables, you can ensure that your code is organized and easy to maintain.</p><br>
+                    `,
+                    quiz: {
+                      question: "Which of the following are TRUE about PHP variables and their scope?",
+                      options: [
+                        "PHP variable names must start with a dollar sign ($) followed by a letter or underscore.",
+                        "A 'local' variable can be accessed from anywhere in the script once it is declared.",
+                        "The 'static' keyword allows a variable to retain its value even after the function finishes.",
+                        "PHP variable names are case-insensitive ($Name is the same as $name).",
+                        "To access a global variable inside a function, you must use the 'global' keyword.",
+                      ],
+                      correctAnswers: [0, 2, 4],
+                    },
+                  };
+                  case 'PHP Echo/Print':
+                    return{
+                      theory:`
+                      <p>In the world of PHP programming, the two most commonly used methods for outputting text are the echo and print statements. These two functions perform similar actions, but there are some important differences between them.</p><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP echo statement</h3><br>
+                      <p>The echo statement is used to output one or more strings of text. It can be used in several different ways, but the most common usage is to output a single string of text:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>&lt;?php<br><br>echo "Hello World!";<br><br>?></code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <p>In addition to simple text output, echo can also be used to output variables and the results of expressions:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>&lt;?php<br><br>$num = 5;<br>echo "The value of num is: " . $num;<br><br>?&gt;</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP print statement</h3><br>
+                      <p>The print statement is similar to echo in that it is used to output text. However, there are some key differences between the two. The main difference is that print is a function, while echo is not. This means that print can be used in expressions and can be assigned to variables:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>$output = print "Hello World!";</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <p>Like echo, print can also be used to output variables and the results of expressions:</p><br>
+                      <div class="code-block">
+                      <pre id="dataExample"><code>&lt;?php<br><br>$num = 5;<br>print "The value of num is: " . $num;<br><br>?&gt;</code></pre>
+                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                      </div><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison between echo and print</h3><br>
+                      <p>When deciding between echo and print, it is important to consider the following factors:</p><br>
+                      <p>In most cases, the choice between echo and print will come down to personal preference. However, for performance-critical code, it is recommended to use echo as it is faster.</p><br>
+                      <ul style="list-style-type: disc; padding-left: 30px">
+                      <li>echo is faster than print because it does not return a value.</li><br>
+                      <li>print is a function, so it can be used in expressions and can be assigned to variables.</li><br>
+                      <li>echo can take multiple parameters, separated by commas, while print can only take a single parameter.</li><br>
+                      </ul><br>
+                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                      <p>Whether you use echo or print, both statements are essential for outputting text in PHP. Understanding the differences between the two and when to use each will help you write better, more efficient code. Whether you are a beginner or an experienced PHP developer, it is important to have a good understanding of these two statements and how they work.</p><br>
+                      `,
+                      quiz: {
+                        question: "What is the difference between echo and print in PHP?",
+                        options: [
+                          "In terms of speed, there isn't a noticeable difference between echo and print.",
+                          "Echo can take one or more parameters, whereas print can only take one.",
+                          "Echo and print are used for returning values.",
+                          "Print returns a value, whereas echo does not.",
+                          "Echo is a function and print is a language construct in PHP.",
+                        ],
+                        correctAnswers: [0, 1, 3]
+                      },
+                    };
+                    case 'PHP Data Types':
+                      return{
+                        theory:`
+                        <p>As a web developer, it is important to understand the different data types used in the PHP programming language. These data types define the type of values that a variable can hold, which is essential for ensuring efficient and effective programming. In this article, we will take a closer look at the various PHP data types and how they can be used in your web development projects.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Simple Data Types in PHP</h3><br>
+                        <p>In PHP, there are four simple data types, which include:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px">
+                        <li>Integer</li><br>
+                        <li>Float</li><br>
+                        <li>Boolean</li><br>
+                        <li>String</li><br>
+                        </ul><br>
+                        <p>An integer is a whole number and can be either positive or negative. To define an integer in PHP, simply use the keyword "int". For example, $num = 42; defines a variable $num as an integer with the value of 42.</p><br>
+                        <p>A float, also known as a floating-point number, is a number with a decimal point. To define a float in PHP, use the keyword "float". For example, $price = 12.99; defines a variable $price as a float with the value of 12.99.</p><br>
+                        <p>A boolean can have only two values: true or false. To define a boolean in PHP, use the keyword "bool". For example, $check = true; defines a variable $check as a boolean with the value of true.</p><br>
+                        <p>A string is a series of characters. To define a string in PHP, use the keyword "string". For example, $name = "John Doe"; defines a variable $name as a string with the value of "John Doe".</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Complex Data Types in PHP</h3><br>
+                        <p>In addition to the simple data types, there are also complex data types in PHP. These include:</p><br>
+                        <ul style="list-style-type: disc; padding-left: 30px">
+                        <li>Array</li><br>
+                        <li>Object</li><br>
+                        <li>NULL</li><br>
+                        </ul><br>
+                        <p>An array is a type of data structure that can hold multiple values in a single variable. To define an array in PHP, use the keyword "array". For example, $fruits = array("apple", "banana", "cherry"); defines a variable $fruits as an array with the values "apple", "banana", and "cherry".</p><br>
+                        <p>An object is a type of data structure that holds data and the actions that can be performed on that data. To define an object in PHP, use the keyword "object". For example, $person = new Person(); creates a new object of the class "Person".</p><br>
+                        <p>NULL is a special type of data that represents the absence of a value. To define a variable as NULL in PHP, simply assign it the value of NULL. For example, $age = NULL; defines a variable $age as NULL.</p><br>
+                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                        <p>In conclusion, understanding the different PHP data types is essential for efficient and effective web development. By familiarizing yourself with the simple and complex data types, you will be able to create robust and well-structured code that is easy to maintain and modify.</p><br>
+                        `,
+                        quiz: {
+                          question: "Which of the following are valid data types in PHP?",
+                          options: [
+                            "String",
+                            "Integer",
+                            "Float",
+                            "Boolean",
+                            "Object",
+                            "NULL",
+                            "Resource",
+                            "Complex",
+                          ],
+                          correctAnswers: [0, 1, 2, 3, 4, 5, 6]
+                        },
+                      };
+                      case 'PHP Strings':
+                        return {
+                          theory:`
+                          <p>In this article, we will dive deep into the world of PHP strings and explore all its features. PHP strings are a fundamental aspect of PHP programming and an essential component in any PHP-based website or application. This guide will provide you with a comprehensive understanding of PHP strings, starting from the basics, to the most advanced concepts.</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Strings?</h3><br>
+                          <p>PHP strings are a sequence of characters that are used to represent text or data. A string can be a combination of letters, numbers, and special characters. PHP strings are surrounded by single or double quotes. For example, $str = 'Hello World';</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">String Concatenation</h3><br>
+                          <p>One of the most common operations performed on PHP strings is string concatenation. It is the process of joining two or more strings into a single string. The concatenation operator in PHP is the dot (.) operator. For example, $str1 = 'Hello'; $str2 = 'World'; $str = $str1 . $str2;</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">String Functions</h3><br>
+                          <p>PHP provides a rich set of functions for manipulating strings. These functions allow you to perform various operations on strings, such as searching for substrings, replacing text, converting to upper or lower case, and much more. Some of the most commonly used string functions are:</p><br>
+                          <ul style="list-style-type:disc; padding-left: 30px;">
+                          <li>strlen - Returns the length of a string.</li><br>
+                          <li>strpos - Searches for a substring within a string and returns its position.</li><br>
+                          <li>str_replace - Replaces all occurrences of a substring with another string.</li><br>
+                          <li>strtoupper - Converts a string to uppercase.</li><br>
+                          <li>strtolower - Converts a string to lowercase.</li><br>
+                          </ul><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Escaping Characters</h3><br>
+                          <p>In PHP, certain characters have a special meaning and are called escape characters. To use these characters as part of a string, they need to be escaped. For example, the escape character for a newline is &#92;n. To include a newline in a string, it can be written as "Hello&#92;nWorld".</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Heredoc and Nowdoc</h3><br>
+                          <p>Heredoc and Nowdoc are two ways to define strings in PHP. Heredoc allows you to define a string that spans multiple lines and preserves white space and newline characters. For example, $str = &lt;&lt;&lt;EOT Hello World EOT;</p><br>
+                          <p>Nowdoc, on the other hand, is similar to Heredoc but it does not interpret any escape sequences. It is used to define strings that contain escape characters, but do not want them to be interpreted. For example, $str = <<<'EOT' Hello&#92;nWorld EOT;</p><br>
+                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                          <p>In conclusion, PHP strings are a powerful tool that provides a wide range of features for working with text and data. Understanding PHP strings and their functions is essential for any PHP programmer, and this guide provides a comprehensive overview of PHP strings. With the knowledge gained from this guide, you'll be able to write efficient and effective code for any PHP-based project.</p><br>
+                          `,
+                          quiz: {
+                            question: "In PHP, which of the following statements about strings are correct?",
+                            options: [
+                              "A string is a sequence of characters.",
+                              "PHP does not support strings with more than 100 characters.",
+                              "You can use either single or double quotes to create a string in PHP.",
+                              "A string variable can only hold numeric data.",
+                              "Strings in PHP can contain HTML tags.",
+                            ],
+                            correctAnswers: [0, 2, 4]
+                          },
+                        };
+                        case 'PHP Numbers':
+                          return {
+                            theory:`
+                            <p>In this article, we will dive deep into the world of PHP numbers and explore everything there is to know about them. From basic arithmetic operations to advanced mathematical functions, we will cover it all. By the end of this article, you will have a thorough understanding of how to work with numbers in PHP.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding PHP Numeric Data Types</h3><br>
+                            <p>There are two main numeric data types in PHP: integers and floating-point numbers. An integer is a whole number without a fractional part, while a floating-point number is a number with a fractional part.</p><br>
+                            <p>It is important to note that in PHP, the size of an integer is platform-dependent. On a 32-bit system, an integer can range from -2,147,483,648 to 2,147,483,647, while on a 64-bit system, an integer can range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</p><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Arithmetic Operations in PHP</h3><br>
+                            <p>In PHP, you can perform various arithmetic operations such as addition, subtraction, multiplication, division, and modulus. Here's an example of how to perform each of these operations:</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>&lt;?php<br>$num1 = 10;<br>$num2 = 5;<br><br>// Addition<br>$result = $num1 + $num2;<br>echo "&#92;$num1 + &#92$num2 = ";<br>echo $result; // 15<br><br>// Subtraction<br>$result = $num1 - $num2;<br>echo "&#92;n&#92;$num1 - &#92;$num2 = ";<br>echo $result; // 5<br><br>// Multiplication<br>$result = $num1 * $num2;<br>echo "&#92;n&#92;$num1 * &#92;$num2 = ";<br>echo $result; // 50<br><br>// Division<br>$result = $num1 / $num2;<br>echo "&#92;n&#92;$num1 / &#92;$num2 = ";<br>echo $result; // 2<br><br>// Modulus<br>$result = $num1 % $num2;<br>echo "&#92;n&#92;$num1 % &#92;$num2 = ";<br>echo $result; // 0<br>?&gt;</code></pre>
+                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced Mathematical Functions in PHP</h3><br>
+                            <p>In addition to basic arithmetic operations, PHP also provides a number of advanced mathematical functions. Here are a few of the most commonly used ones:</p><br>
+                            <ul style="list-style-type: disc; padding-left: 30px;">
+                            <li>abs: Returns the absolute value of a number</li><br>
+                            <li>ceil: Rounds a number up to the nearest integer</li><br>
+                            <li>floor: Rounds a number down to the nearest integer</li><br>
+                            <li>sqrt: Returns the square root of a number</li><br>
+                            <li>pow: Raises a number to a power</li><br>
+                            </ul><br>
+                            <p>Here's an example of how to use some of these functions:</p><br>
+                            <div class="code-block">
+                            <pre id="dataExample"><code>&lt;?php<br>$num1 = -10;<br>$num2 = 2.7;<br>// Absolute value<br>$result = abs($num1);<br>echo "abs(&#92;$num1) = ";<br>echo $result  . "&#92;n"; // 10<br><br>// Round up<br>$result = ceil($num2);<br>echo "ceil(&#92;$num2) = ";<br>echo $result . "&#92;n"; // 3<br><br>// Round down<br>$result = floor($num2);<br>echo "floor(&#92;$num2) = ";<br>echo $result . "&#92;n"; // 2<br><br>// Square root<br>$result = sqrt(9);<br>echo "sqrt(9) = ";<br>echo $result . "$#92;n";  // 3<br><br>// Raise to power<br>$result = pow(2, 3);<br>echo "pow(2, 3) = ";<br>echo $result; // 8<br>?&gt;</code></pre>
+                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                            </div><br>
+                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                            <p>In conclusion, numbers play a crucial role in PHP programming and it is important to have a solid understanding of how to work with them. Whether you are performing basic arithmetic operations or advanced mathematical functions, PHP provides a variety of tools to help you get the job done. With the knowledge you have gained from this article, you are now equipped to tackle any number-related task in your PHP projects.</p><br>
+                            `,
+                            quiz: {
+                              question: "Which of the following are correct with regard to PHP numbers?",
+                              options: [
+                                "PHP supports integer and float numbers.",
+                                "PHP number functions allow to convert a number from one base to another.",
+                                "Decrementing and incrementing is not supported in PHP.",
+                                "PHP includes essential set of number-involving functions built into the language.",
+                                "PHP doesn't support operations such as addition, subtraction, multiplication and division on numbers.",
+                              ],
+                              correctAnswers: [0, 1, 3]
+                            },
+                          };
+                          case 'PHP Math':
+                            return{
+                              theory:`
+                              <p>PHP provides a range of mathematical functions that allow developers to perform various mathematical operations in their code. These functions can be used to perform calculations on numbers, manipulate floating-point values, and even round numbers to specific decimal places. In this article, we will be exploring some of the most commonly used PHP math functions and how they can be used to perform various mathematical operations.</p><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Rounding Functions</h3><br>
+                              <p>One of the most common mathematical operations performed in PHP is rounding numbers to a specific decimal place. The round function can be used to round a number to the nearest integer or to a specific number of decimal places. For example, the following code will round the number 3.14159 to two decimal places:</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>&lt;?php<br><br>$num = 3.14159;<br>$rounded = round($num, 2);<br><br>echo $rounded;<br><br>// Output: 3.14<br>?&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <p>In addition to the round function, PHP also provides the ceil and floor functions, which can be used to round a number up or down to the nearest integer. For example:</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>&lt;?php<br>$num = 3.14159;<br><br>$ceiled = ceil($num);<br>echo $ceiled . "&#92;n";<br>// Output: 4<br><br>$floored = floor($num);<br>echo $floored . "&#92;n";<br>// Output: 3<br>?&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Trigonometric Functions</h3><br>
+                              <p>PHP provides several trigonometric functions, including sin, cos, and tan, which can be used to calculate the sine, cosine, and tangent of an angle, respectively. These functions can be useful for performing calculations related to angles and distances in 2D and 3D space.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>&lt;?php<br><br>$angle = deg2rad(30);<br><br>$sine = sin($angle);<br>echo $sine . "&#92;n";<br>// Output: 0.5<br><br>$cosine = cos($angle);<br>echo $cosine . "&#92;n";<br>// Output: 0.866025<br><br>$tangent = tan($angle);<br>echo $tangent . "&#92;n";<br>// Output: 0.577350<br><br>?&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Logarithmic Functions</h3><br>
+                              <p>PHP provides several logarithmic functions, including log, log10, and exp, which can be used to perform various logarithmic operations. The log function calculates the natural logarithm of a number, while the log10 function calculates the logarithm base 10 of a number. The exp function calculates the exponential value of a number.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>&lt;?php<br><br>$num = 10;<br><br>$natural_log = log($num);<br>echo $natural_log  . "&#92;n";<br>// Output: 2.30259<br><br>$log10 = log10($num);<br>echo $log10   . "&#92;n";<br>// Output: 1<br><br>$exponential = exp($num);<br>echo $exponential   . "&#92;n";<br>// Output: 22026.465<br>?&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Miscellaneous Functions</h3><br>
+                              <p>In addition to the functions discussed above, PHP provides several other mathematical functions that can be used for various purposes. For example, the abs function can be used to calculate the absolute value of a number, while the pow function can be used to calculate the power of a number.</p><br>
+                              <div class="code-block">
+                              <pre id="dataExample"><code>&lt;?php<br><br>$num = -5;<br><br>$absolute = abs($num);<br>echo $absolute . "&#92;n";<br>// Output: 5<br><br>$power = pow(2, 3);<br>echo $power . "&#92;n";<br>// Output: 8<br><br>?&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                              </div><br>
+                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                              <p>In this article, we have explored some of the most commonly used PHP math functions and how they can be used to perform various mathematical operations. Whether you are rounding numbers, performing trigonometric calculations, or working with logarithmic functions, PHP provides a range of functions to help you get the job done. With a little bit</p><br>
+                              `,
+                              quiz: {
+                                question: "In PHP, what functions are used to find minimum and maximum values among given numbers?",
+                                options: [
+                                  "min() and max()",
+                                  "least() and greatest()",
+                                  "small() and large()",
+                                  "minimum() and maximum()",
+                                ],
+                                correctAnswers: [0],
+                              },
+                            };
+                            case 'PHP Constants':
+                              return {
+                                theory:`
+                                <p>A constant in PHP is a value that can not be changed once it is set. Constants are an essential aspect of programming and play a crucial role in maintaining the stability and reliability of code. In this article, we'll delve into the world of PHP constants and explore their syntax, use cases, and how they can be utilized in your PHP projects.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding the Syntax</h3><br>
+                                <p>The syntax for declaring a constant in PHP is relatively simple. You use the define() function and provide two arguments: the name of the constant, and its value. The following is an example of a constant being declared in PHP:</p><br>
+                                <div class="code-block">
+                                <pre id="dataExample"><code>define("CONSTANT_NAME", "value");</code></pre>
+                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                </div><br>
+                                <p>It's important to note that the constant name must always be written in uppercase letters and cannot be changed once set.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Use Cases</h3><br>
+                                <p>Constants are used in a variety of different situations and can be leveraged to improve the organization and efficiency of your code. Some common use cases include:</p><br>
+                                <ul style="list-style-type: disc; padding-left: 30px;">
+                                <li>Defining configuration settings: Constants can be used to store configuration settings that are needed throughout your code. This can be useful when you need to make changes to your configuration settings in the future, as you only need to update the constant's value in one place.</li><br>
+                                <li>Storing static data: Constants can be used to store static data that is used repeatedly throughout your code. This can include values such as the maximum length of a string, the number of items in a list, or the size of an image.</li><br>
+                                <li>Creating globally accessible values: Constants can be used to create values that are accessible from anywhere in your code, even from within functions and classes. This can be useful when you need to access a value from multiple places in your code and want to avoid the use of global variables.</li><br>
+                                </ul><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Constants vs Variables</h3><br>
+                                <p>It's important to understand the differences between constants and variables, as they serve different purposes in PHP. Variables are used to store values that can be changed at any time, whereas constants are used to store values that cannot be changed once set. This makes constants more suitable for storing configuration settings and other values that need to remain the same throughout your code.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Utilizing Constants in Your PHP Projects</h3><br>
+                                <p>Now that you have a better understanding of the syntax and use cases of PHP constants, let's explore how they can be utilized in your PHP projects. One of the best ways to utilize constants is to store configuration settings that are needed throughout your code. This can help improve the organization and maintainability of your code, as you only need to update the constant's value in one place if changes are needed.</p><br>
+                                <p>Another way to utilize constants is to store static data that is used repeatedly throughout your code. This can improve the efficiency of your code, as you only need to retrieve the value once, instead of repeatedly querying the same data.</p><br>
+                                <p>Finally, constants can also be used to create globally accessible values that can be accessed from anywhere in your code, even from within functions and classes. This can help to avoid the use of global variables and improve the organization and maintainability of your code.</p><br>
+                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                <p>In conclusion, PHP constants are an essential aspect of programming and play a crucial role in maintaining the stability and reliability of your code. Whether you're using them to store configuration settings, static data, or creating globally accessible values, constants are a valuable tool to have in your PHP toolkit. We hope this article has given you a deeper understanding of PHP constants and how they can be utilized in your PHP projects.</p><br>
+                                `,
+                                quiz: {
+                                  question: "What are the characteristics of PHP constants?",
+                                  options: [
+                                    "They are automatically global across the entire script.",
+                                    "Their stored value can change during the script execution.",
+                                    "They do not start with a '$' sign.",
+                                    "They are not case-sensitive.",
+                                    "They can be defined and accessed anywhere without regard to variable scoping rules.",
+                                  ],
+                                  correctAnswers: [0, 2, 4],
+                                },
+                              };
+                              case 'PHP Operators':
+                                return{
+                                  theory:`
+                                  <p>PHP provides a wide range of operators for use in your scripts, including arithmetic, comparison, and logical operators. In this article, we will explore the different types of PHP operators and their uses.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Arithmetic Operators</h3><br>
+                                  <p>Arithmetic operators are used to perform mathematical operations in PHP. The most common arithmetic operators include addition (+), subtraction (-), multiplication (*), and division (/).</p><br>
+                                  <p>For example:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>$x = 10;<br>$y = 5;<br><br>$sum = $x + $y;<br>$difference = $x - $y;<br>$product = $x * $y;<br>$quotient = $x / $y;</code></pre>
+                                  </div><br>
+                                  <p>In the above example, we first define two variables $x and $y, and then use the arithmetic operators to perform addition, subtraction, multiplication, and division.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Comparison Operators</h3><br>
+                                  <p>Comparison operators are used to compare values in PHP. The most common comparison operators include equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).</p><br>
+                                  <p>For example:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>$x = 10;<br>$y = 5;<br><br>$is_equal = $x == $y;<br>$is_not_equal = $x != $y;<br>$is_greater = $x > $y;<br>$is_less = $x < $y;<br>$is_greater_or_equal = $x >= $y;<br>$is_less_or_equal = $x <= $y;</code></pre>
+                                  </div><br>
+                                  <p></p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                  <p>In the above example, we use the comparison operators to compare the values of $x and $y.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Logical Operators</h3><br>
+                                  <p>Logical operators are used to combine conditions in PHP. The most common logical operators include and (&&), or (||), and not (!).</p><br>
+                                  <p>For example:</p><br>
+                                  <div class="code-block">
+                                  <pre id="dataExample"><code>$x = 10;<br>$y = 5;<br><br>$is_and = $x == 10 && $y == 5;<br>$is_or = $x == 10 || $y == 5;<br>$is_not = !($x == 10);</code></pre>
+                                  </div><br>
+                                  <p>In the above example, we use the logical operators to combine conditions and evaluate them.</p><br>
+                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                  <p>In conclusion, PHP provides a wide range of operators for use in your scripts, including arithmetic, comparison, and logical operators. These operators allow you to perform mathematical operations, compare values, and combine conditions in your scripts. Understanding the different types of PHP operators and their uses is crucial for writing efficient and effective PHP scripts.</p><br>
+                                  `,
+                                  quiz:{
+                                    question: "Which of the following are valid types of operators in PHP?",
+                                    options: [
+                                      "Arithmetic Operators",
+                                      "Assignment Operators",
+                                      "Comparison Operators",
+                                      "Increment/Decrement Operators",
+                                      "Logical Operators",
+                                      "String Operators",
+                                      "Array Operators",
+                                      "Type Operators",
+                                    ],
+                                    correctAnswers: [0, 1, 2, 3, 4, 5, 6]
+                                  },
+                                };
+                                case 'PHP If...Else...Elseif':
+                                  return{
+                                    theory:`
+                                    <p>PHP is a server-side scripting language that is widely used for web development. One of its essential features is the ability to make decisions based on conditions using the if-else statement. In this article, we will cover everything you need to know about using the if-else statement in PHP.</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding the Basics of PHP If-Else Statement</h3><br>
+                                    <p>The if-else statement allows you to execute different blocks of code based on whether a condition is true or false. The syntax of the if-else statement is as follows:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>if (condition) {<br> // code to be executed if condition is true<br>} else {<br> // code to be executed if condition is false<br>}</code></pre>
+                                    </div><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using PHP If-Else Statement in Practice</h3><br>
+                                    <p>To put the if-else statement into practice, consider the following example. We want to check whether a number is positive or negative.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>&lt;?php<br><br>$number = 5;<br><br>if ($number > 0) {<br> echo "$number is a positive number";<br>} else {<br> echo "$number is a negative number";<br>}<br><br>?&gt;</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <p>In this example, the condition $number > 0 is true, so the code inside the first block (if) is executed, and the output will be "5 is a positive number."</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced Usage of PHP If-Else Statement</h3><br>
+                                    <p>The if-else statement can also be used with multiple conditions. For example, you can use the elseif statement to check multiple conditions.</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>&lt;?php<br>$number = 5;<br><br>if ($number > 0) {<br> echo "$number is a positive number";<br>} elseif ($number == 0) {<br> echo "$number is zero";<br>} else {<br> echo "$number is a negative number";<br>}<br><br>?&gt;</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <p></p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Making Complex Decisions with PHP If-Else Statement</h3><br>
+                                    <p>The if-else statement can be used to make complex decisions by nesting multiple if-else statements inside each other. Consider the following example:</p><br>
+                                    <div class="code-block">
+                                    <pre id="dataExample"><code>&lt;?php<br><br>$number = 5;<br><br>if ($number > 0) {<br> if ($number % 2 == 0) {<br>  echo "$number is a positive even number";<br> } else {<br>  echo "$number is a positive odd number";<br> }<br> } else {<br> echo "$number is a negative number";<br>}<br><br>?&gt;</code></pre>
+                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                    </div><br>
+                                    <p>In this example, the first if statement checks whether $number is positive. If it is, the next if statement checks whether $number is even. The output of this code will be "5 is a positive odd number."</p><br>
+                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                    <p>In this article, we have covered everything you need to know about using the if-else statement in PHP. We have covered the basics of the if-else statement, its usage in practice, advanced usage with multiple conditions, and making complex decisions. We hope this article has been helpful in understanding the power and versatility of the if-else statement in PHP.</p><br>
+                                    `,
+                                    quiz: {
+                                      question: "In PHP, how can you implement conditional statements?",
+                                      options: [
+                                        "Using if statement",
+                                        "Using else statement",
+                                        "Using elseif statement",
+                                        "Using loop statement",
+                                        "Using array statement",
+                                      ],
+                                      correctAnswers: [0, 1, 2]
+                                    },
+                                  };
+                                  case 'PHP Switch':
+                                    return{
+                                      theory:`
+                                      <p>The PHP switch statement is a useful tool for controlling the flow of code in a program. This statement allows you to test a single expression against multiple possible values, and execute different code based on the result. In this article, we will cover everything you need to know about the PHP switch statement, including how to use it, common uses, and best practices.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use the PHP Switch Statement</h3><br>
+                                      <p>The basic syntax of a PHP switch statement is as follows:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>switch (expression) {<br>  case value1:<br>    // code to be executed if expression = value1<br>    break;<br>  case value2:<br>    // code to be executed if expression = value2<br>    break;<br>  ...<br>  default:<br>    // code to be executed if expression does not match any values<br>}</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>The expression is evaluated once, and its value is compared to each of the values in the case statements. If a match is found, the code associated with that case is executed. If no match is found, the code in the default block is executed.</p><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common Uses for the PHP Switch Statement</h3><br>
+                                      <p>One of the most common uses for the PHP switch statement is to control the flow of a program based on user input. For example, you could use a switch statement to display different messages based on the value of a form field:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>switch ($_POST["field_name"]) {<br>  case "value1":<br>    echo "You entered value1.";<br>    break;<br>  case "value2":<br>    echo "You entered value2.";<br>    break;<br>  default:<br>    echo "You entered an unknown value.";<br>}</code></pre>
+                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                      </div><br>
+                                      <p>Another common use for the PHP switch statement is to control the flow of a program based on the values of multiple variables. For example, you could use a switch statement to perform different calculations based on the values of two variables:</p><br>
+                                      <div class="code-block">
+                                      <pre id="dataExample"><code>switch ($variable1 . "-" . $variable2) {<br>  case "value1-valueA":<br>    // code to be executed if $variable1 = "value1" and $variable2 = "valueA"<br>    break;<br>  case "value2-valueB":<br>    // code to be executed if $variable1 = "value2" and $variable2 = "valueB"<br>    break;<br>  ...<br>  default:<br>    // code to be executed if no match is found<br>}</code></pre>
+                                      </div><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for the PHP Switch Statement</h3><br>
+                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                      <li>Always include a break statement after each case block, to prevent fall-through.</li><br>
+                                      <li>Use the default block to handle unexpected values, rather than relying on fall-through.</li><br>
+                                      <li>Consider using an if-else statement instead of a switch statement if you only need to test a single expression against a few possible values.</li><br>
+                                      <li>Use the switch statement to improve readability and maintainability when testing a single expression against multiple values.</li><br>
+                                      </ul><br>
+                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Common Uses for the PHP Switch Statement</h3><br>
+                                      <p>In conclusion, the PHP switch statement is a useful tool for controlling the flow of code in a program. With its ability to test a single expression against multiple possible values, it can help you simplify complex code and make your programs more readable and maintainable. Whether you are new to PHP or an experienced programmer, understanding how to use the PHP switch statement is an essential part of any PHP developer's toolkit.</p><br>
+                                      `,
+                                      quiz: {
+                                        question : "In PHP, what statements can be used inside a switch statement?",
+                                        options: [
+                                          "if",
+                                          "else",
+                                          "case",
+                                          "default",
+                                          "for",
+                                          "while",
+                                        ],
+                                        correctAnswers: [2, 3]
+                                      },
+                                    };
+                                    case 'PHP Loops':
+                                      return{
+                                        theory:`
+                                        <p>PHP is a powerful server-side scripting language that provides a wide range of looping techniques for developers to choose from. Whether you are a beginner or an experienced programmer, understanding how to use PHP looping effectively can greatly enhance your coding abilities and help you create dynamic, interactive web pages. In this article, we will explore the various types of PHP looping, their syntax, and how to use them to achieve specific goals.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">For Loops</h3><br>
+                                        <p>A for loop is a type of loop that allows you to repeat a block of code a specific number of times. It consists of three parts: the initializer, the condition, and the increment/decrement statement. The loop will repeat until the condition is met.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>for ($i=0; $i<10; $i++) {<br> echo "The number is $i &#92;n";<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In the example above, the loop will start with $i=0, and it will continue to repeat until $i is equal to 10. On each iteration, the value of $i will be incremented by 1.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">While Loops</h3><br>
+                                        <p>A while loop is another type of loop in PHP that is used to repeat a block of code while a condition is true. It consists of two parts: the condition and the code block. The loop will continue to repeat until the condition is false.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$i = 0;<br> while ($i < 10) {<br> echo "The number is $i &#92;n";<br> $i++;<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this example, the loop will start with $i=0 and continue to repeat until $i is equal to 10. On each iteration, the value of $i will be incremented by 1.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Do-While Loops</h3><br>
+                                        <p>A do-while loop is similar to a while loop, but the code block will always be executed at least once. It consists of two parts: the code block and the condition. The loop will repeat until the condition is false.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$i = 0;<br>do {<br> echo "The number is $i &#92;n";<br> $i++;<br>} while ($i < 10);<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this example, the loop will start with $i=0 and continue to repeat until $i is equal to 10. On each iteration, the value of $i will be incremented by 1.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Foreach Loops</h3><br>
+                                        <p>A foreach loop is a type of loop in PHP that is used to iterate over arrays. It allows you to loop through each element in an array and perform a specific task.</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$colors = array("Red", "Green", "Blue");<br><br>foreach ($colors as $value) {<br> echo "$value &#92;n";<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this example, the loop will start with the first element in the $colors array and continue to loop through each element until it reaches the end of the array. On each iteration, the value of the current element will be stored in the $value variable.</p><br>
+                                        <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">PHP Looping with the Break Statement</h3><br>
+                                        <p>In PHP, looping through arrays or repeating a block of code a certain number of times is a common task. The break statement provides an efficient way to exit a loop early, without completing all of the iterations.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding the Break Statement</h3><br>
+                                        <p>The break statement terminates the current loop and transfers control to the next statement following the loop. This can be useful when you need to stop a loop when a certain condition is met, or when you want to break out of a nested loop.</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using the Break Statement in a For Loop</h3><br>
+                                        <p>In a for loop, the break statement can be used to stop the loop when a specific condition is met. For example, the following code uses a for loop to search for a number in an array:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$numbers = array(1, 2, 3, 4, 5);<br><br>for ($i = 0; $i < count($numbers); $i++) {<br>  if ($numbers[$i] == 3) {<br>    echo "Found 3 at index $i";<br>    break;<br>  }<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this code, the loop will stop as soon as the value of $numbers[$i] is equal to 3. The output of this code will be "Found 3 at index 2".</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using the Break Statement in a Foreach Loop</h3><br>
+                                        <p>In a foreach loop, the break statement works similarly to the for loop. The following code uses a foreach loop to search for a specific value in an associative array:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$colors = array("red" => "#FF0000", "green" => "#00FF00", "blue" => "#0000FF");<br><br>foreach ($colors as $color => $hex) {<br>  if ($color == "green") {<br>    echo "$color has hex code $hex";<br>    break;<br>  }<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this code, the loop will stop as soon as the key $color is equal to "green". The output of this code will be "green has hex code #00FF00".</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Breaking Out of Nested Loops</h3><br>
+                                        <p>The break statement can also be used to break out of nested loops. When a break statement is used inside a nested loop, only the innermost loop is terminated.</p><br>
+                                        <p>For example, the following code uses two nested loops to search for a specific value in a two-dimensional array:</p><br>
+                                        <div class="code-block">
+                                        <pre id="dataExample"><code>&lt;?php<br><br>$numbers = array(array(1, 2, 3), array(4, 5, 6), array(7, 8, 9));<br><br>for ($i = 0; $i < count($numbers); $i++) {<br>  for ($j = 0; $j < count($numbers[$i]); $j++) {<br>    if ($numbers[$i][$j] == 5) {<br>      echo "Found 5 at [$i][$j]";<br>      break 2;<br>    }<br>  }<br>}<br><br>?&gt;</code></pre>
+                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                        </div><br>
+                                        <p>In this code, the break 2 statement is used to break out of both the inner for loop and the outer for loop. The output of this code will be "Found 5 at [1][1]".</p><br>
+                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                        <p>In conclusion, understanding how to use PHP looping techniques effectively can greatly enhance your coding abilities and help you create dynamic, interactive web pages. Whether you choose to use a for loop, while loop, do-while loop, or foreach loop, it is important to understand their syntax and how to use them to achieve specific goals.</p><br>
+                                        <p>The break statement in PHP provides an efficient way to exit a loop early, without completing all of the iterations.</p><br>
+                                        `,
+                                        quiz:{
+                                          question: "Which of the following are valid loop types in PHP?",
+                                          options: [
+                                            "while loop",
+                                            "for loop",
+                                            "curve loop",
+                                            "foreach loop",
+                                            "until loop",
+                                          ],
+                                          correctAnswers: [0, 1, 3]
+                                        },
+                                      };
+                                      case 'PHP Functions':
+                                        return{
+                                          theory:`
+                                          <p>Function is an important concept in programming and in PHP, functions play a crucial role in making code modular, reusable, and organized. They allow developers to write code that performs a specific task, and then call that code whenever they need it. In this article, we'll explore the basics of PHP functions and show you how to use them in your code.</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is a PHP Function?</h3><br>
+                                          <p>A PHP function is a block of code that performs a specific task. Functions are declared using the function keyword, followed by the name of the function and a set of parentheses. Within the parentheses, you can specify the parameters that the function should accept. Functions can optionally return a value by using the return keyword.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>function functionName($parameter1, $parameter2) {<br>  // code to be executed<br>  return $result;<br>}</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why Use PHP Functions?</h3><br>
+                                          <p>Using functions in your code has several benefits. Firstly, they allow you to write reusable code. Instead of writing the same code multiple times in different parts of your program, you can write it once as a function and call it whenever you need it. This makes your code more organized and reduces the likelihood of introducing bugs by making changes to code in multiple places.</p><br>
+                                          <p>Another benefit of functions is that they allow you to modularize your code. Functions allow you to break down complex tasks into smaller, more manageable parts, making it easier to understand and maintain your code over time.</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Define a PHP Function</h3><br>
+                                          <p>Defining a function in PHP is easy. You simply use the function keyword, followed by the name of the function and a set of parentheses. The parentheses can be empty, or they can contain parameters that the function should accept.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>function functionName() {<br>  // code to be executed<br>}</code></pre>
+                                          </div><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>function functionName($parameter1, $parameter2) {<br>  // code to be executed<br>}</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Call a PHP Function</h3><br>
+                                          <p>To call a PHP function, you simply use the name of the function, followed by a set of parentheses. You can also pass any required parameters within the parentheses.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>functionName();</code></pre>
+                                          </div><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>functionName($parameter1, $parameter2);</code></pre>
+                                          </div><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP Function Examples</h3><br>
+                                          <p>Here are some examples of PHP functions that you can use in your code:</p><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Simple Function</h3><br>
+                                          <p>The following example defines a simple function that takes no parameters and returns a value.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>&lt;?php<br>function helloWorld() {<br>  return 'Hello, World!';<br>}<br><br>echo helloWorld();<br><br>?&gt;</code></pre>
+                                          </div><br>
+                                          <p>Output: Hello, World!</p><br>
+                                          <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Function with Parameters</h3><br>
+                                          <p>The following example defines a function that takes two parameters and returns their sum.</p><br>
+                                          <div class="code-block">
+                                          <pre id="dataExample"><code>&lt;?php<br><br>function add($a, $b) {<br>  return $a + $b;<br>}<br><br>echo add(5, 10);<br><br>?&gt;</code></pre>
+                                          </div><br>
+                                          <p>Output: 15</p><br>
+                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                          <p>In conclusion, PHP functions are an important tool for making your code more organized, reusable, and modular. By understanding how to define and call functions in PHP, you can write better, more maintainable code. Whether you're a beginner or an experienced developer, mastering the use of functions in PHP is essential for writing great code.</p><br>
+                                          `,
+                                          quiz: {
+                                            question: "What are the key characteristics of functions in PHP?",
+                                            options: [
+                                              "Functions in PHP are not reusable pieces of code.",
+                                              "In PHP, functions perform actions and can return values.",
+                                              "Creating a function in PHP does not require any naming and it cannot accept any parameters or arguments.",
+                                              "Same function can be called more than once within a PHP script.",
+                                              "In PHP, it's not possible to provide default values to function parameters.",
+                                            ],
+                                            correctAnswers: [1, 3]
+                                          },
+                                        };
+                                        case 'PHP Arrays':
+                                          return{
+                                            theory:`
+                                            <p>PHP arrays are data structures used to store collections of variables. They are a key component of PHP programming and essential for managing large amounts of data. In this article, we will delve into the fundamentals of PHP arrays and how they are used to create dynamic, interactive websites.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of PHP Arrays</h3><br>
+                                            <p>There are two main types of PHP arrays: indexed and associative arrays. Indexed arrays are created using integer indices, while associative arrays use string keys to index the elements.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>// Example of an indexed array<br>$fruits = array("apple", "banana", "cherry");<br><br>// Example of an associative array<br>$fruits = array("apple" => "red", "banana" => "yellow", "cherry" => "red");</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating PHP Arrays</h3><br>
+                                            <p>Creating PHP arrays is straightforward. The array() function is used to create an array, and elements can be added inside the parentheses. Alternatively, you can use square brackets to create an array and add elements.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>// Creating an array using the array function<br>$fruits = array("apple", "banana", "cherry");<br><br>// Creating an array using square brackets<br>$fruits = ["apple", "banana", "cherry"];<br></code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Accessing Elements of an Array</h3><br>
+                                            <p>Accessing elements of an array is done using an index or a key. For indexed arrays, you can use an integer index to access elements, while for associative arrays, you use a string key.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>// Accessing an element of an indexed array<br>$fruit = $fruits[0];<br><br>// Accessing an element of an associative array<br>$color = $fruits["apple"];</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Adding and Removing Elements</h3><br>
+                                            <p>PHP arrays can be easily manipulated to add and remove elements. The array_push function is used to add an element to the end of an array, while the array_pop function removes the last element of an array.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>// Adding an element to an array<br>array_push($fruits, "mango");<br><br>// Removing an element from an array<br>array_pop($fruits);</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Merging Arrays</h3><br>
+                                            <p>The array_merge function is used to merge two arrays into one. This function takes multiple arrays as arguments and returns a new array that contains all the elements of the original arrays.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>&lt;?php<br><br>// Merging two arrays<br>$fruits1 = array("apple", "banana");<br>$fruits2 = array("cherry", "mango");<br>$fruits = array_merge($fruits1, $fruits2);<br><br>print_r($fruits);<br><br>?&gt;</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Indexed Arrays</h3><br>
+                                            <p>PHP is a powerful and popular server-side scripting language that is widely used for web development. One of its key features is the ability to work with arrays, which are data structures that can store multiple values in a single variable.</p><br>
+                                            <p>In PHP, there are two types of arrays: indexed arrays and associative arrays. In this article, we will focus on indexed arrays, which are arrays that use numerical indices.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding Numerical Indices</h3><br>
+                                            <p>In an indexed array, each value is stored with a numerical index, which is a positive integer that starts at 0. For example, consider the following code:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$cars = array("Volvo", "BMW", "Toyota");</code></pre>
+                                            </div><br>
+                                            <p>In this code, we have created an indexed array called $cars that contains three values: "Volvo", "BMW", and "Toyota". The first value, "Volvo", is stored with an index of 0, the second value, "BMW", is stored with an index of 1, and so on.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Accessing Values in an Indexed Array</h3><br>
+                                            <p>To access the values in an indexed array, you can use the array index in square brackets, like this:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>echo $cars[0]; // Outputs: Volvo</code></pre>
+                                            </div><br>
+                                            <p>In this code, we have used the index 0 to access the first value in the $cars array. Similarly, you can use indices 1 and 2 to access the second and third values, respectively.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Modifying Values in an Indexed Array</h3><br>
+                                            <p>You can also modify the values in an indexed array by assigning a new value to the index, like this:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$cars[0] = "Mercedes";</code></pre>
+                                            </div><br>
+                                            <p>n this code, we have changed the value at index 0 from "Volvo" to "Mercedes".</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Adding Values to an Indexed Array</h3><br>
+                                            <p>To add a new value to the end of an indexed array, you can use the array_push() function, like this:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>array_push($cars, "Audi");</code></pre>
+                                            </div><br>
+                                            <p>In this code, we have added the value "Audi" to the end of the $cars array.</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Associative Arrays</h3><br>
+                                            <p>PHP is a server-side scripting language that is widely used to create dynamic and interactive web pages. One of the key features of PHP is its arrays, which provide a way to store multiple values in a single variable. Among the different types of arrays, associative arrays are a crucial component that allows developers to store values with specific keys.</p><br>
+                                            <p>In this article, we will take a deep dive into PHP associative arrays and understand the basics of how they work.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Associative Arrays?</h3><br>
+                                            <p>An associative array is a type of array where each element is assigned a unique key. This key is used to access the value stored in the array. Unlike other types of arrays, associative arrays do not use numeric indices, but instead, allow developers to use strings as keys.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Create an Associative Array in PHP</h3><br>
+                                            <p>Creating an associative array in PHP is simple and straightforward. Here is an example of how to create an associative array in PHP:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$fruits = array("apple"=>"red", "banana"=>"yellow", "grapes"=>"green");</code></pre>
+                                            </div><br>
+                                            <p>In this example, the keys of the array are "apple", "banana", and "grapes", and the values are "red", "yellow", and "green" respectively.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Accessing Values in an Associative Arrays</h3><br>
+                                            <p>Accessing values in an associative array is easy and can be done using the key of the array. Here is an example of how to access values in an associative array:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>echo $fruits["apple"];</code></pre>
+                                            </div><br>
+                                            <p>This will output "red".</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Modifying Values in an Associative Array</h3><br>
+                                            <p>Modifying values in an associative array is easy. To change a value in an associative array, simply use the key to access the value and then reassign it to a new value. Here is an example of how to modify values in an associative array:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$fruits["apple"] = "green";</code></pre>
+                                            </div><br>
+                                            <p>In this example, the value for "apple" has been changed from "red" to "green".</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Multidimensional Arrays</h3><br>
+                                            <p>PHP is a powerful scripting language that provides a rich set of functions to handle arrays and other data structures. One of the key strengths of PHP is the ability to work with multi-dimensional arrays, which are arrays that contain arrays within them. In this article, we will delve into the basics of PHP multidimensional arrays, including how to create and manipulate them.</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">What are Multidimensional Arrays in PHP?</h3><br>
+                                            <p>Multidimensional arrays are arrays that contain more than one dimension, allowing for complex data structures. These arrays can be thought of as a table, with each row representing a different element in the array. Each row can contain multiple columns, with each column representing a different attribute of the element.</p><br>
+                                            <p>For example, consider an array that represents a set of employees in a company. Each row in the array would represent a different employee, with columns representing the employee's name, job title, salary, and other information. This array would be considered a two-dimensional array, as it contains two dimensions: rows and columns.</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Creating Multidimensional Arrays in PHP</h3><br>
+                                            <p>There are several ways to create multidimensional arrays in PHP. The most common method is to use nested arrays, where an array is used as an element within another array. The syntax for creating a multidimensional array in PHP is as follows:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$array = array(<br>  array("value1", "value2", "value3"),<br>  array("value4", "value5", "value6"),<br>  array("value7", "value8", "value9")<br>);</code></pre>
+                                            </div><br>
+                                            <p>This code creates a two-dimensional array, where each row is represented by an inner array.</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Accessing Elements in a Multidimensional Array</h3><br>
+                                            <p>Accessing elements in a multidimensional array in PHP is similar to accessing elements in a single-dimensional array. The syntax for accessing elements in a multidimensional array is as follows:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$array[row][column]</code></pre>
+                                            </div><br>
+                                            <p>For example, to access the value in the second row and third column of the array created above, we would use the following code:</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>echo $array[1][2]; // Outputs "value6"</code></pre>
+                                            </div><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">Manipulating Multidimensional Arrays</h3><br>
+                                            <p>In addition to accessing elements in a multidimensional array, PHP also provides several functions for manipulating these arrays. For example, the array_push() function can be used to add elements to the end of an array, while the array_pop() function can be used to remove elements from the end of an array.</p><br>
+                                            <p>Another useful function is array_map(), which allows you to apply a function to each element of an array. This function can be useful for transforming data within a multidimensional array.</p><br>
+                                            <div class="code-block">
+                                            <pre id="dataExample"><code>$new_array = array_map(function($row) {<br>  return array_map("strtoupper", $row);<br>}, $array);</code></pre>
+                                            </div><br>
+                                            <p>This code uses array_map() to apply the strtoupper() function to each element of each row in the $array variable. The result is a new array where all values are in uppercase.</p><br>
+                                            <h3 style=" font-size: 1.4em; font-weight: bold; margin: 0.5em 0">PHP Array Sorting</h3><br>
+                                            <p>In PHP, an array is a collection of elements that are stored and accessed using an index or a key. Arrays are a fundamental data structure in PHP, and they are widely used in programming. PHP provides several built-in functions to work with arrays, including sorting functions. Sorting is the process of arranging the elements in an array in a particular order.</p><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding PHP Array Sorting</h3><br>
+                                            <p>PHP provides several sorting functions that can be used to sort arrays. The most commonly used sorting functions in PHP are sort(), rsort(), asort(), arsort(), ksort(), krsort(), natsort(), natcasesort(), and usort(). Each of these functions sorts an array in a different way. Let's take a closer look at some of the most commonly used sorting functions.</p><br>
+                                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Sorting Arrays in Ascending Order</h3><br>
+                                            <p>The sort() function is used to sort an array in ascending order. The sort() function sorts the elements of an array in alphabetical or ascending order. If the array contains numbers, the sort() function will sort them in numerical order.</p><br>
+                                            <img src="/images/sort1.png" width="auto" height="auto"><br>
+                                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Sorting Arrays in Descending Order</h3><br>
+                                            <p>The rsort() function is used to sort an array in descending order. The rsort() function sorts the elements of an array in reverse alphabetical or descending order. If the array contains numbers, the rsort() function will sort them in reverse numerical order.</p><br>
+                                            <img src="/images/sort2.png" width="auto" height="auto"><br>
+                                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Sorting Associative Arrays by Value</h3><br>
+                                            <p>The asort() function is used to sort an associative array by value. An associative array is an array that uses keys to access its elements. The asort() function sorts the values of an associative array in ascending order, while maintaining the association between keys and values.</p><br>
+                                            <img src="/images/sort3.png" width="auto" height="auto"><br>
+                                            <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Sorting Associative Arrays by Key</h3><br>
+                                            <p>The ksort() function is used to sort an associative array by key. The ksort() function sorts the keys of an associative array in ascending order, while maintaining the association between keys and values.</p><br>
+                                            <img src="/images/sort4.png" width="auto" height="auto"><br>
+                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                            <p>Arrays in PHP—whether indexed, associative, or multidimensional—form the backbone of handling collections of data. Indexed arrays allow simple storage and retrieval using numeric indices, associative arrays provide flexibility through key-value pairs, and multidimensional arrays enable the organization of complex structures. Combined with PHP's built-in sorting functions, developers can efficiently manipulate and order data to suit dynamic web applications. Mastering these array types and operations is essential for building interactive, scalable, and well structured PHP projects.</p><br>
+                                            `,
+                                            quiz: {
+                                              question: "Which of the following statements about PHP arrays are correct?",
+                                              options: [
+                                                "Indexed arrays use numeric indices to store and access values.",
+                                                "Associative arrays use named keys instead of numeric indices.",
+                                                "Multidimensional arrays allow arrays to be nested inside other arrays.",
+                                                "PHP arrays cannot be sorted using built-in functions.",
+                                                "Sorting functions in PHP can order arrays by value or by key.",
+                                              ],
+                                              correctAnswers: [0,1,2,4]
+                                            },
+                                          };
+                                          case 'PHP Callback Functions':
+                                            return{
+                                              theory:`
+                                              <p>PHP is a popular server-side scripting language that has been around for decades. One of its useful features is the ability to use callback functions. In this article, we will explain what a PHP callback function is and how to use it effectively.</p><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Callback Functions?</h3><br>
+                                              <p>A PHP callback function is a function that is passed as an argument to another function. It can be either a named function or an anonymous function (also known as a closure). When the parent function is executed, it will call the callback function. This allows for a high level of flexibility in PHP programming.</p><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why Use PHP Callback Functions?</h3><br>
+                                              <p>There are several reasons to use PHP callback functions. First, they allow for code reusability. If you have a common task that needs to be performed multiple times, you can create a callback function and reuse it in different parts of your code.</p><br>
+                                              <p>Second, callback functions can be used to simplify complex code. For example, if you have a large piece of code that needs to be executed under specific conditions, you can create a callback function to wrap that code and pass it to the parent function. This makes your code more readable and easier to maintain.</p><br>
+                                              <p>Finally, PHP callback functions can be used to create event-driven programs. For example, you can attach a callback function to a specific event, such as a button click or a form submission. When the event occurs, the callback function will be executed.</p><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use PHP Callback Functions</h3><br>
+                                              <p>Using PHP callback functions is straightforward. You simply pass the name of the function or the anonymous function as an argument to the parent function. Here is an example of how to use a named function as a callback:</p><br>
+                                              <div class="code-block">
+                                              <pre id="dataExample"><code>&lt;?php<br><br>function myCallbackFunction() {<br> echo "The callback function has been executed.";<br>}<br><br>function parentFunction($callback) {<br> call_user_func($callback);<br>}<br><br>parentFunction('myCallbackFunction');<br><br>?&gt;</code></pre>
+                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                              </div><br>
+                                              <p>In the example above, the myCallbackFunction is passed as an argument to the parentFunction. When the parentFunction is executed, it calls call_user_func and passes the myCallbackFunction as an argument. As a result, the myCallbackFunction is executed and outputs the message "The callback function has been executed."</p><br>
+                                              <p>Here is an example of how to use an anonymous function as a callback:</p><br>
+                                              <div class="code-block">
+                                              <pre id="dataExample"><code>&lt;?php<br><br>function parentFunction($callback) {<br> call_user_func($callback);<br>}<br><br>$myCallbackFunction = function() {<br>  echo "The anonymous callback function has been executed.";<br>};<br><br>parentFunction($myCallbackFunction);<br><br>?&gt;</code></pre>
+                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                              </div><br>
+                                              <p>In this example, the anonymous function is assigned to the variable $myCallbackFunction. This variable can then be passed as an argument to the parentFunction, just like the named function in the previous example.</p><br>
+                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                              <p>In conclusion, PHP callback functions are a powerful tool for PHP programming. They allow for code reusability, simplify complex code, and enable event-driven programming. By understanding how to use PHP callback functions, you can take your PHP skills to the next level.</p><br>
+                                              `,
+                                              quiz: {
+                                                question: "What are PHP Callback Functions?",
+                                                options: [
+                                                  "PHP Callback Functions are the functions that allow developers to pass another function as an argument.",
+                                                  "PHP Callback Functions refer to the final product of a PHP code.",
+                                                  "PHP Callback Functions can't accept other functions as parameters.",
+                                                  "PHP Callback Functions can be denoted by the string and an array that includes the class or object and the method right inside it.",
+                                                ],
+                                                correctAnswers: [0, 3]
+                                              },
+                                            };
+                                            case '$GLOBALS':
+                                              return{
+                                                theory:`
+                                                <p>PHP is a popular server-side scripting language used for web development. It provides a number of superglobals, which are built-in variables that are always accessible in all scopes of a PHP script. One of these superglobals is the $_GLOBALS variable, which contains a reference to all global variables defined in a PHP script.</p><br>
+                                                <p>In this article, we will dive deeper into the $_GLOBALS variable and its uses in PHP programming.</p><br>
+                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Superglobals?</h3><br>
+                                                <p>Superglobals in PHP are special variables that are available in all scopes of a PHP script. This means that they can be accessed from any function, class, or file, without having to declare them as global variables.</p><br>
+                                                <p>The following are the superglobals in PHP:</p><br>
+                                                <ul style="list-style-type: disc; padding-left: 30px;">
+                                                <li>$_GET: contains data passed to the script via the URL query string.</li><br>
+                                                <li>$_POST: contains data passed to the script via a form submission.</li><br>
+                                                <li>$_COOKIE: contains data passed to the script via cookies.</li><br>
+                                                <li>$_SESSION: contains data stored in a user's session.</li><br>
+                                                <li>$_REQUEST: contains data passed to the script via the URL query string, form submission, or cookies.</li><br>
+                                                <li>$_SERVER: contains information about the server and environment.</li><br>
+                                                <li>$_ENV: contains information about the environment.</li><br>
+                                                <li>$_GLOBALS: contains a reference to all global variables defined in a PHP script.</li><br>
+                                                </ul><br>
+                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is the $_GLOBALS Variable in PHP?</h3><br>
+                                                <p>The $_GLOBALS variable is a superglobal that contains a reference to all global variables defined in a PHP script. This means that, with the $_GLOBALS variable, you can access any global variable from anywhere in your script.</p><br>
+                                                <p>Here's an example of how the $_GLOBALS variable can be used to access a global variable:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>&lt;?php<br><br>$x = 10;<br>$y = 20;<br><br>function add() {<br> global $x, $y;<br> return $x + $y;<br>}<br><br>echo add(); // 30<br><br>echo $GLOBALS['x']; // 10<br>echo $GLOBALS['y']; // 20<br><br>?&gt;</code></pre>
+                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                </div><br>
+                                                <p>In this example, the add() function uses the global keyword to access the $x and $y variables. However, instead of using the global keyword, you can also access these variables through the $_GLOBALS variable.</p><br>
+                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use the $_GLOBALS Variable in PHP</h3><br>
+                                                <p>The $_GLOBALS variable is a powerful tool in PHP programming that can be used to access global variables from any part of your script. Here are a few ways to use the $_GLOBALS variable:</p><br>
+                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Accessing Global Variables</h3><br>
+                                                <p>As we saw in the previous example, you can use the $_GLOBALS variable to access any global variable defined in your script. Here's another example:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>&lt;?php$name = "John Doe";<br><br>function greeting() {<br> global $name;<br> echo "Hello, " . $name;<br>}<br><br>greeting(); // Hello, John Doe<br><br>echo $GLOBALS['name']; // John Doe<br><br>?&gt;</code></pre>
+                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                </div><br>
+                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Modifying Global Variables</h3><br>
+                                                <p>The $_GLOBALS variable can also be used to modify global variables. This can be useful if you need to make changes to a global variable from within a function or class.</p><br>
+                                                <p>Here's an example:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>&lt;?php<br><br>$counter = 0;<br><br>function increment() {<br> global $counter;<br> $counter++;<br>}<br><br>increment();<br>echo $counter; // 1<br><br>echo "&#92;n";<br><br>$GLOBALS['counter'] = 10;<br>echo $counter; // 10<br><br>?&gt;</code></pre>
+                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                </div><br>
+                                                <p>In this example, the increment() function increments the value of the $counter variable. However, you can also modify the value of the $counter variable directly through the $_GLOBALS variable.</p><br>
+                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Pass Variables between Functions and Classes</h3><br>
+                                                <p>The $_GLOBALS variable can also be used to pass variables between functions and classes. This can be useful if you need to share data between different parts of your script.</p><br>
+                                                <p>Here's an example:</p><br>
+                                                <div class="code-block">
+                                                <pre id="dataExample"><code>&lt;?php<br><br>$data = array("name" => "John Doe", "age" => 30);<br><br>function display_data() {<br> global $data;<br> print_r($data);<br>}<br><br>class User {<br> function show_data() {<br>  global $data;<br>  print_r($data);<br> }<br>}<br><br>display_data(); // Array ( [name] => John Doe [age] => 30 )<br><br>$user = new User();<br>$user->show_data(); // Array ( [name] => John Doe [age] => 30 )<br><br>$GLOBALS['data']['email'] = "johndoe@example.com";<br><br>display_data(); // Array ( [name] => John Doe [age] => 30 [email] => johndoe@example.com )<br>$user->show_data(); // Array ( [name] => John Doe [age] => 30 [email] => johndoe@example.com )<br><br>?&gt;</code></pre>
+                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                </div><br>
+                                                <p>In this example, the display_data() function and the User class both access the $data variable through the $_GLOBALS variable. This allows you to pass the $data variable between the different parts of your script.</p><br>
+                                                <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                <p>The $_GLOBALS variable is a powerful tool in PHP programming that provides access to all global variables defined in a PHP script. Whether you're accessing, modifying, or passing variables between functions and classes, the $_GLOBALS variable is a versatile tool that can help you write better PHP code.</p><br>
+                                                `,
+                                                quiz: {
+                                                  question: "In PHP, what are the types of variables available in a global scope?",
+                                                  options: [
+                                                    "Global Variable.",
+                                                    "Local Variable.",
+                                                    "Super Global Variable.",
+                                                    "Static Variable.",
+                                                  ],
+                                                  correctAnswers: [0, 2]
+                                                },
+                                              };
+                                              case '$_SERVER':
+                                                return{
+                                                  theory:`
+                                                  <p>PHP is a popular server-side scripting language used for web development. One of its unique features is the use of superglobals, which are special variables that are always accessible, regardless of scope. In this article, we will dive into one of these superglobals, the $_SERVER variable, and explore its properties and uses.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is the $_SERVER Variable?</h3><br>
+                                                  <p>The $_SERVER variable is an array that contains information about the server and environment in which the current script is being executed. It includes information such as headers, paths, and script locations, as well as system environment variables. The following are some of the commonly used properties of the $_SERVER variable:</p><br>
+                                                  <ul style="list-style-type: disc: padding-left: 30px;">
+                                                  <li>$_SERVER['HTTP_HOST']: returns the hostname and port number of the server.</li><br>
+                                                  <li>$_SERVER['REQUEST_URI']: returns the requested URL.</li><br>
+                                                  <li>$_SERVER['QUERY_STRING']: returns the query string part of the URL.</li><br>
+                                                  <li>$_SERVER['HTTP_REFERER']: returns the URL of the page that referred the current script.</li><br>
+                                                  </ul><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using $_SERVER for URL Redirection</h3><br>
+                                                  <p>One common use of the $_SERVER variable is for URL redirection. For example, you can use the following code to redirect the user to a different page:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>&lt;?php<br>header('Location: https://www.example.com/');<br>exit;</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <p>In this example, the header function is used to send a raw HTTP header to the browser, telling it to redirect to the specified URL. The exit statement is then used to halt the execution of the script, preventing any further output from being sent to the browser.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">$_SERVER for Error Handling</h3><br>
+                                                  <p>Another use of the $_SERVER variable is for error handling. For example, you can use the following code to display a custom error page for 404 errors:</p><br>
+                                                  <div class="code-block">
+                                                  <pre id="dataExample"><code>&lt;?php<br>if (http_response_code() == 404) {<br> header('Location: https://www.example.com/404.html');<br> exit;<br>}</code></pre>
+                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                  </div><br>
+                                                  <p>In this example, the http_response_code function is used to retrieve the current HTTP response code. If the code is 404 (page not found), the user is redirected to the custom error page.</p><br>
+                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                  <p>In conclusion, the $_SERVER variable is a powerful tool for web developers, allowing them to access important information about the server and environment in which their scripts are being executed. Whether you're using it for URL redirection, error handling, or other purposes, understanding and utilizing the properties of the $_SERVER variable can greatly improve the functionality and reliability of your PHP scripts.</p><br>
+                                                  `,
+                                                  quiz: {
+                                                    question: "What information can PHP $_SERVER superglobal variable provide?",
+                                                    options: [
+                                                      "Name of the script that is being executed",
+                                                      "Web page's URL",
+                                                      "IP address of the server",
+                                                      "Client's browser name",
+                                                      "Host header from the HTTP request",
+                                                    ],
+                                                    correctAnswers: [0, 1, 4]
+                                                  },
+                                                };
+                                                case '$_REQUEST':
+                                                  return{
+                                                    theory:`
+                                                    <p>The PHP language has many built-in variables, called superglobals, that provide a convenient way to access data from various sources in your scripts. One of the most commonly used superglobals is the $_REQUEST variable, which combines the values of the $_GET, $_POST, and $_COOKIE variables into a single array.</p><br>
+                                                    <p>In this article, we will delve deeper into the $_REQUEST variable, exploring its properties, use cases, and best practices for working with it in your PHP scripts.</p><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is the $_REQUEST Variable?</h3><br>
+                                                    <p>The $_REQUEST variable is a PHP superglobal that contains data submitted to the server through various means, such as GET and POST requests, or cookies. It combines the data from the $_GET, $_POST, and $_COOKIE variables into a single array, making it an easy and convenient way to access all the data sent to the server from the client.</p><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">When to Use the $_REQUEST Variable</h3><br>
+                                                    <p>The $_REQUEST variable is useful when you want to access data submitted by the client, regardless of the method used. For example, if you want to process a form submitted by the user, you can use the $_REQUEST variable to access the values submitted in the form, without having to know whether the form was submitted using the GET or POST method.</p><br>
+                                                    <p>Additionally, if you want to access data stored in a cookie, you can use the $_REQUEST variable to retrieve the data, without having to worry about the specifics of the $_COOKIE variable.</p><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Access Data in the $_REQUEST Variable</h3><br>
+                                                    <p>To access the data in the $_REQUEST variable, you simply use the array notation, providing the key that corresponds to the value you want to retrieve. For example, if you have a form with a text field named "username", you can access the value submitted in the field as follows:</p><br>
+                                                    <div class="code-block">
+                                                    <pre id="dataExample"><code>$username = $_REQUEST['username'];</code></pre>
+                                                    </div><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Working with the $_REQUEST Variable</h3><br>
+                                                    <p>When working with the $_REQUEST variable, it's important to follow some best practices to ensure that your scripts are secure and reliable. Some of the best practices for working with the $_REQUEST variable include:</p><br>
+                                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                                    <li>Validate the data received from the client, to ensure that it is safe to use in your scripts. This can be done using various methods, such as checking for valid input formats, or sanitizing the data to remove any malicious code.</li><br>
+                                                    <li>Use the appropriate method for accessing the data, depending on your needs. For example, if you are accessing data submitted through a form, use the $_POST variable, instead of the $_REQUEST variable, to ensure that the data is being transmitted securely.</li><br>
+                                                    <li>Avoid using the $_REQUEST variable when accessing sensitive data, such as passwords or other confidential information, to prevent security risks.</li><br>
+                                                    </ul><br>
+                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                    <p>The $_REQUEST variable is a powerful and versatile PHP superglobal that makes it easy to access data submitted by the client. By understanding its properties, use cases, and best practices, you can make the most of this variable in your PHP scripts. Whether you're building a web form, processing user data, or working with cookies, the $_REQUEST variable is an essential tool for PHP developers.</p><br>
+                                                    `,
+                                                    quiz:{
+                                                      question: "What are the global arrays provided in PHP to deal with data passed via HTTP requests?",
+                                                      options: [
+                                                        "$_GET",
+                                                        "$_POST",
+                                                        "$_REQUEST",
+                                                        "$_SESSION",
+                                                        "$_COOKIE",
+                                                      ],
+                                                      correctAnswers: [0,1,2]
+                                                    },
+                                                  };
+                                                  case '$_POST':
+                                                    return {
+                                                      theory:`
+                                                      <p>PHP superglobals are special variables that are available in all scopes of a PHP script. They provide access to important information such as user input, server information, and environment variables. One of the most commonly used superglobals is $_POST.</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is $_POST?</h3><br>
+                                                      <p>$_POST is a superglobal variable that is used to collect form data after submitting an HTML form. When a form is submitted, the data is sent to the server in the form of key-value pairs, where the keys represent the names of the form elements and the values represent the input provided by the user. The $_POST variable collects this data and makes it available for further processing in PHP.</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use $_POST</h3><br>
+                                                      <p>Using $_POST is relatively simple. You simply need to access the key-value pairs within the $_POST array. For example, if you have a form with a field named "username", you can access the value entered by the user as follows:</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>$username = $_POST['username'];</code></pre>
+                                                      </div><br>
+                                                      <p>It is important to note that the $_POST variable is only available after the form has been submitted. Before the form has been submitted, $_POST will be an empty array.</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Security Considerations</h3><br>
+                                                      <p>When using $_POST, it is important to take security into consideration. User input should never be trusted and should always be validated and sanitized before it is used. This can help to prevent security vulnerabilities such as SQL injection and cross-site scripting (XSS).</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Example: Creating a Contact Form</h3><br>
+                                                      <p>Here is an example of how you can use $_POST to create a simple contact form.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>&lt;form action="contact.php" method="post"&gt; &lt;label for="name">Name:&lt;/label&gt;<br> &lt;input type="text" id="name" name="name"&gt;<br><br> &lt;label for="email"&gt;Email:&lt;/label&gt;<br><br> &lt;input type="email" id="email" name="email"&gt;<br><br> &lt;label for="message"&gt;Message:&lt;/label&gt;<br> &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;<br><br> &lt;input type="submit" value="Submit"><br>&lt;/form&gt;</code></pre>
+                                                      </div><br>
+                                                      <p>In this example, the form is submitted to the contact.php script using the POST method. The form elements have unique name attributes, which will be used as the keys in the $_POST array.</p><br>
+                                                      <div class="code-block">
+                                                      <pre id="dataExample"><code>&lt;?php<br>if ($_SERVER['REQUEST_METHOD'] == 'POST') {<br> $name = $_POST['name'];<br> $email = $_POST['email'];<br> $message = $_POST['message'];<br><br> // Validate and sanitize data here<br><br> // Send email<br>}<br>?&gt;</code></pre>
+                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                      </div><br>
+                                                      <p>In this example, the form data is collected from the $_POST array and stored in separate variables. It is then validated and sanitized before it is used. This is just a simple example, but it demonstrates the basic usage of $_POST in PHP.</p><br>
+                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                      <p>$_POST is a powerful tool for collecting form data in PHP. When used correctly, it can greatly simplify the process of handling form submissions. However, it is important to take security considerations into account and to validate and sanitize user input before using it.</p><br>
+                                                      `,
+                                                      quiz: {
+                                                        question: "What is the 'POST' method in PHP used for?",
+                                                        options: [
+                                                          "Sending data to the server in the HTTP header of the request.",
+                                                          "Receiving data from the server.",
+                                                          "Sending data to the server in the URL of the request.",
+                                                          "Displaying data on the client-side.",
+                                                          "Fetching data from a database.",
+                                                        ],
+                                                        correctAnswers: [0]
+                                                      },
+                                                    };
+                                                    case '$_GET':
+                                                      return {
+                                                        theory:`
+                                                        <p>PHP provides several superglobals that make it easy for developers to access information from different sources in a simple and unified way. One of these superglobals is $_GET, which is used to retrieve data sent in the URL. In this article, we will dive into the details of $_GET and how it can be used effectively in PHP development.</p><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is $_GET?</h3><br>
+                                                        <p>$_GET is a PHP superglobal that holds an associative array of variables passed to the current script via the URL. These variables can be passed from a form or any other means of sending data to the server, such as a link, for example. The $_GET array provides a convenient way for developers to access this information without having to manually parse the URL.</p><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How does $_GET work?</h3><br>
+                                                        <p>The $_GET superglobal works by appending variables and their values to the URL as query parameters. For example, if you want to pass the value "hello" for the variable "greeting", the URL would look like this:</p><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>http://example.com/script.php?greeting=hello</code></pre>
+                                                        </div><br>
+                                                        <p>When the script is executed, the $_GET array will contain the following data:</p><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>$_GET = array("greeting" => "hello");</code></pre>
+                                                        </div><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to use $_GET in PHP</h3><br>
+                                                        <p>Using $_GET in PHP is straightforward. You simply need to access the values in the $_GET array, using the name of the variable as the key. For example:</p><br>
+                                                        <div class="code-block">
+                                                        <pre id="dataExample"><code>$greeting = $_GET["greeting"];<br>echo $greeting; // outputs "hello"</code></pre>
+                                                        </div><br>
+                                                        <p>It's important to keep in mind that the values in $_GET can come from an external source, so it's always a good practice to validate and sanitize the data before using it. This can be done using the filter_input or filter_var functions, for example.</p><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Examples of $_GET usage</h3><br>
+                                                        <p>$_GET can be used in a variety of ways to pass data between pages, retrieve information from forms, and more. Here are a few examples:</p><br>
+                                                        <ul style="list-style-type: disc; padding-left: 30px;">
+                                                        <li>Creating search results pages: You can pass the search query as a parameter in the URL, allowing users to easily share the results or return to them later.</li><br>
+                                                        <li>Creating dynamic pages: You can pass parameters in the URL to control the content displayed on a page, such as a product ID to display the details of a specific product.</li><br>
+                                                        <li>Retrieving form data: You can use $_GET to retrieve data submitted via a form using the GET method.</li><br>
+                                                        </ul><br>
+                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                        <p>In conclusion, $_GET is a powerful tool in the PHP developer's arsenal, providing a simple and unified way to access data passed in the URL. Whether you're creating dynamic pages, retrieving form data, or anything in between, $_GET can help you get the job done quickly and efficiently. So next time you're working on a PHP project, don't forget to utilize this handy superglobal!</p><br>
+                                                        `,
+                                                        quiz: {
+                                                          question: "Which of the following statements are true about PHP GET method?",
+                                                          options: [
+                                                            "The GET method is used to retrieve data from the server.",
+                                                            "In the GET method, data is not visible in the URL.",
+                                                            "The GET method is suitable for sending large amount of data.",
+                                                            "GET is less secure compared to POST because user sent data is visible in the URL.",
+                                                            "The PHP $_GET function collects form data after submitting an HTML form with method=\"get\".",
+                                                          ],
+                                                          correctAnswers: [0, 3, 4]
+                                                        },
+                                                      };
+                                                      case 'PHP RegEx':
+                                                        return{
+                                                          theory:`
+                                                          <p>PHP is a powerful server-side scripting language that allows developers to create dynamic and interactive web pages. One of its most useful features is its support for regular expressions, which provide a way to match patterns in strings.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Regular Expressions</h3><br>
+                                                          <p>Regular expressions are sequences of characters that define a search pattern. They are used to match and manipulate strings, and can be a powerful tool for validating user input, searching through text, and more.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How Regular Expressions Work in PHP</h3><br>
+                                                          <p>In PHP, regular expressions are supported through the use of the preg_ family of functions. These functions allow you to perform various operations with regular expressions, including searching, replacing, and splitting strings.</p><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The Basics of PHP Regular Expressions</h3><br>
+                                                          <p>The basic syntax of a PHP regular expression is as follows:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>/pattern/modifiers</code></pre>
+                                                          </div><br>
+                                                          <p>Where pattern is the sequence of characters to match, and modifiers are optional letters that alter the behavior of the regular expression. Some of the most commonly used modifiers in PHP include:</p><br>
+                                                          <ul style="list-style-type: disc; padding-left: 30px;">
+                                                          <li>i: Makes the regular expression case-insensitive</li><br>
+                                                          <li>m: Treats the string as multiple lines</li><br>
+                                                          <li>s: Treats the string as a single line</li><br>
+                                                          <li>u: Treats the string as UTF-8 encoded</li><br>
+                                                          </ul><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using PHP Regular Expressions to Validate User Input</h3><br>
+                                                          <p>One of the most common uses of regular expressions in PHP is to validate user input. For example, you can use a regular expression to ensure that a user-entered email address is in the correct format. The following code demonstrates how this can be done:</p><br>
+                                                          <div class="code-block">
+                                                          <pre id="dataExample"><code>&lt;?php<br><br>$email = "user@example.com";<br>if (preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email)) {<br>  echo "Valid email address";<br>} else {<br>  echo "Invalid email address";<br>}<br><br>?&gt;</code></pre>
+                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                          </div><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced Techniques for PHP Regular Expressions</h3><br>
+                                                          <p>While the basics of PHP regular expressions are straightforward, there are many advanced techniques that you can use to take your skills to the next level. These include:</p><br>
+                                                          <ul style="list-style-type: disc; padding-left: 30px;">
+                                                          <li>Using capturing groups to extract specific parts of a match</li><br>
+                                                          <li>Using non-capturing groups to group patterns together</li><br>
+                                                          <li>Using lookahead and lookbehind assertions to match patterns based on what comes before or after them</li><br>
+                                                          <li>Using alternation to match multiple patterns</li><br>
+                                                          <li>Using quantifiers to match a specific number of repetitions of a pattern</li><br>
+                                                          </ul><br>
+                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                          <p>PHP regular expressions are a powerful tool that can help you achieve a wide range of tasks. Whether you're validating user input, searching through text, or performing complex string manipulations, regular expressions are an essential part of the PHP developer's toolkit.</p><br>
+                                                          `,
+                                                          quiz: {
+                                                            question: "What is the main purpose of PHP regex?",
+                                                            options: [
+                                                              "To manipulate strings based on particular patterns",
+                                                              "To perform mathematical calculations",
+                                                              "To validate form data on a website",
+                                                              "To create new variables in PHP",
+                                                            ],
+                                                            correctAnswers: [0, 2]
+                                                          },
+                                                        };
+                                                        case 'PHP JSON':
+                                                          return {
+                                                            theory:`
+                                                            <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format that is widely used for exchanging data between web applications. In PHP, it is widely used to store and retrieve data from databases and web services. This article provides a comprehensive guide to working with JSON in PHP, from encoding and decoding to creating and parsing.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Introduction to JSON</h3><br>
+                                                            <p>JSON is a text-based data format that is used for exchanging data between applications. It is lightweight, easy to read, and easy to parse. JSON data is represented as key-value pairs, where the keys are strings and the values can be of different data types such as strings, numbers, arrays, and objects.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Encoding JSON in PHP</h3><br>
+                                                            <p>Encoding JSON in PHP involves converting data structures into a JSON string. This is done using the json_encode function. The function takes in a PHP data structure, such as an array or object, and returns a JSON string.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>&lt;?php<br><br>$array = array("name" => "John", "age" => 30, "city" => "New York");<br>$json = json_encode($array);<br><br>echo $json;<br>?&gt;</code></pre>
+                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                            </div><br>
+                                                            <p>In the above example, the $array variable is an associative array. The json_encode function is used to convert the array into a JSON string, which is stored in the $json variable.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Decoding JSON in PHP</h3><br>
+                                                            <p>Decoding JSON in PHP involves converting a JSON string into a PHP data structure. This is done using the json_decode function. The function takes in a JSON string and returns a PHP data structure, such as an array or object.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>&lt;?php<br><br>$json = '{"name":"John","age":30,"city":"New York"}';<br>$array = json_decode($json, true);<br><br>print_r($array);<br><br>?&gt;</code></pre>
+                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                            </div><br>
+                                                            <p>In the above example, the $json variable contains a JSON string. The json_decode function is used to convert the JSON string into a PHP associative array, which is stored in the $array variable.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating JSON in PHP</h3><br>
+                                                            <p>JSON can be created in PHP using the json_encode function, as discussed in the previous section. However, if you need to create a more complex JSON structure, you can use the stdClass object. The stdClass object allows you to create a dynamic object with properties and values, which can then be converted into a JSON string using the json_encode function.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>&lt;?php<br><br>$obj = new stdClass();<br>$obj->name = "John";<br>$obj->age = 30;<br>$obj->city = "New York";<br>$json = json_encode($obj);<br><br>echo $json;<br>?&gt;</code></pre>
+                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                            </div><br>
+                                                            <p>In the above example, the stdClass object is used to create a dynamic object with properties and values. The json_encode function is then used to convert the object into a JSON string, which is stored in the $json variable.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Parsing JSON in PHP</h3><br>
+                                                            <p>Parsing JSON in PHP involves accessing the properties and values of a JSON object. This can be done using the json_decode function, as discussed in the previous section. Once the JSON string has been converted into a PHP data structure, you can access the properties and values using standard array or object notation.</p><br>
+                                                            <div class="code-block">
+                                                            <pre id="dataExample"><code>&lt;?php<br><br>$json = '{"name":"John","age":30,"city":"New York"}';<br>$obj = json_decode($json);<br>echo $obj->name; // outputs "John"<br>echo $obj->age; // outputs 30<br>echo $obj->city; // outputs "New York"<br><br>?&gt;</code></pre>
+                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                            </div><br>
+                                                            <p>In the above example, the &#96;json_decode&#96; function is used to convert the JSON string into a PHP object. The properties and values of the object can then be accessed using object notation.</p><br>
+                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                            <p>JSON is a popular data-interchange format that is widely used in web applications. In PHP, it is easy to encode, decode, create, and parse JSON data. Whether you need to store data in a database, retrieve data from a web service, or exchange data between applications, JSON is a versatile and flexible format that can be used to meet your needs. With this comprehensive guide, you now have the knowledge and tools to work with JSON in PHP.</p><br>
+                                                            <p>The json_decode function in PHP is an essential tool for developers who work with JSON (JavaScript Object Notation) data. This function converts a JSON-formatted string into a PHP variable, making it easier to manipulate and extract information from JSON data. In this article, we will dive into the details of json_decode and show you how to use it effectively in your PHP applications.</p><br>
+                                                            `,
+                                                            quiz: {
+                                                              question: "What functions does PHP provide for handling JSON data?",
+                                                              options: [
+                                                                "json_encode()",
+                                                                "json_last_error()",
+                                                                "json_strip()",
+                                                                "json_decode()",
+                                                                "json_filter()",
+                                                              ],
+                                                              correctAnswers: [0, 1, 3]
+                                                            },
+                                                          };
+                                                          case 'PHP Exceptions':
+                                                            return{
+                                                              theory:`
+                                                              <p>In PHP programming, exceptions are used to handle unexpected errors and runtime problems. The purpose of using exceptions is to handle these problems in an organized and efficient way. In this article, we will discuss the basics of PHP exceptions and how to use them effectively.</p><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Exceptions?</h3><br>
+                                                              <p>PHP exceptions are events that occur during the execution of a program, which disrupt the normal flow of the program. These exceptions are thrown when an error occurs and must be caught and handled properly to prevent the program from crashing.</p><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Throw an Exception in PHP</h3><br>
+                                                              <p>Throwing an exception in PHP is simple and straightforward. The throw keyword is used to throw an exception, followed by a new instance of the exception class. The basic syntax for throwing an exception is as follows:</p><br>
+                                                              <div class="code-block">
+                                                              <pre id="dataExample"><code>&lt;?php<br><br>try {<br>  // code that might throw an exception<br>  throw new Exception('An error has occurred.');<br>} catch (Exception $e) {<br>  // code to handle the exception<br>  echo 'Error: ' . $e->getMessage();<br><br>}<br><br>?&gt;</code></pre>
+                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                              </div><br>
+                                                              <p>In the above example, the code within the try block is executed. If an exception is thrown, the code within the catch block is executed, and the exception is caught.</p><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Exception Handling in PHP</h3><br>
+                                                              <p>Exception handling in PHP is achieved using the try and catch keywords. The try keyword is used to encapsulate the code that might throw an exception, while the catch keyword is used to catch the exception. The basic syntax for handling exceptions in PHP is as follows:</p><br>
+                                                              <div class="code-block">
+                                                              <pre id="dataExample"><code>try {<br>  // code that might throw an exception<br>} catch (Exception $e) {<br>  // code to handle the exception<br>  echo 'Error: ' . $e->getMessage();<br>}</code></pre>
+                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                              </div><br>
+                                                              <p>In the above example, the code within the try block is executed. If an exception is thrown, the code within the catch block is executed, and the exception is caught.</p><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using Custom Exception Classes in PHP</h3><br>
+                                                              <p>In addition to the standard Exception class, you can create your own custom exception classes in PHP. Custom exception classes are used to create exceptions with additional information, such as error codes and additional data. The basic syntax for creating a custom exception class is as follows:</p><br>
+                                                              <p>In the above example, the CustomException class extends the standard Exception class and adds additional information, such as error codes and additional data.</p><br>
+                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                              <p>In conclusion, PHP exceptions are a powerful tool for handling unexpected errors and runtime problems in a structured and efficient manner. By using the try, catch, and throw keywords, you can easily handle exceptions and ensure that your programs run smoothly and without interruption. If you want to improve your PHP programming skills and learn more about exceptions.</p><br>
+                                                              `,
+                                                              quiz: {
+                                                                question: "What is true about PHP Exceptions according to the information on the provided URL?",
+                                                                options: [
+                                                                  "An exception can be thrown, and caught within PHP",
+                                                                  "In PHP, Exceptions cannot be handled by a try/catch/finally block",
+                                                                  "The Exception class has user-friendly methods such as getMessage()",
+                                                                  "You cannot create a custom exception class in PHP",
+                                                                  "The getCode() method can be used to get the exception code",
+                                                                  "In PHP, Exceptions always halt script execution",
+                                                                ],
+                                                                correctAnswers: [0, 2, 4]
+                                                              },
+                                                            };
+                                                            case 'PHP Form Handling':
+                                                              return {
+                                                                theory:`
+                                                                <p>PHP is a powerful scripting language that enables developers to create dynamic and interactive user interfaces for web applications. One of the most essential components of any web application is the form, which is used to collect information from users and process it on the server. In this article, we will provide a comprehensive guide to building PHP forms, covering everything from basic form elements to advanced validation techniques.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding the Basics of PHP Forms</h3><br>
+                                                                <p>Before diving into the intricacies of PHP forms, it's important to understand the basics. A form is essentially a collection of HTML elements that allow users to enter information. When a user submits a form, the data is sent to the server for processing. PHP scripts can then interact with the submitted data to perform various operations, such as inserting the information into a database or sending an email to the user.</p><br>
+                                                                <p>The most common form elements include text fields, radio buttons, checkboxes, drop-down menus, and submit buttons. These elements can be combined in various ways to create complex forms with multiple sections and fields.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating a Simple PHP Form</h3><br>
+                                                                <p>Creating a simple PHP form is straightforward. First, you will need to create an HTML form with the desired elements. Then, you can add PHP code to process the form data and perform any desired actions.</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>&lt;form action="process.php" method="post"&gt;<br> &lt;label for="name"&gt;Name:&lt;/label&gt;<br> &lt;input type="text" id="name" name="name"&gt;<br> &lt;br&gt;&lt;br&gt;<br> &lt;label for="email"&gt;Email:&lt;/label&gt;<br> &lt;input type="email" id="email" name="email"&gt;<br> &lt;br&gt;&lt;br&gt;<br> &lt;input type="submit" value="Submit"&gt;<br>&lt;/form&gt;</code></pre>
+                                                                </div><br>
+                                                                <p>In this example, the form contains two text fields (name and email) and a submit button. The action attribute specifies the PHP script that will process the form data, and the method attribute indicates whether the data will be sent via GET or POST. In this case, we are using the POST method, which is more secure for sending sensitive information.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced Form Validation</h3><br>
+                                                                <p>While simple PHP forms can be useful for basic data collection, more complex forms will often require advanced validation to ensure the accuracy and consistency of the submitted data. There are a variety of techniques for validating form data, ranging from basic client-side validation using JavaScript to more advanced server-side validation using PHP.</p><br>
+                                                                <p>One of the simplest and most effective validation techniques is to use regular expressions to validate form data. Regular expressions are a powerful tool for pattern matching, and they can be used to validate information such as email addresses, phone numbers, and ZIP codes.</p><br>
+                                                                <div class="code-block">
+                                                                <pre id="dataExample"><code>&lt;?php<br><br>$name = "12 Jone";<br><br>if (!preg_match("/^[a-zA-Z ]*$/",$name)) {<br> echo "Only letters and white space allowed&#92;n";<br>}<br><br>$email = "Jone";<br><br>if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {<br> echo "Invalid email format";<br>}<br><br>?&gt;</code></pre>
+                                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                </div><br>
+                                                                <p>In this example, we are using two PHP functions (preg_match and filter_var) to validate the name and email fields. The preg_match function checks that the name field contains only letters and white space, while the filter_var function checks that the email field is in a valid email format.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Security Considerations for PHP Forms</h3><br>
+                                                                <p>Security is a critical concern when building PHP forms, as form data can often contain sensitive information, such as passwords and credit card numbers. There are a number of measures that can be taken to ensure the security of PHP forms, including:</p><br>
+                                                                <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                <li>Input validation: Ensure that form data is validated both on the client-side and server-side to prevent malicious data from being submitted.</li><br>
+                                                                <li>Sanitization: Sanitize all user input to prevent potential security threats such as SQL injection and cross-site scripting (XSS).</li><br>
+                                                                <li>HTTPS: Use HTTPS to encrypt all data sent between the client and server, protecting sensitive information from being intercepted.</li><br>
+                                                                <li>Session management: Implement secure session management to prevent session hijacking and other security threats.</li><br>
+                                                                </ol><br>
+                                                                <p>By following these security best practices, you can help ensure that your PHP forms are secure and protected from potential threats.</p><br>
+                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                <p>PHP forms are a crucial component of any web application, allowing users to enter information and interact with the application. In this article, we have provided a comprehensive guide to building PHP forms, from basic form elements to advanced validation techniques and security considerations. With this knowledge, you should be well-equipped to build dynamic and interactive user interfaces for your web applications.</p><br>
+                                                                `,
+                                                                quiz: {
+                                                                  question: "Which of the following are used in PHP form handling?",
+                                                                  options: [
+                                                                    "GET method to collect form data",
+                                                                    "POST method to collect form data",
+                                                                    "$_REQUEST to collect form data after the form is submitted",
+                                                                    "HTML tags to process form data",
+                                                                    "CSS styling to collect form data",
+                                                                  ],
+                                                                  correctAnswers: [0, 1, 2]
+                                                                },
+                                                              };
+                                                              case 'PHP Validation':
+                                                                return {
+                                                                  theory:`
+                                                                  <p>Form validation is an essential part of website development, ensuring that the data entered by users is accurate and complete before it is processed. PHP is a popular server-side scripting language that offers a variety of methods for form validation. In this article, we will explore the PHP form validation process in detail and provide code examples to help you implement it on your own website.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The Importance of PHP Form Validation</h3><br>
+                                                                  <p>Form validation is important for several reasons. It helps to ensure that the data entered by users is accurate and complete, which can reduce the risk of errors and improve the overall user experience. Additionally, form validation can improve the security of your website by preventing malicious users from submitting harmful data.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The PHP Form Validation Process</h3><br>
+                                                                  <p>The PHP form validation process typically involves the following steps:</p><br>
+                                                                  <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                  <li>Create a form in HTML</li><br>
+                                                                  <li>Write a PHP script to process the form data</li><br>
+                                                                  <li>Use PHP functions to validate the form data</li><br>
+                                                                  <li>Display error messages if the form data is invalid</li><br>
+                                                                  </ol><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Validating Form Data with PHP Functions</h3><br>
+                                                                  <p>PHP provides several built-in functions for form validation, including:</p><br>
+                                                                  <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                  <li>filter_var() - Validates variables with filters</li><br>
+                                                                  <li>is_numeric() - Checks if a value is a number</li><br>
+                                                                  <li>is_string() - Checks if a value is a string</li><br>
+                                                                  <li>trim() - Removes whitespace from the beginning and end of a string</li><br>
+                                                                  <li>htmlspecialchars() - Converts special characters to HTML entities to prevent cross-site scripting (XSS) attacks</li><br>
+                                                                  </ol><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Example: PHP Form Validation Code</h3><br>
+                                                                  <div class="code-block">
+                                                                  <pre id="dataExample"><code>&lt;?php<br>// Define variables and initialize with empty values<br>$name = $email = $gender = $comment = $website = "";<br>$name_err = $email_err = $gender_err = $comment_err = "";<br><br>// Processing form data when form is submitted<br>if($_SERVER["REQUEST_METHOD"] == "POST"){<br>  // Validate name<br>  if(empty(trim($_POST["name"]))){<br>    $name_err = "Please enter your name.";<br>  } else{<br>    $name = trim($_POST["name"]);<br>  }<br><br>  // Validate email<br>  if(empty(trim($_POST["email"]))){<br>    $email_err = "Please enter your email.";<br>  } else{<br>    $email = trim($_POST["email"]);<br><br>  }<br><br>  // Validate gender<br>  if(empty(trim($_POST["gender"]))){<br>    $gender_err = "Please select your gender.";<br>  } else{<br>    $gender = trim($_POST["gender"]);<br>  }<br><br>  // Validate comment<br>  if(empty(trim($_POST["comment"]))){<br>    $comment_err = "Please enter your comment.";<br>  } else{<br>    $comment = trim($_POST["comment"]);<br>  }<br><br>  // Check input errors before inserting in database<br>  if(empty($name_err) && empty($email_err) && empty($gender_err) && empty($comment_err)){<br>    // Prepare an insert statement<br>    $sql = "INSERT INTO users (name, email, gender, comment) VALUES (?, ?, ?, ?)";<br><br>    if($stmt = mysqli_prepare($link, $sql)){<br>      // Bind variables to the prepared statement as parameters<br>      mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_email, $param_gender, $param_comment);<br><br>      // Set parameters<br>      $param_name = $name;<br>      $param_email = $email;<br>      $param_gender = $gender;<br>      $param_comment = $comment;<br><br>      // Attempt to execute the prepared statement<br>      if(mysqli_stmt_execute($stmt)){<br>        // Records created successfully. Redirect to landing page<br>        header("location: index.php");<br>        exit();<br>      } else{<br>        echo "Something went wrong. Please try again later.";<br>      }<br>    }<br><br>    // Close statement<br>    mysqli_stmt_close($stmt);<br>  }<br><br>  // Close connection<br>  mysqli_close($link);<br>}<br>?&gt;</code></pre>
+                                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                  </div><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Error Handling in PHP Form Validation</h3><br>
+                                                                  <p>In the previous example, we have included error messages to be displayed if the form data is invalid. It is important to handle errors appropriately to provide the user with meaningful feedback.</p><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Improving User Experience with PHP Form Validation</h3><br>
+                                                                  <p>In addition to ensuring the accuracy of the data entered by users, form validation can also improve the overall user experience. For example, you can use form validation to:</p><br>
+                                                                  <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                  <li>Provide real-time feedback to users</li><br>
+                                                                  <li>Highlight invalid fields in red</li><br>
+                                                                  <li>Display error messages next to the relevant fields</li><br>
+                                                                  </ol><br>
+                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                  <p>In conclusion, PHP form validation is an essential part of website development that helps to ensure the accuracy and security of the data entered by users. With the variety of built-in functions and the ability to handle errors effectively, PHP makes it easy to implement form validation on your own website. Whether you are a beginner or an experienced developer, this guide provides the information you need to get started with PHP form validation.</p><br>
+                                                                  `,
+                                                                  quiz: {
+                                                                    question: "What are some key elements in PHP form validation?",
+                                                                    options: [
+                                                                      "Checking the submitted form data to prevent hacking attempts",
+                                                                      "Displaying the error message on the form",
+                                                                      "Letting the user input anything, including script tags",
+                                                                      "Making all fields required and removing any extra white spaces",
+                                                                      "Removing the field labels of the form",
+                                                                    ],
+                                                                    correctAnswers: [0, 1, 3]
+                                                                  },
+                                                                };
+                                                                case 'PHP Form Required':
+                                                                  return{
+                                                                    theory:`
+                                                                    <p>A well-designed form is a crucial part of any website or application. Forms are used to gather user data, and they are an essential tool for business and e-commerce websites. Unfortunately, forms can also be the source of numerous problems. For example, a user may forget to fill in a required field, causing the form to fail validation and return an error message. To avoid these problems, it is important to implement proper form validation.</p><br>
+                                                                    <p>In this article, we will explore the concept of PHP form validation and how to ensure that required fields are filled out correctly. We will cover the following topics:</p><br>
+                                                                    <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                    <li>Understanding the PHP form validation process</li><br>
+                                                                    <li>The importance of required fields</li><br>
+                                                                    <li>Implementing the required attribute in PHP</li><br>
+                                                                    <li>Validating required fields with PHP</li><br>
+                                                                    <li>Enhancing form validation with regular expressions</li><br>
+                                                                    </ol><br>
+                                                                    <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                    <li style="font-weight: bold;">Understanding the PHP Form Validation Process</li><br>
+                                                                    <p>The PHP form validation process is a series of checks that are performed on form data before it is submitted to the server. The purpose of these checks is to ensure that the data entered by the user is complete, accurate, and in the proper format. Form validation is typically performed on the client-side using JavaScript, but it can also be performed on the server-side using PHP.</p><br>
+                                                                    <li style="font-weight: bold;">The Importance of Required Fields</li><br>
+                                                                    <p>Required fields are an essential part of any form. They ensure that important information is collected from the user and prevent the form from being submitted with missing data. For example, in a contact form, the name, email, and message fields are typically required.</p><br>
+                                                                    <li style="font-weight: bold;">Implementing the Required Attribute in PHP</li><br>
+                                                                    <p>The required attribute can be added to a form field to indicate that it is a required field. The attribute is added to the input tag as follows:</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>&lt;input type="text" name="name" required&gt;</code></pre>
+                                                                    </div><br>
+                                                                    <li style="font-weight: bold;">Validating Required Fields with PHP</li><br>
+                                                                    <p>To validate required fields with PHP, we will use the isset function. The isset function checks if a variable is set and is not NULL. If the variable is not set, an error message will be displayed.</p><br>
+                                                                    <p>Here is an example of how to validate a required field in PHP:</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>if (!isset($_POST['name']) || $_POST['name'] == '') {<br>$errors[] = 'Name is a required field';<br>}</code></pre>
+                                                                    </div><br>
+                                                                    <li style="font-weight: bold;">Enhancing Form Validation with Regular Expressions</li><br>
+                                                                    <p>Regular expressions can be used to enhance form validation by specifying a pattern that the data must match. For example, a regular expression can be used to validate an email address or a phone number.</p><br>
+                                                                    <p>Here is an example of how to use a regular expression to validate an email address:</p><br>
+                                                                    <div class="code-block">
+                                                                    <pre id="dataExample"><code>if (!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $_POST['email'])) {<br> $errors[] = 'Email is not in a valid format';<br>}</code></pre>
+                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                    </div><br>
+                                                                    <p>In conclusion, form validation is an essential part of any website or application. By implementing the required attribute and validating form data with PHP, you can ensure that important information is collected from the user and prevent the form from being submitted with missing data. Regular expressions can also be used to enhance form validation and ensure that data is in the proper format.</p><br>
+                                                                    `,
+                                                                    quiz: {
+                                                                      question: "What does the required attribute in PHP form indicate?",
+                                                                      options: [
+                                                                        "It is optional for a form field to be filled out before submitting it.",
+                                                                        "It indicates that a form field must be filled out before submitting it.",
+                                                                        "It specifies the maximum length of a form field in characters.",
+                                                                        "It is a parameter used to describe the data type of a form field.",
+                                                                      ],
+                                                                      correctAnswers: [1]
+                                                                    },
+                                                                  };
+                                                                  case 'PHP Form URL/E-mail':
+                                                                    return {
+                                                                      theory:`
+                                                                      <p>Form validation is an important aspect of PHP web development, ensuring that the data entered by users is accurate and meets specific requirements before it is processed. This article will focus on validating form inputs for email and URL in PHP.</p><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Validating Email Inputs</h3><br>
+                                                                      <p>Email inputs can be validated using the filter_var function in PHP. This function allows you to validate a string as an email address by checking if it is in the proper format. If the email is in the correct format, the function will return true; otherwise, it will return false.</p><br>
+                                                                      <p>Here is an example of how to validate an email input using the filter_var function:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>&lt;?php<br> $email = "user@example.com";<br> if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {<br>  echo "Invalid email format";<br> } else {<br>  echo "Valid email format";<br> }<br>?&gt;</code></pre>
+                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                      </div><br>
+                                                                      <p>It is also possible to validate email inputs using regular expressions. A regular expression is a pattern used to match specific strings. In this case, you can use a regular expression to match the proper format of an email address.</p><br>
+                                                                      <p>Here is an example of how to validate an email input using a regular expression:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>&lt;?php<br> $email = "user@example.com";<br> if (!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email)) {<br>  echo "Invalid email format";<br> } else {<br>  echo "Valid email format";<br> }<br>?&gt;</code></pre>
+                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                      </div><br>
+                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Validating URL Inputs</h3><br>
+                                                                      <p>URL inputs can be validated using the filter_var function in PHP. This function allows you to validate a string as a URL by checking if it is in the proper format. If the URL is in the correct format, the function will return true; otherwise, it will return false.</p><br>
+                                                                      <p>Here is an example of how to validate a URL input using the filter_var function:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>&lt;?php<br> $url = "https://www.example.com";<br> if (!filter_var($url, FILTER_VALIDATE_URL)) {<br>  echo "Invalid URL format";<br> } else {<br>  echo "Valid URL format";<br> }<br>?&gt;</code></pre>
+                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                      </div><br>
+                                                                      <p>It is also possible to validate URL inputs using regular expressions. A regular expression is a pattern used to match specific strings. In this case, you can use a regular expression to match the proper format of a URL.</p><br>
+                                                                      <p>Here is an example of how to validate a URL input using a regular expression:</p><br>
+                                                                      <div class="code-block">
+                                                                      <pre id="dataExample"><code>&lt;?php<br> $url = "https://www.example.com";<br> if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $url)) {<br>  echo "Invalid URL format";<br> } else {<br>  echo "Valid URL format";<br>}<br>?&gt;</code></pre>
+                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                      </div><br>
+                                                                      <p>In conclusion, form validation is an important aspect of PHP.</p><br>
+                                                                      `,
+                                                                      quiz: {
+                                                                        question: "Which of the following statements about PHP form, URL, and E-mail are correct?",
+                                                                        options: [
+                                                                          "PHP is not suitable for form handling.",
+                                                                          "In PHP, you can use the $_GET function to collect form data sent with the HTTP GET method.",
+                                                                          "In PHP, the $_POST function is used to collect URL variables.",
+                                                                          "PHP allows you to generate and send emails.",
+                                                                          "In PHP, the mail() function is used to send emails.",
+                                                                          "You cannot validate an email address in PHP.",
+                                                                        ],
+                                                                        correctAnswers: [1, 3, 4]
+                                                                      },
+                                                                    };
+                                                                    case 'PHP Form Complete':
+                                                                      return {
+                                                                        theory:`
+                                                                        <p>PHP is a powerful scripting language used for web development and server-side processing. One of its key features is the ability to handle forms, allowing user input to be processed and stored. In this article, we will cover everything you need to know about PHP form processing, from basic HTML form creation to advanced server-side validation.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating an HTML Form</h3><br>
+                                                                        <p>To get started with PHP form processing, you first need to create an HTML form. This form will contain various input fields, such as text boxes, radio buttons, and checkboxes, that allow users to submit data to the server. Here is a simple example of an HTML form:</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>&lt;form action="form_processing.php" method="post"&gt;<br> &lt;label for="name"&gt;Name:&lt;/label&gt;<br> &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;&lt;br&gt;<br> &lt;label for="email"&gt;Email:&lt;/label&gt;<br> &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;<br> &lt;input type="submit" value="Submit"&gt;<br>&lt;/form&gt;</code></pre>
+                                                                        </div><br>
+                                                                        <p>In this example, the form has two fields, a text field for the user's name and an email field for their email address. The form is submitted to form_processing.php, which will be responsible for processing the form data. The method attribute of the form is set to post, which means that the form data will be sent to the server as part of the HTTP request body, rather than as part of the URL.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP Form Processing</h3><br>
+                                                                        <p>Once the form data is submitted to the server, it can be processed using PHP. The first step is to access the form data in the $_POST array. This array contains all of the form data, with the field names as keys and the submitted values as values. For example, to access the name field from the example form, you can use the following code:</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>$name = $_POST['name'];<br>$email = $_POST['email'];</code></pre>
+                                                                        </div><br>
+                                                                        <p>Next, you can perform any necessary validation and processing on the form data. This may include checking that required fields have been filled out, verifying that the email address is in a valid format, or even storing the data in a database. Here is a simple example of server-side validation in PHP:</p><br>
+                                                                        <div class="code-block">
+                                                                        <pre id="dataExample"><code>if (empty($name)) {<br> echo "Name is required";<br> exit;<br>}<br><br>if (empty($email)) {<br> echo "Email is required";<br> exit;<br>}<br><br>if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {<br> echo "Invalid email format";<br> exit;<br>}</code></pre>
+                                                                        </div><br>
+                                                                        <p>In this example, we first check that the $name and $email variables are not empty. If either of these fields are empty, an error message is displayed and the script exits. Next, we use the filter_var function to validate the email address format. If the email address is not in a valid format, an error message is displayed and the script exits.</p><br>
+                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced PHP Form Processing Techniques</h3><br>
+                                                                        <p>There are many advanced techniques that can be used to improve the security and functionality of your PHP form processing scripts. Some of these include:</p><br>
+                                                                        <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                        <li>Using prepared statements to prevent SQL injection attacks</li><br>
+                                                                        <li>Hashing and salting passwords before storing them in a database</li><br>
+                                                                        <li>Implementing CAPTCHA to prevent automated form submissions</li><br>
+                                                                        </ul><br>
+                                                                        `,
+                                                                        quiz: {
+                                                                          question: "What does $_POST do in PHP?",
+                                                                          options: [
+                                                                            "It's a special array used to input data from an Apache web server",
+                                                                            "It's a superglobal variable that is used to collect data from a form with method=\"post\" ",
+                                                                            "It's a function to store data in a MySQL database",
+                                                                            "It's used to collect data from a form with method=\"get\" ",
+                                                                          ],
+                                                                          correctAnswers: [1]
+                                                                        },
+                                                                      };
+                                                                      case 'PHP File Handling':
+                                                                        return {
+                                                                          theory:`
+                                                                          <p>PHP provides various ways to manipulate files and folders on the server. In this article, we will discuss the file handling capabilities of PHP, specifically how to create, read, update, and delete files using PHP.</p><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating a File</h3><br>
+                                                                          <p>To create a file using PHP, you need to use the fopen() function. This function takes two parameters: the name of the file you want to create and the mode in which you want to open the file.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>$file = fopen("test.txt", "w");</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <p>In this example, we are creating a file named "test.txt" and opening it in write mode ("w"). Once the file is open, you can write to it using the fwrite() function.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>fwrite($file, "Hello World");</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <p>After writing to the file, it's important to close it using the fclose() function.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>fclose($file);</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Reading a File</h3><br>
+                                                                          <p>To read the contents of a file, you need to use the file_get_contents() function. This function takes a single parameter: the name of the file you want to read.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>$content = file_get_contents("test.txt");<br>echo $content;</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <p>This will output the contents of the file, which in this case is "Hello World".</p><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Updating a File</h3><br>
+                                                                          <p>To update the contents of a file, you can use the file_put_contents() function. This function takes two parameters: the name of the file you want to update and the new contents of the file.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>$content = "Hello World Again";<br>file_put_contents("test.txt", $content);</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Deleting a File</h3><br>
+                                                                          <p>To delete a file, you can use the unlink() function. This function takes a single parameter: the name of the file you want to delete.</p><br>
+                                                                          <div class="code-block">
+                                                                          <pre id="dataExample"><code>unlink("test.txt");</code></pre>
+                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                          </div><br>
+                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Summary</h3><br>
+                                                                          <p>File handling is a crucial aspect of server-side programming. PHP provides various functions to make it easy to manipulate files and folders on the server. In this article, we discussed how to create, read, update, and delete files using PHP.</p><br>
+                                                                          `,
+                                                                          quiz: {
+                                                                            question: "What are the correct ways to open a file in PHP?",
+                                                                            options: [
+                                                                              "Using the fopen() function.",
+                                                                              "Using the foopen() function.",
+                                                                              "Using the open() function.",
+                                                                              "Using the file() function.",
+                                                                            ],
+                                                                            correctAnswers: [0, 3]
+                                                                          },
+                                                                        };
+                                                                        case 'PHP File Open/Read':
+                                                                          return {
+                                                                            theory:`
+                                                                            <p>PHP is a powerful and versatile scripting language that can be used to accomplish a wide range of tasks, including working with files. In this article, we will take a closer look at how to read and write files in PHP using the fopen() function.</p><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding the fopen() Function</h3><br>
+                                                                            <p>The fopen() function is used to open a file for reading or writing. This function takes two arguments: the name of the file and the mode in which you want to open the file.</p><br>
+                                                                            <p>There are several modes available for opening a file, including:</p><br>
+                                                                            <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                            <li>r: Read-only mode. The file pointer is placed at the beginning of the file and you can only read from it.</li><br>
+                                                                            <li>w: Write mode. The file pointer is placed at the beginning of the file and any data that was previously in the file is truncated. You can only write to the file.</li><br>
+                                                                            <li>a: Append mode. The file pointer is placed at the end of the file and you can only write to it. If the file does not exist, it will be created.</li><br>
+                                                                            <li>x: Exclusive creation mode. This mode is similar to write mode, but it only opens the file if it does not already exist. If the file already exists, the function will return false.</li><br>
+                                                                            </ul><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Reading Files in PHP</h3><br>
+                                                                            <p>To read a file in PHP, you can use the fopen() function in read mode (r) and the fread() function. The fread() function takes two arguments: the file pointer returned by fopen() and the number of bytes you want to read.</p><br>
+                                                                            <p>Here is an example that demonstrates how to read the contents of a file:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>&lt;?php<br>$file = fopen("example.txt", "r");<br>if ($file) {<br>  $contents = fread($file, filesize("example.txt"));<br>  fclose($file);<br>  echo $contents;<br>}<br>?&gt;</code></pre>
+                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                            </div><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Writing Files in PHP</h3><br>
+                                                                            <p>To write to a file in PHP, you can use the fopen() function in write mode (w) and the fwrite() function. The fwrite() function takes two arguments: the file pointer returned by fopen() and the data you want to write to the file.</p><br>
+                                                                            <p>Here is an example that demonstrates how to write data to a file:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>&lt;?php$file = fopen("example.txt", "w");if ($file) {  fwrite($file, "This is some data.");  fclose($file);}?&gt;</code></pre>
+                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                            </div><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Appending Data to Files in PHP</h3><br>
+                                                                            <p>To append data to a file in PHP, you can use the fopen() function in append mode (a) and the fwrite() function. This allows you to add data to the end of a file, rather than overwriting it.</p><br>
+                                                                            <p>Here is an example that demonstrates how to append data to a file:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>&lt;?php<br>$file = fopen("example.txt", "a");<br>if ($file) {<br>  fwrite($file, "This is some additional data.");<br>  fclose($file);<br>}<br>?&gt;</code></pre>
+                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                            </div><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Closing Files in PHP</h3><br>
+                                                                            <p>It is important to close a file after you have finished working with it, to free up system resources and prevent data corruption. This can be done using the fclose() function, which takes the file pointer returned by fopen() as its argument.</p><br>
+                                                                            <p>Here is an example that demonstrates the proper way to close a file in PHP:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>&lt;?php<br>$file = fopen("example.txt", "r");<br>if ($file) {<br>  $contents = fread($file, filesize("example.txt"));<br>  fclose($file);<br>  echo $contents;<br>}<br>?&gt;</code></pre>
+                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                            </div><br>
+                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Error Handling in PHP</h3><br>
+                                                                            <p>It is important to handle errors properly when working with files in PHP. For example, if you try to open a file that does not exist, or if you try to write to a file that is not writable, you will receive an error.</p><br>
+                                                                            <p>To handle errors, you can use the if statement and the $file variable returned by fopen(). If fopen() returns false, it means that an error has occurred.</p><br>
+                                                                            <p>Here is an example that demonstrates error handling in PHP:</p><br>
+                                                                            <div class="code-block">
+                                                                            <pre id="dataExample"><code>&lt;?php<br>$file = fopen("example.txt", "r");<br>if ($file) {<br>  $contents = fread($file, filesize("example.txt"));<br>  fclose($file);<br>  echo $contents;<br>} else {<br>  echo "Error: Unable to open file.";<br>}<br>?&gt;</code></pre>
+                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                            </div><br>
+                                                                            <p>In conclusion, the fopen() function is a powerful tool for reading and writing files in PHP. With the modes available, you can control how a file is opened, and with the fread() and fwrite() functions, you can control what data is read from and written to a file. When working with files, it is important to handle errors properly and to close the file when you have finished working with it.</p><br>
+                                                                            `,
+                                                                            quiz: {
+                                                                              question: "Which functions in PHP are used to open or read a file?",
+                                                                              options: [
+                                                                                "fopen() and fclose()",
+                                                                                "fopen() and fread()",
+                                                                                "fwrite() and fappend()",
+                                                                                "fread() and fclose()",
+                                                                              ],
+                                                                              correctAnswers: [1]
+                                                                            },
+                                                                          };
+                                                                          case 'PHP File Create/Write':
+                                                                            return{
+                                                                              theory:`
+                                                                              <p>In today's web development landscape, PHP is one of the most widely used programming languages for server-side scripting. With PHP, you can create and manipulate files on your server to meet the demands of your website or web application. In this article, we will cover the basics of PHP file creation and manipulation.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Writing to a File</h3><br>
+                                                                              <p>To write to a file in PHP, you can use the fopen() function. This function takes two arguments: the name of the file and the mode in which to open the file.</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>&lt;?php<br>  $file = fopen("example.txt", "w");<br>  fwrite($file, "This is an example.");<br>  fclose($file);<br>?&gt;</code></pre>
+                                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                              </div><br>
+                                                                              <p>In this example, fopen("example.txt", "w") opens the file example.txt in write mode. The fwrite() function writes the string "This is an example." to the file, and fclose() closes the file.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Reading from a File</h3><br>
+                                                                              <p>Reading from a file in PHP is just as easy as writing to a file. The fopen() function can be used to open a file in read mode, and the fread() function can be used to read the contents of the file.</p><br>
+                                                                              <div class="code-block">
+                                                                              <pre id="dataExample"><code>&lt;?php<br>  $file = fopen("example.txt", "r");<br>  $contents = fread($file, filesize("example.txt"));<br>  fclose($file);<br>  echo $contents;<br>?&gt;</code></pre>
+                                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                              </div><br>
+                                                                              <p>In this example, fopen("example.txt", "r") opens the file example.txt in read mode. The fread() function reads the contents of the file, and filesize("example.txt") returns the size of the file. Finally, the fclose() function closes the file, and the contents of the file are echoed to the web browser.</p><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Other File Functions</h3><br>
+                                                                              <p>PHP provides many other file functions that can be used to manipulate files, such as:</p><br>
+                                                                              <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                              <li>file_get_contents(): Reads the entire contents of a file into a string</li><br>
+                                                                              <li>file_put_contents(): Writes a string to a file</li><br>
+                                                                              <li>file_exists(): Checks if a file exists</li><br>
+                                                                              <li>unlink(): Deletes a file</li><br>
+                                                                              <li>rename(): Renames a file</li><br>
+                                                                              <li>copy(): Copies a file</li><br>
+                                                                              </ul><br>
+                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                              <p>In this article, we have covered the basics of PHP file creation and manipulation. With these skills, you can create, read, and write files on your server to meet the demands of your website or web application.</p><br>
+                                                                              `,
+                                                                              quiz: {
+                                                                                question: "What functions can be used to write to a file in PHP?",
+                                                                                options: [
+                                                                                  "fwrite()",
+                                                                                  "file_write()",
+                                                                                  "file_put_contents()",
+                                                                                  "write_file()",
+                                                                                ],
+                                                                                correctAnswers: [0, 2]
+                                                                              },
+                                                                            };
+                                                                            case 'PHP File Upload':
+                                                                              return {
+                                                                                theory:`
+                                                                                <p>In today's digital age, file uploads are a common requirement in web development. Whether it's a profile picture, a document, or any other file type, the ability to upload files is essential for a seamless user experience. In PHP, uploading files to a server can be done easily with the PHP move_uploaded_file() function. In this article, we will discuss the basics of PHP file uploads and show you how to use the move_uploaded_file() function to handle file uploads in your PHP projects.</p><br>
+                                                                                <p>When a file is uploaded to a server, it is stored in a temporary location on the server until it is processed. The information about the uploaded file is stored in the $_FILES superglobal array. The $_FILES array contains several key-value pairs, including:</p><br>
+                                                                                <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                <li>$_FILES['userfile']['name'] - The original name of the uploaded file.</li><br>
+                                                                                <li>$_FILES['userfile']['type'] - The MIME type of the uploaded file.</li><br>
+                                                                                <li>$_FILES['userfile']['size'] - The size of the uploaded file in bytes.</li><br>
+                                                                                <li>$_FILES['userfile']['tmp_name'] - The temporary location of the uploaded file on the server.</li><br>
+                                                                                <li>$_FILES['userfile']['error'] - An error code indicating if there was an issue during the file upload.</li><br>
+                                                                                </ul><br>
+                                                                                <p>Before you can move the uploaded file to its final destination, it's important to validate the file to ensure that it meets your requirements. You can validate the uploaded file in several ways, including:</p><br>
+                                                                                <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                <li>Checking the file size: You can check the size of the uploaded file using the $_FILES['userfile']['size'] value. If the file size is too large, you can reject the file.</li><br>
+                                                                                <li>Checking the file type: You can check the MIME type of the uploaded file using the $_FILES['userfile']['type'] value. If the file type is not acceptable, you can reject the file.</li><br>
+                                                                                <li>Checking for errors: You can check the $_FILES['userfile']['error'] value to see if there was an issue during the file upload. If there was an issue, you can reject the file.</li><br>
+                                                                                </ul><br>
+                                                                                <p>Once you have validated the uploaded file, you can move it to its final destination on the server using the move_uploaded_file() function. The move_uploaded_file() function takes two arguments: the first is the temporary location of the uploaded file ($_FILES['userfile']['tmp_name']), and the second is the final destination for the file.</p><br>
+                                                                                <div class="code-block">
+                                                                                <pre id="dataExample"><code>if (move_uploaded_file($_FILES['userfile']['tmp_name'], "uploads/{$_FILES['userfile']['name']}")) {<br> echo "The file has been uploaded.";<br>} else {<br> echo "There was an error uploading the file.";<br>}</code></pre>
+                                                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                </div><br>
+                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                <p>PHP file uploads are a fundamental part of web development. With the $_FILES superglobal array and the move_uploaded_file() function, you can easily handle file uploads in your PHP projects.</p><br>
+                                                                                `,
+                                                                                quiz: {
+                                                                                  question: "Which of the following statements regarding file uploads in PHP are correct?",
+                                                                                  options: [
+                                                                                    "The PHP setting, upload_max_filesize, controls the maximum file size for files that are uploaded.",
+                                                                                    "Files that are uploaded in PHP are automatically saved to a temporary directory.",
+                                                                                    "The $_FILES superglobal array in PHP contains information about the uploaded file.",
+                                                                                    "The move_uploaded_file() function is not used to move the uploaded file from the temporary directory to a directory of your choice.",
+                                                                                    "You can't check if the upload succeeded by verifying if the ['error'] attribute in the $_FILES superglobal array is set to UPLOAD_ERR_OK.",
+                                                                                  ],
+                                                                                  correctAnswers: [0, 1, 2]
+                                                                                },
+                                                                              };
+                                                                              case 'PHP Include':
+                                                                                return {
+                                                                                  theory: `
+                                                                                  <p>PHP includes are a powerful tool for developers to reuse code across multiple pages. By using PHP includes, developers can avoid repeating the same code on different pages, which can save time and effort. In this article, we will cover everything you need to know about PHP includes, including their benefits, how to use them, and some best practices.</p><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of Using PHP Includes:</h3><br>
+                                                                                  <p>Using PHP includes has several benefits, including:</p><br>
+                                                                                  <ul style="list-style-type: decimal;padding-left: 30px;">
+                                                                                  <li>Saving Time: When developers use PHP includes, they don't need to repeat the same code on multiple pages. Instead, they can write the code once and include it on as many pages as they need.</li><br>
+                                                                                  <li>Easier Maintenance: By using PHP includes, developers can maintain their code more easily. If they need to make a change to the included code, they only need to do it in one place.</li><br>
+                                                                                  <li>Improved Readability: PHP includes can make code more readable by separating it into smaller, more manageable files.</li><br>
+                                                                                  </ul><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use PHP Includes:</h3><br>
+                                                                                  <p>Using PHP includes is straightforward. Developers can use the following steps to include code in their PHP pages:</p><br>
+                                                                                  <ul style="list-style-type: decimal;padding-left: 30px;">
+                                                                                  <li>Create a PHP file that contains the code you want to include.</li><br>
+                                                                                  <li>Use the include or require function to include the file in your PHP page.</li><br>
+                                                                                  <li>Save the PHP file and upload it to your server.</li><br>
+                                                                                  </ul><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Using PHP Includes:</h3><br>
+                                                                                  <p>To get the most out of PHP includes, developers should follow these best practices:</p><br>
+                                                                                  <ul style="list-style-type: decimal;padding-left: 30px;">
+                                                                                  <li>Use Meaningful Names: When creating included files, use meaningful names that describe what the file contains.</li><br>
+                                                                                  <li>Organize Your Files: Organize your included files into logical groups, such as header files, footer files, and menu files.</li><br>
+                                                                                  <li>Use Absolute Paths: When including files, use absolute paths to avoid issues with file paths.</li><br>
+                                                                                  <li>Check for Errors: Always check for errors when including files. If a file can't be found, it can cause errors in your code.</li><br>
+                                                                                  </ul><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                  <p>PHP includes are a powerful tool for developers that can save time, improve code readability, and make code maintenance easier. By following the best practices we've outlined in this article, developers can make the most out of PHP includes and create better, more maintainable code.</p><br>
+                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Diagram</h3><br>
+                                                                                  <img src="/images/include.png" width="auto" height= "auto"><br>
+                                                                                  `,
+                                                                                  quiz: {
+                                                                                    question: "What does the PHP include statement do?",
+                                                                                    options: [
+                                                                                      "It stops the execution of PHP code.",
+                                                                                      "It makes it easy to insert the content of one PHP file into another PHP file before server execution.",
+                                                                                      "It converts PHP code into JavaScript code.",
+                                                                                      "It allows developers to reuse PHP code in multiple scripts.",
+                                                                                      "It deletes the specified PHP file from the server.",
+                                                                                    ],
+                                                                                    correctAnswers: [1, 3]
+                                                                                  },
+                                                                                };
+                                                                                case 'PHP Cookies':
+                                                                                  return{
+                                                                                    theory:`
+                                                                                    <p>PHP cookies are small text files stored on the client side that hold data about the user's behavior and preferences. They are widely used to store information like user preferences, shopping cart contents, or login credentials.</p><br>
+                                                                                    <p>In this article, we will delve into the basics of PHP cookies and how they can be implemented in a website.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Cookies?</h3><br>
+                                                                                    <p>A cookie is a small piece of data stored by a website on the user's device. This data can be used to remember a user's preferences, login credentials, or shopping cart contents. Cookies are stored on the client-side, which means they are stored on the user's device rather than on the server.</p><br>
+                                                                                    <p>PHP cookies are created using the setcookie() function and can be accessed using the $_COOKIE superglobal array. The setcookie() function takes several arguments, including the name of the cookie, its value, and its expiration time.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating PHP Cookies</h3><br>
+                                                                                    <p>To create a PHP cookie, use the setcookie() function. The basic syntax for the setcookie() function is as follows:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>setcookie(name, value, expire, path, domain, secure, httponly);</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>Where:</p><br>
+                                                                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                    <li>name is the name of the cookie</li><br>
+                                                                                    <li>value is the value to be stored in the cookie</li><br>
+                                                                                    <li>expire is the time after which the cookie will expire</li><br>
+                                                                                    <li>path is the path on the server in which the cookie will be available</li><br>
+                                                                                    <li>domain is the domain name of the website</li><br>
+                                                                                    <li>secure indicates if the cookie should only be sent over a secure connection</li><br>
+                                                                                    <li>httponly indicates if the cookie can only be accessed through the HTTP protocol</li><br>
+                                                                                    </ul><br>
+                                                                                    <p>Here's an example of how to create a PHP cookie:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>setcookie("user", "John Doe", time()+3600, "/", "", 0, 0);</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>This code creates a cookie named user with a value of John Doe that expires in one hour. The cookie is available throughout the website and can be accessed over both secure and non-secure connections.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Retrieving PHP Cookies</h3><br>
+                                                                                    <p>Once a cookie has been created, its value can be retrieved using the $_COOKIE superglobal array. The basic syntax for accessing a cookie value is as follows:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>$_COOKIE[name];</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>Where name is the name of the cookie.</p><br>
+                                                                                    <p>Here's an example of how to retrieve a cookie value:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>$user = $_COOKIE["user"];<br>echo "Welcome back, " . $user;</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>This code retrieves the value of the user cookie and displays a welcome message to the user.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Updating PHP Cookies</h3><br>
+                                                                                    <p>To update a PHP cookie, simply create a new cookie with the same name and a new value. The expiration time should also be updated to ensure that the cookie continues to persist.</p><br>
+                                                                                    <p>Here's an example of how to update a PHP cookie:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>setcookie("user", "Jane Doe", time()+3600, "/", "", 0, 0);</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>This code updates the user cookie with a new value of Jane Doe and extends its expiration time by another hour.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Deleting PHP Cookies</h3><br>
+                                                                                    <p>To delete a PHP cookie, simply create a new cookie with the same name and an expiration time in the past. This will cause the cookie to be automatically deleted from the user's device.</p><br>
+                                                                                    <p>Here's an example of how to delete a PHP cookie:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>setcookie("user", "", time()-3600, "/", "", 0, 0);</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>This code creates a new user cookie with an expiration time that is one hour in the past. This will cause the cookie to be automatically deleted from the user's device.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advantages of Using PHP Cookies</h3><br>
+                                                                                    <p>PHP cookies have several advantages, including:</p><br>
+                                                                                    <ol style="list-style-type: decimal;padding-left: 30px;">
+                                                                                    <li>Improved User Experience: Cookies allow websites to store user-specific information, such as preferences and login credentials, which can be used to provide a more personalized user experience.</li><br>
+                                                                                    <li>Persistent Data: Cookies allow websites to store data on the user's device, which can persist even after the user closes the browser or turns off their device. This makes it possible for websites to remember a user's preferences and login credentials across multiple visits.</li><br>
+                                                                                    <li>Easy Implementation: PHP cookies are easy to implement and can be used to store a wide variety of data, making them a versatile tool for website developers.</li><br>
+                                                                                    </ol><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Best Practices for Using PHP Cookies</h3><br>
+                                                                                    <p>To ensure the best possible user experience and security, it is important to follow best practices when using PHP cookies. Some of these best practices include:</p><br>
+                                                                                    <ol style="list-style-type: decimal;padding-left: 30px;">
+                                                                                    <li>Use Secure Connections: Whenever possible, use secure connections (HTTPS) when creating and accessing cookies. This will help protect the data stored in cookies from being intercepted by third-party actors.</li><br>
+                                                                                    <li>Store Sensitive Data Securely: Do not store sensitive data, such as login credentials, in cookies. Instead, use server-side storage solutions, such as databases, to store this type of data.</li><br>
+                                                                                    <li>Use Unique Cookie Names: Use unique and descriptive names for your cookies to prevent conflicts with other cookies used by your website or other websites.</li><br>
+                                                                                    <li>Limit the Amount of Data Stored: Limit the amount of data stored in cookies to only what is necessary. Large amounts of data can slow down website performance and increase the risk of data breaches.</li><br>
+                                                                                    </ol><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                    <p>PHP cookies are a powerful tool for website developers, allowing them to store and retrieve data on the user's device. By following best practices and taking security into consideration, PHP cookies can be used to provide a better user experience and increase website functionality.</p><br>
+                                                                                    `,
+                                                                                    quiz: {
+                                                                                      question: "What is true about PHP cookies?",
+                                                                                      options: [
+                                                                                        "A PHP cookie is data stored on the viewer's computer.",
+                                                                                        "PHP cookies can only hold a small amount of data.",
+                                                                                        "PHP cookies cannot expire.",
+                                                                                        "PHP cookies can be accessed and manipulated using PHP.",
+                                                                                        "PHP cookies are stored on the server-side.",
+                                                                                      ],
+                                                                                      correctAnswers: [0, 1, 3]
+                                                                                    },
+                                                                                  };
+                                                                                case 'PHP Sessions':
+                                                                                  return {
+                                                                                    theory:`
+                                                                                    <p>In this article, we aim to provide a comprehensive guide on PHP sessions, including how they work, how to use them, and how to secure them. PHP sessions are a crucial tool for storing user data on the server-side, and th</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Sessions?</h3><br>
+                                                                                    <p>PHP sessions are a mechanism for storing user data on the server-side for the duration of a user's interaction with your website. This data can be accessed across multiple pages, which allows you to persist user data and preferences from page to page.</p><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How do PHP Sessions Work?</h3><br>
+                                                                                    <p>A PHP session works by assigning a unique session ID to each user who visits your website. This ID is stored on the server-side and sent to the user's browser as a cookie. The browser then sends the session ID back to the server with each subsequent request, allowing the server to access the user's session data.</p><br>
+                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Session Workflow</h3><br>
+                                                                                    <img src="/images/session-workflow.png" alt="Session Workflow" style="max-width: 100%; height: auto;"><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using PHP Sessions</h3><br>
+                                                                                    <p>To start a new PHP session, you can use the session_start function. This function generates a new session ID and sets up the necessary storage for the user's session data.</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>&lt;?php<br><br>session_start();</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>To store data in a PHP session, you can use the $_SESSION array. For example, to store a user's name, you can use the following code:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>&lt;?php<br>$_SESSION['username'] = 'John Doe';</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <p>To retrieve data from a PHP session, you can simply access the relevant elements of the $_SESSION array. For example, to retrieve a user's name, you can use the following code:</p><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>&lt;?php<br><br>$username = $_SESSION['username'];</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Securing PHP Sessions</h3><br>
+                                                                                    <p>It's important to secure PHP sessions to prevent unauthorized access to sensitive user data. You can secure your PHP sessions in several ways:</p><br>
+                                                                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                    <li>Regenerate the session ID periodically.</li><br>
+                                                                                    <li>Store the session data on the server-side in an encrypted format.</li><br>
+                                                                                    <li>Use HTTPS to protect the transmission of session data.</li><br>
+                                                                                    </ul><br>
+                                                                                    <div class="code-block">
+                                                                                    <pre id="dataExample"><code>&lt;?php<br>// Regenerate session ID<br>session_regenerate_id();<br><br>// Store session data encrypted<br>ini_set('session.save_handler', 'files');<br>ini_set('session.save_path', '/tmp');<br>ini_set('session.cookie_secure', true);<br>ini_set('session.use_only_cookies', true);<br>ini_set('session.cookie_httponly', true);<br>ini_set('session.hash_function', 'sha256');</code></pre>
+                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                    </div><br>
+                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                    <p>In conclusion, PHP sessions are an essential tool for storing user data on the server-side and improving the user experience on your website. By understanding how they work and how to use them, you can take full advantage of the benefits they offer. With proper security measures in place, you can also ensure that sensitive user data is protected.</p><br>
+                                                                                    `,
+                                                                                    quiz: {
+                                                                                      question: "What can be accomplished using PHP sessions?",
+                                                                                      options: [
+                                                                                        "PHP sessions allow you to preserve certain data across subsequent accesses",
+                                                                                        "They aid in the creation of interactive website interfaces",
+                                                                                        "PHP sessions can be used to control the color scheme of a website",
+                                                                                        "They offer functionalities for integrating third-party APIs",
+                                                                                      ],
+                                                                                      correctAnswers: [0, 1]
+                                                                                    },
+                                                                                  };
+                                                                                  case 'PHP Filters':
+                                                                                    return {
+                                                                                      theory:`
+                                                                                      <p>PHP filter functions provide a simple and efficient way to validate and sanitize data. In this article, we will explore the different types of filter functions available in PHP and how they can be used to ensure that data is secure and clean.</p><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are PHP Filter Functions?</h3><br>
+                                                                                      <p>PHP filter functions are a set of pre-defined functions that can be used to validate and sanitize data in a web application. These functions can be used to check that the data entered into forms is in the correct format, for example, an email address is valid, or a URL is in the correct format. They can also be used to sanitize data, such as stripping HTML tags from a string of text to prevent cross-site scripting (XSS) attacks.</p><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Filter Functions</h3><br>
+                                                                                      <p>There are several types of filter functions available in PHP, including:</p><br>
+                                                                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                      <li>Validate filters</li><br>
+                                                                                      <li>Sanitize filters</li><br>
+                                                                                      <li>Combined filters</li><br>
+                                                                                      </ul><br>
+                                                                                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Validate Filters</h3><br>
+                                                                                      <p>Validate filters are used to check that the data entered into a form is in the correct format. For example, a validate filter can be used to check that an email address is valid or that a URL is in the correct format.</p><br>
+                                                                                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Sanitize Filters</h3><br>
+                                                                                      <p>Sanitize filters are used to clean up data. For example, a sanitize filter can be used to strip HTML tags from a string of text to prevent cross-site scripting (XSS) attacks.</p><br>
+                                                                                      <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Combined Filters</h3><br>
+                                                                                      <p>Combined filters are a combination of both validate and sanitize filters. For example, a combined filter can be used to check that an email address is valid and to clean up any unwanted characters from the data.</p><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use PHP Filter Functions</h3><br>
+                                                                                      <p>Using PHP filter functions is easy. The filter_var function is used to apply a filter to a variable. The syntax for using the filter_var function is as follows:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>filter_var($variable, $filter, $options);</code></pre>
+                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                      </div><br>
+                                                                                      <p>Where:</p><br>
+                                                                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                      <li>$variable is the variable that you want to apply the filter to</li><br>
+                                                                                      <li>$filter is the type of filter that you want to apply</li><br>
+                                                                                      <li>$options is an array of options that can be used to configure the filter</li><br>
+                                                                                      </ul><br>
+                                                                                      <p>For example, to check that a variable contains a valid email address, you can use the following code:</p><br>
+                                                                                      <div class="code-block">
+                                                                                      <pre id="dataExample"><code>&lt;?php<br><br>$email = "test@example.com";<br>if (filter_var($email, FILTER_VALIDATE_EMAIL)) {<br>  echo "This is a valid email address.";<br>} else {<br>  echo "This is not a valid email address.";<br>}<br><br>?&gt;</code></pre>
+                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                      </div><br>
+                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                      <p>In conclusion, PHP filter functions provide a simple and efficient way to validate and sanitize data in a web application. They are an essential tool for ensuring that data is secure and clean, and can help prevent cross-site scripting (XSS) attacks. Whether you are a beginner or an experienced PHP developer, incorporating filter functions into your web applications is a must.</p><br>
+                                                                                      <p>Diagram:</p><br>
+                                                                                      <img src="/images/filters.png" width="auto" height="auto"><br>
+                                                                                      `,
+                                                                                      quiz: {
+                                                                                        question: "What does the PHP filter_var() function do?",
+                                                                                        options: [
+                                                                                          "It checks if the specified variable is a number or not",
+                                                                                          "It removes special characters from a string",
+                                                                                          "It validates and sanitizes data",
+                                                                                          "It calculates the length of a string",
+                                                                                          "It allows for both validation and sanitization of string array",
+                                                                                        ],
+                                                                                        correctAnswers: [2, 4]
+                                                                                      },
+                                                                                    };
+                                                                                    case 'PHP Filters Advanced':
+                                                                                      return{
+                                                                                        theory:`
+                                                                                        <p>PHP is a versatile and powerful server-side scripting language that is widely used for web development. One of its many features is the ability to filter input data and validate user-submitted information, which is essential for building secure and reliable web applications. In this article, we will be diving into the advanced features of PHP filters and how they can be used to enhance your PHP applications.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Understanding PHP Filters</h3><br>
+                                                                                        <p>PHP filters are functions that are used to validate and sanitize input data. They can be applied to data coming from different sources, such as form submissions, URL parameters, and more. By using PHP filters, you can ensure that the data being processed by your application is clean and safe to use.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Filters</h3><br>
+                                                                                        <p>PHP provides several types of filters that can be used for different purposes. Some of the most commonly used filters include:</p><br>
+                                                                                        <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                        <li>Validate filters: These filters are used to validate data, such as checking if a string is a valid email address or a number is within a certain range.</li><br>
+                                                                                        <li>Sanitize filters: These filters are used to sanitize data, such as removing any harmful characters from a string or converting special characters to HTML entities.</li><br>
+                                                                                        <li>Custom filters: These filters allow you to define your own custom filter functions for specific needs.</li><br>
+                                                                                        </ul><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using PHP Filters</h3><br>
+                                                                                        <p>Using PHP filters is simple and straightforward. The basic syntax for using a filter is:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>filter_var($variable, FILTER_VALIDATE_EMAIL);</code></pre>
+                                                                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                        </div><br>
+                                                                                        <p>Where $variable is the variable you want to filter and FILTER_VALIDATE_EMAIL is the filter you want to apply. In this example, the filter_var function is used to validate if the value stored in $variable is a valid email address.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced PHP Filter Options</h3><br>
+                                                                                        <p>PHP filters also come with several advanced options that can be used to customize their behavior. Some of the most commonly used options include:</p><br>
+                                                                                        <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                        <li>Flag options: These options are used to modify the behavior of the filter, such as requiring a specific type of data or allowing multiple options.</li><br>
+                                                                                        <li>Callback functions: These functions allow you to perform custom validation or sanitization on the data being processed.</li><br>
+                                                                                        </ul><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP Filter Examples</h3><br>
+                                                                                        <p>Here are a few examples of how PHP filters can be used in real-world situations:</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>&lt;?php<br><br>$email = "example@example.com";<br><br>if (filter_var($email, FILTER_VALIDATE_EMAIL)) {<br>  echo "Email is valid";<br>} else {<br>  echo "Email is not valid";<br>}<br><br>?&gt;</code></pre>
+                                                                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                        </div><br>
+                                                                                        <p>In this example, the filter_var function is used to validate an email address. If the email address is valid, the script will output "Email is valid", otherwise, it will output "Email is not valid".</p><br>
+                                                                                        <div class="code-block">
+                                                                                        <pre id="dataExample"><code>&lt;?php<br><br>$string = "<strong>This is a bold string</strong>";<br><br>$filtered_string = filter_var($string, FILTER_SANITIZE_STRING);<br><br>echo $filtered_string;<br><br>?&gt;</code></pre>
+                                                                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                        </div><br>
+                                                                                        <p>In this example, the filter_var function is used to sanitize a string. The FILTER_SANITIZE_STRING filter is used to remove any HTML tags from the string, resulting in a safe and clean string that can be used in your application.</p><br>
+                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                        <p>In conclusion, PHP filters are an essential tool for web developers looking to validate and sanititize input data. With the various types and options available, you can easily tailor your filters to meet the specific needs of your application. Whether you are looking to validate emails, remove harmful characters, or perform custom validation, PHP filters have got you covered.</p><br>
+                                                                                        <p>Don't forget to use a combination of filters and other security measures to ensure that your web application is as secure as possible. With the right approach and the right tools, you can build applications that are safe, reliable, and user-friendly.</p><br>
+                                                                                        `,
+                                                                                        quiz: {
+                                                                                          question: "Which of the following filters are used in PHP?",
+                                                                                          options: [
+                                                                                            "FILTER_VALIDATE_EMAIL",
+                                                                                            "FILTER_SANITIZE_NUMBER_FLOAT",
+                                                                                            "FILTER_SANITIZE_MAGIC_QUOTES",
+                                                                                            "FILTER_VALIDATE_IP",
+                                                                                            "FILTER_SANITIZE_ARRAY",
+                                                                                          ],
+                                                                                          correctAnswers: [0, 1, 3]
+                                                                                        },
+                                                                                      };
+                                                                                      case 'PHP Date and Time':
+                                                                                        return {
+                                                                                          theory:`
+                                                                                          <p>PHP's date function is an essential tool for developers to display, format, and manipulate dates and times in their web applications. Whether you're working with dates in a database, or need to display the current date and time on a website, the date function in PHP is the go-to tool for the job.</p><br>
+                                                                                          <p>In this article, we'll dive into the details of PHP's date function and how to use it to its full potential. From basic usage to advanced time manipulation, we'll cover everything you need to know to use the date function like a pro.</p><br>
+                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Basic Usage</h3><br>
+                                                                                          <p>The basic syntax of PHP's date function is as follows:</p><br>
+                                                                                          <div class="code-block">
+                                                                                          <pre id="dataExample"><code>date(format, timestamp);</code></pre>
+                                                                                          </div><br>
+                                                                                          <p>The format parameter is a string that specifies the format you want the date to be displayed in. For example, you might use d/m/Y to display the date in the format dd/mm/yyyy. The timestamp parameter is an optional value that represents the number of seconds that have passed since January 1, 1970. If no timestamp is provided, the function will use the current date and time.</p><br>
+                                                                                          <p>Here's a simple example of using the date function to display the current date:</p><br>
+                                                                                          <div class="code-block">
+                                                                                          <pre id="dataExample"><code>&lt;?php<br><br>echo date("d/m/Y");<br><br>?&gt;</code></pre>
+                                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                          </div><br>
+                                                                                          <p>This code would output the current date in the format dd/mm/yyyy.</p><br>
+                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Formatting Options</h3><br>
+                                                                                          <p>There are many formatting options available when using the date function in PHP. The following table lists some of the most commonly used options:</p><br>
+                                                                                          <table style="border: 1px solid black;" class="w-full text-left">
+  <tr style="background-color: #f2f2f2;">
+    <th style="border: 1px solid black;">Format Code</th>
+    <th style="border: 1px solid black;">Description</th>
+    <th style="border: 1px solid black;">Example</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">d</td>
+    <td style="border: 1px solid black;">Day of the month (2 digits)</td>
+    <td style="border: 1px solid black;">01 - 31</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">m</td>
+    <td style="border: 1px solid black;">Month (2 digits)</td>
+    <td style="border: 1px solid black;">01 - 12</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">Y</td>
+    <td style="border: 1px solid black;">Year (4 digits)</td>
+    <td style="border: 1px solid black;">1970 - 2038</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">H</td>
+    <td style="border: 1px solid black;">Hour (2 digits, 24-hour format)</td>
+    <td style="border: 1px solid black;">00 - 23</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">i</td>
+    <td style="border: 1px solid black;">Minutes (2 digits)</td>
+    <td style="border: 1px solid black;">00 - 59</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black;">s</td>
+    <td style="border: 1px solid black;">Seconds (2 digits)</td>
+    <td style="border: 1px solid black;">00 - 59</td>
+  </tr>
+</table><br>
+                                                                                          <p>By combining different format codes, you can create custom date and time formats to suit your specific needs. For example, you might use the format Y-m-d H:i:s to display the date and time in the format yyyy-mm-dd hh:mm:ss.</p><br>
+                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advanced Time Manipulation</h3><br>
+                                                                                          <p>In addition to basic date formatting, the date function in PHP also provides several advanced time manipulation options. For example, you can use the strtotime function to convert human-readable strings into timestamps.</p><br>
+                                                                                          <p>Here's an example of using strtotime to convert a date string into a timestamp:</p><br>
+                                                                                          <div class="code-block">
+                                                                                          <pre id="dataExample"><code>&lt;?php<br><br>$timestamp = strtotime("2022-01-01");<br>echo date("d/m/Y", $timestamp);<br><br>?&gt;</code></pre>
+                                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                          </div><br>
+                                                                                          <p>This code would convert the string "2022-01-01" into a timestamp, and then use the date function to display the date in the format dd/mm/yyyy.</p><br>
+                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                          <p>In conclusion, PHP's date function is a versatile and essential tool for web developers. With its wide range of formatting options and advanced time manipulation capabilities, it is the go-to tool for date and time management in PHP</p><br>
+                                                                                          `,
+                                                                                          quiz: {
+                                                                                            question: "In PHP, which of the following functions can be used to get the current date and time?",
+                                                                                            options: [
+                                                                                              "date()",
+                                                                                              "time()",
+                                                                                              "current_date_time()",
+                                                                                              "get_time()",
+                                                                                            ],
+                                                                                            correctAnswers: [0, 1]
+                                                                                          },
+                                                                                        };
+                                                                                        case 'PHP What is OOP':
+                                                                                          return{
+                                                                                            theory:`
+                                                                                            <p>Object-Oriented Programming (OOP) is a popular programming paradigm that focuses on the use of objects to design and develop applications. It is widely used for creating dynamic websites, developing large-scale software systems, and developing reusable components. This article will provide an overview of OOP in PHP and how it can be used to build better, more scalable and maintainable applications.</p><br>
+                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is OOP in PHP?</h3><br>
+                                                                                            <p>OOP is a programming approach that uses objects, classes and methods to organize and manipulate data. An object is an instance of a class, which can be thought of as a blueprint for the object. A class contains properties and methods, which define the characteristics and behaviors of the object.</p><br>
+                                                                                            <p>In PHP, OOP is implemented through the use of classes and objects. A class is a blueprint for creating objects and it is defined using the class keyword. Once a class is defined, objects can be created from it using the new operator.</p><br>
+                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of OOP in PHP</h3><br>
+                                                                                            <p>There are several benefits to using OOP in PHP, including:</p><br>
+                                                                                            <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                            <li><b>Encapsulation:</b> Objects can be used to encapsulate data and behavior, making it easier to maintain and change code.</li><br>
+                                                                                            <li><b>Inheritance:</b> Classes can be derived from other classes, allowing for the reuse of code and making it easier to create complex class hierarchies.</li><br>
+                                                                                            <li><b>Polymorphism:</b> Polymorphism allows for objects to have multiple forms, making it possible to use objects interchangeably in different parts of the application.</li><br>
+                                                                                            <li><b>Abstraction:</b> Abstraction enables the hiding of implementation details and the creation of interfaces that define the behavior of objects.</li><br>
+                                                                                            </ul><br>
+                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating Classes and Objects in PHP</h3><br>
+                                                                                            <p>Here is an example of how to create a class and object in PHP:</p><br>
+                                                                                            <div class="code-block">
+                                                                                            <pre id="dataExample"><code>class Car {<br> public $color;<br> public $make;<br> public $model;<br><br> function __construct($color, $make, $model) {<br>  $this->color = $color;<br>  $this->make = $make;<br>  $this->model = $model;<br> }<br><br> function getDescription() {<br>  return "The car is a ".$this->make." ".$this->model." in ".$this->color." color.";<br> }<br>}<br><br>$car = new Car("red", "Ford", "Mustang");<br>echo $car->getDescription();</code></pre>
+                                                                                            </div><br>
+                                                                                            <p>In the example above, a class called Car is defined with three properties - color, make, and model. The class also has a constructor method that is called when an object is created from the class. The constructor sets the values of the properties for the object. The class also has a method called getDescription, which returns a description of the car.</p><br>
+                                                                                            <p>Finally, an object called $car is created from the Car class and its properties and methods are used to output a description of the car.</p><br>
+                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                            <p>OOP in PHP is a powerful programming paradigm that can be used to build better, more scalable and maintainable applications. By using objects, classes, and methods to encapsulate data and behavior, developers can create applications that are easier to maintain and change over time. Additionally, the use of inheritance, polymorphism, and abstraction can help to create more complex and flexible applications.</p><br>
+                                                                                            <p>In conclusion, if you are looking to develop dynamic websites or large-scale software systems in PHP, it is well worth your time to learn about OOP and how it can be applied to your projects. Whether you are a beginner or an experienced PHP developer, OOP is an essential tool that can help you to create better, more efficient, and more maintainable applications.</p><br>
+                                                                                            `,
+                                                                                            quiz: {
+                                                                                              question: "What is the function of 'Object-Oriented Programming (OOP)' in PHP?",
+                                                                                              options: [
+                                                                                                "It helps to create clear modular code that is easy to update and debug.",
+                                                                                                "It involves writing programs with only a single object.",
+                                                                                                "It promotes the idea of reusability in coding, thus helping to save development time.",
+                                                                                                "It discourages splitting a program into separate modules.",
+                                                                                                "It makes code challenging to maintain and complicated.",
+                                                                                              ],
+                                                                                              correctAnswers:[0, 2]
+                                                                                            },
+                                                                                          };
+                                                                                          case 'PHP Classes/Objects':
+                                                                                            return {
+                                                                                              theory: `
+                                                                                              <p>Object-Oriented Programming (OOP) is a programming paradigm that is based on the concept of "objects", which can contain data and code that operates on that data. OOP allows developers to create complex and dynamic web applications with reusable and modular code. In PHP, OOP is an essential part of the language and is widely used by developers to create scalable and maintainable applications.</p><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Classes and Objects in PHP OOP?</h3><br>
+                                                                                              <p>Classes are blueprint definitions for creating objects in PHP. Classes can contain properties (variables) and methods (functions). Objects are instances of classes, created using the new keyword. The properties of an object store its data and the methods operate on that data. Classes and objects are the building blocks of OOP in PHP.</p><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Defining Classes in PHP</h3><br>
+                                                                                              <p>Classes in PHP are defined using the class keyword, followed by the name of the class. The properties and methods of a class are defined inside the class definition, within curly braces ({}). Here is an example of a class definition in PHP:</p><br>
+                                                                                              <div class="code-block">
+                                                                                              <pre id="dataExample"><code>class User {<br>  public $username;<br>  public $email;<br>  public function __construct($username, $email) {<br>    $this->username = $username;<br>    $this->email = $email;<br>  }<br>  public function getUsername() {<br>    return $this->username;<br>  }<br>  public function getEmail() {<br>    return $this->email;<br>  }<br>}</code></pre>
+                                                                                              </div><br>
+                                                                                              <p>In this example, the User class has two properties, $username and $email, and two methods, getUsername() and getEmail(). The __construct method is a special method in PHP that is called when an object is created from a class.</p><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating Objects from Classes</h3><br>
+                                                                                              <p>To create an object from a class, use the new keyword, followed by the name of the class. Here is an example of how to create an object from the User class:</p><br>
+                                                                                              <div class="code-block">
+                                                                                              <pre id="dataExample"><code>$user = new User("John Doe", "john.doe@example.com");</code></pre>
+                                                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                              </div><br>
+                                                                                              <p>This creates a new User object and stores it in the variable $user. You can access the properties and methods of the object using the arrow operator (->). Here is an example of how to access the properties and methods of the $user object:</p><br>
+                                                                                              <div class="code-block">
+                                                                                              <pre id="dataExample"><code>echo $user->username; // Outputs: "John Doe"<br>echo $user->email; // Outputs: "john.doe@example.com"<br>echo $user->getUsername(); // Outputs: "John Doe"<br>echo $user->getEmail(); // Outputs: "john.doe@example.com"</code></pre>
+                                                                                              </div><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Inheritance in PHP OOP</h3><br>
+                                                                                              <p>Inheritance is a feature of OOP that allows classes to inherit properties and methods from parent classes. This allows developers to create new classes that are based on existing classes, without having to write all the code again. In PHP, inheritance is defined using the extends keyword. Here is an example of inheritance in PHP:</p><br>
+                                                                                              <div class="code-block">
+                                                                                              <pre id="dataExample"><code>class Admin extends User {<br>  public $permissions;<br>  public function __construct($username, $email, $permissions) {<br>    parent::__construct($username, $email);<br>    $this->permissions = $permissions;<br>  }<br>  public function getPermissions() {<br>    return $this->permissions;<br>  }<br>}</code></pre>
+                                                                                              </div><br>
+                                                                                              <p>In this example, the &#96;Admin&#96; class extends the &#96;User&#96; class and inherits its properties and methods. The &#96;Admin&#96; class also has its own property, &#96;$permissions&#96;, and method, &#96;getPermissions()&#96;. The &#96;parent::&#96; keyword is used to call the parent class's &#96;__construct&#96; method, allowing the &#96;Admin&#96; class to reuse the logic from the &#96;User&#96; class.</p><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Polymorphism in PHP OOP</h3><br>
+                                                                                              <p>Polymorphism is a feature of OOP that allows objects of different classes to be treated as objects of the same class. This allows developers to write generic code that can work with objects of different classes, as long as they have the same methods. In PHP, polymorphism is achieved by defining common methods in parent classes and implementing them in child classes. Here is an example of polymorphism in PHP:</p><br>
+                                                                                              <div class="code-block">
+                                                                                              <pre id="dataExample"><code>&lt;?php<br><br>class User<br>{<br>  public $username;<br>  public $email;<br><br>  public function __construct($username, $email)<br>  {<br>    $this->username = $username;<br>    $this->email = $email;<br>  }<br>  public function getUsername()<br>  {<br>    return $this->username;<br>  }<br>  public function getEmail()<br>  {<br>    return $this->email;<br>  }<br><br>  public function showInfo()<br>  {<br>    echo "Username: " . $this->username . "&#92;n";<br>    echo "Email: " . $this->email . "&#92;n";<br>  }<br>}<br><br>class Admin extends User<br>{<br>  public $permissions;<br>  public function __construct($username, $email, $permissions)<br>  {<br>    parent::__construct($username, $email);<br>    $this->permissions = $permissions;<br>  }<br>  public function getPermissions()<br>  {<br>    return $this->permissions;<br>  }<br><br>  public function showInfo()<br>  {<br>    parent::showInfo();<br>    echo "Permissions: " . $this->permissions . "&#92;n";<br>  }<br>}<br><br>$user = new User("John Doe", "john.doe@example.com");<br>$admin = new Admin("Jane Doe", "jane.doe@example.com", ["read", "write", "delete"]);<br><br>$users = [$user, $admin];<br><br>foreach ($users as $user) {<br>  $user->showInfo();<br>}</code></pre>
+                                                                                              </div><br>
+                                                                                              <p>In this example, the &#92;User&#92; class and the &#92;Admin&#92; class both have a &#92;showInfo()&#92; method. When the &#92;showInfo()&#92; method is called on an object, the correct implementation of the method is called, based on the type of the object. This allows the &#92;foreach&#92; loop to treat the &#92;$user&#92; and &#92;$admin&#92; objects as objects of the same type, even though they are instances of different classes.</p><br>
+                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                              <p>Object-Oriented Programming (OOP) is a powerful programming paradigm that is widely used in PHP for creating scalable and maintainable web applications. Classes and objects are the building blocks of OOP in PHP, and inheritance and polymorphism are two of the key features that allow developers to write efficient and reusable code. Whether you are just starting out with PHP or are a seasoned developer, understanding the basics of OOP in PHP is essential for creating high-quality web applications.</p><br>
+                                                                                              `,
+                                                                                              quiz: {
+                                                                                                question: "In PHP, what are the characteristics and functionalities of Objects and Classes?",
+                                                                                                options: [
+                                                                                                  "They can perform actions, nicknamed 'actions'.",
+                                                                                                  "Objects are defined by classes.",
+                                                                                                  "Classes are used to define objects.",
+                                                                                                  "Objects can contain properties and methods.",
+                                                                                                  "Objects don't have the ability to hold functions which are referred to as methods.",
+                                                                                                ],
+                                                                                                correctAnswers: [1, 2, 3]
+                                                                                              },
+                                                                                            };
+                                                                                            case 'PHP Constructor':
+                                                                                              return{
+                                                                                                theory:`
+                                                                                                <p>The term Object Oriented Programming (OOP) has become a buzzword in the world of software development, and with good reason. OOP offers a wealth of benefits that make it easier for developers to build complex, scalable, and maintainable applications. One of the core concepts of OOP is the use of constructors, which play a crucial role in creating objects and initializing their properties.</p><br>
+                                                                                                <p>In PHP, a constructor is a special method that is automatically called when an object is created. The purpose of a constructor is to initialize the object's properties and set the object's state. The constructor method has the same name as the class and is automatically called when an object is instantiated. In this article, we will take a closer look at the syntax and functionality of PHP constructors.</p><br>
+                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The Syntax of Constructors in PHP</h3><br>
+                                                                                                <p>The syntax for defining a constructor in PHP is quite simple. To create a constructor, you simply need to define a method with the same name as the class. For example:</p><br>
+                                                                                                <div class="code-block">
+                                                                                                <pre id="dataExample"><code>class Car {<br>  public function __construct() {<br>   // constructor code goes here<br>  }<br>}</code></pre>
+                                                                                                </div><br>
+                                                                                                <p>It's important to note that the constructor method has no return type and no parameters. You can, however, include parameters in a constructor if you need to pass values to the object when it is created. For example:</p><br>
+                                                                                                <div class="code-block">
+                                                                                                <pre id="dataExample"><code>class Car {<br>  public function __construct($make, $model) {<br>   $this->make = $make;<br>   $this->model = $model;<br>  }<br>}</code></pre>
+                                                                                                </div><br>
+                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">The Functionality of Constructors in PHP</h3><br>
+                                                                                                <p>The primary function of a constructor is to initialize the object's properties and set its state. This means that when an object is created, the constructor is automatically called, and any code inside the constructor is executed. For example, you might use a constructor to set the value of an object's properties, like so:</p><br>
+                                                                                                <div class="code-block">
+                                                                                                <pre id="dataExample"><code>class Car {<br>  public $make;<br>  public $model;<br><br>  public function __construct($make, $model) {<br>   $this->make = $make;<br>   $this->model = $model;<br>  }<br>}</code></pre>
+                                                                                                </div><br>
+                                                                                                <p>In this example, the constructor takes two parameters, $make and $model, and sets the value of the $make and $model properties accordingly.</p><br>
+                                                                                                <p>Another common use case for constructors is to initialize objects with default values. For example:</p><br>
+                                                                                                <div class="code-block">
+                                                                                                <pre id="dataExample"><code>class Car {<br>  public $make;<br>  public $model;<br><br>  public function __construct($make = "Unknown", $model = "Unknown") {<br>   $this->make = $make;<br>   $this->model = $model;<br>  }<br>}</code></pre>
+                                                                                                </div><br>
+                                                                                                <p>In this example, the constructor has default values for $make and $model, so if these values are not provided when an object is created, the default values will be used instead.</p><br>
+                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                <p>Constructors are a powerful and essential part of Object Oriented Programming in PHP. They allow developers to initialize objects and set their state when they are created, making it easier to build complex, scalable, and maintainable applications. By understanding the syntax and functionality of constructors, you can take your PHP development skills to the next level and create more efficient, high-quality code.</p><br>
+                                                                                                `,
+                                                                                                quiz: {
+                                                                                                  question: "What is true about the PHP constructor",
+                                                                                                  options: [
+                                                                                                    "A constructor in PHP is a special type of function which is automatically called when an object of a class is created.",
+                                                                                                    "In PHP, it's not possible to declare a constructor in a class.",
+                                                                                                    "A PHP constructor has the same name as its class.",
+                                                                                                    "In PHP 5.3.3 and later, the __construct() method has been deprecated.",
+                                                                                                    "A PHP constructor can not receive arguments.",
+                                                                                                  ],
+                                                                                                  correctAnswers: [0, 2]
+                                                                                                },
+                                                                                              };
+                                                                                              case 'PHP Destructor':
+                                                                                                return {
+                                                                                                  theory:`
+                                                                                                  <p>A destructor in PHP is a special method that is called automatically when an object is no longer used or explicitly destroyed. This method is useful for releasing any resources that an object has acquired, such as database connections or file handles. In this article, we will dive deep into destructors in PHP and learn how to implement them in your code.</p><br>
+                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is a Destructor?</h3><br>
+                                                                                                  <p>A destructor is a special method that is automatically called when an object is no longer in use or is explicitly destroyed. This method is defined with the __destruct function. For example, to define a destructor for the class "MyClass", you would use the following code:</p><br>
+                                                                                                  <div class="code-block">
+                                                                                                  <pre id="dataExample"><code>class MyClass {<br>  function __destruct() {<br>   // code to be executed when object is destroyed<br>  }<br>}</code></pre>
+                                                                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                  </div><br>
+                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How do Destructors Work in PHP?</h3><br>
+                                                                                                  <p>In PHP, destructors are called automatically when an object is no longer needed or is explicitly destroyed. This can occur when a script terminates, when an object goes out of scope, or when you explicitly call the unset function on an object.</p><br>
+                                                                                                  <p>When a destructor is called, the resources that the object was using are freed. This allows you to clean up any resources that the object was using, such as database connections or file handles.</p><br>
+                                                                                                  <p>It is important to note that a destructor is only called once, even if an object has multiple references. This ensures that resources are only released once, even if multiple references to an object exist.</p><br>
+                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">When to Use Destructors in PHP</h3><br>
+                                                                                                  <p>Destructors are useful when you need to release resources that an object has acquired. For example, if your object opens a database connection, you can use a destructor to close the connection when the object is no longer needed.</p><br>
+                                                                                                  <p>Destructors are also useful when you need to perform some action when an object is destroyed, such as logging that the object was destroyed.</p><br>
+                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Implement Destructors in PHP</h3><br>
+                                                                                                  <p>To implement a destructor in PHP, you simply need to add a __destruct method to your class. The code inside the destructor will be executed automatically when the object is no longer in use or is explicitly destroyed.</p><br>
+                                                                                                  <p>Here is an example of a class that uses a destructor to close a database connection:</p><br>
+                                                                                                  <div class="code-block">
+                                                                                                  <pre id="dataExample"><code>class MyDB {  private $conn;<br><br>  function __construct() {<br>   $this->conn = mysqli_connect("localhost", "user", "password", "database");<br>  }<br><br>  function __destruct() {<br>   mysqli_close($this->conn);<br>  }<br>}</code></pre>
+                                                                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                  </div><br>
+                                                                                                  <p>In this example, the constructor opens a database connection and the destructor closes the connection. This ensures that the connection is closed when the object is no longer needed.</p><br>
+                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                  <p>Destructors in PHP are a powerful tool for releasing resources and performing actions when an object is no longer in use. Whether you need to close database connections, release file handles, or log that an object was destroyed, destructors make it easy to do so. With this comprehensive guide, you now have a solid understanding of how destructors work in PHP and how to implement them in your own code.</p><br>
+                                                                                                  `,
+                                                                                                  quiz: {
+                                                                                                    question: "What is the purpose of a destructor in PHP?",
+                                                                                                    options: [
+                                                                                                      "It is automatically called at the end of a script.",
+                                                                                                      "It is used to destruct or terminate an object.",
+                                                                                                      "A destructor function __destruct() can contain an argument.",
+                                                                                                      "It is not possible to explicitly call a destructor.",
+                                                                                                    ],
+                                                                                                    correctAnswers: [0, 1]
+                                                                                                  },
+                                                                                                };
+                                                                                                case 'PHP Access Modifiers':
+                                                                                                  return{
+                                                                                                    theory:`
+                                                                                                    <p>The concept of access modifiers in Object Oriented Programming (OOP) is fundamental to the development of robust and secure applications. In PHP, access modifiers determine the accessibility of class members and methods, specifying which parts of the code can be accessed and manipulated by other objects or parts of the application. In this article, we will explore the different access modifiers in PHP and how they can be used to control the visibility and accessibility of class members and methods.</p><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP Access Modifiers: Overview</h3><br>
+                                                                                                    <p>PHP provides three main access modifiers: public, protected, and private. These access modifiers control the visibility and accessibility of class members and methods, dictating who can access and manipulate them. Understanding these access modifiers is essential for developing secure and robust applications.</p><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Public Access Modifier</h3><br>
+                                                                                                    <p>The public access modifier is the most permissive of the three, allowing any object or part of the code to access and manipulate class members and methods marked as public. Public members and methods can be accessed from anywhere within the code, regardless of the location or scope of the accessing object.</p><br>
+                                                                                                    <div class="code-block">
+                                                                                                    <pre id="dataExample"><code>class User {<br> public $name;<br><br> public function setName($name) {<br>  $this->name = $name;<br> }<br><br> public function getName() {<br>  return $this->name;<br> }<br>}</code></pre>
+                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                    </div><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Protected Access Modifier</h3><br>
+                                                                                                    <p>The protected access modifier is less permissive than public, but more permissive than private. It allows objects within the same class or any child classes to access and manipulate class members and methods marked as protected. Protected members and methods cannot be accessed from outside the class or any child classes.</p><br>
+                                                                                                    <div class="code-block">
+                                                                                                    <pre id="dataExample"><code>class User {<br> protected $email;<br><br> protected function setEmail($email) {<br>  $this->email = $email;<br> }<br><br> protected function getEmail() {<br>  return $this->email;<br> }<br>}</code></pre>
+                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                    </div><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Private Access Modifier</h3><br>
+                                                                                                    <p>The private access modifier is the most restrictive of the three, allowing only the object within the same class to access and manipulate class members and methods marked as private. Private members and methods cannot be accessed from outside the class or any child classes.</p><br>
+                                                                                                    <div class="code-block">
+                                                                                                    <pre id="dataExample"><code>class User { private $password;<br><br> private function setPassword($password) {<br>  $this->password = $password;<br> }<br><br> private function getPassword() {<br>  return $this->password;<br> }<br>}</code></pre>
+                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                    </div><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Access Modifiers and Inheritance</h3><br>
+                                                                                                    <p>Inheritance is an important concept in OOP and is used to create new classes that are based on existing classes. When a child class inherits from a parent class, it also inherits the class members and methods of the parent class. However, the access modifiers of the class members and methods of the parent class are also inherited by the child class.</p><br>
+                                                                                                    <div class="code-block">
+                                                                                                    <pre id="dataExample"><code>class User {<br> protected $email;<br><br> protected function setEmail($email) {<br>  $this->email = $email;<br> }<br><br> protected function getEmail() {<br>  return $this->email;<br> }<br>}<br><br>class Admin extends User {<br> public function updateEmail($email) {<br>  $this->setEmail($email);<br> }<br>}</code></pre>
+                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                    </div><br>
+                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                    <p>In conclusion, access modifiers in PHP are an essential aspect of OOP and play a crucial role in determining the visibility and accessibility of class members and methods. Understanding how public, protected, and private access modifiers work and how they can be used in inheritance is crucial for the development of secure and robust applications. Using access modifiers, you can control the accessibility of class members and methods, ensuring that sensitive information is kept private and that public members and methods are accessible where needed. By using access modifiers effectively, you can write more organized, maintainable, and secure code.</p><br>
+                                                                                                    <p>To summarize, access modifiers are one of the key tools in the OOP toolkit, providing developers with the ability to control the visibility and accessibility of class members and methods. Whether you're an experienced developer or just starting out, understanding how access modifiers work and how to use them effectively is an important step towards writing clean, maintainable, and secure code.</p><br>
+                                                                                                    `,
+                                                                                                    quiz: {
+                                                                                                      question: "What are the Access Modifiers in PHP, and what do they do?",
+                                                                                                      options: [
+                                                                                                        "Public declares that a function or variable may be accessed from anywhere in the script.",
+                                                                                                        "Protected declares that a function or variable may be accessed only within the class itself.",
+                                                                                                        "Private declares that a function or variable may be accessed only within the class itself.",
+                                                                                                        "Protected declares that a function or variable may be accessed only within the class itself and its child classes.",
+                                                                                                        "Public declares that a function or variable may be accessed only within the class itself.",
+                                                                                                      ],
+                                                                                                      correctAnswers: [0, 2, 3]
+                                                                                                    },
+                                                                                                  };
+                                                                                                  case 'PHP Inheritance':
+                                                                                                    return{
+                                                                                                      theory:`
+                                                                                                      <p>Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that allows developers to create new objects from existing ones, inheriting all its properties and methods. In PHP, inheritance is implemented using the extends keyword. In this article, we'll explore PHP OOP inheritance in depth and understand how it can be used to simplify your code and create more maintainable applications.</p><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is Inheritance?</h3><br>
+                                                                                                      <p>Inheritance is a feature of OOP that allows developers to create new classes based on existing ones. The newly created class inherits all the properties and methods of the original class, also called the base or parent class. Inheritance is used to create a hierarchy of classes, where subclasses inherit the properties and methods of the parent class, and can also add new properties and methods of their own.</p><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of Inheritance</h3><br>
+                                                                                                      <p>There are several benefits of inheritance in PHP OOP, including:</p><br>
+                                                                                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                                      <li>Reusability: Reuse the properties and methods of existing classes, avoiding the need to write new code for similar objects.</li><br>
+                                                                                                      <li>Code Maintainability: Makes code more organized and easier to maintain by reducing code duplication and promoting code reuse.</li><br>
+                                                                                                      <li>Polymorphism: Ability to use objects of different classes interchangeably, through inheritance.</li><br>
+                                                                                                      <li>Abstraction: Encapsulation of properties and methods in a parent class, hiding the implementation details and making it easier to use subclasses.</li><br>
+                                                                                                      </ul><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">PHP OOP Inheritance Syntax</h3><br>
+                                                                                                      <p>The syntax of inheritance in PHP is simple. To create a subclass, you use the extends keyword, followed by the name of the parent class. For example:</p><br>
+                                                                                                      <div class="code-block">
+                                                                                                      <pre id="dataExample"><code>class ChildClass extends ParentClass {<br>  // Class body<br>}</code></pre>
+                                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                      </div><br>
+                                                                                                      <p>The subclass ChildClass inherits all the properties and methods of the parent class ParentClass. To access the properties and methods of the parent class, you use the parent keyword.</p><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Overriding Parent Methods</h3><br>
+                                                                                                      <p>Inheritance allows subclasses to override parent class methods, which means they can provide a new implementation of the method. To override a parent class method, you simply declare a new method with the same name in the subclass. For example:</p><br>
+                                                                                                      <div class="code-block">
+                                                                                                      <pre id="dataExample"><code>class ParentClass {<br>  public function displayMessage() {<br>    echo "Hello from ParentClass";<br>  }<br>}<br><br>class ChildClass extends ParentClass {<br>  public function displayMessage() {<br>    echo "Hello from ChildClass";<br>  }<br>}</code></pre>
+                                                                                                      </div><br>
+                                                                                                      <p>In this example, the ChildClass overrides the displayMessage method of the ParentClass. To access the parent class method, you can use the parent keyword. For example:</p><br>
+                                                                                                      <div class="code-block">
+                                                                                                      <pre id="dataExample"><code>class ChildClass extends ParentClass {<br>  public function displayMessage() {<br>    parent::displayMessage();<br>    echo "Hello from ChildClass";<br>  }<br>}</code></pre>
+                                                                                                      </div><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                      <p>Let's look at a real-world example of how inheritance can be used in PHP OOP. Consider a scenario where you have a Vehicle class with properties such as make, model, and year. You can then create a Car class that inherits from the Vehicle class, adding a new property fuelType.</p><br>
+                                                                                                      <div class="code-block">
+                                                                                                      <pre id="dataExample"><code>&lt;?php<br><br>class Vehicle<br>{<br>  public $make;<br>  public $model;<br>  public $year;<br><br>  public function displayDetails()<br>  {<br>    echo "Make: " . $this->make . "&#92;n";<br>    echo "Model: " . $this->model . "&#92;n";<br>    echo "Year: " . $this->year . "&#92;n";<br>  }<br>}<br><brclass Car extends Vehicle<br>{<br>  public $fuelType;<br>  public function displayDetails()<br>  {<br>    parent::displayDetails();<br>    echo "Fuel Type: " . $this->fuelType . "&#92;n";<br>  }<br>}</code></pre>
+                                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                      </div><br>
+                                                                                                      <p>In this example, the &#96;Car&#96; class inherits the properties and methods of the &#96;Vehicle&#96; class, but also adds a new property &#96;fuelType&#96;. The &#96;displayDetails&#92; method of the &#96;Car&#96; class also overrides the method of the same name in the &#96;Vehicle&#96; class, adding the output of the &#96;fuelType&#96; property.</p><br>
+                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                      <p>Inheritance is a fundamental concept in PHP OOP, allowing developers to create new objects from existing ones, inheriting all their properties and methods. Inheritance helps promote code reuse, maintainability, and abstraction, making it an essential tool for developing PHP applications. In this article, we explored PHP OOP inheritance in detail, including its syntax, benefits, and an example of how it can be used in real-world applications.</p><br>
+                                                                                                      `,
+                                                                                                      quiz: {
+                                                                                                        question: "In PHP inheritance, which of the following statements are true?",
+                                                                                                        options: [
+                                                                                                          "Inheritance allows a class to use the methods and properties of another class.",
+                                                                                                          "A class can inherit from multiple parent classes.",
+                                                                                                          "The child class has the ability to override or extend the methods of the parent class.",
+                                                                                                          "The final keyword can be used to prevent a method from being overridden by a child class.",
+                                                                                                          "The parent class can access the protected methods of the child class.",
+                                                                                                        ],
+                                                                                                        correctAnswers: [0, 2, 3],
+                                                                                                      },
+                                                                                                    };
+                                                                                                    case 'PHP Constants(OOP context)':
+                                                                                                      return {
+                                                                                                        theory:`
+                                                                                                        <p>PHP is a powerful, server-side scripting language that is widely used to create dynamic web pages and applications. One of the core features of PHP is Object-Oriented Programming (OOP), which allows developers to create complex and scalable applications. In this article, we will focus on a specific aspect of OOP in PHP: constants.</p><br>
+                                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Constants in PHP OOP?</h3><br>
+                                                                                                        <p>Constants in PHP are fixed values that cannot be changed during the execution of a script. In OOP, constants are defined within a class and can be accessed using the class name. Unlike variables, constants do not need to be declared with a dollar sign ($), and their values cannot be changed once they have been set.</p><br>
+                                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Defining Constants in PHP OOP</h3><br>
+                                                                                                        <p>In PHP OOP, constants are defined using the const keyword, followed by the constant name and its value. For example:</p><br>
+                                                                                                        <div class="code-block">
+                                                                                                        <pre id="dataExample"><code>class MyClass {<br>  const CONSTANT = 'constant value';<br>  public function showConstant() {<br>    echo self::CONSTANT . "&#92;n";<br>  }<br>}</code></pre>
+                                                                                                        </div><br>
+                                                                                                        <p>In this example, we have defined a constant CONSTANT within the MyClass class with a value of 'constant value'. The constant can be accessed using the class name and the double colon (::) operator.</p><br>
+                                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Accessing Constants in PHP OOP</h3><br>
+                                                                                                        <p>Once a constant has been defined within a class, it can be accessed from within the class or from outside the class. To access the constant from within the class, we use the self keyword, followed by the double colon operator and the constant name. To access the constant from outside the class, we use the class name, followed by the double colon operator and the constant name. For example:</p><br>
+                                                                                                        <div class="code-block">
+                                                                                                        <pre id="dataExample"><code>&lt;?php<br><br>class MyClass {<br>  const CONSTANT = 'constant value';<br>  public function showConstant() {<br>    echo self::CONSTANT . "&#92;n";<br>  }<br>}<br><br>echo MyClass::CONSTANT . "&#92;n";<br><br>$class = new MyClass();<br>$class->showConstant();</code></pre>
+                                                                                                        <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                        </div><br>
+                                                                                                        <p>In the first example, we have used the class name to access the constant. In the second example, we have created an instance of the MyClass class and used the object to access the constant.</p><br>
+                                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of Using Constants in PHP OOP</h3><br>
+                                                                                                        <p>There are several benefits to using constants in PHP OOP:</p><br>
+                                                                                                        <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                                                        <li>Constants provide a way to store values that cannot be changed during the execution of a script.</li><br>
+                                                                                                        <li>Constants improve the readability of code by making it clear what values are fixed and cannot be changed.</li><br>
+                                                                                                        <li>Constants can be accessed from anywhere within a class or outside the class, making it easy to reuse values across multiple parts of an application.</li><br>
+                                                                                                        </ol><br>
+                                                                                                        <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                        <p>Constants are an important aspect of OOP in PHP and provide a convenient way to store values that cannot be changed during the execution of a script. Whether you're a beginner or an experienced PHP developer, understanding how to use constants can help you write more organized and maintainable code.</p><br>
+                                                                                                        `,
+                                                                                                        quiz: {
+                                                                                                          question: "What is true about PHP Class Constants ",
+                                                                                                          options: [
+                                                                                                            "Class constants are defined inside class definition and outside methods.",
+                                                                                                            "You can change the value of a PHP Class Constant once it's been set.",
+                                                                                                            "A class constant can be accessed using the double colon (::).",
+                                                                                                            "A class constant is always case-sensitive.",
+                                                                                                            "A class constant can only be defined within methods.",
+                                                                                                          ],
+                                                                                                          correctAnswers: [0, 2, 3]
+                                                                                                        },
+                                                                                                      };
+                                                                                                      case 'PHP Abstract Classes':
+                                                                                                        return {
+                                                                                                          theory:`
+                                                                                                          <p>When it comes to programming in PHP, object-oriented programming (OOP) can be a powerful tool for creating clean, organized, and maintainable code. One important aspect of OOP is the use of abstract classes.</p><br>
+                                                                                                          <p>An abstract class is a blueprint for creating objects, but it cannot be instantiated on its own. Instead, abstract classes serve as a base from which other classes can inherit common properties and methods. This allows for a level of abstraction and provides a way to ensure consistency among related classes.</p><br>
+                                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of Using Abstract Classes</h3><br>
+                                                                                                          <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                                                          <li>Encapsulation: Abstract classes can encapsulate common properties and methods, making it easier to maintain consistency among related classes.</li><br>
+                                                                                                          <li>Code Reusability: The inheritance mechanism in OOP allows developers to create new classes by extending existing classes, including abstract classes. This can reduce the amount of code that needs to be written and increase the efficiency of development.</li><br>
+                                                                                                          <li>Improved Design: By using abstract classes, developers can create a clear hierarchy of classes, making it easier to understand the relationships between different parts of the code.</li><br>
+                                                                                                          <li>Flexibility: By defining an abstract class, developers can specify what properties and methods should be included in a derived class, but leave the implementation details to the derived class. This provides a degree of flexibility and allows developers to create classes that are customized for specific purposes.</li><br>
+                                                                                                          </ol><br>
+                                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Define an Abstract Class in PHP</h3><br>
+                                                                                                          <p>To create an abstract class in PHP, you must use the abstract keyword before the class declaration. Additionally, any method declared in an abstract class must also be declared as abstract.</p><br>
+                                                                                                          <div class="code-block">
+                                                                                                          <pre id="dataExample"><code>abstract class Shape {<br>abstract protected function getArea();<br>}</code></pre>
+                                                                                                          </div><br>
+                                                                                                          <p>In this example, the Shape class is declared as abstract, and the getArea method is also declared as abstract. This means that any class that extends the Shape class must implement the getArea method.</p><br>
+                                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Extending an Abstract Class in PHP</h3><br>
+                                                                                                          <p>To extend an abstract class, you must use the extends keyword in the class declaration of the derived class.</p><br>
+                                                                                                          <div class="code-block">
+                                                                                                          <pre id="dataExample"><code>class Rectangle extends Shape { protected $width;<br> protected $height;<br><br> public function __construct($width, $height) {<br>  $this->width = $width;<br>  $this->height = $height;<br> }<br><br> protected function getArea() {<br>  return $this->width * $this->height;<br> }<br>}</code></pre>
+                                                                                                          <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                          </div><br>
+                                                                                                          <p>In this example, the Rectangle class extends the Shape abstract class and implements the getArea method.</p><br>
+                                                                                                          <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                          <p>Abstract classes provide a way to enforce consistency and structure in your PHP code, and they offer numerous benefits such as encapsulation, code reusability, improved design, and flexibility. Whether you are a seasoned PHP developer or just starting out, understanding the concept of abstract classes is an important step in mastering OOP in PHP.</p><br>
+                                                                                                          `,
+                                                                                                          quiz: {
+                                                                                                            question: "What are the characteristics and usage of PHP Abstract Classes?",
+                                                                                                            options: [
+                                                                                                              "Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks.",
+                                                                                                              "An abstract class cannot be instantiated.",
+                                                                                                              "Abstract methods can be declared in any PHP class.",
+                                                                                                              "Abstract methods only declare the method's signature.",
+                                                                                                              "Abstract classes are used to provide a default action.",
+                                                                                                            ],
+                                                                                                            correctAnswers: [0, 1, 3]
+                                                                                                          },
+                                                                                                        };
+                                                                                                        case 'PHP Interfaces':
+                                                                                                          return {
+                                                                                                            theory:`
+                                                                                                            <p>Interfaces are a fundamental part of Object Oriented Programming (OOP) in PHP, and they play an important role in helping to ensure that code is well organized, maintainable, and scalable. In this article, we will explore the basics of PHP interfaces and how they can be used to structure your code in a way that is both effective and efficient.</p><br>
+                                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What is an Interface in PHP?</h3><br>
+                                                                                                            <p>An interface in PHP is essentially a blueprint for a class. It defines a set of methods and properties that must be implemented by any class that implements the interface. This means that when you create a class that implements an interface, you must provide implementations for all of the methods and properties defined in that interface.</p><br>
+                                                                                                            <p>This provides a level of structure and organization to your code, as you know that any class that implements a particular interface will have the same basic structure and functionality. This makes it easier to understand and maintain your code, as well as to add new features and functionality in the future.</p><br>
+                                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why Use Interfaces in PHP?</h3><br>
+                                                                                                            <p>Interfaces are an important tool in PHP OOP because they provide a way to ensure that your code is both organized and maintainable. They can also help you to enforce consistency and promote reusability, as you can use the same interface in multiple classes, knowing that all of those classes will have the same basic structure and functionality.</p><br>
+                                                                                                            <p>Another advantage of using interfaces in PHP is that they allow you to define contracts for your code. This means that you can define what a particular class must do, without having to worry about how it will do it. This makes it easier to change and extend your code, as you can make changes to the implementation of a particular class without affecting the rest of your code.</p><br>
+                                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Implementing Interfaces in PHP</h3><br>
+                                                                                                            <p>Implementing interfaces in PHP is simple and straightforward. To implement an interface, you simply use the implements keyword in your class definition, followed by the name of the interface. You can then provide implementations for all of the methods and properties defined in the interface.</p><br>
+                                                                                                            <p>Here is an example of a class that implements a simple interface:</p><br>
+                                                                                                            <div class="code-block">
+                                                                                                            <pre id="dataExample"><code>interface SimpleInterface {<br> public function hello();<br>}<br><br>class SimpleClass implements SimpleInterface {<br> public function hello() {<br>  return 'Hello, World!';<br> }<br>}</code></pre>
+                                                                                                            <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                            </div><br>
+                                                                                                            <p>In this example, the SimpleClass implements the SimpleInterface, and provides an implementation for the hello() method.</p><br>
+                                                                                                            <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                            <p>Interfaces are an important part of PHP OOP, and they play a crucial role in helping to ensure that your code is well organized, maintainable, and scalable. By using interfaces, you can define contracts for your code, enforce consistency, and promote reusability. Whether you are a seasoned PHP developer or just starting out, learning how to use interfaces is a must, and can help you to write better, more effective code.</p><br>
+                                                                                                            `,
+                                                                                                            quiz: {
+                                                                                                              question: "What is the primary use of PHP interfaces?",
+                                                                                                              options: [
+                                                                                                                "To share properties across different classes.",
+                                                                                                                "To provide a means of creating plug and play type frameworks.",
+                                                                                                                "To generate random numbers in PHP.",
+                                                                                                                "To define navigation menus in websites.",
+                                                                                                                "To specify what methods a class must implement.",
+                                                                                                              ],
+                                                                                                              correctAnswers: [1, 4]
+                                                                                                            },
+                                                                                                          };
+                                                                                                          case 'PHP Traits':
+                                                                                                            return{
+                                                                                                              theory:`
+                                                                                                              <p>PHP is a widely-used, open-source scripting language that is perfect for web development and can be embedded into HTML. One of its most powerful features is its Object Oriented Programming (OOP) capabilities, which allow developers to write clean, reusable, and organized code. In this article, we will delve into one of the lesser-known OOP features in PHP: traits.</p><br>
+                                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Traits in PHP OOP?</h3><br>
+                                                                                                              <p>Traits are a mechanism in PHP that allow developers to reuse sets of methods across multiple classes. In other words, they provide a way to reuse class code without having to use inheritance. A trait cannot be instantiated on its own, but it can be used in any number of classes, making it a convenient way to share common code between multiple classes.</p><br>
+                                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How do Traits Work in PHP?</h3><br>
+                                                                                                              <p>Traits work by allowing you to declare a set of methods in a single place, which can then be reused in any number of classes. When a class uses a trait, all of the methods in the trait become available as if they were declared in the class itself. This makes it easy to share common code between multiple classes, without having to copy and paste the code into each class.</p><br>
+                                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Advantages of Using Traits in PHP</h3><br>
+                                                                                                              <ol style="list-style-type: decimal; padding-left: 30px;">
+                                                                                                              <li>Code Reuse: Traits allow developers to reuse code without having to use inheritance, making it a convenient way to share common code between multiple classes.</li><br>
+                                                                                                              <li>Simplified Code: By using traits, developers can simplify their code and make it easier to read and maintain.</li><br>
+                                                                                                              <li>Better Organization: Traits allow developers to organize their code in a more modular and efficient way, making it easier to manage large code bases.</li><br>
+                                                                                                              <li>Increased Flexibility: Traits can be used in any number of classes, giving developers increased flexibility when it comes to code reuse.</li><br>
+                                                                                                              </ol><br>
+                                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Use Traits in PHP</h3><br>
+                                                                                                              <p>Using traits in PHP is straightforward. Simply declare a trait using the trait keyword, followed by the name of the trait. Then, declare the methods that you want to include in the trait. To use a trait in a class, use the use keyword followed by the name of the trait. The methods in the trait will then become available in the class.</p><br>
+                                                                                                              <div class="code-block">
+                                                                                                              <pre id="dataExample"><code>trait CommonMethods<br>{<br>  public function method1()<br>  {<br>    // implementation here<br>  }<br>  public function method2()<br>  {<br>    // implementation here<br>  }<br>}<br><br>class MyClass<br>{<br>  use CommonMethods;<br>}</code></pre>
+                                                                                                              <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                              </div><br>
+                                                                                                              <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                              <p>Traits are a powerful feature in PHP OOP that allow developers to reuse code without having to use inheritance. By using traits, developers can simplify their code, make it easier to read and maintain, and improve the organization of their code. Whether you're a beginner or an experienced PHP developer, understanding how to use traits can greatly improve your coding skills and make your projects more successful.</p><br>
+                                                                                                              `,
+                                                                                                              quiz: {
+                                                                                                                question: "What are the characteristics of PHP traits?",
+                                                                                                                options: [
+                                                                                                                  "They are used to declare methods that can be used in multiple classes.",
+                                                                                                                  "They can have member variables.",
+                                                                                                                  "Traits can be inherited.",
+                                                                                                                  "They cannot be instantiated on their own.",
+                                                                                                                  "Traits are used to implement interfaces.",
+                                                                                                                ],
+                                                                                                                correctAnswers: [0, 1, 3]
+                                                                                                              },
+                                                                                                            };
+                                                                                                            case 'PHP static Methods':
+                                                                                                              return{
+                                                                                                                theory:`
+                                                                                                                <p>Static methods are a special type of method that are defined within a class and can be called without creating an instance of the class. These methods belong to the class itself and not to any individual object of the class. In this article, we will take a closer look at PHP OOP static methods and explore their use cases.</p><br>
+                                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Static Methods in PHP OOP?</h3><br>
+                                                                                                                <p>Static methods are methods that are defined using the static keyword. Once defined, these methods can be called using the class name, without having to create an instance of the class. Static methods are often used to perform operations that do not require access to instance-specific data. For example, you may want to create a utility function that performs a calculation, such as finding the average of a set of numbers.</p><br>
+                                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why use Static Methods in PHP OOP?</h3><br>
+                                                                                                                <p>There are several reasons why you might want to use static methods in your PHP OOP code:</p><br>
+                                                                                                                <ul style="list-style-type: decimal; padding-left: 30px;">
+                                                                                                                <li>Performance - Since static methods do not require an instance of the class, they can be executed faster than regular methods.</li><br>
+                                                                                                                <li>Global Accessibility - Static methods can be called from anywhere in your code, without having to create an instance of the class.</li><br>
+                                                                                                                <li>Ease of Use - Static methods are easy to call, as they can be called using the class name, rather than an instance of the class.</li><br>
+                                                                                                                <li>Reusability - Static methods can be used by multiple classes, without having to create an instance of each class.</li><br>
+                                                                                                                </ul><br>
+                                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">How to Define and Call Static Methods in PHP OOP</h3><br>
+                                                                                                                <p>Defining a static method in PHP OOP is easy. Simply add the static keyword before the method name when defining the method within your class:</p><br>
+                                                                                                                <div class="code-block">
+                                                                                                                <pre id="dataExample"><code>class Math {<br> public static function average($numbers) {<br>  return array_sum($numbers) / count($numbers);<br> }<br>}</code></pre>
+                                                                                                                </div><br>
+                                                                                                                <p>Once the static method has been defined, it can be called using the class name, followed by the method name:</p><br>
+                                                                                                                <div class="code-block">
+                                                                                                                <pre id="dataExample"><code>&lt;?php<br><br>class Math {<br> public static function average($numbers) {<br>  return array_sum($numbers) / count($numbers);<br> }<br>}<br><br>$average = Math::average([1, 2, 3, 4, 5]);<br>echo $average;<br><br>?&gt;</code></pre>
+                                                                                                                <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                </div><br>
+                                                                                                                <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                                <p>Static methods are a powerful tool in PHP OOP that can help you to create efficient, reusable, and accessible code. By understanding the basics of static methods, you can take your PHP OOP skills to the next level. Whether you are creating a complex application or a simple utility function, static methods are a must-know for any PHP OOP developer.</p><br>
+                                                                                                                `,
+                                                                                                                quiz: {
+                                                                                                                  question : "What is true about static methods in PHP?",
+                                                                                                                  options: [
+                                                                                                                    "Static methods can be called directly - without creating an instance of a class.",
+                                                                                                                    "Static methods can only be called after an instance of the class is created.",
+                                                                                                                    "Static methods cannot access any non-static methods or non-static properties of the same class.",
+                                                                                                                    "Static methods are declared with the static keyword.",
+                                                                                                                    "Static methods can be accessed using the object of a class.",
+                                                                                                                  ],
+                                                                                                                  correctAnswers: [0, 3, 4]
+                                                                                                                },
+                                                                                                              };
+                                                                                                              case 'PHP Static Properties':
+                                                                                                                return {
+                                                                                                                  theory:`
+                                                                                                                  <p>Object Oriented Programming (OOP) is a programming paradigm that allows developers to create objects, which can be treated as instances of a class. The class can be seen as a blueprint for creating these objects. One of the important concepts in OOP is the use of properties, which are used to store data and information about the objects. In this article, we will dive into static properties in PHP OOP and how they are used.</p><br>
+                                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">What are Static Properties in PHP OOP?</h3><br>
+                                                                                                                  <p>Static properties are properties that belong to the class itself, rather than to an instance of the class. In other words, they are shared between all instances of a class. They are accessed using the class name, rather than an instance of the class.</p><br>
+                                                                                                                  <div class="code-block">
+                                                                                                                  <pre id="dataExample"><code>&lt;?php<br><br>class User {<br>  public static $count = 0;<br>  public function __construct() {<br>    self::$count++;<br>  }<br>}<br><br>$user1 = new User();<br>$user2 = new User();<br><br>echo User::$count; // Outputs: 2<br><br>?&gt;</code></pre>
+                                                                                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                  </div><br>
+                                                                                                                  <p>In the example above, we have created a User class with a static property $count. Every time a new instance of the User class is created, the $count property is incremented. Since the $count property is static, it is shared between all instances of the User class and can be accessed using the class name, User.</p><br>
+                                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Why Use Static Properties in PHP OOP?</h3><br>
+                                                                                                                  <p>Static properties are useful in certain situations where you need to store information that is shared between all instances of a class. For example, you may want to keep track of the total number of instances that have been created for a particular class.</p><br>
+                                                                                                                  <p>Static properties are also useful for creating constant values, which cannot be changed after they are defined.</p><br>
+                                                                                                                  <div class="code-block">
+                                                                                                                  <pre id="dataExample"><code>&lt;?php<br><br>class User {<br>  const MAX_USERS = 100;<br>}<br><br>echo User::MAX_USERS; // Outputs: 100<br><br>?&gt;</code></pre>
+                                                                                                                  <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                  </div><br>
+                                                                                                                  <p>In the example above, we have created a constant MAX_USERS in the User class. The constant value cannot be changed after it is defined.</p><br>
+                                                                                                                  <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                                  <p>Static properties in PHP OOP are a powerful tool for developers. They allow you to store information that is shared between all instances of a class, and are useful for keeping track of the total number of instances or for creating constant values. By understanding the use of static properties, you can create more efficient and organized code in your PHP OOP projects.</p><br>
+                                                                                                                  `,
+                                                                                                                  quiz: {
+                                                                                                                    question: "What is correct about PHP static properties?",
+                                                                                                                    options: [
+                                                                                                                      "Static properties can be accessed from a method defined within the same class.",
+                                                                                                                      "Static properties cannot be accessed directly using the object using the arrow operator.",
+                                                                                                                      "Static properties are properties that cannot be changed after being declared.",
+                                                                                                                      "Static properties can be declared with the var keyword.",
+                                                                                                                      "Static properties can be accessed dynamically within the class by using the variable name $this->propertyName.",
+                                                                                                                    ],
+                                                                                                                    correctAnswers: [0, 1]
+                                                                                                                  },
+                                                                                                                };
+                                                                                                                case 'PHP Namespaces':
+                                                                                                                  return {
+                                                                                                                    theory:`
+                                                                                                                    <p>PHP namespaces are a way of encapsulating items, such as classes, functions, and constants, within a logical structure. They are used to prevent naming collisions between items defined in different parts of a codebase, and to provide a way to organize code into meaningful groups.</p><br>
+                                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Benefits of Using Namespaces</h3><br>
+                                                                                                                    <p>There are several benefits to using namespaces in your PHP code:</p><br>
+                                                                                                                    <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                                                    <li><b>Reduces naming collisions:</b> Namespaces help to prevent naming collisions between items defined in different parts of a codebase. By using namespaces, you can ensure that each item has a unique name within the namespace, and you can avoid the risk of naming conflicts that could occur if all items were defined in the global namespace.</li><br>
+                                                                                                                    <li><b>Improves code organization:</b> Namespaces provide a way to organize code into meaningful groups. This makes it easier to find and maintain code, and it can also help to improve the readability of your code.</li><br>
+                                                                                                                    <li><b>Enables code reuse:</b> Namespaces make it easier to reuse code across different projects. By encapsulating items within a namespace, you can easily import and reuse code from other namespaces.</li><br>
+                                                                                                                    </ul><br>
+                                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Defining a Namespace</h3><br>
+                                                                                                                    <p>To define a namespace in PHP, you use the namespace keyword followed by the name of the namespace. The name of the namespace should be a valid PHP identifier and can contain multiple levels, separated by a backslash (\).</p><br>
+                                                                                                                    <div class="code-block">
+                                                                                                                    <pre id="dataExample"><code>namespace MyApp\Components;</code></pre>
+                                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                    </div><br>
+                                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Using Namespaces</h3><br>
+                                                                                                                    <p>To use a namespace in your code, you must either reference items in the namespace using the namespace name, or you can import items from the namespace into the current namespace.</p><br>
+                                                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Referencing Items in a Namespace</h3><br>
+                                                                                                                    <p>To reference an item in a namespace, you use the namespace name followed by the item name, separated by a backslash (\).</p><br>
+                                                                                                                    <div class="code-block">
+                                                                                                                    <pre id="dataExample"><code>$obj = new \MyApp\Components\MyClass();</code></pre>
+                                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                    </div><br>
+                                                                                                                    <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Importing Items from a Namespace</h3><br>
+                                                                                                                    <p>To import items from a namespace into the current namespace, you use the use keyword followed by the namespace name and the item name.</p><br>
+                                                                                                                    <div class="code-block">
+                                                                                                                    <pre id="dataExample"><code>use MyApp\Components\MyClass;<br><br>$obj = new MyClass();</code></pre>
+                                                                                                                    <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                    </div><br>
+                                                                                                                    <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                                    <p>PHP namespaces provide a way to organize code into meaningful groups and prevent naming collisions. By using namespaces, you can improve the readability and maintainability of your code, and you can also make it easier to reuse code across different projects. Whether you're a seasoned PHP developer or just starting out, understanding and using namespaces is an important part of writing high-quality PHP code.</p><br>
+                                                                                                                    `,
+                                                                                                                    quiz: {
+                                                                                                                      question: "What are the purposes of PHP namespaces?",
+                                                                                                                      options: [
+                                                                                                                        "They help to encapsulate items.",
+                                                                                                                        "They help to increase the speed of PHP programs.",
+                                                                                                                        "They are a way of encapsulating items so that same names can be reused without name conflicts.",
+                                                                                                                        "They create physical spaces within the PHP program.",
+                                                                                                                        "They enable to organize classes, interfaces, functions and constants in a better way.",
+                                                                                                                      ],
+                                                                                                                      correctAnswers: [0, 2, 4],
+                                                                                                                    },
+                                                                                                                  };
+                                                                                                                  case 'PHP Iterables':
+                                                                                                                    return {
+                                                                                                                      theory:`
+                                                                                                                      <p>PHP Iterables, also known as arrays, are data structures that allow you to store and manipulate multiple values in a single variable. These values can be of different data types and can be easily retrieved and processed using various array functions.</p><br>
+                                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Types of Iterables in PHP</h3><br>
+                                                                                                                      <p>There are two main types of iterables in PHP, indexed arrays and associative arrays.</p><br>
+                                                                                                                      <p>An indexed array stores values under a numeric index, starting from 0, while an associative array uses a string as the index, allowing you to access its values by specifying the key.</p><br>
+                                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Creating and Accessing Iterables in PHP</h3><br>
+                                                                                                                      <p>To create an array in PHP, use the array keyword followed by a list of values within square brackets. For example:</p><br>
+                                                                                                                      <div class="code-block">
+                                                                                                                      <pre id="dataExample"><code>$fruits = array("apple", "banana", "cherry");</code></pre>
+                                                                                                                      </div><br>
+                                                                                                                      <p>To access values in an array, you can use the square bracket notation, with the index of the value you want to access. For example:</p><br>
+                                                                                                                      <div class="code-block">
+                                                                                                                      <pre id="dataExample"><code>echo $fruits[0]; // Output: apple</code></pre>
+                                                                                                                      </div><br>
+                                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Array Functions in PHP</h3><br>
+                                                                                                                      <p>PHP provides a wide range of functions that you can use to manipulate and process arrays. Some of the most commonly used array functions include:</p><br>
+                                                                                                                      <ul style="list-style-type: disc; padding-left: 30px;">
+                                                                                                                      <li>array_keys: returns an array of all the keys in the input array</li><br>
+                                                                                                                      <li>array_values: returns an array of all the values in the input array</li><br>
+                                                                                                                      <li>sort: sorts the values in an array in ascending or descending order</li><br>
+                                                                                                                      <li>count: returns the number of elements in an array</li><br>
+                                                                                                                      </ul><br>
+                                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Working with Associative Arrays in PHP</h3><br>
+                                                                                                                      <p>Associative arrays allow you to access values by specifying a key instead of an index. To create an associative array, use the array keyword followed by a list of key-value pairs within square brackets. For example:</p><br>
+                                                                                                                      <div class="code-block">
+                                                                                                                      <pre id="dataExample"><code>$student = array("name" => "John Doe", "age" => 25, "country" => "USA");</code></pre>
+                                                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                      </div><br>
+                                                                                                                      <p>To access values in an associative array, use the key within square brackets. For example:</p><br>
+                                                                                                                      <div class="code-block">
+                                                                                                                      <pre id="dataExample"><code>echo $student["name"]; // Output: John Doe</code></pre>
+                                                                                                                      <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
+                                                                                                                      </div><br>
+                                                                                                                      <h3 style=" font-size: 1.3em; font-weight: bold; margin: 0.5em 0">Conclusion</h3><br>
+                                                                                                                      <p>PHP Iterables are an essential part of programming in PHP and provide a convenient way to store and manipulate multiple values in a single variable. With a wide range of array functions and the ability to use both indexed arrays and associative arrays, you have the tools you need to efficiently manage your data and build dynamic, powerful applications.</p><br>
+                                                                                                                      `,
+                                                                                                                      quiz:{
+                                                                                                                        question: "What can be considered as Iterables in PHP?",
+                                                                                                                        options: [
+                                                                                                                          "Arrays",
+                                                                                                                          "Objects implementing the Iterator interface",
+                                                                                                                          "Strings",
+                                                                                                                          "integer numbers",
+                                                                                                                        ],
+                                                                                                                        correctAnswers: [0, 1]
+                                                                                                                      },
+                                                                                                                    };
+
 
     }
   }
