@@ -49,7 +49,7 @@ const handleToggleAnswer = (idx: number) => {
 
     const timer = setTimeout(() => {
       onUnlock?.();
-    }, 60000);
+    }, 10);
 
     return () => clearTimeout(timer);
   }, [lesson.id, onUnlock]);
@@ -113,7 +113,17 @@ const handleToggleAnswer = (idx: number) => {
 </html>`,
               expectedOutput: undefined,
               instructions: "Create a simple HTML page with a heading and a paragraph about yourself."
-            }
+            },
+            quiz: {
+              question: "What does HTML stand for?",
+              options: [
+                "Hyperlinks and Text Management Language",
+                "Hyper Text Markup Language",
+                "Home Tool Markup Language",
+                "High Tech Modern Language",
+              ],
+              correctAnswers: [1]
+            },
           };
           
         case 'HTML Text Editors':
@@ -157,6 +167,16 @@ const handleToggleAnswer = (idx: number) => {
 </html>`,
               expectedOutput: undefined
             },
+            quiz: {
+              question: "Which text editor is recommended for beginners on Windows?",
+              options: [
+                "Sublime Text",
+                "Atom",
+                "Vim",
+                "Notepad",
+              ],
+              correctAnswers: [3]
+            },
           };
           
         case 'Building Blocks of HTML':
@@ -192,6 +212,16 @@ const handleToggleAnswer = (idx: number) => {
 </html>`,
               expectedOutput: undefined
             },
+            quiz: {
+              question: "Which of the following best describes an HTML attribute?",
+              options: [
+                "A tag that surrounds content",
+                "Extra information applied within the start tag",
+                "A document type declaration",
+                "A heading elemen",
+              ],
+              correctAnswers: [1]
+            },
           };
           case 'HTML Attributes':
           return {
@@ -224,7 +254,7 @@ const handleToggleAnswer = (idx: number) => {
 <p style="color: red">It will change the color of content</p>
 </body>
 </html>`,
-              expectedOutput: undefined
+              expectedOutput: undefined,
             },
             codeExplanation: `
             <h3><strong>Explanation of above code</strong></h3><br>
@@ -268,6 +298,17 @@ const handleToggleAnswer = (idx: number) => {
               <i style="color: grey">&lt;a href=https://www.example.com&gt;Click here&lt;/a&gt;</i>
 
               `,
+              quiz: {
+                question: "Which statements about HTML attributes are correct?",
+                options: [
+                  "Attributes are written as name/value pairs inside the start tag",
+                  "Attributes can be combined in one element, separated by spaces",
+                  "Attributes are case sensitive and recommended in lowercase",
+                  "Attributes can only be applied in the closing tag",
+                  "Attributes cannot be used with images",
+                ],
+                correctAnswers: [0, 1, 2]
+              },
             };
         case 'HTML Elements':
           return {
@@ -382,6 +423,17 @@ const handleToggleAnswer = (idx: number) => {
                   <td style="border: 1px solid black;"></td>
                   <td style="border: 1px solid black;">This element is used to provide a horizontal line. (void element).</td>
                 </table>`,
+                quiz: {
+                  question: "Which of the following statements about HTML elements are correct?",
+                  options: [
+                    "An HTML element usually consists of a start tag, content, and an end tag",
+                    "Some elements do not require an end tag and are called void elements",
+                    "Block-level elements always start on a new line and take the full width of the page",
+                    "Inline elements always start on a new line",
+                    "<br> and <hr> are examples of void elements",
+                  ],
+                  correctAnswers: [0, 1, 2, 4]
+                },
           };
           case 'HTML Formatting':
             return {
@@ -537,6 +589,18 @@ const handleToggleAnswer = (idx: number) => {
               <p>Output: <big>This is a big text</big></p><br>
 
                `,
+               quiz: {
+                question: "Which of the following statements about HTML formatting tags are correct?",
+                options: [
+                  "<b> is a physical tag used to make text bold",
+                  "<strong> is a logical tag that indicates important text",
+                  "<i> and <em> both display italic text, but <em> adds semantic emphasis",
+                  "<u> is used to underline text",
+                  "<tt> is fully supported in HTML5",
+                  "<mark> highlights text",
+                ],
+                correctAnswers: [0, 1, 2, 3, 5],
+               },
             };
         case 'HTML Headings':
           return {
@@ -583,8 +647,18 @@ const handleToggleAnswer = (idx: number) => {
       <h6>This is fifth sub-heading</h6>
       <p>h6 is used to display the fifth sub-heading of the page.</p>
 </body>
-</html>`,}
-
+</html>`,},
+              quiz: {
+                question: "Which of the following statements about HTML headings are correct?",
+                options: [
+                  "There are six heading levels in HTML, from <h1> to <h6>",
+                  "<h1> is the largest and most important heading",
+                  "<h6> is the smallest and least important heading",
+                  "Headings should be used only for structuring content, not just to make text bold or big",
+                  "Headings have no impact on search engine indexing",
+                ],
+                correctAnswers: [0, 1, 2, 3]
+              },
           };
           case 'HTML Paragraphs':
             return {
@@ -640,6 +714,17 @@ const handleToggleAnswer = (idx: number) => {
               <hr>
               <p>This is the second paragraph</p>
               `,
+              quiz: {
+                question: "Which of the following statements about HTML paragraphs are correct?",
+                options: [
+                  "The <p> tag is used to define a paragraph",
+                  "Browsers automatically add a blank line before and after each paragraph",
+                  "Extra spaces inside a paragraph are preserved exactly as typed",
+                  "The <br> tag can be used inside a paragraph to insert a line break",
+                  "The <hr> tag can be used inside a paragraph to insert a horizontal line",
+                ],
+                correctAnswers: [0, 1, 3, 4]
+              },
             };
             case 'HTML Phrase tags':
               return {
@@ -732,6 +817,17 @@ const handleToggleAnswer = (idx: number) => {
                 <p>Output:</p><br>
                 <p><address> You can ask your queries by contacting us on <a href="">example123@newdomain.com</a> <br> You can also visit us at: <br>58 S. Garfield Street. Villa Rica, GA 30187.</address></p>
                 `,
+                quiz: {
+                  question: "Which of the following are valid HTML phrase tags in modern HTML5?",
+                  options: [
+                    "<abbr>",
+                    "<mark>",
+                    "<strong>",
+                    "<em>",
+                    "<acronym>",
+                  ],
+                  correctAnswers: [0, 1, 2, 3]
+                },
               };
               case 'HTML Anchor':
               return {
@@ -776,6 +872,17 @@ const handleToggleAnswer = (idx: number) => {
         <p>A <strong>visited link</strong> is displayed underlined and purple.</p>
         <p>An <strong>active link</strong> is underlined and red.</p>
         `,
+              quiz: {
+                question: "Which of the following statements about the HTML anchor tag <a> are correct?",
+                options: [
+                  "A visited link is displayed underlined and green",
+                  "The target=\"_blank\" attribute opens the link in a new tab/window",
+                  "If no target attribute is used, the link opens in the same page",
+                  "The href attribute defines the destination URL",
+                  "An unvisited link is displayed underlined and blue",
+                ],
+                correctAnswers: [1,2,3,4]
+              },
               };
               case 'HTML Images':
               return {
@@ -850,6 +957,17 @@ expectedOutput: undefined,
 </html>
 `,
               expectedOutput: undefined,
+            },
+            quiz: {
+              question: "Which of the following statements about the HTML <img> tag are correct?",
+              options: [
+                "<img> is an empty tag that does not require a closing tag",
+                "The src attribute specifies the image source path",
+                "The alt attribute provides alternative text if the image cannot be displayed",
+                "The width and height attributes are recommended to be set via CSS",
+                "An image can be used as a hyperlink by placing <img> inside an <a> tag",
+              ],
+              correctAnswers: [0, 1, 2, 3, 4]
             },
               };
               case 'HTML Lists':
@@ -960,6 +1078,16 @@ expectedOutput: undefined,
 </body>
 </html>`,
                     expectedOutput: undefined,
+                  },
+                  quiz: {
+                    question: "Which of the following statements about HTML lists are correct?",
+                    options: [
+                      "An ordered list uses the <ol> tag and numbers items",
+                      "A description list uses only <li> tags",
+                      "Lists cannot be nested",
+                      "An unordered list uses the <ul> tag and displays bullets",
+                    ],
+                    correctAnswers: [0, 3]
                   },
                 };
                 case 'HTML Ordered List':
@@ -1119,7 +1247,16 @@ expectedOutput: undefined,
 </html>
                       `,
                     },
-
+                    quiz: {
+                      question: "Which of the following statements about HTML ordered lists <ol> are correct?",
+                      options: [
+                        "The default numbering type is numeric (1, 2, 3…)",
+                        "You can change numbering style using the type attribute (e.g., I, i, A, a)",
+                        "The start attribute specifies the starting value of the list",
+                        "The reversed attribute is available in all HTML versions",
+                      ],
+                      correctAnswers: [0, 1, 2]
+                    },
                   };
                 case 'HTML Unordered List':
                   return{
@@ -1229,6 +1366,16 @@ expectedOutput: undefined,
 </html>
                       `,
                     },
+                    quiz: {
+                      question: "Which of the following statements about HTML unordered lists <ul> are correct?",
+                      options: [
+                        "The default bullet style is disc",
+                        "The type attribute supports values like circle, square, and none",
+                        "The type attribute is fully supported in HTML5",
+                        "Unordered lists must always be nested inside ordered lists",
+                      ],
+                      correctAnswers: [0, 1, 2]
+                    },
                   };
                   case 'HTML Description List':
                     return{
@@ -1261,6 +1408,16 @@ expectedOutput: undefined,
     </dl>
 </body>
 </html>`,
+                      },
+                      quiz: {
+                        question: "Which of the following statements about HTML description lists are correct?",
+                        options: [
+                          "The <dl> tag defines the description list",
+                          "Description lists can only be used inside unordered lists",
+                          "The <dt> tag defines the data term",
+                          "The <dd> tag defines the data definition (description)",
+                        ],
+                        correctAnswers: [0,2,3]
                       },
                     };
                     case 'HTML Form':
@@ -1618,6 +1775,16 @@ Hobby:<br>
  </body>  
 </html>   
                             `,
+                          },
+                          quiz: {
+                            question: "Which of the following statements about HTML forms are correct?",
+                            options: [
+                              "Radio buttons allow selecting multiple options at once",
+                              "The <form> element is a container that holds input controls",
+                              "The name attribute in <input> is required for data submission to the server",
+                              "The <label> tag improves accessibility and focuses the input when clicked",
+                            ],
+                            correctAnswers: [1, 2, 3]
                           },
                       };
                       case 'HTML Form Input types':
@@ -2202,6 +2369,18 @@ Hobby:<br>
                           </form><br>
                           <p><strong>Note:</strong> Here we are using two attributes that are "pattern" and "required" which wil allow user to enter the number in given format and it is required to enter the number in input field.</p>
                           `,
+                          quiz: {
+                            question: "hich of the following are TRUE regarding HTML5 input types and their behaviors?",
+                            options: [
+                              "The <input type='password'> field automatically encrypts data before sending it to the server.",
+                              "HTML5 input types like 'email' and 'url' provide built-in pattern validation without needing complex JavaScript.",
+                              "The 'radio' type allows selecting multiple options from a set, while 'checkbox' only allows one.",
+                              "The <input type='number'> element can be restricted using 'min' and 'max' attributes.",
+                              "The <input type='tel'> type comes with a universal default validation that works for all countries automatically.",
+                              "The <input type='color'> type uses a hexadecimal format (e.g., #000000) for its value."
+                            ],
+                            correctAnswers: [1, 3, 5]
+                          },
                         };
                         case 'HTML Form attribute':
                           return {
@@ -2853,7 +3032,16 @@ Hobby:<br>
                               expectedOutput: undefined,
                               instructions: "Create a simple HTML page with a form that includes various input types and attributes."
                             },
-
+                            quiz: {
+                              question: "Which of the following statements about HTML form attributes are correct?",
+                              options: [
+                                "The action attribute defines the URL where form data is sent",
+                                "The method=\"get\" displays submitted data in the URL",
+                                "The target=\"_blank\" opens the response in the same page",
+                                "The enctype=\"multipart/form-data\" is used when uploading files",
+                              ],
+                              correctAnswers: [0, 1, 3]
+                            },
                           };
                           case 'HTML style using CSS':
                             return {
@@ -2979,6 +3167,18 @@ Hobby:<br>
   </tr>
 </table><br> 
                               `,
+                              quiz: {
+                                question: "Which of the following are TRUE about applying CSS to HTML?",
+                                options: [
+                                  "Inline CSS is applied using the 'style' attribute directly on an HTML element.",
+                                  "External CSS is defined inside <style> tags in the <head> section.",
+                                  "The <link> tag is used to connect an external .css file to an HTML document.",
+                                  "Padding creates space outside the border, while Margin creates space inside.",
+                                  "Internal CSS is the most efficient method for styling a website with 50+ pages.",
+                                  "The 'color' property changes the text color, while 'background-color' changes the area behind it."
+                                ],
+                                correctAnswers: [0, 2, 5]
+                              },
                             };
                             case 'HTML Classes':
                               return {
@@ -3126,6 +3326,17 @@ codeExplanation:`
 </body>
 </html></p>
                                 `,
+                                quiz: {
+                                  question: "Which of the following are TRUE about HTML Classes?",
+                                  options: [
+                                    "To select a class in CSS, you must use a hash (#) followed by the class name.",
+                                    "An HTML element can have multiple classes by separating them with a space.",
+                                    "Class names are case-sensitive, meaning 'Fruit' and 'fruit' are different.",
+                                    "A single class name can only be used on one specific element per page.",
+                                    "The same class can be applied to different types of tags (e.g., both an <h2> and a <p>).",
+                                  ],
+                                  correctAnswers: [1, 2, 4]
+                                },
                               };
                               case 'HTML Id attribute':
                                 return {
@@ -3197,6 +3408,18 @@ Date of Joining:
 <h2 id="demo"> </h2>   
 </body>   
 </html>`,
+                                  },
+                                  quiz: {
+                                    question: "Which of the following are TRUE about the 'id' attribute?",
+                                    options: [
+                                      "The id attribute is used to specify a unique ID for an element.",
+                                      "In CSS, you select an element with a specific id using the # symbol.",
+                                      "JavaScript can access an element with an ID using the getElementByClassName() method.",
+                                      "The id attribute allocates a unique identifier used by CSS and JavaScript.",
+                                      "In CSS, you select an id by using the period (.) character followed by the id name.",
+                                      "JavaScript accesses an element with a given ID using the getElementById() method.",
+                                    ],
+                                    correctAnswers: [0, 1, 3, 5]
                                   },
                                 };
                                 case 'HTML iframes':
@@ -3415,6 +3638,18 @@ Date of Joining:
   </tbody>
 </table>    
                                     `,
+                                    quiz: {
+                                      question: "Based on the article about HTML iframes, which of the following statements are TRUE?",
+                                      options: [
+                                        "An iframe is used to display a nested webpage within the current HTML document.",
+                                        "By default, iframe width and height values are specified in percentage (%).",
+                                        "You can remove an iframe border using the CSS 'border:none;' style property.",
+                                        "To target an iframe with a link, the link's 'target' attribute must match the iframe's 'name' attribute.",
+                                        "The 'srcdoc' attribute is used to specify the URL of the inline frame page.",
+                                        "The 'sandbox' attribute can be used to apply extra restrictions, such as allowing or blocking scripts and forms.",
+                                      ],
+                                      correctAnswers: [0, 2, 3, 5]
+                                    },
                                   };
                                   case "HTML JavaScript":
                                     return{
@@ -3582,6 +3817,16 @@ function fun() {
 
 
                                       `,
+                                      quiz: {
+                                        question: "Which of the following statements about HTML and JavaScript are correct?",
+                                        options: [
+                                          "JavaScript cannot be linked externally",
+                                          "The <script> tag can be placed inside <head> or <body>",
+                                          "JavaScript can change HTML content, styles, and attributes ",
+                                          "The <noscript> tag displays text when JavaScript is disabled",
+                                        ],
+                                        correctAnswers: [1, 2, 3]
+                                      },
                                     };
                                   case "HTML Comments":
                                     return{
@@ -3655,6 +3900,18 @@ function fun() {
 </body>
 </html>`,
                                       },
+                                      quiz: {
+                                        question: "According to the lesson on HTML Comments, which of the following are TRUE?",
+                                        options: [
+                                          "Comments are visible to the user on the web page.",
+                                          "HTML comments are ignored by the browser.",
+                                          "Comments increase the readability of the code and make it easy to understand.",
+                                          "The correct syntax for an HTML comment is <!- Write commented text here->.",
+                                          "Comments can be used for both documentation and debugging purposes.",
+                                          "Multiline comments can only be used for text, not for commenting out code.",
+                                        ],
+                                        correctAnswers: [1, 2, 3, 4]
+                                      },
                                     };
                                     case "HTML File Paths":
                                       return{
@@ -3716,6 +3973,18 @@ function fun() {
 <li>Try to use relative file paths, so that your code will be independent of URL.</li>
 </ul>            
                                         `,
+                                        quiz: {
+                                          question: "Which of the following are TRUE about HTML File Paths?",
+                                          options: [
+                                            "An Absolute File Path specifies a full URL address.",
+                                            "The syntax <img src='../picture.jpg'> points to a file in the folder one level up from the current folder.",
+                                            "A Relative File Path specifies a file based on the location of the current page.",
+                                            "The syntax <img src='/images/picture.jpg'> means the image is in the same folder as the current page.",
+                                            "It is generally recommended to use relative file paths to keep your code independent of the URL.",
+                                            "If you use an incorrect file name or path, the image will still display but at a smaller size.",
+                                          ],
+                                          correctAnswers: [0, 1, 2, 4]
+                                        },
                                       };
                                       case 'HTML Head':
                                         return{
@@ -3918,6 +4187,18 @@ expectedOutput: undefined,
 
 <p><strong>Note:</strong> It is recommended to omit the &lt;html&gt; and &lt;body&gt; tags. omitting these tags can crash DOM or XML software and produce errors in older browsers (IE9).</p><br>
 <p>However, you can omit the &lt;head&gt; tag.</p>                                         `,
+                                          quiz: {
+                                            question: "According to the lesson on the HTML <head> element, which of the following are TRUE?",
+                                            options: [
+                                              "The content within the <head> tag is displayed in the browser window on page loading.",
+                                              "The <title> element defines the title in the browser tab and search engine results.",
+                                              "The <meta charset='UTF-8'> tag allows the page to handle and display any language.",
+                                              "The 'viewport' meta tag is used to control dimensions and scaling on different devices.",
+                                              "The <base> element is used to specify the base URL for all relative URLs in a page.",
+                                              "In HTML5, it is recommended to omit the <html> and <body> tags to avoid errors in older browsers.",
+                                            ],
+                                            correctAnswers: [1, 2, 3, 4]
+                                          },
                                         };
                                         case 'HTML Layouts':
                                           return {
@@ -4005,6 +4286,16 @@ expectedOutput: undefined,
 </div><br>
 
                                          `,
+                                         quiz: {
+                                          question: "Which of the following HTML5 elements are correctly matched with their purpose in page layout?",
+                                          options: [
+                                            "<header> defines the top section of a page",
+                                            "<nav> is used for navigation links",
+                                            "<aside> is used for unrelated content",
+                                            "<footer> defines the bottom section of a page",
+                                          ],
+                                          correctAnswers: [0, 1, 3]
+                                         },
       };
                                           case 'HTML Layout Techniques':
                                             return{
@@ -4344,10 +4635,17 @@ expectedOutput: undefined,
                                                                                             `,
                                                                                             expectedOutput: undefined,
                                                                                            },
-
-                                                                                            
-
-                                            };
+                                                                                           quiz: {
+                                                                                            question: "Which of the following statements about HTML layout techniques are correct?",
+                                                                                            options: [
+                                                                                              "Table-based layouts are easy to create but not recommended for modern websites",
+                                                                                              "CSS float can be used for layouts but may reduce flexibility",
+                                                                                              "CSS Flexbox adapts layouts to different screen sizes and devices",
+                                                                                              "CSS frameworks cannot be used for responsive design",
+                                                                                            ],
+                                                                                            correctAnswers: [0, 1, 2]
+                                                                                           },
+};
                                             case 'HTML Responsive':
                                               return{
                                                 theory:`
@@ -4511,6 +4809,16 @@ codeExample6:{
   `,
   expectedOutput: undefined, 
 },
+                                                quiz: {
+                                                  question: "Which of the following techniques are commonly used to make web pages responsive?",
+                                                  options: [
+                                                    "Using max-width:100% for images to prevent scaling beyond original size",
+                                                    "Avoiding media queries for different screen sizes",
+                                                    "Applying the <picture> element to change images based on browser width",
+                                                    "Setting text size with viewport units",
+                                                  ],
+                                                  correctAnswers: [0, 2, 3]
+                                                },
                                               };
                                               case 'HTML Computer Code':
                                                 return{
@@ -4609,7 +4917,17 @@ expectedOutput: undefined,
                                                   `,
                                                   expectedOutput: undefined,
                                                 },
-                                                  
+                                                  quiz: {
+                                                    question: "Which of the following HTML elements are correctly matched with their purpose?",
+                                                    options: [
+                                                      "<code> is used to display programming code",
+                                                      "<kbd> represents user input such as keyboard strokes",
+                                                      "<samp> is used to represent program output",
+                                                      "<var> is used to define a variable ",
+                                                      "<pre> ignores formatting and displays preformatted text",
+                                                    ],
+                                                    correctAnswers: [0, 1, 2, 3, 4]
+                                                  },
                                                 };
                                                 case 'HTML Entities':
                                                   return{
@@ -4789,6 +5107,16 @@ expectedOutput: undefined,
     </tr>
     </table><br><br>
                                                     `,
+                                                    quiz: {
+                                                      question: "Which of the following statements about HTML entities are correct?",
+                                                      options: [
+                                                        "HTML entities start with & and end with ;",
+                                                        "&lt; and &gt; are used to display < and >",
+                                                        "Entity names are case-insensitive ",
+                                                        "&copy; displays the copyright symbol",
+                                                      ],
+                                                      correctAnswers: [0, 1, 3]
+                                                    },
                                                   };
                                                   case 'HTML Symbols':
                                                     return{
@@ -5007,7 +5335,16 @@ expectedOutput: undefined,
     </tr>
         </table><br><br>                                                   
                                                       `,
-
+                                                      quiz: {
+                                                        question: "Which of the following statements about HTML symbols are correct?",
+                                                        options: [
+                                                          "Symbols not present on a keyboard can be added using HTML entities",
+                                                          "If an entity name does not exist, you can use its numerical reference",
+                                                          "&sum; represents the summation symbol (∑)",
+                                                          "Entity names are optional and browsers always prefer numbers",
+                                                        ],
+                                                        correctAnswers: [0, 1, 2]
+                                                      },
                                                     };
                                                     case 'HTML Charset':
                                                       return{
@@ -5034,6 +5371,16 @@ expectedOutput: undefined,
                                                         <i style="color: grey;"><p>&lt;meta charset="UTF-8"&gt;</p></i>
 
                                                         `,
+                                                        quiz: {
+                                                          question: "Which of the following statements about HTML character encoding are correct?",
+                                                          options: [
+                                                            "ASCII was the first character encoding standard and supports 128 characters",
+                                                            "ANSI (Windows-1252) supports 256 characters",
+                                                            "ISO-8859-1 was the default character set for HTML 2.0 and HTML 4",
+                                                            "UTF-8 is limited to English letters only",
+                                                          ],
+                                                          correctAnswers: [0, 1, 2]
+                                                        },
                                                       };
                                                       case 'HTML URL Encode':
                                                         return{
@@ -5082,10 +5429,18 @@ expectedOutput: undefined,
     <tr><td>Ä</td><td>%C4</td><td>%C3%84</td></tr>
     <tr><td>Å</td><td>%C5</td><td>%C3%85</td></tr>
   </tbody>
-</table><br>
-
-                                                          
+</table><br>     
                                                           `,
+                                                          quiz : {
+                                                            question: "Which of the following statements about URLs and URL encoding are correct?",
+                                                            options: [
+                                                              "UTF-8 encoding is not supported in HTML5",
+                                                              "A URL can contain either a domain name or an IP address",
+                                                              "The default port for HTTP is 80",
+                                                              "URL encoding replaces spaces with + or %20",
+                                                            ],
+                                                            correctAnswers: [1, 2, 3]
+                                                          },
                                                         };
 
 
