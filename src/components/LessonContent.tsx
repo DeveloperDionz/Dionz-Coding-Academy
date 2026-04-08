@@ -49,7 +49,7 @@ const handleToggleAnswer = (idx: number) => {
 
     const timer = setTimeout(() => {
       onUnlock?.();
-    }, 60000);
+    }, 10);
 
     return () => clearTimeout(timer);
   }, [lesson.id, onUnlock]);

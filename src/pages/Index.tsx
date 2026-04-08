@@ -36,7 +36,7 @@ const Index = () => {
       description: "Learn the building blocks of web development",
       icon: <img src="./images/hlogo.png" alt="HTML Logo" style={{ width: "40px", height: "40px" }} />,
       level: "Beginner",
-      duration: "17+ hours",
+      duration: "8+ hours",
       lessons: 34,
       color: "bg-yellow-600 text-black"
     },
@@ -45,7 +45,7 @@ const Index = () => {
       description: "Master styling and layout techniques",
       icon: <img src="./images/clogo.png" alt="HTML Logo" style={{ width: "40px", height: "40px" }} />,
       level: "Beginner",
-      duration: "15+ hours",
+      duration: "9+ hours",
       lessons: 58,
       color: "bg-yellow-600 text-black"
     },
@@ -54,7 +54,7 @@ const Index = () => {
       description: "Dynamic programming and interactivity",
       icon: <img src="./images/jlogo.png" alt="HTML Logo" style={{ width: "40px", height: "40px" }} />,
       level: "Beginner-Intermediate-Advanced",
-      duration: "24+ hours",
+      duration: "11+ hours",
       lessons: 70,
       color: "bg-yellow-600 text-black"
     },
@@ -63,8 +63,8 @@ const Index = () => {
       description: "Versatile programming language mastery",
       icon: <img src="./images/plogo.png" alt="HTML Logo" style={{ width: "40px", height: "40px" }} />,
       level: "Intermediate",
-      duration: "15 hours",
-      lessons: 30,
+      duration: "15+ hours",
+      lessons: 74,
       color: "bg-yellow-600 text-black"
     },
     {
@@ -72,7 +72,7 @@ const Index = () => {
       description: "Modern frontend development with React",
       icon: <img src="./images/rlogo.png" alt="HTML Logo" style={{ width: "40px", height: "40px" }} />,
       level: "Advanced",
-      duration: "20 hours",
+      duration: "20+ hours",
       lessons: 35,
       color: "bg-yellow-600 text-black"
     },
@@ -81,8 +81,8 @@ const Index = () => {
       description: "Master version control and collaboration tools",
       icon: <img src="	https://ryvpndnkailzmuajceug.supabase.co/storage/v1/object/public/icons/glogo.png" alt="git logo" style={{ width: "40px", height: "40px" }} />,
       level: "Intermediate",
-      duration: "10 hours",
-      lessons: 20,
+      duration: "6+ hours",
+      lessons: 39,
       color: "bg-yellow-600 text-black"
     }
   ];
