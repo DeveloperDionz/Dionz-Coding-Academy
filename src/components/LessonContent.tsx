@@ -5490,6 +5490,16 @@ expectedOutput: undefined,
    </body>	
 </html>`,
             },
+            quiz: {
+              question: "Which of the following statements about CSS are correct?",
+              options: [
+                "CSS stands for Cascading Style Sheets",
+                "CSS is used to control the style and layout of web pages",
+                "CSS can only be used with JavaScript",
+                "Learning CSS helps in understanding other web technologies like JavaScript and PHP"
+              ],
+              correctAnswers: [0, 1, 3]
+            },
           };
         case 'Introduction to CSS':
           return {
@@ -5506,6 +5516,16 @@ expectedOutput: undefined,
               <li><strong>Internal CSS</strong> - by using a &lt;style&gt; element in the &lt;head&gt; section.</li>
               <li><strong>External CSS</strong> - by creating an external CSS file.</li>
             `,
+            quiz: {
+              question: "Which of the following statements about CSS usage are correct?",
+              options: [
+                "Inline CSS is applied using the style attribute inside HTML elements",
+                "Internal CSS is applied using the <style> element inside the <head> section",
+                "External CSS is applied by linking to a .css file",
+                "CSS was developed by Microsoft"
+              ],
+              correctAnswers: [0, 1, 2]
+            },
           };
           case 'CSS-Syntax':
           return {
@@ -5577,6 +5597,17 @@ color: blue; /*This is a comment and will not be displayed*/
 </html>
             `},
             expectedOutput3: undefined,
+            quiz: {
+              question: "Which of the following options describes the correct CSS syntax?",
+              options: [
+                "A CSS declaration consists of a property and its value, separated by a colon.",
+                "A CSS block is enclosed in square brackets.",
+                "The properties and values in a CSS declaration are separated by a semicolon.",
+                "CSS rulesets consist of a selector followed by a declaration block in curly brackets.",
+                "CSS rulesets consist of a selector followed by a declaration block in round brackets."
+              ],
+              correctAnswers: [0, 2, 3]
+            },
           };
           case 'CSS id and class':
             return {
@@ -5634,6 +5665,17 @@ color: blue; /*This is a comment and will not be displayed*/
               theory3:`<h3 style="font-size: 1.5em; font-weight: bold; margin: 0.5em 0;">The Difference Between id and class selector</h3>
               <p>The difference between ids and classes is that the first one is unique, and the second one is not. This means that each element can have only one id, and each page can have only one element with this id. When using the same id on multiple elements, the code won't pass validation. But as the classes are not unique, the same class can be used on multiple elements, and vice versa, you can use several classes on the same element.</p>
               `,
+              quiz: {
+                question: "What is the main difference between CSS ID and class?",
+                options: [
+                  "CSS ID is unique and should only be used once per page, while class can be used multiple times.",
+                  "CSS ID and class can both be used multiple times on a single page.",
+                  "The class applies to HTML elements and ID applies to CSS elements.",
+                  "CSS ID is defined with a #, while class is defined with a.",
+                  "CSS ID applies to CSS elements and class applies to HTML elements.",
+                ],
+                correctAnswers: [0, 3]
+              },
             };
             case 'CSS Text':
               return {
@@ -5854,6 +5896,17 @@ color: blue; /*This is a comment and will not be displayed*/
         <button class="copy-btn" onclick="copyCode('wordSpacingExample4', this)">Copy</button>
       </div><br>
                 `,
+                quiz: {
+                  question: "Which of the following properties can you use to control the appearance of text in CSS?",
+                  options: [
+                    "Color",
+                    "Text-align",
+                    "Font-size",
+                    "Border-radius",
+                    "Background-color",
+                  ],
+                  correctAnswers: [0, 1, 2]
+                },
               };
               case 'CSS Fonts':
                 return{
@@ -5862,11 +5915,11 @@ color: blue; /*This is a comment and will not be displayed*/
                   <p>The CSS font properties are used for defining the size, font family, boldness and the style of the text. Besides, it sets the font of the element to a system font.</p><br>
                   <p>The CSS font property is considered to be a shorthand property. So, here we will explain the following properties:</p>
                   <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0">
-                  <li>Font Family</li>
-                  <li>Font Style</li>
-                  <li>Font Size</li>
-                  <li>Font Weight</li>
-                  <li>Font Variant</li>
+                  <li>Font Family</li><br>
+                  <li>Font Style</li><br>
+                  <li>Font Size</li><br>
+                  <li>Font Weight</li><br>
+                  <li>Font Variant</li><br>
                   </ul><br>
                   <p>When we write some information,some text or link in our webpage, we must give themstyles. We use the properties mentioned above for text styles. Let's know more about these properties.</p><br><hr>
                   <h3 style="font-size: 1.2em; font-weight: bold; margin: 0.5em 0;">Font Family</h3>
@@ -5979,6 +6032,17 @@ color: blue; /*This is a comment and will not be displayed*/
 
             `,
                     expectedOutput: undefined,
+                  },
+                  quiz: {
+                    question: "Which of the following statements are true regarding CSS fonts?",
+                    options: [
+                      "The list of CSS font properties is Font-size, Font-style, Font-family, Font-weight, and Font-variant",
+                      "You can't specify a list of fonts in CSS",
+                      "Generic font families are: serif, sans-serif, cursive, monospace, and fantasy",
+                      "Font-style specifies whether a text should be strikethrough or not",
+                      "Font-weight determines how bold or light a font appears",
+                    ],
+                    correctAnswers: [0, 2, 4]
                   },
                 };
                 case 'CSS Links':
@@ -6108,6 +6172,17 @@ color: blue; /*This is a comment and will not be displayed*/
                       expectedOutput: undefined,
                     },
                     codeExplanation4:`You can choose your preferable color with the color picker.`,
+                    quiz: {
+                      question: "What properties are used in CSS to modify the appearance of links?",
+                      options: [
+                        "a:link",
+                        "a:visited",
+                        "a:active",
+                        "a:hover",
+                        "a:linker"
+                      ],
+                      correctAnswers: [0, 1, 2, 3]
+                    },
                   };
                   case 'CSS Tables':
                     return {
@@ -6569,6 +6644,17 @@ color: blue; /*This is a comment and will not be displayed*/
 </html>`,
                   expectedOutput: undefined,
                 },
+                quiz: {
+                  question: "What properties of CSS can be applied on tables?",
+                  options: [
+                    "Text Alignment",
+                    "Vertical Alignment",
+                    "Padding",
+                    "Color",
+                    "Animations"
+                  ],
+                  correctAnswers: [0, 1, 2, 3]
+                },
                   };
                   case 'CSS Border':
                     return {
@@ -6782,7 +6868,18 @@ expectedOutput: undefined,
                       <ul style="list-style-type: disc; padding-left: 30px; margin: 0.5em 0;">
                       <li>Outlines are drawn outside of the content of an element, so they don't take up space.</li>
                       <li>Outlines usually are rectangualar, although they don't have to be.</li>
-                      `
+                      `,
+                      quiz: {
+                        question: "Which of the following are properties that can be used to style borders in CSS?",
+                        options: [
+                          "border-style",
+                          "border-font",
+                          "border-radius",
+                          "border-width",
+                          "border-color"
+                        ],
+                        correctAnswers: [0, 2, 3, 4]
+                      },
                     };
                     case 'CSS Padding':
                       return{
@@ -6959,6 +7056,17 @@ expectedOutput: undefined,
 </html>`,
                           expectedOutput: undefined,
                         },
+                        quiz: {
+                          question: "What describes the 'padding' property in CSS correctly?",
+                          options: [
+                            "The padding property creates extra space within the element only.",
+                            "The padding property adds extra space around the element's content, outside of any defined borders.",
+                            "The padding is a shorthand property for setting the padding-top, padding-right, padding-bottom, and padding-left properties in a single declaration.",
+                            "The padding property changes the background color of an element.",
+                            "The padding property assigns a texture to the element."
+                          ],
+                          correctAnswers: [0, 2]
+                        },
                       };
                       case 'CSS Margin':
                         return {
@@ -7101,6 +7209,17 @@ expectedOutput: undefined,
   </body>
 </html>`,
                           },
+                          quiz: {
+                            question: "What properties can you set with CSS Margin?",
+                            options: [
+                              "Margin-top",
+                              "Margin-bottom",
+                              "Margin-left",
+                              "Margin-right",
+                              "Margin-color"
+                            ],
+                            correctAnswers: [0, 1, 2, 3]
+                          },
                         };
                         case 'CSS Color Names':
                           return {
@@ -7160,6 +7279,19 @@ expectedOutput: undefined,
                             <p>Below you will see the HEX values of web colors, you can write it even in small letters. It's the same.</p><br>
                             <p>For example white is #FFFFFF or #ffffff</p>
                             `,
+                            quiz: {
+                              question: "Which of the following are valid CSS color names?",
+                              options: [
+                                "Blue",
+                                "YellowCream",
+                                "GhostWhite",
+                                "Magenta",
+                                "SeaGreen",
+                                "HotPink",
+                                "ColdRed"
+                              ],
+                              correctAnswers: [0, 2, 3, 4, 5]
+                            },
                           };
                           case 'CSS Gradients':
                             return {
@@ -7663,6 +7795,17 @@ expectedOutput: undefined,
   </body>
 </html>`,
                                 expectedOutput: undefined,
+                              },
+                              quiz: {
+                                question: "What types of CSS gradients are mentioned in the webpage?",
+                                options: [
+                                  "Linear Gradients",
+                                  "Circular Gradients",
+                                  "Radial Gradients",
+                                  "Elliptical Gradients",
+                                  "Repeated Gradients"
+                                ],
+                                correctAnswers: [0, 2, 4]
                               },
                             };
                             case 'The Ultimate Guide to Flexbox':
@@ -8599,6 +8742,18 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                   expectedOutput: undefined,
                                 },
+                                quiz: {
+                                  question: "Which of the following are properties of Flexbox in CSS?",
+                                  options: [
+                                    "flex-direction",
+                                    "flex-wrap",
+                                    "display-inline",
+                                    "justify-content",
+                                    "align-content",
+                                    "text-align"
+                                  ],
+                                  correctAnswers: [0, 1, 3, 4]
+                                },
                               };
                               case 'CSS3 Properties':
                                 return {
@@ -8834,6 +8989,22 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </tbody>
 </table><br>
                                   `,
+                                  quiz: {
+                                    question: "Which of the following are valid CSS3 properties?",
+                                    options: [
+                                      "color",
+                                      "border",
+                                      "font-family",
+                                      "text-decoration",
+                                      "align-content",
+                                      "margin-top",
+                                      "padding-left",
+                                      "width",
+                                      "image-url",
+                                      "font-size"
+                                    ],
+                                    correctAnswers: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+                                  },
                                 };
                                 case 'CSS * Selector':
                                   return {
@@ -8893,6 +9064,18 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                       expectedOutput: undefined,
+                                    },
+                                    quiz: {
+                                      question: "What are the types of CSS selectors",
+                                      options: [
+                                        "Element Selector",
+                                        "Id Selector",
+                                        "Class Selector",
+                                        "Universal Selector",
+                                        "Grouping Selector",
+                                        "Combination Selector",
+                                      ],
+                                      correctAnswers: [0, 1, 2, 3, 4]
                                     },
                                   };
                                   case 'CSS :active Pseudo Class':
@@ -8980,6 +9163,18 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                       },
+                                      quiz: {
+                                        question: "What is the purpose of the :active selector in CSS and where can it be used?",
+                                        options: [
+                                          "It is used to select and style an active element.",
+                                          "It is used for inactive elements to change their state.",
+                                          "It can be used for a link that is currently being clicked.",
+                                          "It cannot be used for a link that is currently being clicked.",
+                                          "It is a CSS pseudo-class which can be used in combination with the :hover and :focus selectors.",
+                                          "It is a CSS property which cannot be used in combination with the :hover and :focus selectors."
+                                        ],
+                                        correctAnswers: [0, 2, 4]
+                                      },
                                     };
                                     case 'CSS ::after Pseudo element':
                                       return{
@@ -9044,6 +9239,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                         },
+                                        case: {
+                                          question: "What does the ::after pseudo-element in CSS do?",
+                                          options: [
+                                            "It inserts content before the selected element.",
+                                            "It inserts content after the selected element.",
+                                            "It allows you to style selected text.",
+                                            "It is used in conjunction with the content property."
+                                          ],
+                                          correctAnswers: [1, 3]
+                                        },
                                       };
                                       case 'CSS ::before Pseudo Element':
                                         return {
@@ -9104,6 +9309,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     <p>"Be or not to be".</p>
   </body>
 </html>`,
+                                          },
+                                          quiz: {
+                                            question: "What does the '::before' pseudo-element do in CSS?",
+                                            options: [
+                                              "It inserts content before the content of the selected element.",
+                                              "It hides content before the selected element.",
+                                              "It changes the color of the selected element.",
+                                              "It is used to style the selected element before any other styles are applied."
+                                            ],
+                                            correctAnswers: [1, 3]
                                           },
                                         };
                                         case 'CSS :checked Pseudo Class':
@@ -9278,6 +9493,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                           },
                                           codeExplanation4:`<br><p>So, the :checked pseudo-class can be used for making forms more accessible and building interactive widgets with hidden inputs and their visible labels.</p><br>`,
+                                          quiz: {
+                                            question: "What is the function of the ':checked' pseudo-class in CSS?",
+                                            options: [
+                                              "It styles the selected input elements",
+                                              "It changes the color of the checked checkbox",
+                                              "It increases the size of the HTML document",
+                                              "It hides the content of the checked checkbox"
+                                            ],
+                                            correctAnswers: [0, 1]
+                                          },
                                         };
                                         case 'CSS :default Pseudo Class':
                                           return {
@@ -9361,6 +9586,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                               expectedOutput: undefined,
                                             },
+                                            quiz: {
+                                                question: "What can the 'default style' in CSS be used for?",
+                                                options: [
+                                                  "It is used to define the standard attractiveness of every element.",
+                                                  "It is used to set the default layout of an HTML page.",
+                                                  "It can be used to style attributes, like color and font size, of an HTML page.",
+                                                  "It cannot be used to style HTML elements."
+                                              ],
+                                              correctAnswers: [1, 2]
+                                            },
                                           };
                                           case 'CSS :dir() Pseudo Class':
                                             return {
@@ -9407,6 +9642,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     </div>
   </body>
 </html>`,
+                                              },
+                                              quiz: {
+                                                question: "What is the purpose of the 'dir' property in CSS?",
+                                                options: [
+                                                  "It allows the user to specify the direction of text.",
+                                                  "It changes the background color of text.",
+                                                  "It is used to align text.",
+                                                  "It can decide if the text should be rendered right-to-left or left-to-right."
+                                                ],
+                                                correctAnswers: [0, 3]
                                               },
                                             };
                                             case 'CSS :disabled Pseudo Class':
@@ -9538,6 +9783,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                 },
+                                                quiz: {
+                                                  question: "What are the characteristics of the 'disabled' attribute in CSS?",
+                                                  options: [
+                                                    "The disabled attribute is a Boolean attribute.",
+                                                    "The disabled attribute is often used with form elements.",
+                                                    "When the disabled attribute is set, it affects the element and its children.",
+                                                    "The disabled attribute cannot be used with buttons.",
+                                                    "The disabled attribute can only disable text input fields."
+                                                  ],
+                                                  correctAnswers: [0, 1, 2]
+                                                },
                                               };
                                               case 'CSS :empty Pseudo Class':
                                                 return {
@@ -9609,6 +9865,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     </p>
   </body>
 </html>`,
+                                                  },
+                                                  quiz: {
+                                                    question: "What does the :empty pseudo-class in CSS represent?",
+                                                    options: [
+                                                      "Affects elements with no children (including text nodes).",
+                                                      "Affects elements with uppercase text content.",
+                                                      "A filter for removing empty elements from the DOM.",
+                                                      "Affects elements with no text content."
+                                                    ],
+                                                    correctAnswers: [0, 3]
                                                   },
                                                 };
                                                 case 'CSS :enabled Pseudo Class':
@@ -9691,6 +9957,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                   expectedOutput: undefined
+                                                },
+                                                quiz: {
+                                                  question: "What does the ':enabled' pseudo-class in CSS do?",
+                                                  options: [
+                                                    "It selects every disabled <input> element.",
+                                                    "It selects every enabled <input> element.",
+                                                    "It selects every <input> element that is hovered over.",
+                                                    "It applies a special style to an element when it is hovered over.",
+                                                    "It applies a special style to an enabled <input> element."
+                                                  ],
+                                                  correctAnswers: [1, 4]
                                                 },
                                                   };
                                                   case "CSS :first-child Pseudo Class":
@@ -9848,6 +10125,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                         expectedOutput: undefined,
                                                       },
+                                                      quiz: {
+                                                        question: "What does the :first-child pseudo-class represent in CSS?",
+                                                        options: [
+                                                          "It represents the first child of an element.",
+                                                          "It represents the last child of an element.",
+                                                          "It targets and styles the first paragraph of an HTML document.",
+                                                          "It represents the first-occurring 'div' element in CSS.",
+                                                        ],
+                                                        correctAnswers: [0, 2]
+                                                      },
                                                     };
                                                     case 'CSS ::first-letter Pseudo element':
                                                       return {
@@ -9920,6 +10207,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                           expectedOutput: undefined,
                                                         },
+                                                        quiz: {
+                                                          question: "How does the CSS ::first-letter pseudo-element selector work?",
+                                                          options: [
+                                                            "It selects and styles the first letter of every paragraph.",
+                                                            "It selects and styles the last letter of every paragraph.",
+                                                            "It can be used with block-level elements and table cells.",
+                                                            "It can be used to select and style the first letter of each word in a paragraph."
+                                                          ],
+                                                          correctAnswers: [0, 2]
+                                                        },
                                                       };
                                                       case 'CSS ::first-line Pseudo element':
                                                         return {
@@ -9974,6 +10271,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
   </body>
 </html>`,
+                                                          },
+                                                          quiz: {
+                                                            question: "What can the ::first-line pseudo-element selector be applied to in CSS?",
+                                                            options: [
+                                                              "Block-level elements",
+                                                              "Inline elements",
+                                                              "Elements with ::before and ::after pseudo-elements",
+                                                              "Elements that are set to float"
+                                                            ],
+                                                            correctAnswers: [0]
                                                           },
                                                         };
                                                         case 'CSS ::first-of-type Pseudo Class':
@@ -10068,6 +10375,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                               expectedOutput: undefined,
                                                             },
+                                                            quiz: {
+                                                              question: "What is the correct definition and use of the :first-of-type CSS pseudo-class?",
+                                                              options: [
+                                                                "The :first-of-type CSS pseudo-class represents the first sibling of its kind in the list of children of an element.",
+                                                                "The :first-of-type CSS pseudo-class applies style to the last child of its parent.",
+                                                                "The :first-of-type CSS pseudo-class helps with styling only the first child of an element.",
+                                                                "The :first-of-type CSS pseudo-class matches the first element among siblings of the same type.",
+                                                                "The :first-of-type CSS pseudo-class can be used with the styling of text contents."
+                                                              ],
+                                                              correctAnswers: [0, 3]
+                                                            },
                                                           };
                                                           case 'CSS :focus Pseudo Class':
                                                             return {
@@ -10149,6 +10467,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                 expectedOutput: undefined,
                                                               },
+                                                              quiz: {
+                                                                question: "What is the function of the ':focus' pseudo-class in CSS?",
+                                                                options: [
+                                                                  "It is used to select and style the current element a user is interacting with.",
+                                                                  "It is used to apply styles to an element when the user's mouse pointer hovers over it.",
+                                                                  "It is used to target and style an element when it has been clicked or tapped.",
+                                                                  "It is used to style an element when the user's mouse pointer moves away from it."
+                                                                ],
+                                                                correctAnswers: [0, 2]
+                                                              },
                                                             };
                                                             case 'CSS :fullscreen Pseudo Class':
                                                               return {
@@ -10229,6 +10557,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                   expectedOutput: undefined,
+                                                                },
+                                                                quiz: {
+                                                                  question: "What are the ways to make a webpage fullscreen",
+                                                                  options: [
+                                                                    "Using the Fullscreen API",
+                                                                    "Using F11 key on the keyboard",
+                                                                    "Using CSS 'fullscreen' property",
+                                                                    "Using JavaScript 'fullscreen' method"
+                                                                  ],
+                                                                  correctAnswers: [0, 1]
                                                                 },
                                                               };
                                                               case 'CSS :hover Pseudo Class':
@@ -10319,6 +10657,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                   expectedOutput: undefined,
                                                                 },
+                                                                quiz: {
+                                                                  question: "What is the purpose of the :hover selector in CSS?",
+                                                                  options: [
+                                                                    "It allows the text to be dragged.",
+                                                                    "It lets you apply dramatic transformations to HTML items.",
+                                                                    "It allows you to specify a special state of an element.",
+                                                                    "It is used to style an element when you mouse over it.",
+                                                                    "It allows to align text in a specific direction.",
+                                                                  ],
+                                                                  correctAnswers: [2, 3]
+                                                                },
                                                                 };
                                                                 case 'CSS :in-range Pseudo Class':
                                                                   return {
@@ -10354,6 +10703,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     </form>
   </body>
 </html>`,
+                                                                    },
+                                                                    quiz: {
+                                                                      question: "What is the purpose of the :in-range pseudo-class in CSS?",
+                                                                      options: [
+                                                                        "It is used to style input elements with type range when the current value is between the min and max.",
+                                                                        "It is used to style elements when the mouse hovers over them.",
+                                                                        "It is used to style input elements when they are disabled.",
+                                                                        "It is used to select and style an element that has a specific parent.",
+                                                                        "It is used to style input elements with type range when the current value is outside the min and max."
+                                                                      ],
+                                                                      correctAnswers: [0]
                                                                     },
                                                                   };
                                                                   case 'CSS :indeterminate Pseudo Class':
@@ -10435,6 +10795,18 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                       expectedOutput: undefined
                                                                     },
+                                                                    quiz: {
+                                                                      question: "Which of the following states about the indeterminate attribute in CSS is correct?",
+                                                                      options: [
+                                                                        "It is a boolean attribute.",
+                                                                        "It applies to the <input> element exclusively",
+                                                                        "It doesn't affect the behavior of the input; it just alters the look of the input.",
+                                                                        "It reduces the opacity of the input element.",
+                                                                        "It can be used for checkboxes and radio buttons.",
+                                                                        "It is only compatible with HTML5."
+                                                                      ],
+                                                                      correctAnswers: [0, 2, 4]
+                                                                    },
                                                                     };
                                                                     case 'CSS :invalid Pseudo Class':
                                                                       return {
@@ -10475,6 +10847,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                           expectedOutput: undefined,
+                                                                        },
+                                                                        quiz: {
+                                                                          question: "What is the function of the ':invalid' pseudo-class in CSS?",
+                                                                          options: [
+                                                                            "It is used to select and style every invalid element in a form.",
+                                                                            "It is used for error handling in JavaScript.",
+                                                                            "It is used to select and style every valid element in a form.",
+                                                                            "It helps to validate the form elements before submitting them to a server.",
+                                                                            "It is used to style the body of the HTML page."
+                                                                          ],
+                                                                          correctAnswers: [0, 3]
                                                                         },
                                                                       };
                                                                       case 'CSS :lang() Pseudo Class':
@@ -10542,6 +10925,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </body>
 </html>
 `,
+                                                                          },
+                                                                          quiz: {
+                                                                            question: "What does the :lang pseudo-class in CSS do?",
+                                                                            options: [
+                                                                              "It enables you to select elements with a specific language attribute.",
+                                                                              "It allows you to style text in a specific language.",
+                                                                              "It allows you to translate text from one language to another.",
+                                                                              "It allows you to apply different styles to different parts of the text.",
+                                                                              "It changes the language of the text."
+                                                                            ],
+                                                                            correctAnswers: [0, 1]
                                                                           },
                                                                         };
                                                                         case 'CSS :last-child pseudo Class':
@@ -10668,6 +11062,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>
 `,
                                                                             },
+                                                                            quiz: {
+                                                                              question: "What does the :last-child CSS pseudo-class represent?",
+                                                                              options: [
+                                                                                "It represents the last element among a group of sibling elements.",
+                                                                                "It represents the first element among a group of sibling elements.",
+                                                                                "It changes the background color of a webpage.",
+                                                                                "It is used to apply styles to the last-child of its parent.",
+                                                                                "It is used to apply styles to the first child of its parent."
+                                                                              ],
+                                                                              correctAnswers: [0, 3]
+                                                                            },
                                                                           };
                                                                           case 'CSS :last-of-type Pseudo class':
                                                                             return {
@@ -10773,6 +11178,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
     <span>Some text</span>
   </body>
 </html>`,
+                                                                              },
+                                                                              quiz: {
+                                                                                question: "What does the :last-of-type CSS pseudo-class represent?",
+                                                                                options: [
+                                                                                  "The :last-of-type CSS pseudo-class represents the last element of its parent.",
+                                                                                  "The :last-of-type CSS pseudo-class represents the last element of its type in a collection of siblings.",
+                                                                                  "This pseudo-class only accepts element types, not class or ID selectors.",
+                                                                                  "The :last-of-type CSS pseudo-class can also be used in conjunction with class or ID selectors.",
+                                                                                  "The :last-of-type pseudo-class helps in applying style to the last child of the specified type."
+                                                                                ],
+                                                                                correctAnswers: [1, 3, 4]
                                                                               },
                                                                             };
                                                                             case 'CSS :link Pseudo Class':
@@ -10927,6 +11343,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                   expectedOutput: undefined,
                                                                                 },
+                                                                                quiz: {
+                                                                                  question: "In CSS, what are the different link states that can be styled?",
+                                                                                  options: [
+                                                                                    "Visited",
+                                                                                    "Active",
+                                                                                    "Hover",
+                                                                                    "Link",
+                                                                                    "Align"
+                                                                                  ],
+                                                                                  correctAnswers: [0, 1, 2, 3]
+                                                                                },
                                                                               };
                                                                               case 'CSS :not() Pseudo Class':
                                                                                 return {
@@ -11015,6 +11442,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                     expectedOutput: undefined,
                                                                                   },
+                                                                                  quiz: {
+                                                                                    question: "What does the :not psuedo-class in CSS do?",
+                                                                                    options: [
+                                                                                      "It represents an element that is not represented by its argument",
+                                                                                      "It is used to specify a particular attribute for an element",
+                                                                                      "It selects every single element that is not the specified element",
+                                                                                      "It is the opposite of :has pseudo-class"
+                                                                                    ],
+                                                                                    correctAnswers: [0, 2]
+                                                                                  },
                                                                                 };
                                                                                 case 'CSS :nth-child() Pseudo Class':
                                                                                   return {
@@ -11089,6 +11526,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                       expectedOutput: undefined,
+                                                                                    },
+                                                                                    quiz: {
+                                                                                      question: "What is the function of nth-child() selector in CSS?",
+                                                                                      options: [
+                                                                                        "The nth-child() selector in CSS matches every element that is the nth child, regardless of type, of its parent.",
+                                                                                        "The nth-child() selector only applies to children elements of a specific type.",
+                                                                                        "The nth-child() selector is used to select the nth sibling of an element.",
+                                                                                        "The nth-child() selector can have an argument representing an integer, odd or even numbers, or an expression(n+an+b).",
+                                                                                        "The nth-child() selector can be used to select an element based on its parent's attributes."
+                                                                                      ],
+                                                                                      correctAnswers: [0, 3]
                                                                                     },
                                                                                   };
                                                                                   case 'CSS :nth-last-child Pseudo Class':
@@ -11251,6 +11699,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                         expectedOutput: undefined,
                                                                                       },
+                                                                                      quiz: {
+                                                                                        question: "What is true about the nth-last-child pseudo-class in CSS?",
+                                                                                        options: [
+                                                                                          "It is used to select elements with a specific class.",
+                                                                                          "It selects the nth child element from the last child of its parent.",
+                                                                                          "The counting of children starts from the first child.",
+                                                                                          "The counting of children starts from the last child.",
+                                                                                          "It cannot be used with other pseudo-classes."
+                                                                                        ],
+                                                                                        correctAnswers: [1, 3]
+                                                                                      },
                                                                                     };
                                                                                     case 'CSS :nth-last-of-type() Pseudo Class':
                                                                                       return {
@@ -11352,6 +11811,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                           expectedOutput: undefined,
                                                                                         },
+                                                                                        quiz: {
+                                                                                          question: "What is the function of the :nth-last-of-type CSS pseudo-class?",
+                                                                                          options: [
+                                                                                            "It selects an HTML element which is the second to the last child of its type in a group of siblings.",
+                                                                                            "It matches elements depending on their position among a group of siblings, counting from the end.",
+                                                                                            "It selectively styles elements by applying styles to alternate elements.",
+                                                                                            "It matches only the last child elements of each type.",
+                                                                                            "It can be utilized with 'even' and 'odd' keywords to select even and odd instances of an element from the end."
+                                                                                          ],
+                                                                                          correctAnswers: [1, 4]
+                                                                                        },
                                                                                       };
                                                                                       case 'CSS :nth-of-type() Pseudo Class':
                                                                                         return {
@@ -11420,6 +11890,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                             expectedOutput: undefined,
+                                                                                          },
+                                                                                          quiz: {
+                                                                                            question: "What does the CSS :nth-of-type() selector match?",
+                                                                                            options: [
+                                                                                              "It matches every element that is the nth child, regardless of type, of its parent.",
+                                                                                              "It matches every element that is the nth child, of a particular type, of its parent.",
+                                                                                              "It matches the unique type of each element in a HTML document.",
+                                                                                              "It matches the elements based on their position in a group or a pseudo-class."
+                                                                                            ],
+                                                                                            correctAnswers: [1, 3]
                                                                                           },
                                                                                         };
                                                                                         case 'CSS :only-child Pseudo Class':
@@ -11569,6 +12049,15 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                               expectedOutput: undefined,
                                                                                             },
+                                                                                            quiz: {
+                                                                                              question: "The :only-child pseudo-selector matches an element",
+                                                                                              options: [
+                                                                                                "if it is the last child among the other elements.",
+                                                                                                "that do not have any child elements or text content.",
+                                                                                                "if it is the only child of its parent."
+                                                                                              ],
+                                                                                              correctAnswers: [2]
+                                                                                            },
                                                                                           };
                                                                                           case 'CSS :only-of-type Pseudo class':
                                                                                             return {
@@ -11610,6 +12099,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                 expectedOutput: undefined,
+                                                                                              },
+                                                                                              quiz: {
+                                                                                                question: "What does the ':only-of-type' pseudo-class represent in CSS?",
+                                                                                                options: [
+                                                                                                  "The ':only-of-type' represents an element that has no siblings of the given type within its parent container.",
+                                                                                                  "The ':only-of-type' represents a target element that is the only child of its type within its parent.",
+                                                                                                  "The ':only-of-type' represents an element with a certain ID or class within its parent container.",
+                                                                                                  "The ':only-of-type' represents a styled element that is the only child of its type within its document."
+                                                                                                ],
+                                                                                                correctAnswers: [1]
                                                                                               },
                                                                                             };
                                                                                             case 'CSS :optional Pseudo Class':
@@ -11694,6 +12193,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                                 expectedOutput: undefined,
                                                                                               },
+                                                                                              quiz: {
+                                                                                                question: "What are the functions of CSS optional selectors?",
+                                                                                                options: [
+                                                                                                  "They are used to select the first child of an element.",
+                                                                                                  "They are used to select the elements based on their position in their parent element.",
+                                                                                                  "They are used to apply styles to HTML elements with specific attributes.",
+                                                                                                  "They are used to select all elements."
+                                                                                                ],
+                                                                                                correctAnswers: [0, 1]
+                                                                                              },
                                                                                             };
                                                                                             case 'CSS :out-of-range Pseudo Class':
                                                                                               return {
@@ -11729,6 +12238,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                   expectedOutput: undefined,
+                                                                                                },
+                                                                                                quiz: {
+                                                                                                  question: "What is the purpose of the :out-of-range pseudo-class selector in CSS?",
+                                                                                                  options: [
+                                                                                                    "It is used to style HTML forms with input elements which contain values outside a specified range.",
+                                                                                                    "It is used to style HTML forms with input elements which contain values inside a specified range.",
+                                                                                                    "It is used to make elements disappear from a webpage when they are not within the viewport.",
+                                                                                                    "It is used to apply effects or animations to an element when a user interacts with it.",
+                                                                                                    "It is used to style form controls that are enabled."
+                                                                                                  ],
+                                                                                                  correctAnswers: [0]
                                                                                                 },
                                                                                               };
                                                                                               case 'CSS ::placeholder Pseudo element':
@@ -11857,6 +12377,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                     expectedOutput: undefined,
+                                                                                                  },
+                                                                                                  quiz: {
+                                                                                                    question: "What does the ::placeholder pseudo-element in CSS entail?",
+                                                                                                    options: [
+                                                                                                      "It is used to style the placeholder text of an input field.",
+                                                                                                      "It has widespread support across all browsers.",
+                                                                                                      "It is used to style the background color of an input field.",
+                                                                                                      "It allows changing the text color, font size, and letter-spacing of the placeholder text.",
+                                                                                                      "It is used to manipulate the positioning of an element."
+                                                                                                    ],
+                                                                                                    correctAnswers: [0, 3]
                                                                                                   },
                                                                                                 };
                                                                                                 case 'CSS :read-only Pseudo Class':
@@ -12011,6 +12542,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                                       expectedOutput: undefined,
                                                                                                     },
+                                                                                                    quiz: {
+                                                                                                      question: "What does the CSS :read-only pseudo-class select?",
+                                                                                                      options: [
+                                                                                                        "It selects input elements with 'readonly' attribute",
+                                                                                                        "It selects all input elements",
+                                                                                                        "It selects input elements without the 'readonly' attribute",
+                                                                                                        "It selects any HTML elements with the 'readonly' attribute",
+                                                                                                        "It selects any HTML elements without the 'readonly' attribute"
+                                                                                                      ],
+                                                                                                      correctAnswers: [0, 3]
+                                                                                                    },
                                                                                                   };
                                                                                                   case 'CSS :read-write Pseudo Class':
                                                                                                     return {
@@ -12072,6 +12614,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                         expectedOutput: undefined,
+                                                                                                      },
+                                                                                                      quiz: {
+                                                                                                        question: "What can you learn from the 'Read/Write' section",
+                                                                                                        options: [
+                                                                                                          "How to color a web page background in CSS",
+                                                                                                          "How to read and write CSS declarations",
+                                                                                                          "Basics of JavaScript and HTML",
+                                                                                                          "General syntax of CSS rules",
+                                                                                                          "How to integrate CSS in an existing HTML project"
+                                                                                                        ],
+                                                                                                        correctAnswers: [1, 3]
                                                                                                       },
                                                                                                     };
                                                                                                     case 'CSS :required Pseudo Class':
@@ -12148,6 +12701,17 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
 </html>`,
                                                                                                           expectedOutput: undefined,
                                                                                                         },
+                                                                                                        quiz: {
+                                                                                                          question: "What is the function of the ':required' pseudo-class in CSS?",
+                                                                                                          options: [
+                                                                                                            "It selects every <input> element with a 'required' attribute",
+                                                                                                            "It selects every <input> element without a 'required' attribute",
+                                                                                                            "It embeds images in the CSS file",
+                                                                                                            "It is used to select the items that have the required attribute in the form",
+                                                                                                            "It adjusts the size of images in CSS"
+                                                                                                          ],
+                                                                                                          correctAnswers: [0, 3]
+                                                                                                        },
                                                                                                       };
                                                                                                       case 'CSS :root Pseudo Class':
                                                                                                         return {
@@ -12188,6 +12752,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                             expectedOutput: undefined,
+                                                                                                          },
+                                                                                                          quiz: {
+                                                                                                            question: "What is the purpose of the ':root' pseudo-class selector in CSS?",
+                                                                                                            options: [
+                                                                                                              "It is used to select the root element of the document.",
+                                                                                                              "It is used to select all elements of a document.",
+                                                                                                              "It is used to set global properties that can be used across all the elements in the document.",
+                                                                                                              "It is used to select the first child element of a document."
+                                                                                                            ],
+                                                                                                            correctAnswers: [0, 2]
                                                                                                           },
                                                                                                         };
                                                                                                         case 'CSS :scope Pseudo Class':
@@ -12240,6 +12814,16 @@ display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+</code></pre>
   </body>
 </html>`,
                                                                                                               expectedOutput: undefined,
+                                                                                                            },
+                                                                                                            quiz: {
+                                                                                                              question: "What does the scope in CSS refer to?",
+                                                                                                              options: [
+                                                                                                                "The scope in CSS refers to the part of the code where a variable or function can be accessed.",
+                                                                                                                "The scope in CSS refers to the styles that are only available within the block of code they are declared.",
+                                                                                                                "The scope in CSS refers to the size of the display screen for the web page.",
+                                                                                                                "The scope in CSS refers to the limits set on the amount of data that can be transferred on a website."
+                                                                                                              ],
+                                                                                                              correctAnswers: [0, 1]
                                                                                                             },
                                                                                                           };
                                                                                                           case 'CSS ::selection Pseudo Element':
@@ -12367,6 +12951,17 @@ expectedOutput: undefined,
   </body>
 </html>`,
                                                                                                                 expectedOutput: undefined,
+                                                                                                              },
+                                                                                                              quiz: {
+                                                                                                                question: "What can you achieve using the ::selection pseudo-element in CSS?",
+                                                                                                                options: [
+                                                                                                                  "You can change the background color of the selected text.",
+                                                                                                                  "You can modify the color of the selected text.",
+                                                                                                                  "You can rotate the selected text.",
+                                                                                                                  "You can change the font size of the unselected text.",
+                                                                                                                  "You can modify the font-family of the selected text."
+                                                                                                                ],
+                                                                                                                correctAnswers: [0, 1]
                                                                                                               },
                                                                                                             };
                                                                                                             case 'CSS :target Pseudo Class':
@@ -12699,6 +13294,16 @@ expectedOutput: undefined,
 </html>`,
 expectedOutput: undefined,
                                                                                                                 },
+                                                                                                                quiz: {
+                                                                                                                  question: "What is the purpose of the :target selector in CSS?",
+                                                                                                                  options: [
+                                                                                                                    "It is used to target and select the current active #id element.",
+                                                                                                                    "It is used to select all elements with the specified class.",
+                                                                                                                    "It is used to change the background color of a specific #id element.",
+                                                                                                                    "It is used to select the element with the specific ID that is currently targeted in the URL."
+                                                                                                                  ],
+                                                                                                                  correctAnswers: [0, 3]
+                                                                                                                },
                                                                                                               };
                                                                                                               case 'CSS :valid Pseudo Class':
                                                                                                                 return {
@@ -12743,6 +13348,17 @@ expectedOutput: undefined,
                                                                                                                     expectedOutput: undefined,
                                                                                                                   },
                                                                                                                   codeExplanation2: `<p>In the given example when typing an illegal e-mail address, the styling disappears.</p>`,
+                                                                                                                  quiz: {
+                                                                                                                    question: "What is the usage and function of the 'valid' CSS pseudo-class?",
+                                                                                                                    options: [
+                                                                                                                      "'valid' pseudo-class is used to apply styles to all HTML elements that fit into the criteria of an invalid input according to form validation rules.",
+                                                                                                                      "'valid' pseudo-class is applied to HTML elements that pass client-side validation.",
+                                                                                                                      "'valid' pseudo-class changes the content of an HTML element.",
+                                                                                                                      "It is used to style the form controls when the user submits the form.",
+                                                                                                                      "It can change the border colour of input fields when they contain valid data."
+                                                                                                                    ],
+                                                                                                                    correctAnswers: [1, 4]
+                                                                                                                  },
                                                                                                                 };
                                                                                                                 case 'CSS :visited pseudo Class':
                                                                                                                   return {
@@ -12832,6 +13448,17 @@ expectedOutput: undefined,
   </body>
 </html>
 `,
+                                                                                                                    },
+                                                                                                                    quiz: {
+                                                                                                                      question: "What does the :visited selector in CSS do?",
+                                                                                                                      options: [
+                                                                                                                        "It represents a link that the user has not clicked on.",
+                                                                                                                        "It represents a link that the user has clicked on.",
+                                                                                                                        "It helps in styling unvisited links.",
+                                                                                                                        "It helps in styling visited links.",
+                                                                                                                        "It changes the color of text in a link."
+                                                                                                                      ],
+                                                                                                                      correctAnswers: [1, 3]
                                                                                                                     },
                                                                                                                   };
 
