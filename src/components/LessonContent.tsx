@@ -49,7 +49,7 @@ const handleToggleAnswer = (idx: number) => {
 
     const timer = setTimeout(() => {
       onUnlock?.();
-    }, 10);
+    }, 60000);
 
     return () => clearTimeout(timer);
   }, [lesson.id, onUnlock]);
@@ -13504,6 +13504,19 @@ expectedOutput: undefined,
               <p>The designers of JavaScript are careful to not make any major changes that could break existing programs. This is done to allow new browsers run old programs. JavaScript is not only used on platforms like web browsers. Databases like MongoDB and CouchDB, use JavaScript as their scripting and query language. Several platforms for desktop and server programming provide an environment for programming JavaScript outside of the browser (for example Node JS).</p>
               
             `,
+            quiz: {
+              question: "Which of the following statements are true about JavaScript?",
+              options: [
+                "JavaScript was originally named LiveScript.",
+                "JavaScript is mainly used for server-side scripting.",
+                "JavaScript is a high-level, dynamic, lightweight, interpreted language.",
+                "JavaScript was developed by Brendan Eich in 1995.",
+                "JavaScript is closely related to the Java programming language.",
+                "ECMAScript version 3 was the most supported version between 2000 and 2010.",
+                "JavaScript allows for rich interfaces and less server interaction."
+            ],
+            correctAnswers: [0, 2, 3, 5, 6]
+          },
           };
           
         case 'Start Using Javascript':
@@ -13617,6 +13630,19 @@ expectedOutput: undefined,
               </div><br>
               <p>Click the Customize menu button to open the JavaScript console and choose Tools→JavaScript Console. Or use the keyboard shortcut Ctrl+Shift+J (Windows) or ⌘-Option-J (Mac) etc.</p>
             `,
+            quiz: {
+              question: "Which of the following statements are true about starting with JavaScript in web development?",
+              options: [
+                "JavaScript can be used to add intelligence to web pages, allowing them to respond to user interactions.",
+                "The <script> tag is used to insert JavaScript code into any part of an HTML document.",
+                "JavaScript is primarily used for styling web pages, similar to CSS.",
+                "To link an external JavaScript file, the 'src' attribute is used within the <script> tag.",
+                "The 'type' attribute in the <script> tag is required in modern HTML to specify JavaScript code.",
+                "The document.write() command in JavaScript can be used to print messages directly onto a web page.",
+                "Google Chrome's JavaScript console is primarily used for designing web page layouts."
+              ],
+              correctAnswers: [0, 1, 3, 5]
+            },
           };
           case 'Javascript comments':
             return {
@@ -13634,6 +13660,17 @@ expectedOutput: undefined,
               <button class="copy-btn" onclick="copyCode('scriptExample', this)">Copy</button>
               </div><br>
               `,
+              quiz: {
+                question: "What are true statements about JavaScript comments?",
+                options: [
+                  "Single-line comments are initiated with '//' and extend to the end of the line.",
+                  "Multi-line comments are enclosed between '/*' and '*/'.",
+                  "Comments in JavaScript can be used to temporarily disable code for testing.",
+                  "JavaScript executes single-line comments as code if they are not at the start of a line.",
+                  "Multi-line comments can be nested within each other."
+                ],
+                correctAnswers: [0, 1, 2]
+              },
             };
             case 'Javascript with DOM':
               return {
@@ -13866,6 +13903,18 @@ expectedOutput: undefined,
             <p>The way a document is displayed can be affected by styling and explaining rules that match certain nodes. There are a lot of different style properties, such as color or display. JavaScript code can manipulate the style of elements directly through its style property.</p><br>
 
             `,
+              quiz: {
+                question: "What is the role of JavaScript with the Document Object Model (DOM)?",
+                options: [
+                  "JavaScript is used to apply CSS styles to the DOM.",
+                  "JavaScript can manipulate the DOM to add, change, or remove HTML elements and attributes.",
+                  "JavaScript is used to store and retrieve data in the DOM.",
+                  "JavaScript can change all the HTML elements in the page through the DOM.",
+                  "JavaScript is used to handle events on HTML elements.",
+                  "JavaScript cannot change the content of HTML elements."
+                ],
+                correctAnswers: [1, 3, 4]
+              },
               };
               case 'Javascript Use Strict':
                 return{
@@ -13982,6 +14031,17 @@ expectedOutput: undefined,
                   <li>For security reasons, it is not allowed for eval() to create variables in the scope from which it was caleed.</li>
                   </ul><br>
                   `,
+                  quiz: {
+                    question: "What does the 'use strict' directive do in JavaScript?",
+                    options: [
+                      "'use strict' catches common coding bloopers, throwing exceptions.",
+                      "'use strict' prevents the use of global variables.",
+                      "'use strict' excludes the silent error by changing them to throw errors.",
+                      "'use strict' allows the use of undeclared variables.",
+                      "'use strict' makes the JavaScript code less secure.",
+                    ],
+                    correctAnswers: [0, 1, 2],
+                  },
                 };
                 case 'Javascript variables':
                   return {
@@ -14091,6 +14151,17 @@ expectedOutput: undefined,
                     <p>It's important to name variables in a way that allows us to easily understand what's inside them.</p><br>
                     <p>One more important characteristic of a programming language is set of data types it supports. There are two main types of languages: <strong>statically typed language</strong> and <strong>dynamically typed language.</strong></p><br>
                     `,
+                    quiz: {
+                      question: "Which of the following rules apply to creating JavaScript variables?",
+                      options: [
+                        "Variable names must start with a number.",
+                        "Variable names can contain letters, digits, underscores, and dollar signs.",
+                        "Variable names are case-sensitive.",
+                        "Variable names cannot be reserved JavaScript keywords.",
+                        "Spaces are allowed in variable names."
+                      ],
+                      correctAnswers: [1, 2, 3],
+                    },
                   };
                   case 'Javascript Data Types':
                     return{
@@ -14254,6 +14325,21 @@ expectedOutput: undefined,
                       <p><code style="color: grey;">Number(value)</code> function helps us explicitly convert a value to a number.</p><br>
                       <p>Explict conversion is required when we read a value from a string-based source as a text form which expects a number to be entered.</p><br>
                       `,
+                      quiz: {
+                        question: "Which of the following are valid data types in JavaScript",
+                        options: [
+                          "Number",
+                          "Boolean",
+                          "Symbol",
+                          "Character",
+                          "Null",
+                          "Undefined",
+                          "Object",
+                          "Bigint",
+                          "String"
+                        ],
+                        correctAnswers: [0, 1, 2, 4, 5, 6, 7, 8]
+                      },
                     };
                     case 'Javascript Simple Actions alert, prompt, confirm':
                       return {
@@ -14330,7 +14416,18 @@ expectedOutput: undefined,
                       </div><br>
                       <p>When clicked, this button logs "Welcome to DCA!" to the browser's developer console. You won't see a popup, but you can open DevTools (F12 or Ctrl+Shift+I) and check the Console tab to view the output.</p>
                         `,
-                        console:` `,                     
+                        console:` `,
+                        quiz: {
+                          question: "What are some of the simple actions JavaScript can perform?",
+                          options: [
+                            "Writing into an HTML output",
+                            "Setting the attributes of named elements in an HTML document",
+                            "Reading and setting CSS properties of HTML elements",
+                            "Executing complex machine learning algorithms",
+                            "Updating a live database",
+                          ],
+                          correctAnswers: [0, 1, 2]
+                        },                 
                       };
                       case 'Javascript Operators':
                       return {
@@ -14392,6 +14489,17 @@ expectedOutput: undefined,
                       <p>++x increments x first, then returns the new value.</p>
                       <p>So both x and y are 6.</p><br>
                         `,
+                        quiz: {
+                          question: "Which of the following statements about JavaScript comparisons are correct?",
+                          options: [
+                            "In JavaScript, comparison operations return a boolean value.",
+                            "NaN is considered equal to NaN in JavaScript.",
+                            "The equality check '==' needs exactly the same type to return true.",
+                            "The strict equality check '===' cannot convert data types.",
+                            "Null and undefined are considered unequal because they are of different types.",
+                          ],
+                          correctAnswers: [0, 3]
+                        },
                       };
                       case 'Comparison Operators':
                         return{
@@ -14535,6 +14643,17 @@ expectedOutput: undefined,
                       <li>The equality check (3) returns false, as here undefined only equals null, undefined and no other value.</li>
                       </ul><br>                     
                           `,
+                          quiz: {
+                            question: "Which of the following comparison operators can be used in JavaScript?",
+                            options: [
+                              "== (Equal to)",
+                              "!= (Not equal to)",
+                              "=== (Strict equal to)",
+                              "!== (Strict not equal to)",
+                              "<> (Not equal to)"
+                            ],
+                            correctAnswers: [0, 1, 2, 3]
+                          },
                         };
                         case 'Javascript Logical Operators':
                           return {
@@ -14617,6 +14736,17 @@ expectedOutput: undefined,
                             <p>There's a little more wordy way to do the same thing - a built-in Boolean function.</p><br>
                             <p>The priority of <b>! (NOT)</b> is the highest of all logical operators, that's why it always executes first, before <b>&&</b> or <b>||</b>.</p><br>
                             `,
+                            quiz: {
+                              question: "What is the behavior of the logical operators in JavaScript?",
+                              options: [
+                                "The logical OR '||' returns true if one of the operands (values) is true.",
+                                "The logical AND '&&' returns true if one of the operands (values) is true.",
+                                "The logical NOT '!' operator converts the operand to boolean type and returns the inverse value",
+                                "The logical OR '||' returns true only if all operands (values) are true.",
+                                "The logical AND '&&' returns true only if both the operands (values) are true.",
+                              ],
+                              correctAnswers: [0, 2, 4]
+                            },
                           };
                           case 'Javascript Conditional Operators: if, "?"':
                             return {
@@ -14744,6 +14874,17 @@ expectedOutput: undefined,
                               <p>Here the code is located vertically. It's easier to understand the code blocks which span several lines than a long, horizontal instruction set.</p><br>
                               <p>The main purpose of the question mark operator is to return one value or another, it depends on it's condition. So use it for exactly that, when you need to execute different branches of code.</p><br>
                               `,
+                              quiz: {
+                                question: "What are the different ways of using the 'if' conditional operator in JavaScript?",
+                                options: [
+                                  "The 'if' statement executes a block of code if a specified condition is true.",
+                                  "The 'else' statement executes a block of code if the same condition is false.",
+                                  "The 'else if' statement adds a new condition if the first condition is false.",
+                                  "The 'switch' statement is used to perform a different action based on different conditions.",
+                                  "The 'if' statement can only test for a single condition."
+                                ],
+                                correctAnswers: [0, 1, 2],
+                              },
                             };
                             case 'Javascript Switch':
                               return{
@@ -14791,6 +14932,17 @@ expectedOutput: undefined,
                               <p>At the result both 2 and 5 cases and 3, 6, 8 cases show the same message.</p><br>
                               <p>The ability to "group" cases is an after effect of how <code style="color: grey;">switch/case</code> works without <b>break.</b> The execution of <b>case 2</b> starts from the line <b>(**)</b>, then it goes through <b>case 5,</b> because there's no <b>break</b>.</p><br>
                                 `,
+                                quiz: {
+                                  question: "Which of the following statements about JavaScript Switch is correct?",
+                                  options: [
+                                    "The switch statement is used to select one of many code blocks to be executed.",
+                                    "The switch statement can only take string expressions.",
+                                    "The switch statement chooses the block to run by comparing with case values using the === operator.",
+                                    "If no case value matches the switch expression and no default is specified, no action is taken.",
+                                    "Each case in switch statement must be an 'if' condition."
+                                  ],
+                                  correctAnswers: [0, 2, 3],
+                                },
                               };
                               case 'Javascript Loops: while and for':
                                 return {
@@ -14932,6 +15084,18 @@ expectedOutput: undefined,
                                   <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                   </div><br>
                                   `,
+                                  quiz: {
+                                    question: "Which of the following statements about JavaScript loops are correct?",
+                                    options: [
+                                      "JavaScript loops are used to repeatedly run a block of code.",
+                                      "JavaScript loops cannot deal with arrays.",
+                                      "JavaScript has several loops including for, while, and do while.",
+                                      "In Javascript, the for/in loop is used for looping over property names of an object.",
+                                      "The break statement causes the loop to continue with the next iteration.",
+                                      "The continue statement causes the loop to skip the remaining part of the current iteration and continue with the next one.",
+                                    ],
+                                    correctAnswers: [0, 2, 3, 5]
+                                  },
                                 };
                                 case 'Javascript Functions':
                                   return {
@@ -15079,6 +15243,17 @@ expectedOutput: undefined,
                                     </div><br>
                                     <p>As you see it is easier to understand the second variant. we see the name of the action (isEven) instead of the code piece.</p><br>
                                     `,
+                                    quiz: {
+                                      question: "What is true about Javascript functions?",
+                                      options: [
+                                        "A function in JavaScript is similar to a procedure created to perform a specific task.",
+                                        "Functions are assigned to variables in JavaScript.",
+                                        "Functions can be deleted after creation in JavaScript.",
+                                        "Every valid JavaScript app must use the 'function' keyword in defining at least one function.",
+                                        "In JavaScript, a function can be defined inside another function."
+                                      ],
+                                      correctAnswers: [0, 1, 4]
+                                    },
                                   };
                                   case 'Javascript Function Expressions':
                                     return {
@@ -15214,6 +15389,17 @@ expectedOutput: undefined,
                                       <h3 style="font-size: 1.2em; font-weight: bold; margin: 0.5em 0">When to choose Function Declaration against Function Expression?</h3>
                                       <p>When we need to declare a function, <b>Function Declaration</b> syntax is the first to consider. With it we are free to organize our code the way we want, because we can such functions before they are declared.</p><br>
                                       <p>One more advantage is readability, as it's easier to look up function <code style="color: grey;">f(...) {...}</code> in th ecode than <code style="color: grey;">let f = function (...) {...};</code>. <b>Function Declarations</b> are more impressive. But we need to use <b>Function Declaration</b> in case we need a conditional declaration.</p><br>`,
+                                      quiz: {
+                                        question: "What are the characteristics of function expressions in JavaScript?",
+                                        options: [
+                                          "A function expression can be stored in a variable.",
+                                          "A function expression cannot be used to create a function that can be invoked immediately.",
+                                          "'Function' is just a special kind of object.",
+                                          "The function name can be omitted in a function expression to create an anonymous function.",
+                                          "The function name cannot be used to refer to the function from inside itself."
+                                        ],
+                                        correctAnswers: [0, 2, 3]
+                                      },
                                     };
                                     case 'Javascript Arrow Functions':
                                       return {
@@ -15262,6 +15448,18 @@ expectedOutput: undefined,
                                         </div><br>
                                         <p>Arrow functions also have some other interesting features. For studying them in-depth, we need to get to know some other features of JavaScript. we will return to arrow functions later in the chapter Arrow functions revisted.</p><br>
                                         `,
+                                        quiz:{
+                                          questions: "What are some characteristics of Arrow Functions in JavaScript?",
+                                          options: [
+                                            "They are always anonymous.",
+                                            "They require the 'function' keyword to declare.",
+                                            "They can't be used as constructors.",
+                                            "They are best suited for non-method functions.",
+                                            "They utilize a unique syntax that involves the => symbol.",
+                                            "They have their own this, arguments, super, or new.target."
+                                          ],
+                                          correctAnswers: [0, 2, 3, 4]
+                                        },
                                       };
                                       case 'Javascript Objects':
                                         return {
@@ -15480,6 +15678,17 @@ expectedOutput: undefined,
                                         </div><br>
                                         <p>In JavaScript, <b>objects</b> are much more powerful than it can seem from the first sight. This is an extensive topic, and you will learn more about it in the next chapters.</p><br>
                                           `,
+                                          quiz: {
+                                            question: "What are the ways to create an object in JavaScript?",
+                                            options: [
+                                              "Using object literals",
+                                              "Using object function",
+                                              "Using a constructor",
+                                              "Using class",
+                                              "Using var keyword"
+                                            ],
+                                            correctAnswers: [0, 2, 3]
+                                          },
                                         };
                                         case 'Javascript Object Methods, "this"':
                                           return {
@@ -15580,6 +15789,17 @@ expectedOutput: undefined,
                                             </div><br>
                                             <p>The special arrow function method is useful especially when you want to take it from a context beyond.</p><br>
                                             `,
+                                            quiz: {
+                                              question: "What does the 'this' keyword in JavaScript refer to?",
+                                              options: [
+                                                "The 'this' keyword refers to the object that it belongs to.",
+                                                "'This' keyword refers to the global object in a non-method function.",
+                                                "The 'this' keyword refers to the HTML element that triggered the event, in an event method.",
+                                                "The 'this' keyword refers to undefined in strict mode.",
+                                                "'This' keyword always refers to the HTML element."
+                                              ],
+                                              correctAnswers: [0, 1, 2, 3]
+                                            },
                                           };
                                           case 'Javascript Garbage Collection':
                                             return {
@@ -15640,6 +15860,18 @@ expectedOutput: undefined,
                                               <p>Objects can be retained in memory while they are reachable.</p><br>
                                               <p>It's essential to know that being referenced is not similar to being reachable. Advanced algorithms of garbage colllection are performed by modern engines.</p><br>
                                               `,
+                                              quiz: {
+                                                question: "What are the characteristics or functionalities of Garbage Collection in JavaScript?",
+                                                options: [
+                                                  "Garbage Collection is a process that automatically identifies and eliminates junk data.",
+                                                  "Garbage Collection can only be performed manually by the user.",
+                                                  "In JavaScript, the garbage collector can automatically discard objects that are no longer reachable.",
+                                                  "Garbage Collection never eliminates 'unreachable' (not in use) data.",
+                                                  "The possible garbage collection algorithms include mark-and-sweep, incremental collection, and generational collection.",
+                                                  "JavaScript's Garbage Collection doesn't consider any object as 'waste' or 'junk'."
+                                                ],
+                                                correctAnswers: [0, 2, 4]
+                                              },
                                             };
                                             case 'Javascript Symbol Types':
                                               return {
@@ -15754,6 +15986,17 @@ expectedOutput: undefined,
                                                 <p>In JavaScript, symbols guarantee access level uniqueness to objects. All developers need to have a basic understanding of symbols and their use cases.</p><br>
                                                 <p>Technically, symbols are not entirely hidden. A built-in method <code>Object.getOwnPropertySymbols(obj)</code> will allow you to receive all the symbols. There exists another method, called <code>Reflect.ownKeys(obj)</code>, which is targeted at returning all the keys of an object along with symbolic ones. Anyway, most libraries, syntax constructs, and built-in functions avoid using the methods mentioned above.</p><br>
                                                 `,
+                                                quiz: {
+                                                  question: "What are some characteristics of JavaScript Symbol type?",
+                                                  options: [
+                                                    "A Symbol is a special and unique type.",
+                                                    "Symbols are most often used as unique identifiers.",
+                                                    "All symbols are exactly the same and duplicate each other.",
+                                                    "Every time we call the function Symbol(), it will return a unique symbol.",
+                                                    "The calling of Symbol() with the same argument return the same symbol."
+                                                  ],
+                                                  correctAnswers: [0, 1, 3]
+                                                },
                                               };
                                               case 'JavaScript Object to Primitive Conversion':
                                                 return{
@@ -15861,6 +16104,16 @@ expectedOutput: undefined,
                                                   <li>In case the hint is "default" or "number" run <code>obj.valueOf()</code and <code>obj.toString()</code>, whichever exists.</li>
                                                   </ol>
                                                   `,
+                                                  quiz: {
+                                                    question: "In JavaScript, what are the three conversion types that an object goes through in Object-to-Primitive?",
+                                                    options: [
+                                                      "toString, valueOf, toNumber",
+                                                      "toBoolean, valueOf, toNumber",
+                                                      "toString, toBoolean, toNumber",
+                                                      "toString, valueOf, toBoolean",
+                                                    ],
+                                                    correctAnswers: [0]
+                                                  },
                                                 };
                                                 case 'Javascript Constructor, operator "new"':
                                                   return {
@@ -15941,6 +16194,18 @@ expectedOutput: undefined,
                                                     <p>Constructors are regular functions, but it is preferred to name them with the capital letter first. They should merely be called with new. A call like this will create an empty this at th ebeginning and return the populated one at the end.</p><br>
                                                     <p>Constructors are used for creating multiple similar objects as well.</p><br>
                                                     `,
+                                                    quiz: {
+                                                      question: "What occurs when a function is executed with 'new' in JavaScript?",
+                                                      options: [
+                                                        "It creates a new object and binds that to 'this'.",
+                                                        "It returns the value of 'this' if that value is an object.",
+                                                        "It changes the type of the function.",
+                                                        "It modifies the global scope.",
+                                                        "If nothing was returned by the constructor, the object created automatically becomes the result of the call.",
+                                                        "It prevents the code within the function from running."
+                                                      ],
+                                                      correctAnswers: [0, 1, 4]
+                                                    },
                                                   };
                                                   case 'Javascript Methods of Primitives':
                                                     return {
@@ -16014,6 +16279,17 @@ expectedOutput: undefined,
                                                       <h3 style="font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Summary</h3>
                                                       <p>Primitive has a range of helpful methods (except <b>null</b> and <b>undefined</b>). Those methods operate via temporary objects. The engines of JavaScript are properly tuned to enhance that internally. Therefore, it is not expensive to call.</p><br>
                                                       `,
+                                                      quiz: {
+                                                        question: "Which of the following methods are applicable to primitive data types in JavaScript?",
+                                                        options: [
+                                                          "charAt()",
+                                                          "toString()",
+                                                          "toFixed()",
+                                                          "append()",
+                                                          "connect()"
+                                                        ],
+                                                        correctAnswers: [0, 1, 2]
+                                                      },
                                                     };
                                                     case 'JavaScript Numbers':
                                                       return{
@@ -16133,6 +16409,19 @@ expectedOutput: undefined,
                                                         <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                         </div><br>
                                                         `,
+                                                        quiz: {
+                                                          question: "What is true about JavaScript numbers?",
+                                                          options: [
+                                                            "JavaScript has only one type of number.",
+                                                            "JavaScript numbers can be written with, or without decimals.",
+                                                            "The typeof() function in JavaScript cannot be used to find the data type of a variable or a value.",
+                                                            "Extra large or extra small numbers can be written with scientific (exponential) notation in JavaScript.",
+                                                            "JavaScript automatically converts numbers to strings when necessary.",
+                                                            "JavaScript numbers are always written without commas.",
+                                                            "The global JavaScript functions isNaN() and isFinite() cannot be used to check if a number is a regular number."
+                                                          ],
+                                                          correctAnswers: [0, 1, 3, 4, 5]
+                                                        },
                                                       };
                                                       case 'JavaScript Math':
                                                         return {
@@ -16194,34 +16483,45 @@ expectedOutput: undefined,
     </tr>
   </thead>
   <tbody>
-    <tr><td style="border: 1px solid #333;">Math.E</td><td style="border: 1px solid #333;">Euler’s constant as well as natural logarithms’ base; nearly 2.718.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.E</td><td style="border: 1px solid #333;">Euler's constant as well as natural logarithms' base; nearly 2.718.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.atanh(x)</td><td style="border: 1px solid #333;">Returning the hyperbolic arctangent of a number.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.atan2(x, y)</td><td style="border: 1px solid #333;">Returning the arctangent of its arguments’ quotient.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.cbrt(x)</td><td style="border: 1px solid #333;">Returning a number’s cube root.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.atan2(x, y)</td><td style="border: 1px solid #333;">Returning the arctangent of its arguments' quotient.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.cbrt(x)</td><td style="border: 1px solid #333;">Returning a number's cube root.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.ceil(x)</td><td style="border: 1px solid #333;">Returning the smallest integer that is greater than or equal to a number.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.clz32(x)</td><td style="border: 1px solid #333;">Returning the number of leading a 32-bit integer zeros.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.cos(x)</td><td style="border: 1px solid #333;">Returning the cosine of a number.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.cosh(x)</td><td style="border: 1px solid #333;">Returning a number’s hyperbolic cosine.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.exp(x)</td><td style="border: 1px solid #333;">Returning Ex, where x is the argument, and E is Euler’s constant (2.718..., the natural logarithm base).</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.cosh(x)</td><td style="border: 1px solid #333;">Returning a number's hyperbolic cosine.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.exp(x)</td><td style="border: 1px solid #333;">Returning Ex, where x is the argument, and E is Euler's constant (2.718..., the natural logarithm base).</td></tr>
     <tr><td style="border: 1px solid #333;">Math.expm1(x)</td><td style="border: 1px solid #333;">Returning subtracting 1 from exp(x).</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.fround(x)</td><td style="border: 1px solid #333;">Returning a number’s nearest single-precision float representation.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.fround(x)</td><td style="border: 1px solid #333;">Returning a number's nearest single-precision float representation.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.hypot([x[, y[, ...]]])</td><td style="border: 1px solid #333;">Returning the square root of the sum of squares of its arguments.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.imul(x, y)</td><td style="border: 1px solid #333;">Returning a 32-bit integer multiplication result.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.log(x)</td><td style="border: 1px solid #333;">Returning a number’s natural logarithm (loge; also, ln).</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.log10(x)</td><td style="border: 1px solid #333;">Returning a number’s base 10 logarithm.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.log2(x)</td><td style="border: 1px solid #333;">Returning a number’s base 2 logarithm.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.log(x)</td><td style="border: 1px solid #333;">Returning a number's natural logarithm (loge; also, ln).</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.log10(x)</td><td style="border: 1px solid #333;">Returning a number's base 10 logarithm.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.log2(x)</td><td style="border: 1px solid #333;">Returning a number's base 2 logarithm.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.max(x[, y[, ...]])</td><td style="border: 1px solid #333;">Returning the largest of zero or more numbers.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.min(x[, y[, ...]])</td><td style="border: 1px solid #333;">Returning the smallest of zero or more numbers.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.random()</td><td style="border: 1px solid #333;">Returning a pseudo-random number between 0 and 1.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.sign(x)</td><td style="border: 1px solid #333;">Returning the x sign, indicating whether x is positive, negative, or zero.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.sinh(x)</td><td style="border: 1px solid #333;">Returning a number’s hyperbolic sine.</td></tr>
-    <tr><td style="border: 1px solid #333;">Math.tan(x)</td><td style="border: 1px solid #333;">Returning a number’s tangent.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.sinh(x)</td><td style="border: 1px solid #333;">Returning a number's hyperbolic sine.</td></tr>
+    <tr><td style="border: 1px solid #333;">Math.tan(x)</td><td style="border: 1px solid #333;">Returning a number's tangent.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.tanh(x)</td><td style="border: 1px solid #333;">Returning the hyperbolic tangent of a number.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.toSource()</td><td style="border: 1px solid #333;">Returning the string “Math”.</td></tr>
     <tr><td style="border: 1px solid #333;">Math.trunc(x)</td><td style="border: 1px solid #333;">Returning the integer part of the number x and removing each fractional digit.</td></tr>
   </tbody>
 </table>
                                                           `,
+                                                          quiz: {
+                                                            question: "Which of the following statements about JavaScript Math are correct?",
+                                                            options: [
+                                                              "JavaScript Math is a built-in object that has properties and methods for mathematical constants and functions.",
+                                                              "JavaScript Math is a separate library that needs to be imported before usage.",
+                                                              "Math.random() returns a random number between 0 (inclusive), and 1 (exclusive).",
+                                                              "Math.floor() rounds a number upwards to its nearest integer.",
+                                                              "Math.max() is used to find the number with the lowest value."
+                                                            ],
+                                                            correctAnswers: [0, 2],
+                                                          },
                                                         };
                                                         case 'JavaScript Strings':
                                                           return {
@@ -16446,6 +16746,19 @@ expectedOutput: undefined,
                                                             </div><br>
                                                             <p>Here, you can notice that capital characters go first, then several special characters, and finally, at the end of the output.</p><br>
                                                             `,
+                                                            quiz: {
+                                                              question: "What are some characteristics or functions of strings in JavaScript?",
+                                                              options: [
+                                                                "Strings are considered as primitive data type in JavaScript.",
+                                                                "The 'length' property of JavaScript strings is used to find out the number of characters.",
+                                                                "The 'indexOf()' method is used to return the Unicode value of the character at a specified index.",
+                                                                "The 'charAt()' method cannot return an empty string.",
+                                                                "The 'slice()' method extracts a section of a string and returns it as a new string.",
+                                                                "The 'toUpperCase()' method converts the entire string to uppercase letters.",
+                                                                "In JavaScript, we cannot concatenate strings using '+'."
+                                                              ],
+                                                              correctAnswers: [0, 1, 4, 5]
+                                                            },
                                                           };
                                                           case 'JavaScript Arrays':
                                                             return {
@@ -16634,6 +16947,16 @@ expectedOutput: undefined,
                                                               <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                               </div><br>
                                                               `,
+                                                              quiz: {
+                                                                question: "Which of the following are ways to declare an array in JavaScript?",
+                                                                options: [
+                                                                  "Array literal: var arr = [1, 2, 3, 4, 5];",
+                                                                  "Array constructor: var arr = new Array(1, 2, 3, 4, 5);",
+                                                                  "Using the 'new' keyword only: var arr = new;",
+                                                                  "Embedding numbers directly: var arr = 1, 2, 3, 4, 5;"
+                                                                ],
+                                                                correctAnswers: [0, 1]
+                                                              },
                                                             };
                                                             case 'JavaScript Array Methods':
                                                             return {
@@ -16853,6 +17176,16 @@ expectedOutput: undefined,
                                                               <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                               </div><br>
                                                               `,
+                                                              quiz: {
+                                                                question: "Which of the following array methods can be used in JavaScript to add and remove elements from an array?",
+                                                                options: [
+                                                                  "push() and pop()",
+                                                                  "add() and remove()",
+                                                                  "splice() and slice()",
+                                                                  "insert() and delete()"
+                                                                ],
+                                                                correctAnswers: [0, 2]
+                                                              },
                                                             };
                                                             case 'JavaScript Iterables':
                                                               return {
@@ -16945,6 +17278,17 @@ expectedOutput: undefined,
                                                                 <p>As a rule, they should perform the <code>Symbol.iterator</code> method. This method is, generally, called automatically by <code>for..of</code>. But, it can also be done directly. Objects, having indexed properties, and <code>length</code> are considered array-like. They can also include other properties and methods, but they are not real arrays. For transforming them into arrays, you can use the Array.from(obj[, mapFn,thisArg]) method.</p><br>
                                                                 <p>The <code>mapFn</code> and <code>thisArg</code> arguments allow applying a function to each of them.</p><br>
                                                                 `,
+                                                                quiz: {
+                                                                  question: "Which of the following statements about JavaScript iterables are correct?",
+                                                                  options: [
+                                                                    "An object is iterable if it has a method named [Symbol.iterator].",
+                                                                    "Iterable objects include built-in JavaScript objects such as Array, String, Map, and Set.",
+                                                                    "The [Symbol.iterator] method must return an accumulator function.",
+                                                                    "An iterable object can not be used in a for..of loop.",
+                                                                    "The `next()` method, when called, must return the next value in the sequence."
+                                                                  ],
+                                                                  correctAnswers: [0, 1, 4]
+                                                                },
                                                               };
                                                               case 'JavaScript Map and Set':
                                                                 return{
@@ -17060,6 +17404,18 @@ expectedOutput: undefined,
                                                                   <p>In this chapter, we represented to you Map and set. Now, lets summarize what was covered in general. While Map is a collection of keyed values, Set represents a collection of unique values. Each of them has its methods and properties.</p><br>
                                                                   <p>Both of these data structures add extra capabilities of JavaScript and can simplify common tasks (for example, detecting the length of a key/value pair collection or deleting duplicate items from a data set).</p><br>
                                                                   `,
+                                                                  quiz: {
+                                                                    question: "What are some properties of JavaScript Map and Set?",
+                                                                    options: [
+                                                                      "The keys of a Map are ordered while keys added to a Set are unordered.",
+                                                                      "In a Set, the value of 'size' can be used to return the number of values.",
+                                                                      "In a Map, keys can be any type and values can also be of any type.",
+                                                                      "A Map is a collection of keyed values and a Set is a collection of unique values.",
+                                                                      "It is impossible to get access to an element based on its position in a Set.",
+                                                                      "A Set only stores keys, not values."
+                                                                    ],
+                                                                    correctAnswers: [1, 2, 3, 4],
+                                                                  },
                                                                 };
                                                                 case 'JavaScript WeakMap and weakSet':
                                                                   return {
@@ -17138,6 +17494,17 @@ expectedOutput: undefined,
                                                                     <p>WeakSet is considered a Set-like collection, storing merely objects and deleting them when they become inaccessible.</p><br>
                                                                     <p>Both collections don't support properties and methods not referring to all th ekeys or the count of them. They allow merely individual operations.</p><br>
                                                                     `,
+                                                                    quiz: {
+                                                                      question: "What are some key characteristics of WeakMap and WeakSet in JavaScript?",
+                                                                      options: [
+                                                                        "They are more memory-efficient than Map and Set, but are not enumerable.",
+                                                                        "WeakMap accepts objects as keys while WeakSet accepts both objects and primitives as keys.",
+                                                                        "WeakMap and WeakSet don't prevent garbage collection of their keys/values.",
+                                                                        "WeakMap and WeakSet have methods like size and clear.",
+                                                                        "They provide a way to extend objects from the outside without affecting garbage collection."
+                                                                      ],
+                                                                      correctAnswers: [0, 2, 4]
+                                                                    },
                                                                   };
                                                                   case 'JavaScript Object.keys, Values, Entries':
                                                                     return {
@@ -17202,6 +17569,17 @@ expectedOutput: undefined,
                                                                       <li>With <code>Object.entries + Object.fromEntries</code>, you can apply powerful array transformations to objects.</li>
                                                                       </ul><br>
                                                                       `,
+                                                                      quiz: {
+                                                                        question: "",
+                                                                        options: [
+                                                                          "It returns an array of the object's property names.",
+                                                                          "It directly modifies the original object.",
+                                                                          "It deletes the objects in an array.",
+                                                                          "It calculates the length of an object.",
+                                                                          "It provides a way to get an array of keys."
+                                                                        ],
+                                                                        correctAnswers: [0, 4]
+                                                                      },
                                                                     };
                                                                     case 'JavaScript Destructuring Assignment':
                                                                       return {
@@ -17350,8 +17728,18 @@ expectedOutput: undefined,
                                                                         <li>Default values can be assigned for missing items.</li>
                                                                         <li>Destructuring is very useful for functions with multiple parameters, especially when most of them are optional.</li>
                                                                         </ul><br>
-
                                                                         `,
+                                                                        quiz: {
+                                                                          question: "What are the uses of destructuring assignment in JavaScript",
+                                                                          options: [
+                                                                            "It allows unpacking values from arrays, or properties from objects, into distinct variables.",
+                                                                            "It can be used to swap variables without the need of an extra variable.",
+                                                                            "It only allows extraction of array data into variables.",
+                                                                            "Destructuring can't be used to assign default values to a variable.",
+                                                                            "It allows to extract items from an array and assign them to variables based on their array index."
+                                                                          ],
+                                                                          correctAnswers: [0, 1, 4]
+                                                                        },
                                                                       };
                                                                       case 'JavaScript Date and Time':
                                                                         return {
@@ -17490,6 +17878,17 @@ expectedOutput: undefined,
                                                                           <li>Dates can be converted to timestamps and subtracted for measuring time intervals.</li>
                                                                           </ul><br>
                                                                           `,
+                                                                          quiz: {
+                                                                            question: "Which of the following methods can be used to extract various parts of a JavaScript date?",
+                                                                            options: [
+                                                                              "getYear()",
+                                                                              "getMonth()",
+                                                                              "getDate()",
+                                                                              "getHour()",
+                                                                              "getSecond()"
+                                                                            ],
+                                                                            correctAnswers: [0, 1, 2]
+                                                                          },
                                                                         };
                                                                         case 'JavaScript JSON methods, toJSON':
                                                                           return {
@@ -17601,6 +18000,16 @@ expectedOutput: undefined,
                                                                             <li><code>JSON.parse(str, [reviver])</code> - parses a JSON string and converts it back into a JavaScript object. It also supports an optional parameter for transforming the parsed values.</li>
                                                                             </ul><br>
                                                                             `,
+                                                                            quiz: {
+                                                                              question: "",
+                                                                              options: [
+                                                                                "parseJSON() and stringifyJSON()",
+                                                                                "toJSON() and fromJSON()",
+                                                                                "parse() and stringify()",
+                                                                                "decode() and encode()"
+                                                                              ],
+                                                                              correctAnswers: [2]
+                                                                            },
                                                                           };
                                                                           case 'JavaScript Recursion and Stack':
                                                                             return {
@@ -17711,6 +18120,18 @@ expectedOutput: undefined,
                                                                               <li>Recursive data structures, such as linked lists, can be effectively traversed using recursive functions.</li>
                                                                               </ul><br>
                                                                               `,
+                                                                              quiz: {
+                                                                                question: "What is recursion in JavaScript and how does it work?",
+                                                                                options: [
+                                                                                  "Recursion is when a function calls itself.",
+                                                                                  "Recursion can't be used to solve tasks in 'plain' ways.",
+                                                                                  "Recursion is used to replace loops.",
+                                                                                  "A recursive (looping) call can be replaced with a loop. The choice between them depends on which is more convenient.",
+                                                                                  "Every recursive process can also be done iteratively.",
+                                                                                  "Every iterative process can also be timed with recursion."
+                                                                                ],
+                                                                                correctAnswers: [0, 2, 3, 4]
+                                                                              },
                                                                             };
                                                                             case 'JavaScript Rest Parameters and Spread Syntax':
                                                                               return {
@@ -17797,6 +18218,18 @@ expectedOutput: undefined,
                                                                                 <li>Both rest parameters and spread syntax use the same three-dot (...) notation, but they serve opposite purposes: rest gathers multiple elements into an array, while spread expands an array into individual elements.</li>
                                                                                 </ul><br>
                                                                                 `,
+                                                                                quiz: {
+                                                                                  question: "What is true about the use of rest parameters and spread syntax in JavaScript?",
+                                                                                  options: [
+                                                                                    "Rest parameters allow a function to accept an indefinite number of arguments as an array.",
+                                                                                    "The spread syntax splits an iterable object into individual values.",
+                                                                                    "The rest parameters must be the last argument in a function.",
+                                                                                    "The spread operator can only be applied to arrays.",
+                                                                                    "Spread syntax is used to merge two or more objects into a new one.",
+                                                                                    "Rest parameters are used to merge two or more arrays into a new one."
+                                                                                  ],
+                                                                                  correctAnswers: [0, 1, 2, 4]
+                                                                                },
                                                                               };
                                                                               case 'JavaScript Variable Scope':
                                                                                 return {
@@ -17883,6 +18316,16 @@ expectedOutput: undefined,
                                                                                   <p>After, a new Lexical environment is made for the call, which external Lexical Environment reference is taken from the <code>counter.[[Environment]]</code>.</p><br>
                                                                                   <p>Any variable can be updated in the Lexical Environment it exists in. In the event of calling <code>counter()</code> several times, the variable <code>count</code> increases to 2, 3, and more.</p><br>
                                                                                   `,
+                                                                                  quiz: {
+                                                                                    question: "What are the types of JavaScript variable scopes?",
+                                                                                    options: [
+                                                                                      "Local Scope and Global Scope",
+                                                                                      "Public Scope and Private Scope",
+                                                                                      "Protected Scope and Package Scope",
+                                                                                      "Block Scope"
+                                                                                    ],
+                                                                                    correctAnswers: [0, 3]
+                                                                                  },
                                                                                 };
                                                                                 case 'JavaScript The Old "var"':
                                                                                   return {
@@ -17957,6 +18400,17 @@ expectedOutput: undefined,
                                                                                     <li><code>var</code> declarations are function-scoped or globally-scoped if declared outside a function, whereas <code>let</code> and <code>const</code> are block-scoped.</li>
                                                                                     <li><code>var</code> declarations are hoisted to the top of their scope and initialized with <code>undefined</code>, allowing access before the declaration line, while <code>let</code> and <code>const</code> are also hoisted but not initialized, leading to a temporal dead zone until their declaration is encountered.</li>
                                                                                     `,
+                                                                                    quiz: {
+                                                                                      question: "Which of the following statements about the 'var' keyword in JavaScript are true?",
+                                                                                      options: [
+                                                                                        "Variables declared with 'var' are block-scoped.",
+                                                                                        "'var'-declared variables can be hoisted, allowing them to be referenced before they are declared in the code.",
+                                                                                        "Using 'var' outside of any function creates a local variable.",
+                                                                                        "Variables declared with 'var' inside a function are accessible anywhere within that function.",
+                                                                                        "The introduction of 'let' and 'const' in ES6 offers alternatives to 'var' that provide block-scoped variable declarations."
+                                                                                      ],
+                                                                                      correctAnswers: [1, 3, 4]
+                                                                                    },
                                                                                   };
                                                                                   case 'JavaScript Global Object':
                                                                                     return {
@@ -18033,6 +18487,17 @@ expectedOutput: undefined,
                                                                                       <p>In short we can state that the global object includes variables that are supported anywhere. It involves JavaScript built-ins like Array and environment-specific values.</p><br>
                                                                                       <p>A generic <code>globalThis</code> name is used for global objects. It is required to store values inside a global object only if they are really global object only if they are really global for the project. Moreover, their nuumber should be kept at a minimum.</p><br>
                                                                                       `,
+                                                                                      quiz: {
+                                                                                        question: "Which of the following are best practices when using the global object in JavaScript?",
+                                                                                        options: [
+                                                                                          "Declare all variables globally to ensure they can be accessed from anywhere in the code.",
+                                                                                          "Minimize the use of global variables to avoid polluting the global namespace.",
+                                                                                          "Organize global variables under a single global namespace to reduce the risk of conflicts.",
+                                                                                          "Use 'var' for all variable declarations to ensure they are hoisted to the top of their scope.",
+                                                                                          "Employ closures for encapsulation and to create private variables within functions."
+                                                                                        ],
+                                                                                        correctAnswers: [1, 2, 4]
+                                                                                      },
                                                                                     };
                                                                                     case 'JavaScript Function object, NFE':
                                                                                       return {
@@ -18137,6 +18602,16 @@ expectedOutput: undefined,
                                                                                         <p>Moreover, you can add your own properties to functions.</p><br>
                                                                                         <p>Named Function Expressions (NFE) are Function Expressions having a name. The name is accessible only inside the function.</p><br>
                                                                                         `,
+                                                                                        quiz: {
+                                                                                          question: "What is an NFE (Named Function Expression) in JavaScript?",
+                                                                                          options: [
+                                                                                            "NFE is a function with a specific schedule.",
+                                                                                            "NFE is a Function Declaration that binds its very own this.",
+                                                                                            "NFE is a syntax to provide a function with a name in its local scope.",
+                                                                                            "NFE are always anonymous functions."
+                                                                                          ],
+                                                                                          correctAnswers: [2]
+                                                                                        },
                                                                                       };
                                                                                       case 'JavaScript The "new function" Syntax':
                                                                                         return {
@@ -18191,6 +18666,18 @@ expectedOutput: undefined,
                                                                                           </div><br>
                                                                                           <p>For passing something to a function, created as <code>new Function</code>, its arguments should be used.</p><br>
                                                                                           `,
+                                                                                          quiz: {
+                                                                                            question: "What are the features and best practices associated with the new function syntax in JavaScript?",
+                                                                                            options: [
+                                                                                              "Arrow functions allow the use of `this` from their surrounding code context, making them ideal for callbacks.",
+                                                                                              "The `new Function` syntax is suitable for creating functions dynamically, but should be used with caution due to security concerns.",
+                                                                                              "Arrow functions can be used as constructors when combined with the `new` keyword.",
+                                                                                              "Dynamic function creation with the `new Function` syntax improves performance by avoiding the parsing of function body strings.",
+                                                                                              "Using arrow functions for object methods where `this` refers to the global object is recommended.",
+                                                                                              "It is essential to validate and sanitize input that will be used to generate function code dynamically to prevent security vulnerabilities."
+                                                                                            ],
+                                                                                            correctAnswers: [0, 1, 5]
+                                                                                          },
                                                                                         };
                                                                                         case 'JavaScript setTimeout and setInterval':
                                                                                           return {
@@ -18295,6 +18782,18 @@ expectedOutput: undefined,
                                                                                             <p>Browsers set limitations on how often nested timers may run. the HTML5 standard states that after five nested timers, the interval must be at least 4 ms.</p><br>
                                                                                             <p>Server-side JavaScript, there are no such limitations. It offers other ways of scheduling an immediate asynchronous job, such as setimmediate for Nodejs.</p><br>
                                                                                             `,
+                                                                                            quiz: {
+                                                                                              question: "Which of the following statements are true regarding the use of `setTimeout()` and `setInterval()` in JavaScript?",
+                                                                                              options: [
+                                                                                                "`setTimeout()` is used to execute a function once after a specified delay.",
+                                                                                                "`setInterval()` executes a function repeatedly at every given time interval without any delay.",
+                                                                                                "`clearTimeout()` is used to cancel the execution scheduled by `setTimeout()`.",
+                                                                                                "The delay parameter in both `setTimeout()` and `setInterval()` is optional and defaults to 0 if not provided.",
+                                                                                                "`setTimeout()` can be used to implement debouncing, which is useful for limiting the rate at which a function is executed.",
+                                                                                                "Throttling, which ensures a function is executed at most once every specified milliseconds, can be implemented using `setInterval()`."
+                                                                                              ],
+                                                                                              correctAnswers: [0, 2, 3, 4]
+                                                                                            },
                                                                                           };
                                                                                           case 'JavaScript Decorators and Forwarding, Call/Apply':
                                                                                             return {
@@ -18381,6 +18880,18 @@ expectedOutput: undefined,
                                                                                               <p>It is known as method borrowing.</p><br>
                                                                                               <p>So, you borrow a join method from a regular array <code>[].join</code> using <code>[] . join.call</code> to run it in the context of the <code>arguments.</code> It works as the <code>arr.join(glue)</code> native method algorithm is quite simple.</p><br>
                                                                                               `,
+                                                                                              quiz: {
+                                                                                                question: "Which statements accurately describe the usage and differences between the `call` and `apply` methods in JavaScript?",
+                                                                                                options: [
+                                                                                                  "`call` and `apply` can both be used to invoke a function with a specified `this` context.",
+                                                                                                  "`call` method requires arguments to be passed in individually, while `apply` accepts an array of arguments.",
+                                                                                                  "`apply` is used exclusively for functions that do not require a `this` context.",
+                                                                                                  "`call` can be used to inherit properties and methods from another object.",
+                                                                                                  "Both `call` and `apply` are methods on the Function prototype, allowing for their use with any JavaScript function.",
+                                                                                                  "The only difference between `call` and `apply` is the performance aspect in specific JavaScript engines."
+                                                                                                ],
+                                                                                                correctAnswers: [0, 1, 3, 4]
+                                                                                              },
                                                                                             };
                                                                                             case 'JavaScript Function Binding':
                                                                                               return {
@@ -18475,6 +18986,17 @@ expectedOutput: undefined,
                                                                                                 </div><br>
                                                                                                 <p>The benefit of making a partial function is that you can create an independent function using a readable name. You can use it not providing the first argument anytime it's fixed with <code>bind.</code></p><br>
                                                                                                 `,
+                                                                                                quiz: {
+                                                                                                  question: "Which of the following statements accurately describe the behavior and usage of function binding in JavaScript?",
+                                                                                                  options: [
+                                                                                                    "The `bind` method creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.",
+                                                                                                    "Arrow functions bind the `this` keyword lexically, meaning they inherit `this` from the parent scope at the time of definition, not at the time of execution.",
+                                                                                                    "`call` and `apply` methods are used to immediately execute a function in the context of the first argument passed, with `call` accepting an argument list and `apply` accepting a single array of arguments.",
+                                                                                                    "Arrow functions should be used for event handlers in React class components because they automatically bind `this` to the instance of the class.",
+                                                                                                    "The `bind` method can only be used to set the `this` keyword and cannot be used for partial application of functions."
+                                                                                                  ],
+                                                                                                  correctAnswers: [0, 1, 2]
+                                                                                                },
                                                                                               };
                                                                                               case 'JavaScript Arrow Functions Revisted':
                                                                                                 return {
@@ -18522,6 +19044,17 @@ expectedOutput: undefined,
                                                                                                   <p>To be brief, we can state that arrow functions don't have <code>this.</code> They don't have arguments, either. Also, you can't call them using <code>new</code>.</p><br>
                                                                                                   <p>As a rule, arrow functions are handy for short pieces of code that don't have their context and operate within the current one.</p><br>
                                                                                                   `,
+                                                                                                  quiz: {
+                                                                                                    question: "Which of the following statements are true about arrow functions in JavaScript?",
+                                                                                                    options: [
+                                                                                                      "Arrow functions allow the use of 'this' keyword to refer to the global object.",
+                                                                                                      "Arrow functions do not have their own 'this' context, but inherit it from the enclosing scope.",
+                                                                                                      "Arrow functions can be used as constructors and can have prototype methods.",
+                                                                                                      "To return an object literal from an arrow function, wrap the object in parentheses.",
+                                                                                                      "When an arrow function contains a single expression, curly braces and the return keyword are mandatory."
+                                                                                                    ],
+                                                                                                    correctAnswers: [1, 3]
+                                                                                                  },
                                                                                                 };
                                                                                                 case 'JavaScript Property Flags and Descriptors':
                                                                                                   return {
@@ -18621,6 +19154,17 @@ expectedOutput: undefined,
                                                                                                     </div><br>
                                                                                                     <p>Note that it can't clone flags. To have a better result, it is recommended to use <code>Object.defineProperties.</code></p><br>
                                                                                                     `,
+                                                                                                    quiz: {
+                                                                                                      question: "In JavaScript, what are the characteristics that can be defined by property descriptors?",
+                                                                                                      options: [
+                                                                                                        "Property value",
+                                                                                                        "Writable",
+                                                                                                        "Enumerable",
+                                                                                                        "Configurable",
+                                                                                                        "Runnable"
+                                                                                                      ],
+                                                                                                      correctAnswers: [0, 1, 2, 3]
+                                                                                                    },
                                                                                                   };
                                                                                                   case 'JavaScript Property Getters and setters':
                                                                                                     return {
@@ -18699,6 +19243,17 @@ expectedOutput: undefined,
                                                                                                       </div><br>
                                                                                                       <p>So, finally, both the code works, and there is an additional useful property.</p><br>
                                                                                                       `,
+                                                                                                      quiz: {
+                                                                                                        question: "Which statements are true regarding JavaScript getters and setters?",
+                                                                                                        options: [
+                                                                                                          "Getters and setters allow encapsulation of the internal representation of an object.",
+                                                                                                          "Setters can be used without corresponding getters in an object.",
+                                                                                                          "Getters enable the creation of computed properties based on other property values.",
+                                                                                                          "JavaScript does not allow the use of getters and setters for input validation.",
+                                                                                                          "Getters and setters can only be used in JavaScript classes and not with object literals."
+                                                                                                        ],
+                                                                                                        correctAnswers: [0, 1, 2]
+                                                                                                      },
                                                                                                     };
                                                                                                     case 'JavaScript Prototypal inheritance':
                                                                                                       return {
@@ -18771,6 +19326,17 @@ expectedOutput: undefined,
                                                                                                         <p>So, you may wonder where the method <code>dog.hasOwnProperty</code> comes from. If you look at the chain carefully, you can notice that it is provided by <code>Object.prototype.hasOwnProperty</code>. So, it is inherited.</p><br>
                                                                                                         <p>Also note that all other key/value - getting methods (for example, <code>Object.keys</code> and <code>Object.values</code>)ignore the properties that were inherited. They work on the object itself. But, the prototype properties are not taken into account.</p><br>
                                                                                                         `,
+                                                                                                        quiz: {
+                                                                                                          question: "Which statements accurately describe Prototypal Inheritance in JavaScript?",
+                                                                                                          options: [
+                                                                                                            "Prototypal Inheritance allows objects to directly inherit properties and methods from other objects.",
+                                                                                                            "In JavaScript, objects inherit from classes, similar to classical inheritance models found in languages like Java and C++.",
+                                                                                                            "The `Object.create` method can be used to create a new object that inherits properties from a specified prototype object.",
+                                                                                                            "Constructor functions in JavaScript do not use the `prototype` property for defining methods to be inherited by instances.",
+                                                                                                            "The prototype chain ends when a property is found or when `null` is reached, which has no prototype."
+                                                                                                          ],
+                                                                                                          correctAnswers: [0, 2, 4]
+                                                                                                        },
                                                                                                       };
                                                                                                       case 'JavaScript F .prototype':
                                                                                                         return {
@@ -18834,6 +19400,17 @@ expectedOutput: undefined,
                                                                                                           <p>The <code>F.prototype</code> value can be an object or <code>null</code>. The special effect is only active for the <code>"prototype"</code> property when it is set on a constructor function and called with <code>new</code>.</p><br>
                                                                                                           <p>As a rule, all the functions have <code>F.prototype = { constructor: F }</code>. Hence it is possible to get the object constructor through accessing its <code>"constructor"</code> property.</p><br>
                                                                                                           `,
+                                                                                                          quiz: {
+                                                                                                            question: "What is the main purpose of F.prototype in JavaScript?",
+                                                                                                            options: [
+                                                                                                              "It is used to set the [[Prototype]] of objects created using new F()",
+                                                                                                              "It is used to store variables inside a function",
+                                                                                                              "It defines the default object that new instances inherit from",
+                                                                                                              "It converts functions into asynchronous functions",
+                                                                                                              "It helps objects access shared methods through the prototype chain"
+                                                                                                            ],
+                                                                                                            correctAnswers: [0, 2, 4]
+                                                                                                          },
                                                                                                         };
                                                                                                         case 'JavaScript Native Prototypes':
                                                                                                           return {
@@ -18848,9 +19425,9 @@ expectedOutput: undefined,
                                                                                                             </div><br>
                                                                                                             <p>Probably, you wonder where the code creating the string <code>"[object Object]"</code> is. It is the built-in <code>toString</code> method. But, in fact, the <code>obj</code> is empty.</p><br>
                                                                                                             <p>Note that short notation <code>obj = { }</code> is equal to <code>obj = new Object()</code>, where Object is a built-in object constructor function along with its <code>prototype</code> referencing an immense object with toString or other methods.</p><br>
-                                                                                                            <img src="./images/prototype.png" alt="Object Prototype Chain" style="max-width: 50%; height: 50%;"><br>
+                                                                                                            <img src="/images/prototype.png" alt="Object Prototype Chain" style="max-width: 50%; height: 50%;"><br>
                                                                                                             <p>Whenever, a <code>new Object()</code> is invoked, its <code>[[Prototype]]</code> is set to <code>Object.prototype.</code></p><br>
-                                                                                                            <img src="./images/prototype1.png" alt="Object Prototype Chain 2" style="max-width: 50%; height: 50%;"><br>
+                                                                                                            <img src="/images/prototype1.png" alt="Object Prototype Chain 2" style="max-width: 50%; height: 50%;"><br>
                                                                                                             <p>As you can see, when you call <code>obj.toString()</code>, the method is taken from <code>Object.prototype.</code></p><br>
                                                                                                             <p>You have the option of checking it, acting like this:</p><br>
                                                                                                             <div class="code-block">
@@ -18877,7 +19454,7 @@ expectedOutput: undefined,
                                                                                                             <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                                                                             </div><br>
                                                                                                             <p>Also, the <code>Array.prototype</code> obtains <code>toString</code>, but Array.prototype is nearer in the chain. Hence, the array option is used.</p><br>
-                                                                                                            <img src="./images/prototype2.jpeg" alt="Object Prototype Chain 3" style="max-width: 100%; height: auto;"><br>
+                                                                                                            <img src="/images/prototype2.png" alt="Object Prototype Chain 3" style="width: auto; height: auto;"><br>
                                                                                                             <p>Chrome developer console also shows inheritance.</p><br>
                                                                                                             <p>Other built-in objects operate similarly. The functions, as well, are objects of a built-in <code>Function</code> Constructor. Their methods (<code>call, apply</code>, and more) are taken from <code>Function.prototype.</code> Likewise, the functions have <code>toString.</code></p><br>
                                                                                                             <h3 style=" font-size: 1.2em; font-weight: bold; margin: 0.5em 0">Primitives</h3>
@@ -18905,6 +19482,17 @@ expectedOutput: undefined,
                                                                                                             <p>Another way of inheriting is to set <code>obj.__proto__</code> to <code>Array.prototype</code>. Thus, all array methods can be automatically available in <code>obj</code>. But that is impossible when <code>obj</code> inherits from another one. Note that you can inherit from one object only once.</p><br>
                                                                                                             <p>Borrowing methods allow the mixing of functionalities from different objects.</p><br>
                                                                                                             `,
+                                                                                                            quiz: {
+                                                                                                            question: "What is true about extending native prototypes in JavaScript?",
+                                                                                                            options: [
+                                                                                                              "It is encouraged to add custom methods to native prototypes for easier code management.",
+                                                                                                              "Extending native prototypes can lead to conflicts in larger codebases or with third-party scripts.",
+                                                                                                              "Native prototypes should not be modified, as this can introduce unexpected behavior in your code.",
+                                                                                                              "Using polyfills to add new methods to native prototypes is considered safe and recommended practice.",
+                                                                                                              "JavaScript does not allow extending native prototypes."
+                                                                                                            ],
+                                                                                                            correctAnswers: [1, 2, 3]
+                                                                                                          },
                                                                                                           };
                                                                                                           case 'JavaScript Prototype Methods, Objects Without __proto__':
                                                                                                             return {
@@ -18953,7 +19541,7 @@ expectedOutput: undefined,
                                                                                                               <p>To avoid such kind of problems, first, you can switch to using <code>Map</code>.</p><br>
                                                                                                               <p>The <code>Object</code> may also be helpful. The <code>__proto__</code> is not an object property, but an accessor property of <code>Object.prototype.</code></p><br>
                                                                                                               <p>Check out this case:</p><br>
-                                                                                                              <img src="./images/prototype3.jpeg"  style="max-width: 100%; height: auto;"><br>
+                                                                                                              <img src="/images/prototype3.png"  style="max-width: 100%; height: auto;"><br>
                                                                                                               <p>In <code>obj.__proto__</code> is set or read, the appropriate setter/getter is called from it's prototype, as well as, sets/ gets <code>[[Prototype]]</code>.</p><br>
                                                                                                               <p>If you intend to use an object as an associative array, you can implement it with a trick.</p><br>
                                                                                                               <p>Here is how to do it:</p><br>
@@ -18962,7 +19550,7 @@ expectedOutput: undefined,
                                                                                                               <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                                                                               </div><br>
                                                                                                               <p><code>Object.create(null)</code> generatesd an empty object without a prototype:</p><br>
-                                                                                                              <img src="./images/prototype4.png"  style="max-width: 100%; height: auto;"><br>
+                                                                                                              <img src="/images/prototype4.png"  style="max-width: 100%; height: auto;"><br>
                                                                                                               <p>It can be assumed that there isn't any inherited getter/setter for <code>__proto__</code>. It is handled as an ordinary data property.</p><br>
                                                                                                               <p>Such objects can be named "very plain" because they are more straightforward than the ordinary plain object <b>{...}.</b></p><br>
                                                                                                               <p>The disadvantage is that such objects lack built-in object methods (<code>toString</code>).</p><br>
@@ -18973,6 +19561,16 @@ expectedOutput: undefined,
                                                                                                               </div><br>
                                                                                                               <p>Usually, it's fine for associative arrays.</p><br>
                                                                                                               `,
+                                                                                                              quiz: {
+                                                                                                                question: "What does JavaScript allow to create, remove and manage prototype methods and objects without __proto__?",
+                                                                                                                options: [
+                                                                                                                  "JavaScript provides a variety of alternatives for that purpose",
+                                                                                                                  "JavaScript does not allow to create, remove and manage prototype methods and objects without __proto__",
+                                                                                                                  "JavaScript allows to create, remove and manage prototype methods and objects without __proto__ using built-in methods only",
+                                                                                                                  "JavaScript allows to create, remove and manage prototype methods and objects without __proto__ with the help of special syntax constructions like Object.create, obj.hasOwnProperty(prop), Object.getPrototypeOf(obj) or Reflect.getPrototypeOf(obj)."
+                                                                                                                ],
+                                                                                                                correctAnswers: [0, 3]
+                                                                                                              },
                                                                                                             };
                                                                                                             case 'JavaScript Class Basic Syntax':
                                                                                                               return {
@@ -19070,6 +19668,17 @@ expectedOutput: undefined,
                                                                                                                 </div><br>
                                                                                                                 <p>The name of the property is not placed into <code>Site.prototype</code>. It is generated by <code>new</code> before running the constructor. It's a property of the object.</p><br>
                                                                                                                 `,
+                                                                                                                quiz: {
+                                                                                                                  question: "What are the key features of JavaScript 'class' syntax?",
+                                                                                                                  options: [
+                                                                                                                    "The 'class' keyword creates a function, and class methods are stored in the class's prototype.",
+                                                                                                                    "The 'class' keyword is just syntactic sugar and does not introduce new functionality.",
+                                                                                                                    "Class methods are enumerable by default.",
+                                                                                                                    "Classes in JavaScript always use strict mode.",
+                                                                                                                    "Class properties are placed in the prototype by default."
+                                                                                                                  ],
+                                                                                                                  correctAnswers: [0, 1, 3]
+                                                                                                                },
                                                                                                               };
                                                                                                               case 'JavaScript Class Inheritance':
                                                                                                                 return{
@@ -19163,6 +19772,17 @@ expectedOutput: undefined,
                                                                                                                   <button class="copy-btn" onclick="copyCode('dataExample', this)">Copy</button>
                                                                                                                   </div><br>
                                                                                                                   `,
+                                                                                                                  quiz: {
+                                                                                                                    question: "In JavaScript class inheritance, which statements are true?",
+                                                                                                                    options: [
+                                                                                                                      "The 'extends' keyword is used for class inheritance.",
+                                                                                                                      "Overriding a method in the subclass requires the 'super' keyword.",
+                                                                                                                      "A subclass constructor must call 'super()' before using 'this'.",
+                                                                                                                      "The subclass does not have access to the superclass methods.",
+                                                                                                                      "In a subclass, 'super.method(...)' is used to call a superclass method."
+                                                                                                                    ],
+                                                                                                                    correctAnswers: [0, 2, 4]
+                                                                                                                  },
                                                                                                                 };
                                                                                                                 case 'JavaScript Static Properties and Methods':
                                                                                                                   return {
@@ -19245,6 +19865,17 @@ expectedOutput: undefined,
                                                                                                                     <p>Static properties are applied when it's necessary to store class-level data, not bound to an instance.</p><br>
                                                                                                                     <p>Static methods and properties are considered inherited.</p><br>
                                                                                                                     `,
+                                                                                                                    quiz: {
+                                                                                                                      question: "Which statements are true regarding static properties and methods in JavaScript?",
+                                                                                                                      options: [
+                                                                                                                        "Static methods are meant to be called on the class itself, not on instances of the class.",
+                                                                                                                        "Static properties and methods can be inherited in subclasses.",
+                                                                                                                        "The 'static' keyword is used to define a method that can only be called by instantiated objects of the class.",
+                                                                                                                        "Static methods can use the 'this' keyword to reference the class they belong to.",
+                                                                                                                        "Static methods are primarily used for utility functions that pertain to the class, rather than any particular object instance."
+                                                                                                                      ],
+                                                                                                                      correctAnswers: [0, 1, 3, 4]
+                                                                                                                    },
                                                                                                                   };
                                                                                                                   case 'JavaScript Private & Protected Properties & Methods':
                                                                                                                     return {
@@ -19331,6 +19962,17 @@ expectedOutput: undefined,
                                                                                                                       </div><br>
                                                                                                                       <p>Also, the class definition provides two prototypes for defining methods: the public prototype and the protected prototype. The protected methods and properties can be accessed by applying the protected key (the <code>cKey</code> variable). The regular methods, as usual, can be accessed by using <code>this.</code></p><br>
                                                                                                                       `,
+                                                                                                                      quiz: {
+                                                                                                                        question: "What are true statements about private and protected properties and methods in JavaScript?",
+                                                                                                                        options: [
+                                                                                                                          "Private properties and methods can be accessed outside the class they are defined in.",
+                                                                                                                          "Protected methods are not accessible outside the class but are accessible by subclasses.",
+                                                                                                                          "Using closures is one way to implement private and protected properties in JavaScript.",
+                                                                                                                          "Private properties and methods can be inherited by subclasses.",
+                                                                                                                          "The use of 'PrivateParts.createKey()' is one method for implementing privacy in classes.",
+                                                                                                                        ],
+                                                                                                                        correctAnswers: [1, 2, 4]
+                                                                                                                      },
                                                                                                                     };
                                                                                                                     case 'JavaScript Extending Built-in Classes':
                                                                                                                       return {
@@ -19369,6 +20011,17 @@ expectedOutput: undefined,
                                                                                                                         <p>So, no link can be noticed between <code>Date</code>and <code>Object.</code> But <code>Date.prototype</code> inherits from <code>Object.prototype.</code></p><br>
                                                                                                                         <p>It's a notable inheritance difference between built-in objects in comparison to what is received with <code>extends.</code></p><br>
                                                                                                                         `,
+                                                                                                                        quiz: {
+                                                                                                                          question: "Which statements are accurate regarding extending built-in classes in JavaScript?",
+                                                                                                                          options: [
+                                                                                                                            "Subclasses of built-in classes like Array can have custom methods.",
+                                                                                                                            "The 'extends' keyword cannot be used with built-in classes.",
+                                                                                                                            "Extended built-in classes inherit non-static methods only.",
+                                                                                                                            "Built-in methods of extended classes, like 'filter', return instances of the subclass.",
+                                                                                                                            "Static methods of built-in classes are inherited by subclasses."
+                                                                                                                          ],
+                                                                                                                          correctAnswers: [0, 3, 4]
+                                                                                                                        },
                                                                                                                       };
                                                                                                                       case 'JavaScript Class Checking: "instanceof"':
                                                                                                                         return {
@@ -19465,6 +20118,17 @@ expectedOutput: undefined,
                                                                                                                           <p>So, you can notice that the result is <code>Symbol.toStringTag</code> that is wrapped into <code>[object ...]</code></p><br>
                                                                                                                           <p>The <code>{}.toString.call</code> may be used instead of <code>instanceof</code> for built-in objects whenever it's necessary to receive the type as a string rather than just check.</p><br>
                                                                                                                           `,
+                                                                                                                          quiz: {
+                                                                                                                            question: "What are true statements about the 'instanceof' operator in JavaScript?",
+                                                                                                                            options: [
+                                                                                                                              "'instanceof' checks if an object belongs to a specific class, taking inheritance into account.",
+                                                                                                                              "The syntax for 'instanceof' is 'Class instanceof obj'.",
+                                                                                                                              "'instanceof' works by checking the prototype chain of the object.",
+                                                                                                                              "You can use 'instanceof' with built-in classes like Array and Object.",
+                                                                                                                              "Custom logic for 'instanceof' can be implemented using the static method 'Symbol.hasInstance'."
+                                                                                                                            ],
+                                                                                                                            correctAnswers: [0, 2, 3, 4]
+                                                                                                                          },
                                                                                                                         };
                                                                                                                         case 'JavaScript Mixins':
                                                                                                                           return{
@@ -19502,6 +20166,17 @@ expectedOutput: undefined,
                                                                                                                             <p>Multiple inheritances arent supported by JavaScript, but mixins may be performed via copying methods into prototype. Mixins can also be used for augmenting a class by adding multiple behaviours such as event-handling.</p><br>
                                                                                                                             <p>Sometimes mixins can become a point of conflict (for instance, when they accidentally overwrit the existing methods of the class). Therefore, it would be best if you thought well about naming methods of a mixin to minimize the risks.</p><br>
                                                                                                                             `,
+                                                                                                                            quiz: {
+                                                                                                                              question: "Which statements correctly describe the concept of Mixins in JavaScript?",
+                                                                                                                              options: [
+                                                                                                                                "Mixins allow a class to inherit from multiple other classes.",
+                                                                                                                                "A mixin is a class that provides methods to other classes, but is not meant for direct instantiation.",
+                                                                                                                                "Mixins can be implemented by copying methods into the prototype of a class.",
+                                                                                                                                "In JavaScript, a class can directly extend multiple other classes using mixins.",
+                                                                                                                                "Mixins can potentially lead to naming conflicts if not carefully managed."
+                                                                                                                              ],
+                                                                                                                              correctAnswers: [1, 2, 4]
+                                                                                                                            },
                                                                                                                           };
                                                                                                                           case 'JavaScript Error handling, "try..catch"':
                                                                                                                             return {
@@ -19695,6 +20370,17 @@ expectedOutput: undefined,
                                                                                                                               <p>Even in case of not having <code>try...catch</code>, most of the environments allow setting up a global error handler for catching the errors that fall out. But, in case of inheriting, it is possible to use <code>obj instanceof Error</code> for identifying error objects. Hence it is always better to inherit from it.</p><br>
 
                                                                                                                               `,
+                                                                                                                              quiz: {
+                                                                                                                                question: "What is the purpose of the try/catch statement in JavaScript?",
+                                                                                                                                options: [
+                                                                                                                                  "To test a block of code for errors.",
+                                                                                                                                  "To handle errors by implementing a block of code to be executed, if an error occurs in the try block.",
+                                                                                                                                  "To change the functionality of the program and create errors deliberately.",
+                                                                                                                                  "To ignore errors and continue executing code.",
+                                                                                                                                  "To display errors directly to user."
+                                                                                                                                ],
+                                                                                                                                correctAnswers: [0, 1]
+                                                                                                                              },
                                                                                                                             };
                                                                                                                             case 'JavaScript Custom Errors, Extending error':
                                                                                                                               return{
@@ -19774,6 +20460,16 @@ expectedOutput: undefined,
                                                                                                                                 <p>The instanceof class can also be applied to check for specific errors. It also operates with inheritance. At times when an error object comes from a third-party library, the name property can be used.</p><br>
                                                                                                                                 <p>A widespread and useful technique is wrapping exceptions. With it, a  function can handle low-level exceptions, creating high-level errors, instead of different low-level ones.</p><br>
                                                                                                                                 `,
+                                                                                                                                quiz: {
+                                                                                                                                  question: "What is the purpose of using extended error classes in JavaScript?",
+                                                                                                                                  options: [
+                                                                                                                                    "To create new types of errors",
+                                                                                                                                    "To speed up script execution",
+                                                                                                                                    "To provide additional details about an error",
+                                                                                                                                    "To prevent errors from occurring"
+                                                                                                                                  ],
+                                                                                                                                  correctAnswers: [0, 2]
+                                                                                                                                },
                                                                                                                               };
                                                                                                                               case 'JavaScript Introduction: callbacks':
                                                                                                                                 return{
@@ -19865,6 +20561,16 @@ expectedOutput: undefined,
                                                                                                                                   <p>That's it. It does the same without deep nesting.</p><br>
                                                                                                                                   <p>There is an additional solution to this problem, which is using JavaScript promise. You can learn about it in the next chapter.</p><br>
                                                                                                                                   `,
+                                                                                                                                  quiz: {
+                                                                                                                                    question: "What is a callback function in JavaScript and when is it executed?",
+                                                                                                                                    options: [
+                                                                                                                                      "A callback function is a feature of JavaScript that executes when another function has finished its process.",
+                                                                                                                                      "A callback function is executed as soon as the script loads.",
+                                                                                                                                      "A callback function is a special type of array method in JavaScript.",
+                                                                                                                                      "A callback function is a function which is passed as an argument to another function, and the callback function is executed after the function that it has been passed into has finished executing."
+                                                                                                                                    ],
+                                                                                                                                    correctAnswers: [0, 3]
+                                                                                                                                  },
                                                                                                                                 };
                                                                                                                                 case 'JavaScript Promise':
                                                                                                                                   return{
@@ -19986,6 +20692,16 @@ expectedOutput: undefined,
                                                                                                                                     </div><br>
                                                                                                                                     <p>As you can see in the above given example, the new function <code>loadScript</code> doesn't require a callback. Yet it creates and resolves when the loading is done. The outer code might add handlers to it applying <code>.then.</code></p>
                                                                                                                                     `,
+                                                                                                                                    quiz: {
+                                                                                                                                      question: "What is a promise in JavaScript?",
+                                                                                                                                      options: [
+                                                                                                                                        "It's a special type of event.",
+                                                                                                                                        "It's a scripting method used to structure a program.",
+                                                                                                                                        "It's an object representing the eventual completion or failure of an asynchronous operation.",
+                                                                                                                                        "It's a looping structure."
+                                                                                                                                      ],
+                                                                                                                                      correctAnswers: [2]
+                                                                                                                                    },
                                                                                                                                   };
                                                                                                                                   case 'JavaScript Promise Chaining':
                                                                                                                                       return{
@@ -20094,6 +20810,17 @@ expectedOutput: undefined,
                                                                                                                                         <p>As a rule, chaining promises is performed with the following methods of the promise object prototype: <code>.then</code> and <code>.catch.</code></p><br>
                                                                                                                                         <p>The <code>.then</code> method determines the action to run when a promise is fulfilled. The <code>.catch</code> method determines what to do in case the promise is rejected.</p><br>
                                                                                                                                         `,
+                                                                                                                                        quiz: {
+                                                                                                                                          question: "What is the purpose of Promise Chaining in JavaScript?",
+                                                                                                                                          options: [
+                                                                                                                                            "To handle multiple asynchronous operations sequentially.",
+                                                                                                                                            "To increase the complexity of code.",
+                                                                                                                                            "To perform a series of asynchronous tasks one after another.",
+                                                                                                                                            "To improve readability and maintainability of the code.",
+                                                                                                                                            "To decrease the speed of code execution."
+                                                                                                                                          ],
+                                                                                                                                          correctAnswers: [0, 2, 3]
+                                                                                                                                        },
                                                                                                                                       };
                                                                                                                                       case 'JavaScript error Handling with Promises':
                                                                                                                                         return{
@@ -20171,6 +20898,17 @@ expectedOutput: undefined,
                                                                                                                                           <p>Errors in the promises can be handled with <code>.catch</code>: no matter it's a <code>reject()</code> call or an error thrown in a handler. It would be best if you put <code>.catch</code> precisely in the places where you want to handle errors. The handler analyzes the errors rethrowing the ones that are unknown (for example, programming mistakes).</p><br>
                                                                                                                                           <p>In any other case, you need to have <code>unhandledRejection</code> event handler (for browsers and analogs of different environments). It will track unhandled errors informing th euser about them. It will help you avoid the collapse of your app.</p><br>
                                                                                                                                           `,
+                                                                                                                                          quiz: {
+                                                                                                                                            question: "What is the key concept to understand about promises in JavaScript error handling?",
+                                                                                                                                            options: [
+                                                                                                                                              "The promise constructor is unique in that it’s being executed immediately when created.",
+                                                                                                                                              "If an error occurs in a promise, the control jumps to the nearest rejection handler.",
+                                                                                                                                              "To handle an error inside a promise, a special method .catch(err) can be used.",
+                                                                                                                                              "Promises always return the result of a resolved promise.",
+                                                                                                                                              "A promise represents a completed action."
+                                                                                                                                            ],
+                                                                                                                                            correctAnswers: [0, 1, 2]
+                                                                                                                                          },
                                                                                                                                         };
                                                                                                                                         case 'JavaScript Promise API':
                                                                                                                                           return {
@@ -20276,6 +21014,17 @@ expectedOutput: undefined,
                                                                                                                                             <p><code>Promise</code> class has five static methods: <code>Promise.all(promises), Promise.allSettled(promises),Promise.race(promises),Promise.resolve(value)</code> and <code>promise.reject(error)</code>.</p><br>
                                                                                                                                             <p>Of the mentioned above five methods, the most common in practice is <code>Promise.all</code>.</p><br>
                                                                                                                                             `,
+                                                                                                                                            quiz: {
+                                                                                                                                              question: "Which of the following statements are true about Promises in JavaScript",
+                                                                                                                                              options: [
+                                                                                                                                                "A promise is a proxy for a value that will eventually become available.",
+                                                                                                                                                "Promises in JavaScript always return error messages.",
+                                                                                                                                                "'Promise.all(iterable)' waits for all promises to resolve or any to reject.",
+                                                                                                                                                "'Promise.race(iterable)' waits until any of the promises to reject.",
+                                                                                                                                                "'Promise.resolve(value)' method creates a new Promise object that is resolved with the given value."
+                                                                                                                                              ],
+                                                                                                                                              correctAnswers: [0, 2, 4]
+                                                                                                                                            },
                                                                                                                                           };
                                                                                                                                           case 'JavaScript Promisification':
                                                                                                                                             return {
@@ -20313,6 +21062,17 @@ expectedOutput: undefined,
                                                                                                                                               <p>It is important to note that a promise can have a single result. On the contrary, a callback can be called multiple times.</p><br>
                                                                                                                                               <p>So, promisification is used for the functions, calling the callback once. Upcoming calls are always ignored.</p><br>
                                                                                                                                               `,
+                                                                                                                                              quiz: {
+                                                                                                                                                question: "What is the main function of promisification in JavaScript?",
+                                                                                                                                                options: [
+                                                                                                                                                  "To transform a callback-based function into a Promise-based one",
+                                                                                                                                                  "To change a Promise-based function into a callback-based one",
+                                                                                                                                                  "To handle errors in code",
+                                                                                                                                                  "To make code harder to read and understand",
+                                                                                                                                                  "To allow the use of async/await syntax"
+                                                                                                                                                ],
+                                                                                                                                                correctAnswers: [0]
+                                                                                                                                              },
                                                                                                                                             };
                                                                                                                                             case 'JavaScript Microtasks':
                                                                                                                                               return{
@@ -20355,6 +21115,16 @@ expectedOutput: undefined,
                                                                                                                                                 <p>The handlers such as <code>.then/catch/finally</code> should be called after the current code is over. To make sure that these handlers are executed, it is required to add them to the <code>.then</code> call.</p><br>
                                                                                                                                                 <p>The microtasks concepts in JavaScript are closely linked to the event loop macrotasks, as well.</p><br>
                                                                                                                                                 `,
+                                                                                                                                                quiz: {
+                                                                                                                                                  question: "What is a Microtask in JavaScript?",
+                                                                                                                                                  options: [
+                                                                                                                                                    "A microtask is synonymous with a JavaScript function.",
+                                                                                                                                                    "Microtasks come with every promise that gets resolved or rejected, and whenever mutation observers are triggered.",
+                                                                                                                                                    "Microtasks are actions that are executed after the current function has finished processing but before returning control to the engine to be executed later.",
+                                                                                                                                                    "A microtask is a small task done by a JavaScript engine behind the scenes."
+                                                                                                                                                  ],
+                                                                                                                                                  correctAnswers: [1, 2]
+                                                                                                                                                },
                                                                                                                                               };
                                                                                                                                               case 'JavaScript async/await':
                                                                                                                                                 return{
@@ -20468,6 +21238,16 @@ expectedOutput: undefined,
                                                                                                                                                   <p>Together <code>async</code> and <code>await</code> provide an excellent framework for writing asynchronous code, easy to write, and read.</p><br>
                                                                                                                                                   <p>Another prominent advantage: you will rarely need to write <code>promise.then/catch</code> with <code>async/await.</code> Also, <code>Also, Promise.all is there to help you whenever you are waiting for multiple tasks simultaneously.</code></p><br>
                                                                                                                                                   `,
+                                                                                                                                                  quiz: {
+                                                                                                                                                    question: "What is the function of the 'async' keyword in JavaScript?",
+                                                                                                                                                    options: [
+                                                                                                                                                      "It transforms a regular function into an asynchronous function.",
+                                                                                                                                                      "It is used to indicate that a function will return a promise.",
+                                                                                                                                                      "It is used to stop the execution of a function.",
+                                                                                                                                                      "It makes a function synchronous."
+                                                                                                                                                    ],
+                                                                                                                                                    correctAnswers: [0, 1]
+                                                                                                                                                  },
                                                                                                                                                 };                                                                                                          
 
       }

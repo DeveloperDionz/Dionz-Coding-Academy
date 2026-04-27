@@ -16,6 +16,7 @@ import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import Community from "./pages/Community";
 import ProtectedRoute from "./components/ProtectedRoute";
+import WhatsAppButton from "./components/WhatsappButton";
 
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+        <WhatsAppButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route 
