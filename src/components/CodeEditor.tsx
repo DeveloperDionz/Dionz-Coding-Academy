@@ -121,7 +121,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
             <textarea
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              className="w-full h-48 p-3 border rounded-md font-mono text-sm bg-slate-50"
+              className="w-full h-48 p-3 border rounded-md font-mono text-sm bg-slate-50 dark:bg-black/100 dark:text-white"
               placeholder={`Write your ${language} code here...`}
             />
           </div>
@@ -131,7 +131,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
             <label className="text-sm font-medium mb-2 block">
               {language === 'html' || language === 'css' ? 'Result:' : 'Output:'}
             </label>
-            <div className="w-full h-48 border rounded-md overflow-auto">
+            <div className="w-full h-48 border rounded-md overflow-auto bg-slate-50">
               {language === 'html' || language === 'css' ? (
                 <iframe
                   srcDoc={output}
@@ -139,7 +139,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
                   sandbox="allow-scripts"
                 />
               ) : (
-                <pre className="p-3 text-sm bg-slate-50 h-full overflow-auto">
+                <pre className="p-3 text-sm bg-slate-50 h-full overflow-auto ">
                   {output || 'Click "Run" to see the output...'}
                 </pre>
               )}
@@ -149,7 +149,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         
         {expectedOutput && (
           <div className="mt-4 p-3 bg-blue-50 border-l-4 border-blue-500 rounded">
-            <p className="text-sm">
+            <p className="text-sm ">
               <strong>Expected Output:</strong> {expectedOutput}
             </p>
           </div>

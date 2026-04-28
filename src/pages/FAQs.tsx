@@ -1,6 +1,6 @@
 const FAQs = () => {
   return (
-    <div className="bg-yellow-50 min-h-screen text-black">
+    <div className="bg-yellow-50 min-h-screen dark:bg-black/100 dark:text-white">
     <div className="container mx-auto py-20">
       <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
       <p><b>Q: Do I need prior experience?</b> A: Not at all. Our "Fundamentals" courses are designed specifically for absolute beginners.</p>

@@ -403,20 +403,20 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black/100 to-black/100">
+    <div className="min-h-screen dark:bg-gradient-to-br dark:from-black/100 to-black/100">
       {/* Header */}
-      <header className="bg-black/100 backdrop-blur-sm border-b">
+      <header className="bg-white/80 dark:bg-black/100 backdrop-blur-sm border-b sticky top-0 z-40 transition-colors">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-20 h-20 bg-gradient-to-br from-black/90 to-black/90 rounded-lg flex items-center justify-center">
+            <div className="w-20 h-20 dark:bg-gradient-to-br dark:from-black/90 dark:to-black/90 rounded-lg flex items-center justify-center">
               <img src="./images/DCAlogo1.png" alt="Logo" className="w-20 h-20" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-white/100 to-white/100 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
               Dionz Coding Academy
             </h1>
           </div>
           <div className="flex items-center space-x-4">
-            <span className="text-white/100">
+            <span className="dark:text-white/100">
               Welcome, {profile?.full_name || user?.user_metadata?.full_name || user?.email || 'Student'}!
             </span>
             <Button 
@@ -465,7 +465,7 @@ const Dashboard = () => {
   </label>
 </div>
 
-              <CardTitle>{profile?.full_name || user?.user_metadata?.full_name || 'Student'}</CardTitle>
+              <CardTitle className='dark:text-black/80'>{profile?.full_name || user?.user_metadata?.full_name || 'Student'}</CardTitle>
               <CardDescription>{profile?.email || user?.email}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -488,7 +488,7 @@ const Dashboard = () => {
                 <CardTitle className="text-sm font-medium text-slate-600">Total Courses</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">{courses.length}</div>
+                <div className="text-2xl font-bold dark:text-black/80">{courses.length}</div>
                 <Badge className="mt-2 bg-green-100 text-green-800">Available</Badge>
               </CardContent>
             </Card>
@@ -498,7 +498,7 @@ const Dashboard = () => {
                 <CardTitle className="text-sm font-medium text-slate-600">In Progress</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">{inProgressCourses}</div>
+                <div className="text-2xl font-bold dark:text-black/80">{inProgressCourses}</div>
                 <Badge className="mt-2 bg-green-100 text-green-800">Active</Badge>
               </CardContent>
             </Card>
@@ -508,7 +508,7 @@ const Dashboard = () => {
                 <CardTitle className="text-sm font-medium text-slate-600">Completed</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">{completedCourses}</div>
+                <div className="text-2xl font-bold dark:text-black/80">{completedCourses}</div>
                 <Badge className="mt-2 bg-green-100 text-green-800">Finished</Badge>
               </CardContent>
             </Card>
@@ -517,7 +517,7 @@ const Dashboard = () => {
 
         {/* Course Progress */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-white/100">My Courses</h2>
+          <h2 className="text-3xl font-bold dark:text-white/100">My Courses</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
@@ -529,7 +529,7 @@ const Dashboard = () => {
                       {getStatusText(course.progress?.status)}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl">{course.title}</CardTitle>
+                  <CardTitle className="text-xl dark:text-black/80">{course.title}</CardTitle>
                   <CardDescription>{course.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">

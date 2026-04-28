@@ -728,29 +728,29 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black/100 to-black/100">
+    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-black dark:to-black transition-colors duration-300">
       {/* Header */}
-      <header className="bg-black/100 backdrop-blur-sm border-b">
+      <header className="bg-white/80 dark:bg-black/100 backdrop-blur-sm border-b sticky top-0 z-40 transition-colors">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Button 
               variant="ghost" 
               onClick={() => navigate('/dashboard')}
-              className="text-white/100 hover:text-black/100"
+              className="dark:text-white/100 hover:text-black/100"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Dashboard
             </Button>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 ">
               <CourseIcon icon={course.icon} title={course.title} />
-              <h1 className="text-2xl font-bold text-white">{course.title}</h1>
+              <h1 className="text-2xl font-bold dark:text-white">{course.title}</h1>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Badge variant="outline" className="px-3 py-1 text-white/100">
+            <Badge variant="outline" className="px-3 py-1 dark:text-white/100">
               {progress?.completed_lessons || 0}/{lessons.filter(l => !l.isHeading).length} lessons
             </Badge>
-            <div className="w-32 text-white">
+            <div className="w-32 dark:text-white">
               <Progress value={lessons.filter(l => !l.isHeading).length > 0 ? ((progress?.completed_lessons || 0) / lessons.filter(l => !l.isHeading).length) * 100 : 0} />
             </div>
           </div>
@@ -761,7 +761,7 @@ const currentIndex = realLessons.findIndex(l => l.id === lessons[currentLesson].
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
           {/* Lessons Sidebar */}
-<div className="lg:col-span-1">
+<div className="lg:col-span-1 sticky top-24 self-start">
   <Card>
     <CardHeader>
       <CardTitle className="text-lg">Course Content</CardTitle>

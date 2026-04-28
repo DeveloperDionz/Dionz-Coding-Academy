@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="bg-yellow-50 min-h-screen text-black">
+    <div className="bg-yellow-50 min-h-screen dark:bg-black/100 dark:text-white">
     <div className="container mx-auto py-20">
       <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
       <h1 className="text-2xl font-semibold mb-4">We are here to help</h1>

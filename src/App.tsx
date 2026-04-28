@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import Community from "./pages/Community";
 import ProtectedRoute from "./components/ProtectedRoute";
 import WhatsAppButton from "./components/WhatsappButton";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 
 const queryClient = new QueryClient();
@@ -28,6 +29,9 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+        <div className="fixed top-9 right-24 z-50">
+            <DarkModeToggle />
+          </div>
         <WhatsAppButton />
           <Routes>
             <Route path="/" element={<Index />} />

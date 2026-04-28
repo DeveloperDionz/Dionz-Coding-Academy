@@ -143,15 +143,15 @@ const sliderSettings = {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-black">
+    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-black dark:to-black transition-colors duration-300">
       {/* Header */}
-      <header className="bg-black/100 backdrop-blur-sm border-b sticky top-0 z-40">
+      <header className="bg-white/80 dark:bg-black/100 backdrop-blur-sm border-b sticky top-0 z-40 transition-colors">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-20 h-20 bg-black/90 rounded-lg flex items-center justify-center img hover:scale-105 transition-transform ">
+            <div className="w-20 h-20 rounded-lg flex items-center justify-center img hover:scale-105 transition-transform ">
               <img src="./images/DCAlogo1.png" alt="DCA Logo" className="w-20 h-20" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-br from-white to-white bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
               Dionz Coding Academy
             </h1>
           </div>
@@ -196,19 +196,19 @@ const sliderSettings = {
       <Badge className="mb-6 bg-yellow-600 text-white px-4 py-2">
         Start Your Coding Journey Today
       </Badge>
-      <h2 className="text-5xl font-bold mb-6 leading-tight text-white">
+      <h2 className="text-5xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
         Master Programming with{" "}
         <span className="bg-gradient-to-r from-yellow-600 to-yellow-600 bg-clip-text text-transparent">
           Expert-Led Courses
         </span>
       </h2>
-      <p className="text-xl text-white/90 mb-6 leading-relaxed">
+      <p className="text-xl text-slate-700 dark:text-white/90 mb-6 leading-relaxed">
         Join thousands of students learning HTML, CSS, JavaScript, Python, and React
         through our hands-on curriculum designed by industry experts.
       </p>
 
       {/* Value Highlights */}
-      <div className="flex flex-col gap-3 mb-6 text-white/90">
+      <div className="flex flex-col gap-3 mb-6 text-slate-700 dark:text-white/90">
         <div className="flex items-center gap-2"><BookOpen className="w-5 h-5" />No prior experience needed</div>
         <div className="flex items-center gap-2"><Users className="w-5 h-5" />Join global community</div>
         <div className="flex items-center gap-2"><Trophy className="w-5 h-5" />Earn certificate on completion</div>
@@ -236,7 +236,7 @@ const sliderSettings = {
       </div>
 
       {/* Social Proof */}
-      <div className="flex items-center gap-6 mt-8 justify-center md:justify-start text-sm text-white/80">
+      <div className="flex items-center gap-6 mt-8 justify-center md:justify-start text-sm dark:text-white/80">
         <div className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-400" />4.9/5 Rating</div>
         <div>50,000+ Students</div>
         <div>100+ Hours Content</div>
@@ -245,7 +245,7 @@ const sliderSettings = {
 
     {/* Right Side: Hero Carousel */}
 <div className="flex-1 flex justify-center md:justify-end w-full max-w-md">
-  <Slider {...sliderSettings} className="w-full rounded-xl shadow-2xl overflow-hidden">
+  <Slider {...sliderSettings} className="w-full rounded-xl overflow-hidden">
     {carouselImages.map((src, index) => (
       <div key={index} className="relative">
         <img
@@ -276,8 +276,8 @@ const sliderSettings = {
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold mb-4 text-white">Why Choose Dionz Coding Academy?</h3>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold mb-4 dark:text-white">Why Choose Dionz Coding Academy?</h3>
+          <p className="dark:text-white/80 max-w-2xl mx-auto">
             Our platform is designed to provide the best learning experience with proven methodologies
           </p>
         </div>
@@ -288,10 +288,10 @@ const sliderSettings = {
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-yellow-700" />
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
+                <CardTitle className="text-xl dark:text-black/80">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-black/80 text-center">{feature.description}</p>
+                <p className="dark:text-black/80 text-center">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -301,8 +301,8 @@ const sliderSettings = {
       {/* Courses Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-4">Our Popular Courses</h3>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold dark:text-white mb-4">Our Popular Courses</h3>
+          <p className="dark:text-white/80 max-w-2xl mx-auto">
             Structured learning paths designed to take you from beginner to professional
           </p>
         </div>
@@ -314,7 +314,7 @@ const sliderSettings = {
                   <span className="text-3xl">{course.icon}</span>
                   <Badge className={course.color}>{course.level}</Badge>
                 </div>
-                <CardTitle className="text-xl group-hover:text-yellow-600 transition-colors">
+                <CardTitle className="text-xl group-hover:text-yellow-600 transition-colors dark:text-black/80">
                   {course.title}
                 </CardTitle>
                 <CardDescription className="text-black/80">
@@ -339,7 +339,7 @@ const sliderSettings = {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-yellow-700 to-yellow-700 text-white py-16">
+      <section className="bg-gradient-to-r from-yellow-700 to-yellow-700 dark:text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to Start Your Coding Journey?</h3>
           <p className="text-xl mb-8 opacity-90">
@@ -349,7 +349,7 @@ const sliderSettings = {
             size="lg" 
             variant="secondary"
             onClick={() => handleAuth('register')}
-            className="px-8 py-6 text-lg bg-white text-yellow-800 hover:bg-slate-100"
+            className="px-8 py-6 text-lg bg-white dark:text-yellow-800 hover:bg-slate-100"
           >
             Create Free Account <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
@@ -357,47 +357,47 @@ const sliderSettings = {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/100 text-white py-12">
+      <footer className="dark:bg-black/100 dark:text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-20 h-20 bg-black/100 rounded-lg flex items-center justify-center">
+                <div className="w-20 h-20 rounded-lg flex items-center justify-center">
                   <img src="./images/DCAlogo1.png" alt="Dionz Logo" className="w-20 h-20" />
                 </div>
                 <h4 className="text-xl font-bold">Dionz Coding Academy</h4>
               </div>
-              <p className="text-white/50">
+              <p className="dark:text-gray-400">
                 Empowering the next generation of developers through quality education.
               </p>
             </div>
             <div>
               <h5 className="font-semibold mb-4">Courses</h5>
-              <ul className="space-y-2 text-white/50" onClick={() => handleAuth('login')}>
-                <li className="hover:text-white cursor-pointer">HTML & CSS</li>
-                <li className="hover:text-white cursor-pointer">JavaScript</li>
-                <li className="hover:text-white cursor-pointer">Python</li>
-                <li className="hover:text-white cursor-pointer">React</li>
+              <ul className="space-y-2 dark:text-gray-400" onClick={() => handleAuth('login')}>
+                <li className="hover:text-gray-300 cursor-pointer">HTML & CSS</li>
+                <li className="hover:text-gray-300 cursor-pointer">JavaScript</li>
+                <li className="hover:text-gray-300 cursor-pointer">Python</li>
+                <li className="hover:text-gray-300 cursor-pointer">React</li>
               </ul>
             </div>
             <div>
               <h5 className="font-semibold mb-4">Support</h5>
-              <ul className="space-y-2 text-white/50">
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/community')}>Community</li>
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/contact')}>Contact Us</li>
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/faq')}>FAQ</li>
+              <ul className="space-y-2 dark:text-gray-400">
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/community')}>Community</li>
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/contact')}>Contact Us</li>
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/faq')}>FAQ</li>
               </ul>
             </div>
             <div>
               <h5 className="font-semibold mb-4">Company</h5>
-              <ul className="space-y-2 text-white/50">
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/about')}>About Us</li>
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/privacy')}>Privacy Policy</li>
-                <li className="hover:text-white cursor-pointer" onClick={() => handleFooterClick('/terms')}>Terms of Service</li>
+              <ul className="space-y-2 dark:text-gray-400">
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/about')}>About Us</li>
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/privacy')}>Privacy Policy</li>
+                <li className="hover:text-gray-300 cursor-pointer" onClick={() => handleFooterClick('/terms')}>Terms of Service</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/50 mt-8 pt-8 text-center  text-white/50">
+          <div className="border-t dark:border-white/50 mt-8 pt-8 text-center  dark:text-white/50">
             <p>In Partnership with <img src="./images/CyberSenseiLogo.jpg" className="h-12 inline-block ml-2" /></p>
             <p>&copy; 2026 Dionz Coding Academy. All rights reserved.</p>
           </div>

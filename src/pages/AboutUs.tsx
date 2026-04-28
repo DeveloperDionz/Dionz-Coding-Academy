@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="bg-yellow-50 min-h-screen text-black">
+    <div className="bg-yellow-50 min-h-screen dark:bg-black/100 dark:text-white">
     <div className="container mx-auto py-20">
       <h1 className="text-4xl font-bold mb-6">About Us</h1>
       <p>Empowering the Next Generation of Digital Architects.</p><br></br>
